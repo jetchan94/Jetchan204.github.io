@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>	My HTML Notebook </title>
+		<strong><font size="7"><p align="center"> 
+		  <a href="../index.html">My HTML Notebook I</a>    
+    </font></strong>
+	</head>
+	<body bgcolor="#e5e4e2">	<!-- Platinum background -->
+		<p align="center"> ***** On Wednesday, 8/29/18, I started 
+		learning the fundamentals of HTML on 
+		<a href= "http://www.sololearn.com"target="_blank"> 
+		sololearn.com</a>. *****
+		</p> <br />
+		
+<!-- ************************************* PAGE 2 ************************************* -->
+	
+<!-- ***** Module 3 & 4 Materials ***** -->
+		
+		<p align="center"><strong><u><font size="6"> Modules 3 and 4: HTML5 
+		</font></u></strong>
+		
+<!-- I. Introduction to HTML5 -->
+		<p> <strong><font size="4">I.</font> <u>Introduction to HTML5</u></strong>
+		<br /> When writing HTML5 documents, one of the first new features is the
+			doc type declaration:	</p> <p> i.e. </p> <p>
+			
+			<span class="codeBlock">
+				<span class="code html">
+					<b>
+						<span class="tooltip" data-text="Defines the document type">
+						<!DOCTYPE HTML></span> 
+					</b>
+				</span>
+			</span>
+			<strong>&lt;!DOCTYPE HTML&gt;</strong> </p> <p>
+			
+			
+			The character encoding &lpar;<strong>charset</strong>&rpar; declaration
+			is also simplified: </p> <p> i.e. </p> <p>
+<!-- UTF-8 is the default character encoding -->	
+			<strong>&lt;meta charset="UTF-8"&gt;</strong> </p> <br />
+			<strong><u>New Elements in HTML5</u></strong> <br />
+			<span style="color:blue"><strong>&lt;article&gt;</strong></span>,
+			<span style="color:blue"><strong>&lt;aside&gt;</strong></span>,
+			<span style="color:blue"><strong>&lt;audio&gt;</strong></span>,
+			<span style="color:blue"><strong>&lt;canvas&gt;</strong></span>,
+			<span style="color:blue"><strong>&lt;datalist&gt;</strong></span>,
+			<strong>&lt;details&gt;</strong>,
+			<span style="color:blue"><strong>&lt;embed&gt;</strong></span>,
+			<span style="color:blue"><strong>&lt;footer&gt;</strong></span>.
+			<span style="color:blue"><strong>&lt;header&gt;</strong></span>,
+			<span style="color:blue"><strong>&lt;nav&gt;</strong></span>,
+			<strong>&lt;output&gt;</strong>,
+			<span style="color:blue"><strong>&lt;progress&gt;</strong></span>,
+			<span style="color:blue"><strong>&lt;section&gt;</strong></span>,
+			<span style="color:blue"><strong>&lt;video&gt;</strong></span>,
+			and even more! </p> <p>
+			Take note that the default character encoding in HTML5 is UTF-8 </p> <p>
+			<strong><u>Forms</u></strong> &rarr; &lpar;New in HTML5&rpar; <br />
+			<ul>
+			 <li>The Web Forms 2.0 specification allows for creation of more
+				 powerful forms and more compelling user experiences.</li>
+			 <li>Date pickers, color pickers, and numeric stepper controls
+				 have been added.</li>
+			 <li>Input field types now include email, search, and URL.</li>
+			 <li>PUT and DELETE form methods are now supported.</li>
+			</ul> </p> <p>
+
+			<strong><u>Integrated API</u></strong> 
+			&lpar;Application Programming Interfaces&rpar;
+			&rarr; &lbrack;New in HTML5&rbrack; <br />
+			<ul>
+			 <li>Drag and Drop</li>
+			 <li>Audio and Video</li>
+			 <li>Offline Web Applications</li>
+			 <li>History</li>
+			 <li>Local Storage</li>
+			 <li>Geolocation</li>
+			 <li>Web Messaging</li>
+			</ul> </p> <br />
+		
+<!-- ********************************************************************************** -->		
+		
+<!-- II. Content Models -->
+		<p> <strong><font size="4">II.</font> <u>Content Models</u></strong>
+		<br /> In HTML, elements typically belonged in either the block level or
+			inline content model. HTML5 introduces <strong>seven</strong> main
+			content models. </p> <p>
+			<ul>
+			 <li>Metadata</li>
+			 <li>Embedded</li>
+			 <li>Interactive</li>
+			 <li>Heading</li>
+			 <li>Phrasing</li>
+			 <li>Flow</li>
+			 <li>Sectioning</li>
+			</ul> <p> <p>
+			Take note that HTML5 content models are designed to make the markup
+			structure more meaningful for both the browser and the web designer. </p>
+		<p> <ol>
+<!-- Metadata (7 elements) -->	 
+			 <li><strong><u>Metadata</u></strong>: Content that sets up the 
+			 presentation or behavior of the rest of the content. 
+			 These elements are found in the <strong>head</strong> 
+			 of the document. <br />
+			 <i>Elements</i>: 
+			 <span style="color:blue"><strong>&lt;base&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;link&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;meta&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;noscript&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;script&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;style&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;title&gt;</strong></span>
+			 </li> </p> <p>
+<!-- Embedded (8 elements) -->
+			 <li><strong><u>Embedded</u></strong>: Content that imports other
+			 resources into the document. <br />
+			 <i>Elements</i>: 
+			 <span style="color:blue"><strong>&lt;audio&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;video&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;canvas&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;iframe&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;img&gt;</strong></span>,
+			 &lt;math&gt;,
+			 <span style="color:blue"><strong>&lt;object&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;svg&gt;</strong></span>
+			 </li> </p> <p>
+<!-- Interactive (13 elements) -->
+			 <li><strong><u>Interactive</u></strong>: Content specifically intended
+			 for user interaction. <br />
+			 <i>Elements</i>: 
+			 <span style="color:blue"><strong>&lt;a&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;audio&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;video&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;button&gt;</strong></span>,
+			 &lt;math&gt;,
+			 <span style="color:blue"><strong>&lt;embed&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;iframe&gt;</strong></span>
+			 <span style="color:blue"><strong>&lt;img&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;input&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;label&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;object&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;select&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;textarea&gt;</strong></span>,
+			 </li> </p> <p>
+<!-- Heading (7 elements) -->
+			 <li><strong><u>Heading</u></strong>: Defines a section header. <br />
+			 <i>Elements</i>: 
+			 <span style="color:blue"><strong>&lt;h1&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;h2&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;h3&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;h4&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;h5&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;h6&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;hgroup&gt;</strong></span>
+			 </li> </p> <p>
+<!-- Phrasing (7+ elements) -->	
+			 <li><strong><u>Phrasing</u></strong>: This model has a number of
+			 inline level elements in common with HTML4. <br />
+			 <i>Elements</i>: 
+			 <span style="color:blue"><strong>&lt;img&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;span&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;strong&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;label&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;br /&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;small&gt;</strong></span>,
+			 <span style="color:blue"><strong>&lt;sub&gt;</strong></span>, and more.
+			 </li>
+			</ol>	</p> <p>
+			Take note that the same element can belong to more than one content model. </p>
+		
+		<p>	<strong><u>Flow content</u></strong>: Contains the majority of
+			HTML5 elements that would be included in the normal flow of
+			the document. </p> <p>
+			<strong><u>Sectioning content</u></strong>: Defines the scope of
+			headings, content, navigation, and footers.
+			<i>Elements</i>: 
+			<span style="color:blue"><strong>&lt;article&gt;</strong></span>,
+			<span style="color:blue"><strong>&lt;aside&gt;</strong></span>,
+			<span style="color:blue"><strong>&lt;nav&gt;</strong></span>,
+			<span style="color:blue"><strong>&lt;section&gt;</strong></span> </p>
+<!-- Content Model Image -->
+		<p align="center">	
+			<img src="https://api.sololearn.com/DownloadFile?id=2546" alt=""> </p> <p>
+			Take note that the various content models overlap in certain areas, 
+			depending on how they are being used. </p> <br />
+
+<!-- ********************************************************************************** -->
+			
+<!-- III. HTML5 Page Structure -->
+		<p> <strong><font size="4">III.</font> <u>HTML5 Page Structure</u></strong>
+		<br /> A generic HTML5 page structure looks like this: </p> 
+		<p align="center">
+			<img src="https://api.sololearn.com/DownloadFile?id=2471" alt=""> </p> <br />
+		
+<!-- ********************************************************************************** -->
+
+<!-- IV. Header, nav & footer -->
+		<p> <strong><font size="4">IV.</font> <u>Header, nav & footer</u></strong>
+		<br /> In HTML4, a header is defined like this:
+		<p> i.e. </p>
+		<p>	<u>&lt;div id="header"&gt;</u>
+<!-- The <header> Element -->		
+		<p> In HTML5, a simple <strong><font color="blue">&lt;header&gt;</font></strong>
+			tag is used, instead. </p>
+		<p> The <font color="blue">&lt;header&gt;</font> element is appropriate for use
+			inside the body tag. </p>
+		<p> i.e. </p>
+<!-- Code -->		
+		<p> <u>&lt;!DOCTYPE html&gt;</u> <br />
+		<u>&lt;html&gt;</u> <br />
+		&emsp; <u>&lt;head&gt;</u>&lt;/head&gt; <br />
+		&emsp; <u>&lt;body&gt;</u> <br />
+		&emsp;&emsp; <strong><u>&lt;header&gt;</u></strong> <br />
+		&emsp;&emsp;&emsp; <u>&lt;h1&gt;</u> Most important heading &lt;/h1&gt; <br />
+		&emsp;&emsp;&emsp; <u>&lt;h3&gt;</u> Less important heading &lt;/h3&gt; <br />	
+		&emsp;&emsp; <strong>&lt;/header&gt;</strong> <br />
+		&emsp; &lt;/body&gt; <br />
+		&lt;html&gt; </p>
+<!-- Result -->	
+		<p> <strong>Result:</strong> </p>
+		<p> <!DOCTYPE html>
+			<html>
+				<head></head>
+				<body>
+					<header>
+						<h1> Most important heading </h1>
+						<h3> Less important heading </h3>
+					</header>
+				</body>
+			</html> </p>
+		<p> Take note that the <u>&lt;header&gt;</u> is completely different from
+			the <u>&lt;head&gt;</u> tag. </p>
+			
+<!-- The <header> Element -->
+		<p> The footer element is also widely used. Generally, the section located at the
+			very bottom of the web page is referred to as the footer. </p>
+		<p> i.e. </p>
+<!-- Code -->		
+		<p> <strong><u>&lt;footer&gt;</u>...&lt;/footer&gt;</strong> </p>
+			
+		<p> Take note that the following information is usually provided between these tags:
+		<ul>
+			<li>Contact Informaion</li>
+			<li>Privacy Policy</li>
+			<li>Social Media Icons</li>
+			<li>Terms of Service</li>
+			<li>Copyright Information</li>
+			<li>Sitemap and Related Documents</li>
+		</ul>	</p>
+		
+<!-- The <nav> Element -->
+		<p> The <strong>&lt;nav&gt;</strong> tag represents a section of a page that links
+			to other pages or to certain sections within the page. This would be a section
+			with navigation links. </p>
+		<p> Here is an example of a major block of navigation links: </p>
+<!-- Code --> 
+		<p> <strong><u>&lt;nav&gt;</u></strong> <br />
+		&emsp; <u>&lt;ul&gt;</u> <br />
+		&emsp;&emsp; <u>&lt;li&gt;&lt;a </u>href="#"&gt;Home&lt;/a&gt;&lt;li&gt; <br />	
+		&emsp;&emsp; <u>&lt;li&gt;&lt;a </u>href="#"&gt;Services&lt;/a&gt;&lt;li&gt; <br />
+		&emsp;&emsp; <u>&lt;li&gt;&lt;a </u>href="#"&gt;About us&lt;/a&gt;&lt;li&gt; <br />
+		&emsp; &lt;/ul&gt; <br />
+		<strong>&lt;/nav&gt;</strong> </p>
+<!-- Result -->
+		<p> <nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">About us</a></li>
+				</ul>
+			</nav>	</p>
+			
+		<p> Take note that not all of the links in a document should be inside a
+			<u>&lt;nav&gt;</u> element. The	<u>&lt;nav&gt;</u> element is intended only
+			for major blocks of navigation links. Typically, the <u>&lt;footer&gt;</u>
+			element often has a list of links that don't need to be in a
+			<u>&lt;nav&gt;</u> element. </p> <br />
+		
+<!-- ********************************************************************************** -->
+
+<!-- V. Header, nav & footer -->
+		<p> <strong><font size="4">V.</font> <u>Article, section & aside</u></strong>
+<!-- The <article> Element -->
+		<p> <strong>Article</strong> is a self-contained, independent piece of content 
+			that can be used and distributed separately from the rest of the page or site.
+			This could be a forum post, a magazine or newspaper, a blog entry, a comment,
+			an interactive widget or gadget, or other independent piece of content. </p>
+		<p> The <font color="blue">&lt;article&gt;</font> element replaces the 
+		<font color="blue">&lt;div&gt;</font> element that was widely used in HTML4, along with
+			an id or class. </p>
+		<p> i.e. </p>
+<!-- Code -->		
+		<p> <strong><u>&lt;article&gt;</u></strong> <br />
+		&emsp; <u>&lt;h1&gt;</u>The article titie&lt;/h1&gt; <br />
+		&emsp; <u>&lt;p&gt;</u>Contents of the article element&lt;/p&gt; <br />
+		<strong>&lt;/article&gt;</strong> </p>
+		<p> Take note that when an <u>&lt;article&gt;</u> element is nested, the inner
+			element represents an article related to the outer element. For example,
+			blog post comments can be <u>&lt;article&gt;</u> elements nested in the
+		<u>&lt;article&gt;</u> representing the blog post. </p>
+
+<!-- The <section> Element -->
+		<p> <strong><font color="blue">&lt;section&gt;</font></strong> is a logical
+			container of the page or article. <br />
+			Sections can be used to divide up content within an article. <br />
+			For example, a homepage could have a section for introducing the company,
+			another for news items, and still another for contact information. </p>
+		<p> Each <strong><font color="blue">&lt;section&gt;</font></strong> should be 
+			identified, typically by including a heading &lpar;h1 - h6 element&rpar; as a
+			child of the <font color="blue">&lt;section&gt;</font> element. </p>
+		<p> i.e. </p>
+<!-- Code -->
+		<p><u>&lt;article&gt;</u> <br />
+		&emsp; <u>&lt;h1&gt;</u>Welcome&lt;/h1&gt; <br />
+		&emsp; <strong><u>&lt;section&gt;</u></strong> <br />
+		&emsp;&emsp; <u>&lt;h1&gt;</u>Heading&lt;/h1&gt; <br />
+		&emsp;&emsp; <u>&lt;p&gt;</u>content or image&lt;/p&gt; <br />
+		&emsp; <strong>&lt;/section&gt;</strong> <br />	
+		&lt;/article&gt; </p>
+		<p> If it makes sense to separately syndicate the content of a <u>&lt;section&gt;</u>
+			element, use an <u>&lt;article&gt;</u> element instead. </p>
+		
+<!-- The <aside> Element -->		
+		<p> <strong><font color="blue">&lt;aside&gt;</font></strong> is secondary or
+			tangential content which should be considered separate from but indirectly
+			related to the main content. <br />
+			This type of content is often represented in sidebars. <br />
+			When an <font color="blue">&lt;aside&gt;</font> tag is used within an
+		<font color="blue">&lt;article&gt;</font> tag, the content of the
+		<font color="blue">&lt;aside&gt;</font>	should be specifically related 
+			to that article. </p>
+<!-- Code -->
+		<p><u>&lt;article&gt;</u> <br />
+		&emsp; <u>&lt;h1&gt;</u>Gifts for everyone&lt;/h1&gt; <br />
+		&emsp; <u>&lt;p&gt;</u> This website will be the best place
+			for choosing gifts &lt;/p&gt; <br />
+		&emsp; <strong><u>&lt;aside&gt;</u></strong> <br />		
+		&emsp;&emsp; <u>&lt;p&gt;</u> Gifts will be delivered to you 
+			within 24 hours &lt;/p&gt; <br />
+		&emsp; <strong>&lt;/aside&gt;</strong> <br />	
+		&lt;/article&gt; </p>
+		<p>	When an <u>&lt;aside&gt;</u> tag is used outside of an <u>&lt;article&gt;</u>
+			tag, its content should be related to the surrounding content. </p> <br />
+		
+<!-- ********************************************************************************** -->
+
+<!-- VI. The audio Element -->
+		<p> <strong><font size="4">VI.</font> <u>The audio Element</u></strong>
+<!-- Audio on the Web -->
+		<p> Before HTML5, there was no standard for playing audio files on a web page. <br />
+			The HTML <font color="blue">&lt;audio&gt;</font> element specifies a standard
+			for embedding audio in a web page. </p>
+		<p> There are two different ways to specify the audio source file's URL. The 
+			first uses the source attribute:
+		<p> i.e. <strong>Method one</strong> </p>		
+<!-- Code -->
+		<p> &lt;<strong>audio</strong> src="audio.mp3" controls&gt; <br />
+		&emsp; Audio element not supported by your browser <br />
+		&lt;<strong>/audio</strong>&gt; </p>
+
+		<p> The second way uses the <font color="blue">&lt;source&gt;</font> element
+			inside the <font color="blue">&lt;audio&gt;</font> element: </p>
+		<p> i.e. <strong>Method two</strong> </p>
+<!-- Code -->
+		<p> <u><strong>&lt;audio</u> controls&gt;</strong> <br />
+		&emsp; <u>&lt;source src="audio.mp3" type="audio/mpeg"&gt;</u> <br />
+		&emsp; <u>&lt;source src="audio.ogg" type="audio/ogg"&gt;</u> <br />
+		<strong>&lt;/audio&gt;</strong> </p>
+		<p> Take note that multiple <u>&lt;source&gt;</u> elements can be linked to different
+			audio files. The browser will use the first recognized format.
+			
+<!-- Audio on the Web -->
+		<p> The <font color="blue">&lt;audio&gt;</font> element creates an audio player
+			inside the browser. </p>
+		<p> i.e. </p>
+<!-- Code -->
+		<p> <u>&lt;audio</u> controls&gt; <br />
+		&emsp; <u>&lt;source src="audio.mp3" type="audio/mpeg"&gt;</u> <br />
+		&emsp; <u>&lt;source src="audio.ogg" type="audio/ogg"&gt;</u> <br />
+		&emsp; Audio element not supported by your browser. <br />
+		&lt;/audio&gt; </p>
+
+<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<audio controls>
+			<source src="audio.mp3" type="audio/mpeg">
+			<source src="audio.ogg" type="audio/ogg">
+			Audio element not supported by your browser. 
+		</audio> <p>
+
+<!-- Working Example -->		
+		<p> <strong>A working example:</strong> </p>
+		<audio controls>
+			<source src="http://www.sololearn.com/uploads/audio.mp3" type="audio/mpeg">
+			<source src="http://www.sololearn.com/uploads/audio.ogg" type="audio/ogg">
+			Audio element not supported by your browser. 
+		</audio>
+		
+		<p> Take note that the text between the <u>&lt;audio&gt;</u> and &lt;/audio&gt;
+			tags will display in browsers that do not support the 
+			<u>&lt;audio&gt;</u> element. </p>
+			
+<!-- Attributes of <audio> -->
+		<p> <strong>controls</strong> <br />
+			Specifies that audio controls should be displayed 
+			&lpar;such as a play/pause button, etc.&rpar; </p>
+<!-- autoplay attribute -->		
+		<p> <strong>autoplay</strong> <br />
+			When this attribute is defined, audio starts playing as soon as it is ready,
+			without asking for the visitor's permission. </p>
+		<p> i.e. </p>
+	<!-- Code -->
+		<p> <u>&lt;audio</u> controls <strong>autoplay</strong>&gt; </p>
+
+	<!-- autoplay Working Example -->
+		<font size="6">&rarr;</font>&ensp;
+		<!-- HTML5 button for new tab -->	
+		<button class="btn btn-success" 
+			onclick="window.open('http://www.sololearn.com/uploads/audio.mp3','_blank')"> 
+			Autoplay Working Example
+		</button>
+		&ensp;<font size="6">&larr;</font>
+	
+<!-- loop attribute -->	
+		<p> <strong>loop</strong> <br />
+		This attribute is used to have the audio replay every time it is finished. </p>			
+	<!-- Code -->		
+		<p> <u>&lt;audio</u> controls autoplay <strong>loop</strong>&gt; </p>
+	<!-- loop autoplay Working Example -->
+		<p> <audio controls autoplay loop>
+				<source src="http://www.sololearn.com/uploads/audio.mp3" type="audio/mpeg">
+				Audio element not supported by your browser. 
+			</audio>
+		<p> Currently, there are three supported file formats for the <u>&lt;audio&gt;</u>
+			element: MP3, WAV, and OGG. </p> <br />			
+			
+<!-- ********************************************************************************** -->
+
+<!-- VII. The video Element -->
+		<p> <strong><font size="4">VII.</font> <u>The video Element</u></strong>			
+<!-- Videos in HTML -->
+		<p> The video element is similar to the audio element. <br />
+			You can specify the video source URL using an attribute in a video element, 
+			or using source elements inside the video element: </p>
+		<p> i.e. </p>
+	<!-- Code -->
+		<p> <strong><u>&lt;video controls&gt;</u></strong> <br />
+		&emsp; <u>&lt;source src="video.mp4" type="video/mp4"&gt;</u> <br />
+		&emsp; <u>&lt;source src="video.ogg" type="video/ogg"&gt;</u> <br />
+		&emsp; Video is not supported by your browser <br />
+		<strong>&lt;/video&gt;</strong> </p>
+		<p> Another aspect that the audio and video elements have in common is that the
+			major browsers do not all support the same file types. If the browser does not
+			support the first video type, it will try the next one. </p>
+	<!-- video control example -->
+		<p> <video controls>
+			<source src="http://www.sololearn.com/uploads/video.mp4" type="video/mp4">
+			<source src="http://www.sololearn.com/uploads/video.webm" type="video/webm">
+			Video is not supported by your browser
+			</video> </p>
+		
+<!-- Attributes of <video> -->
+		<p> Another aspect shared by both the audio and the video elements is that each
+			has <strong>controls</strong>, <strong>autoplay</strong> and
+			<strong>loop</strong> attributes. </p>
+		<p> In this example, the video will replay after it finishes playing: </p>
+		<p> i.e. </p>
+	<!-- Code -->
+		<p> <u>&lt;video controls <strong>autoplay loop</strong>&gt;</u></strong> <br />
+		&emsp; <u>&lt;source src="video.mp4" type="video/mp4"&gt;</u> <br />
+		&emsp; <u>&lt;source src="video.ogg" type="video/ogg"&gt;</u> <br />
+		&emsp; Video is not supported by your browser <br />
+		&lt;/video&gt; </p>
+	<!-- autoplay loop example -->		
+		<p> <video controls autoplay loop>
+			<source src="http://www.sololearn.com/uploads/video.mp4" type="video/mp4">
+			<source src="http://www.sololearn.com/uploads/video.ogg" type="video/ogg">
+			Video is not supported by your browser
+			</video> </p>
+		<p> Take note that currently, there are three supported video formats for the 
+			<u>&lt;video&gt;</u> element: MP4, WebM, and OGG. </p> <br />
+		
+<!-- ********************************************************************************** -->
+
+<!-- VIII. The progress Element -->
+		<p> <strong><font size="4">VIII.</font> <u>The progress Element</u></strong>
+<!-- Progress Bar -->		
+		<p> The <strong><font color="blue">&lt;progress&gt;</font></strong> element
+			provides the ability to create progress bars on the web. <br />
+			The progress element can be used within headings, paragraphs, or anywhere
+			else in the body. </p>
+		<p> <strong><u>Progress Element Attributes</u></strong> <br />
+		<strong>Value</strong>: Specifies how much of the task has been completed. <br />
+		<strong>Max</strong>: Specifies how much work the task requires in total. </p>
+		<p> <strong>Example:</strong> </p>
+	<!-- Code -->
+		<p> Status: <u>&lt;progress</u> min="0" <strong>max</strong>="100"
+			<strong>value</strong>="35"&gt; <br />
+		<strong>&lt;/progress&gt;</strong> </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		Status: <progress min="0" max="100" value="35">
+		</progress> </p>
+		<p> Use the <u>&lt;progress&gt;</u> tag in conjunction with JavaScript to
+			dynamically display a task's progress. </p> <br />
+			
+<!-- ********************************************************************************** -->
+
+<!-- IX. Web Storage API -->
+		<p> <strong><font size="4">IX.</font> <u>Web Storage API</u></strong>
+		&emsp;&emsp;&emsp; 
+		<button class="btn btn-success" 
+			onclick="window.open('https://www.mulesoft.com/resources/api/what-is-an-api','_blank')"> 
+			<strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface
+		</button>	
+<!-- HTML5 Web Storage -->		
+		<p>	With HTML5 web storage, websites can store data on a user's local computer. <br />
+			Before HTML5, we had to use <strong>JavaScript cookies</strong> to achieve
+			this functionality. </p>
+		<p> <strong><u>The Advantages of Web Storage</u></strong> 
+		<ul>
+			<li>More secure</li>
+			<li>Faster</li>
+			<li>Stores a larger amount of data</li>
+			<li>Stored data is not sent with every server request</li>	
+		</ul> </p>
+		<p> Take note that local storage is per domain. All pages from one domain can store
+			and access the same data. </p>
+		
+	<!-- Types of Web Storage Objects -->
+		<p> There are two types of web storage objects:
+		<ul>
+			<strong><li>sessionStorage&lpar;&rpar;</li></strong>
+			<strong><li>localStorage&lpar;&rpar;</li></strong>
+		</ul> </p>
+		<p><strong><u>Local vs. Session</u></strong>
+		<ul>
+			<li>Session Storage is destroyed once the user closes the browser</li>
+			<li>Local Storage stores data with no expiration date</li>
+		</ul> </p>
+		<p> You need to be familiar with basic JavaScript in order to understand
+			and use the API. </p>
+		
+	<!-- Working with Values -->
+		<p> The syntax for web storage for both local and session storage 
+			is very simple and similar. <br />
+			The data is stored as key/value pairs. </p>
+		<!-- Storing a Value + Code -->	
+		<p> <strong>Storing a Value:</strong> </p>
+		<p> localStorage.<strong>setItem</strong>&lpar;"key1","value1"&rpar;; </p>
+		<!-- Getting a Value + Code -->	
+		<p> <strong>Getting a Value:</strong> </p>
+		<p> //this will print the value <br />
+			alert&lpar;localStorage.<strong>getItem</strong>&lpar;"key1"&rpar;&rpar;; </p>
+		<!-- Removing a Value + Code -->	
+		<p> <strong>Removing a Value:</strong> </p>
+		<p>	localStorage.<strong>removeItem</strong>&lpar;"key1"&rpar;; </p>
+		<!-- Removing All Values + Code -->	
+		<p> <strong>Removing all Values:</strong> </p>
+		<p> localStorage.<strong>clear</strong>&lpar;&rpar;; </p>
+		<p> Take note that the same syntax applies to the session storage, with one
+			difference: Instead of localStorage, sessionStorage is used. </p> <br />
+			
+<!-- ********************************************************************************** -->
+
+<!-- X. Geolocation API -->
+		<p> <strong><font size="4">X.</font> <u>Geolocation API</u></strong>			
+<!-- What is the Geolocation API? -->
+		<p> In HTML5, the Geolocation API is used to obtain the user's geographical location. </p>
+		<p> Since this can compromise user privacy, the option is not available unless
+			the user approves it. </p>
+		<p> Take note that Geolocation is much more accurate for devices with GPS, 
+			like smartphones and the like. </p>
+
+<!-- Using HTML Geolocation -->
+		<p> The Geolocation API's main method is getCurrentPosition, which retrieves 
+			the current geographic location of the user's device. </p>
+		<p> i.e. </p>		
+	<!-- Code -->
+		<p> navigator.geolocation.getCurrentPosition&lpar;&rpar;; </p>
+		
+		<p> <u>Parameters:</u> <br />
+		<strong>showLocation &lpar;mandatory&rpar;</strong>: Defines the callback method
+			that retrieves location information. <br />
+		<strong>ErrorHandler &lpar;optional&rpar;</strong>: Defines the callback method
+			that is invoked when an error occurs in processing the asynchronous call. <br />
+		<strong>Optional &lpar;optional&rpar;</strong>: Defines a set of options for retrieving
+			the location information. </p>
+		<p> Take note that you need to be familiar with basic JavaScript in order to understand
+			and use the API. </p>
+		
+<!-- Presenting Data -->
+		<p> User location can be presented in two ways: 
+		<strong>Geodetic</strong> and <strong>Civic</strong>. </p>
+		<ol>
+			<li>The geodetic way to describe position refers directly to 
+				latitude and longitude.</li>
+			<li>The civic representation of location data is presented in a format that is 
+				more easily read and understood by the average person. </li>	
+		</ol>		
+		<p> Each parameter has both geodetic and a civic representation: </p>
+		<img src="https://api.sololearn.com/DownloadFile?id=2472" alt="">	
+		<p> Take note that the getCurrentPosition&lpar;&rpar; method returns an object if it
+			is successful. The latitude, longitude, and accuracy properties are 
+			always returned. </p> <br />
+
+<!-- ********************************************************************************** -->
+
+<!-- XI. Drag&Drop API -->
+		<p> <strong><font size="4">XI.</font> <u>Drag&amp;Drop API</u></strong>			
+<!-- Making Elements Draggable -->
+		<p> The drag and drop feature lets you "grab" an object and drag it to a 
+			different location. <br />
+			To make an element draggable, just set the <strong>draggable</strong>
+			attrbute to true: </p>
+		<p> i.e. </p>
+	<!-- Code -->
+		<p> &lt;img <strong>draggable="true"</strong> /> </p>
+
+		<p> Take note that any HTML element can be draggable. </p>
+		<p> The API for HTML5 drag and drop is event-based. </p>
+		<p> <strong>Example:</strong> </p>
+		<p> <u>&lt;!DOCTYPE HTML&gt; <br />
+		&lt;html&gt; </u> <br />
+		&emsp; <u>&lt;head&gt;</u> <br />
+		&emsp; <u>&lt;script&gt;</u> <br />
+		function allowDrop&lpar;ev&rpar; { <br />
+		&emsp; ev.preventDefault&lpar;&rpar;; <br />
+			} </p>
+		<p> function drag&lpar;ev&rpar; { <br />
+		&emsp; ev.dataTransfer.setData&lpar;"text", ev.target.id&rpar;; <br />
+			} </p>	
+		<p> function drop&lpar;ev&rpar; { <br />
+		&emsp; ev.preventDefault&lpar;&rpar;; <br />
+		&emsp; var data = ev.dataTransfer.getData&lpar;"text"&rpar;; <br />
+		&emsp; ev.target.appendChild&lpar;document.getElementById&lpar;data&rpar;&rpar;; <br />
+			} <br />
+		&emsp; &lt;/script&gt; <br />
+		&emsp; &lt;/head&gt; <br />
+		<u>&lt;body&gt;</u>	</p>
+		<p> &emsp;&lt;div id="box" <strong>ondrop</strong>="drop&lpar;event&rpar;" <br />
+		&emsp;<strong>ondragover</strong>="allowDrop&lpar;event&rpar;" <br />
+		&emsp;style="border: 1px solid black; <br />
+		&emsp;width: 200px; height: 200px"&gt;&lt;/div&gt; </p>
+		<p> &emsp;<u>&lt;img</u> id="image" src="sample.jpg" 
+				<strong>draggable</strong>="true" <br />
+		&emsp;<strong>ondragstart</strong>="drag&lpar;event&rpar;" width="150" 
+				height="50" alt="" /&gt; </p>
+		<p> &lt;/body&gt; <br />
+		&lt;/html&gt; </p>	
+			
+		<p> <strong><u>What to Drag</u></strong> <br />		
+			When the element is dragged, the <strong>ondragstart</strong> attribute calls a
+			function, drag&lpar;event&rpar;, which specifies what data is to be dragged. <br />
+			The <strong>dataTransfer.setData&lpar;&rpar;</strong> method sets the data type
+			and the value of the dragged data: </p>
+		<p> i.e. </p>
+	<!-- Code -->	
+		<p>	function drag&lpar;ev&rpar; { <br />
+		&emsp; ev.dataTransfer.setData&lpar"text", ev.target.id&rpar;; <br />
+			} </p>
+		<p> In our example, the data type is "text" and the value is the ID of the 
+			draggable element &lpar;"image&rpar;. </p>
+		
+		<p> <strong><u>Where to Drop</u></strong> <br />
+			The <strong>ondragover</strong> event specifies where the dragged data 
+			can be dropped.	By default, data and elements cannot be dropped in 
+				other elements. To allow a drop, we must prevent the default 
+				handling of the element. <br />
+			This is done by calling the event.<strong>preventDefault&lpar;&rpar;</strong>
+				method for the <strong>ondragover</strong> event. </p>
+		
+		<p> <strong><u>Do the Drop</u></strong> <br />
+			When the dragged data is dropped, a drop event occurs. <br />
+			In the example above, the <strong>ondrop</strong> attribute calls a 
+				function, drop&lpar;event&rpar;; </p>
+		<p> i.e. </p>
+	<!-- Code -->
+		<p> function drop&lpar;ev&rpar; { <br />
+		&emsp; ev.preventDefault&lpar;&rpar;; <br />
+		&emsp; var data = ev.dataTransfer.getData&lpar;"text"&rpar;; <br />
+		&emsp; ev.target.appendChild&lpar;document.getElementById&lpar;data&rpar;&rpar;; <br />
+			} </p>
+			
+		<p> The <strong>preventDefault&lpar;&rpar;</strong> method prevents the browser's
+			default handling of the data &lpar;default is open as link on drop&rpar;. <br />
+			The dragged data can be accessed with the 
+			<strong>dataTransfer.getData&lpar;&rpar;</strong> method. This method will return
+				any data that was set to the same type in the setData&lpar;&rpar; method. <br />
+			The dragged data is the ID of the dragged element &lpar;"image"&rpar;. </p>
+		<p> At the end, dragged element is appended into the drop element, using the
+				appendChild&lpar;&rpar; function. </p>
+		<p> Take note that basic knowledge of JavaScript is required to understand and 
+				use the API. </p> <br />
+		
+<!-- ********************************************************************************** -->
+
+<!-- XII. SVG -->
+		<p> <strong><font size="4">XII.</font> <u>SVG</u></strong>			
+<!-- Drawing Shapes -->	
+		<p> <strong>SVG</strong> stands for <strong>S</strong>calable 
+		<strong>V</strong>ector <strong>G</strong>raphics, and is used to draw shapes
+			with HTML-style markup. </p>
+		<p> It offers several methods for drawing paths, boxes, circles, text, and graphic images. </p>	
+		<p> Take note that SVG is not pixel-based, so it can be magnified infinitely
+			with no loss of quality. </p>
+
+<!-- Inserting SVG Images -->
+		<p> An SVG image can be added to HTML code with just a basic image tag that includes
+			a source attribute pointing to the image: </p>
+	<!-- Code -->
+		<p> <u>&lt;img</u> <strong>src</strong>="image.<strong>svg</strong>"
+			alt="" height="300" /&gt; </p>
+		<p> Take note that SVG defines vector-based graphics in XML format. </p>
+
+<!-- Drawing a Circle -->
+		<p> To draw shapes with SVG, you first need to create an <strong>SVG</strong>
+			element tag with two attributes: width and height. </p>
+	<!-- Code -->
+		<p> &lt;<strong>svg width</strong>="1000" <strong>height</strong>="1000"&gt;
+		<strong>&lt;/svg&gt;</strong> </p>
+		<p> To create a circle, add a <strong><font color="blue">&lt;circle&gt;</font></strong>
+			tag: </p>
+	<!-- Code -->
+		<p> <u>&lt;svg</u> width="500" height="200"&gt; <br />
+		&emsp;<u>&lt;circle</u> cx="80" cy="80" r="50" fill="green" /&gt; <br />
+		&lt;/svg&gt; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<svg width="500" height="200">
+			<circle cx="80" cy="80" r="50" fill="green" />
+		</svg>	
+		
+		<p> <ul>
+			<li><strong>cx</strong> pushes the center of the circle further to the right
+				of the screen</li>
+			<li><strong>cy</strong> pushes the center of the circle further down
+				from the top of the screen</li>
+			<li><strong>r</strong> defines the radius</li>
+			<li><strong>fill</strong> determines the color of our circle</li>
+			<li><strong>stroke</strong> adds an outline to the circle</li>
+		</ul>
+		<p> Take note that every element and every attribute in SVG files can be animated. </p>
+
+<!-- Other Shape Elements -->
+		<p>	<strong><font color="blue">&lt;rect&gt;</font></strong> defines a rectangle: </p>
+	<!-- Code -->
+		<p> <u>&lt;svg</u> width="500" height="200"&gt; <br />
+		&emsp;&lt;<strong>rect</strong> width="300" height="100" <br />
+		&emsp;x="20" y="20" fill="green" /&gt; <br />
+		&lt;/svg&gt; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<svg width="500" height="200">
+			<rect width="300" height="100" 
+			x="20" y="20" fill="green" />
+		</svg>
+
+		<p> <strong><font color="blue">&lt;line&gt;</font></strong>	defines a line segment: </p>
+	<!-- Code -->	
+		<p> <u>&lt;svg</u> width="400" height="210"&gt; <br />
+		&emsp;<u>&lt;line</u> x1="10" y1="10" x2="200" y2="100" <br />
+		&emsp;&emsp;style="stroke: #000000; stroke-linecap:round; <br />
+		&emsp;&emsp;stroke-width: 20" /&gt; <br />
+		&lt;/svg&gt; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<svg width="400" height="210">
+			<line x1="10" y1="10" x2="200" y2="100" 
+				style="stroke:#000000; stroke-linecap:round; 
+				stroke-width:20"  />
+		</svg>
+		<p> &lpar;x1, y1&rpar; define the start coordinates <br /> 
+			&lpar;x2, y2&rpar; define the end coordinates </p>
+
+		<p> <strong><font color="blue">&lt;polyline&gt;</font></strong> defines shapes
+			built from multiple line definitions: </p>
+	<!-- Code -->
+		<u>&lt;svg</u> width="500" height="200"&gt;
+		&emsp;<u>&lt;polyline</u> style="stroke-linejoin:miter; stroke:black; <br />
+		&emsp;&emsp;stroke-width: 12; fill: none;" <br />
+		&emsp;&emsp;points="100 100, 150 150, 200 100" /&gt; <br />
+		&lt;/svg&gt; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<svg width="500" height="200">
+			<polyline style="stroke-linejoin:miter; stroke:black; 
+				stroke-width:12; fill: none;"
+				points="100 100, 150 150, 200 100" />
+		</svg>
+		<p> Points are the polyline's coordinates. <br />
+			The code above will draw a black check sign. </p>
+		<p> Take note that the width and height attributes of the <u>&lt;rect&gt;</u>
+			element define the height and the width of the rectangle. </p>
+			
+<!-- <ellipse> and <polygon> -->
+		<p><strong><u>Ellipse</u></strong> <br />
+			The <strong>&lt;ellipse&gt;</strong> is similar to the 
+		<strong>&lt;circle&gt;</strong>, with one exception: <br />
+			You can independently change the horizontal and vertical axes of its radius,
+			using the <strong>rx</strong> and <strong>ry</strong> attrbutes. </p>
+	<!-- Code -->
+		<p> <u>&lt;svg</u> height="200" width="1000"&gt; <br />
+		&emsp;<u>&lt;ellipse</u> cx="200" cy="100" rx="150" ry="70" style="fill:green" /&gt; <br />
+		&lt;/svg&gt; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<svg height="200" width="1000">
+			<ellipse cx="200" cy="100" rx="150" ry="70" style="fill:green" />
+		</svg>
+
+		<p> <strong><u>Polygon</u></strong>	<br />
+			The <strong><font color="blue">&lt;polygon&gt;</font></strong> element is used
+			to create a graphic with at least three sides. The polygon element is unique
+			because it automatically closes off the shape for you. </p>
+	<!-- Code -->
+		<p> <u>&lt;svg</u> width="2000" height="200"&gt; <br />
+		<u>&lt;polygon</u> points="100 100, 200 200, 300 0" <br />
+		&emsp;style="fill: green; stroke:black;" /&gt; <br />
+		&lt;/svg&gt; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<svg width="2000" height="200">
+		<polygon points="100 100, 200 200, 300 0" 
+			style="fill: green; stroke:black;" />
+		</svg>
+		<p> Take note that Polygon comes from the Greek word. "Poly" means "many" and
+			"gon" means "angle." </p> <br />
+			
+<!-- ********************************************************************************** -->
+
+<!-- XIII. SVG Animations & Paths -->
+		<p> <strong><font size="4">XIII.</font> <u>SVG Animations &amp; Paths</u></strong>			
+<!-- Shape Animations -->			
+		<p> SVG animations can be created using the <font color="blue">&lt;animate&gt;</font>
+			element. </p>
+		<p> The example below creates a rectangle that will change its position in 3 seconds
+			and will then repeat the animation twice: </p>
+	<!-- Code -->
+		<p> <u>&lt;svg</u> width="1000" height="250"&gt; <br />
+		<u>&lt;rect</u> width="150" height="150" fill="orange"&gt; <br />
+		&emsp;<strong><u>&lt;animate</u></strong> attributeName="x" from="0"
+			<strong>to</strong>="300" <br />
+		&emsp;&emsp; <strong>dur</strong>="3s" <strong>fill</strong>="freeze"
+			<strong>repeatCount</strong>="indefinite"/&gt; <br />
+		&lt;/rect&gt; <br />
+		&lt;/svg&gt; </p>		
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<svg width="1000" height="250">
+		<rect width="150" height="150" fill="orange">
+			<animate attributeName="x" from="0" to="300"
+				dur="3s" fill="freeze" repeatCount="indefinite"/> 
+		</rect>
+		</svg>
+
+		<p> <strong>attributeName</strong>: Specifies which attribute will be affected
+			by the animation <br />
+			<strong>from</strong>: Specifies the starting value of the attribute <br />
+			<strong>to</strong>: Specifies the ending value of the attribute <br />
+			<strong>dur</strong>: Specifies how long the animation runs &lpar;duration&rpar; <br />
+			<strong>fill</strong>: Specifies whether or not the attribute's value should return
+				to its initial value when the animation is finished &lpar;Values: "remove" resets
+				the value; "freeze" keeps the "to value"&rpar; <br />
+			<strong>repeatCount</strong>: Specifies the repeat count of the animation </p>
+
+		<p> In the example above, the rectangle changes its x attribute from 0 to 300
+			in 3 seconds. </p>
+		<p> To repeat the animation indefinitely, use the value "<strong>indefinite</strong>"
+			for the repeatCount attribute. </p>
+
+<!-- Paths -->
+		<p> The <font color="blue">&lt;path&gt;</font> element is used to define a path. </p>
+		<p> The following commands are available for path data: <br />
+		<strong>M</strong>: moveto <br />
+		<strong>L</strong>: lineto <br />
+		<strong>H</strong>: horizontal lineto <br />
+		<strong>V</strong>: vertical lineto <br />	
+		<strong>C</strong>: curveto <br />
+		<strong>S</strong>: smooth curveto <br />
+		<strong>Q</strong>: quadratic B&eacute;zier curve <br />
+		<strong>T</strong>: smooth quadratic B&eacute;zier curveto <br />
+		<strong>A</strong>: elliptical Arc <br />
+		<strong>Z</strong>: closepath </p>
+		<p> Define a path using the <strong>d</strong> attribute: </p>
+	<!-- Code -->
+		<p> <u>&lt;svg</u> width="500" height="200"&gt; <br />
+		&lt;<strong>path</strong> d=" M 0 0 L200 200 L200 0 Z" style="stroke:#000;
+			fill:none;" /&gt; <br />
+		&lt;/svg&gt; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<svg width="500" height="200">
+		<path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000;  fill:none;" />
+		</svg>
+		
+		<p> M places our "virtual pen" down at the position 0, 0. It then moves 200px down
+			and to the right, then moves up to the position 200, 0. The Z command closes
+			the shape, which results in a hypotenuse. </p>
+		<p> Take note that all of the above commands can also be expressed with lowercase
+			letters. When capital letters are used, it indicates absolute position;
+			lowercase indicates relative position. </p> <br />
+	
+<!-- ********************************************************************************** -->
+
+<!-- XIV. Canvas -->
+		<p> <strong><font size="4">XIV.</font> <u>Canvas</u></strong>			
+<!-- The <canvas> Element -->		
+		<p> The HTML canvas is used to draw graphics that include everything from simple
+			lines to complex graphic objects. </p>
+		<p> The <font color="blue">&lt;canvas&gt;</font> element is defined by: </p>
+	<!-- Code -->
+		<p> <strong><u>&lt;canvas</u></strong> id="canvas1" width="200" height="100"&gt; <br />
+		&lt;<strong>/canvas</strong>&gt; </p>
+		<p> Take note that the <u>&lt;canvas&gt;</u> element is only a container for graphics.
+			You must use a script to actually draw the graphics &lpar;usually JavaScript&rpar;. </p>
+		<p> The <font color="blue">&lt;canvas&gt;</font> element must have an 
+		<strong>id attribute</strong> so it can be referred to by JavaScript: </p>
+	<!-- Code -->
+		<p> <u>&lt;html&gt;</u> <br />
+		&emsp;<u>&lt;head&gt;</u>&lt;/head&gt; <br />
+		&emsp;<u>&lt;body&gt;</u> <br />
+		&emsp;&emsp; <strong><u>&lt;canvas</u> id</strong>="canvas1" <br />
+		&emsp;width="400" height="300"&gt;<strong>&lt;/canvas&gt;</strong> </p>
+		<p> <u>&lt;script&gt;</u> <br />
+		&emsp;&emsp;var can = document.getElementById&lpar;"canvas1"&rpar;; <br />
+		&emsp;&emsp;var ctx = can.getContext&lpar;"2d"&rpar;; <br />
+		&emsp;&lt;/script&gt; </p>
+		<p> &emsp;&lt;/body&gt; <br />
+		&lt;/html&gt; </p>
+		
+		<p> <strong>getContext&lpar;&rpar;</strong> returns a drawing context on the canvas. </p>
+		<p> Take note that basic knowledge of JavaScript is required to understand and use
+			the Canvas. </p>
+			
+<!-- Canvas Coordinates -->
+		<p> The HTML canvas is a two-dimensional grid. <br />
+			The upper-left corner of the canvas has the coordinates &lpar;0,0&rpar;. </p>
+		<p> X coordinate increases to the right. <br />
+			Y coordinate increases toward the bottom of the canvas. </p>
+		<img src="https://api.sololearn.com/DownloadFile?id=2556" alt=""> <p></p>
+			Take note that the <u>&lt;canvas&gt;</u> element is only a container for graphics. </p>	
+		
+<!-- Drawing Shapes -->
+		<p> The <strong>fillRect&lpar;x, y, w, h&rpar;</strong> method draws a "filled"
+			rectangle, in which "w" indicates width and "h" indicates height.
+			The default fill color is black. </p>
+		<p> A black 100*100 pixel rectangle is drawn on the canvas at the
+			position &lpar;20, 20&rpar;: </p>
+	<!-- Code -->
+		<p> var c = document.getElementById&lpar;"canvas1"&rpar;; <br />
+			var ctx = c.getContext&lpar;"2d"&rpar;; <br />
+			ctx.<strong>fillRect</strong>&lpar;20,20,100,100&rpar;; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<canvas id="canvas1" width="400" height="200"></canvas>
+		<script>	
+			var c = document.getElementById("canvas1");
+			var ctx = c.getContext("2d");
+			ctx.fillRect(20,20,100,100);	
+		</script>
+
+		<p> The <strong>fillStyle</strong> property is used to set a color, gradient, or pattern
+			to fill the drawing. <br />
+			Using this property allows you to draw a green-filled rectangle. </p>
+	<!-- Code -->
+		<p> var canvas = document.getElementById&lpar;"canvas2"&rpar;; <br />
+			var ctx = canvas.getContext&lpar;"2d"&rpar;; <br />
+			ctx.fillStyle = "rgba&lpar;0,200,0,1&rpar;"; <br />
+			ctx.fillRect&lpar;20,20,100,100&rpar;; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<canvas id="canvas2" width="400" height="200"></canvas> 
+        <script>
+            var canvas = document.getElementById("canvas2");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "rgba(0, 200, 0, 1)";
+            ctx.fillRect (36, 10, 22, 22);
+        </script>		
+		
+		<p> The canvas supports various other methods for drawing: </p>
+		<p> <strong><u>Draw a Line</u></strong> <br />
+			moveTo&lpar;x,y&rpar;: Defines the starting point of the line. <br />
+			lineTo&lpar;x,y&rpar;: Defines the ending point of the line. </p>
+			
+		<p> <strong><u>Draw a Circle</u></strong> <br />
+			beginPath&lpar;&rpar;: Starts the drawing. <br />
+			arc&lpar;x,y,r,start,stop&rpar;: Sets the parameters of the circle. <br />
+			stroke&lpar;&rpar;: Ends the drawing. </p>
+
+		<p> <strong><u>Gradients</u></strong> <br />
+			createLinearGradient&lpar;x,y,x1,y1&rpar;: Creates a linear gradient. <br />
+			createRadialGradient&lpar;x,y,r,x1,y1,r1&rpar;: Creates a radial/circular gradient. </p>
+
+		<p> <strong><u>Drawing Text on the Canvas</u></strong> <br />
+			Font: Defines the font properties for the text. <br />
+			fillText&lpar;text,x,y&rpar;: Draws "filled" text on the canvas. <br />
+			strokeText&lpar;text,x,y&rpar;: Draws text on the canvas &lpar;no fill&rpar;</p>
+		<p> Take note that there are many other methods aimed at helping to draw shapes
+			and images on the canvas. </p> <br />
+			
+<!-- ********************************************************************************** -->
+
+<!-- XV. SVG vs. Canvas -->
+		<p> <strong><font size="4">XV.</font> <u>SVG vs. Canvas</u></strong>			
+<!-- Canvas vs. SVG -->
+		<p> <strong><u>Canvas</u></strong> 
+		<ul>
+			<li>Elements are drawn programmatically</li>
+			<li>Drawing is done with pixels</li>
+			<li>Animations are not built in</li>
+			<li>High performance for pixels-based drawing operations</li>
+			<li>Resolution dependent</li>
+			<li>No support for event handlers</li>
+			<li>You can save the resulting image as .png or .jpg</li>
+			<li>Well suited for graphics-intensive games</li>
+		</ul> </p>		
+		
+		<p> <strong><u>SVG</u></strong> 
+		<ul>
+			<li>Elements are part of the page's DOM &lpar;Document object model&rpar;</li>
+			<li>Drawing is done with vectors</li>
+			<li>Effects, such as animations are built in</li>
+			<li>Based on standard XML syntax, which provides better accessibility</li>
+			<li>Resolution independent</li>
+			<li>Support for event handlers</li>
+			<li>Not suited for game application</li>
+			<li>Best suited for applications with large rendering areas 
+				&lpar;for example, Google Maps&rpar;</li>
+		</ul> </p>
+		<p> Take note that you can actually use both SVG and canvas on the same page, if needed. <br />
+			However, you cannot just draw SVG onto a canvas, or vice-versa. </p> <br />
+
+<!-- ********************************************************************************** -->
+
+<!-- XVI. Canvas Transformations -->
+		<p> <strong><font size="4">XVI.</font> <u>Canvas Transformations</u></strong>			
+<!-- Working with Canvas -->
+		<p> The Canvas element can be transformed. As an example, a text is written on the
+			canvas at the coordinates &lpar;10, 30&rpar;. </p>
+	<!-- Code -->	
+		<p>	ctx.<strong>font</strong>="bold 22px Tahoma"; <br />
+			ctx.<strong>textAlign</strong>="start"; <br />
+			ctx.<strong>fillText</strong>&lpar;"start", 10, 30&rpar;; <br />
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<canvas id="canvas3" width="400" height="200"></canvas> 	
+		<script>
+			var c=document.getElementById("canvas3");
+			var ctx=c.getContext("2d");	
+			ctx.font="bold 22px Tahoma";
+			ctx.textAlign="start";
+			ctx.fillText("start", 10, 30);	
+		</script>
+		
+		<p> The <strong>translate&lpar;x,y&rpar;</strong> method is used to move the Canvas. <br />
+			"x" indicates how far to move the grid horizontally, and "y" indicates how far to
+			move the grid vertically. </p>
+	<!-- Code -->
+		<p> ctx.<strong>translate</strong>&lpar;100, 150&rpar;; <br />
+			ctx.fillText&lpar;"after translate", 10, 30&rpar;; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<canvas id="canvas4" width="400" height="200"></canvas> 
+		<script>
+			var c=document.getElementById("canvas4");
+			var ctx=c.getContext("2d");
+			ctx.font="bold 22px Tahoma";
+			ctx.textAlign="start";
+			ctx.fillText("start", 10, 30);
+		<!-- Insert code below -->
+			ctx.translate(100, 150);
+			ctx.fillText("after translate", 10, 30);
+		</script>		
+	
+		<p> In this example, the canvas is moved 100px to the right, and 150px down </p>
+		<p> Take note that Canvas has several methods for drawing paths, boxes, circles,
+			text, and adding images. </p>
+			
+<!-- The rotate() Method -->
+		<p> The <strong>rotate&lpar;&rpar;</strong> method is used to rotate the HTML5 Canvas.
+			The value must be in radians, not degrees. </p>
+		<p> Here is an example that draws the same rectangle 
+			before and after the rotation is set: </p>
+	<!-- Code -->
+		<p> ctx.fillStyle = "#FF0000"; <br />
+			ctx.fillRect&lpar;10, 10, 100, 100&rpar;; </p>
+		<p> ctx.<strong>rotate</strong>&lpar; &lpar;Math.PI / 180&rpar; * 25&rpar;
+				//rotate 25 degrees. </p>
+		<p> ctx.fillStyle = "#0000FF"; <br />
+			ctx.fillRect&lpar;10, 10, 100, 100&rpar;; </p>	
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<canvas id="canvas5" width="400" height="200"></canvas> 
+    <script>
+        var c = document.getElementById("canvas5");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(10,10, 100, 100);
+        ctx.rotate( (Math.PI / 180) * 25);  //rotate 25 degrees.
+        ctx.fillStyle = "#0000FF";
+        ctx.fillRect(10,10, 100, 100);
+    </script>	
+		
+		<p>	Take note that the rotation will only affect drawings made after the
+			rotation is done. </p>
+			
+<!-- The scale() Method -->
+		<p> The <strong>scale&lpar;&rpar;</strong> method scales the current drawing.
+			It takes two parameters: </p>
+		<ul>
+			<li>The number of times by which the image should be scaled in the X-direction.</li>
+			<li>The number of times by which the image should be scaled in the Y-direction.</li>
+		</ul>	
+	<!-- Code -->
+		<p> var canvas = document.getElementById&lpar;'canvas6'&rpar;; <br />
+			ctx = canvas.getContext&lpar;'2d'&rpar;; <br />
+			ctx.font = "bold 22px Tahoma"; <br />
+			ctx.textAlign = "start"; <br />
+			ctx.fillText&lpar;"start", 10, 30&rpar;; <br />
+			ctx.translate&lpar;100, 150&rpar;; <br />
+			ctx.fillText&lpar;"after translate", 0, 0&rpar;; <br />
+			ctx.rotate&lpar;1&rpar;; <br />
+			ctx.fillText&lpar;"after rotate", 0, 0&rpar;; <br />
+			ctx.<strong>scale&lpar;1.5, 4&rpar;</strong>; <br />
+			ctx.fillText&lpar;"after scale", 0, 20&rpar;; <br />
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<canvas id="canvas6" width="400" height="400"></canvas> 
+		<script>
+			var canvas = document.getElementById('canvas6');
+			ctx = canvas.getContext('2d');
+			ctx.font = "bold 22px Tahoma";
+			ctx.textAlign = "start";
+			ctx.fillText("start", 10, 30);
+			ctx.translate(100, 150);
+			ctx.fillText("after translate", 0, 0);
+			ctx.rotate(1);
+			ctx.fillText("after rotate", 0, 0);
+			ctx.scale(1.5, 4);
+			ctx.fillText("after scale", 0,20);	
+		</script>
+		
+		<p> Take note that if you scale a drawing, all future drawings will also be scaled. </p>
+		<br />
+		
+<!-- ********************************************************************************** -->
+
+<!-- XVII. HTML5 Forms, Part 1 -->
+		<p> <strong><font size="4">XVII.</font> <u>HTML5 Forms, Part 1</u></strong>			
+<!-- HTML5 Forms -->
+		<p> HTML5 brings many features and improvements to web form creation. There are new
+			attributes and input types that were introduced to help create better experiences
+			for web users. </p>
+		<p> Form creation is done in HTML5 the same way as it was in HTML4: </p>	
+	<!-- Code -->
+		<p> <u>&lt;form&gt;</u> <br />
+		&emsp; <u>&lt;label&gt;</u>Your name:&lt;/label&gt; <br />
+		&emsp; <u>&lt;input</u> id="user" name="username" type="text" /&gt; <br />
+		&lt;/form&gt; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<form>
+			<label>Your name:</label>
+			<input id="user" name="username" type="text" />
+		</form>
+
+		<p> Use the nonvalidate attribute to avoid form validation on submissions. </p>
+
+<!-- New Attributes -->
+		<p> HTML5 has introduced a new attribute called <strong>placeholder</strong>.
+			On <font color="blue">&lt;input&gt;</font> and 
+			<font color="blue">&lt;textarea&gt;</font> elements, this attribute provides a
+			hint to the user of what information can be entered into the field. </p>
+	<!-- Code -->
+		<p> <u>&lt;form&gt;</u> <br />
+		&emsp; <u>&lt;label for="email"&gt;</u>Your e-mail address: &lt;/label&gt; <br />
+		&emsp; <u>&lt;input</u> type="text" name="email" 
+		<strong>placeholder</strong>="email@example.com" /&gt; <br />
+		&lt;/form&gt; </p> 
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<form>
+			<label for="email">Your e-mail address: </label>
+			<input type="text" name="email" placeholder="email@example.com" />
+		</form>
+		
+		<p> The <strong>autofocus</strong> attribute makes the desired input focus when
+			the form loads: </p>
+	<!-- Code -->
+		<p> <u>&lt;form&gt;</u> <br />
+		&emsp; <u>&lt;label for="email"&gt;</u>Your e-mail address: &lt;/label&gt; <br />
+		&emsp; <u>&lt;input</u> type="text" name="email" <strong>autofocus</strong>/&gt; <br />
+		&lt;/form&gt; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<form>
+			<label for="email">Your e-mail address: </label>
+			<input type="text" name="email" autofocus/>
+		</form>
+		
+		<p> Take note that the required attribute tells the browser that the input is required. </p>
+		
+<!-- Forms with Required Fields -->
+		<p> The "<strong>required</strong>"	attribute is used to make the 
+			input elements required. </p>
+	<!-- Code -->
+		<p> <u>&lt;form <strong>autocomplete</strong>="<strong>off</strong>"&gt;</u> <br />
+		&emsp; <u>&lt;label for="e-mail"&gt;</u>Your e-mail address: &lt;/label&gt; <br />
+		&emsp; <u>&lt;input</u> name="Email" type="text" <strong>required</strong>/&gt; <br />
+		&emsp; <u>&lt;input</u> type="submit" value="Submit"/&gt; <br />
+		&lt;/form&gt; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<form autocomplete="off">
+			<label for="e-mail">Your e-mail address: </label>
+			<input name="Email" type="text" required/>
+			<input type="submit" value="Submit"/>
+		</form>
+
+		<p> The form will not be submitted without filling in the required fields. </p>
+
+		<p> Take note that the <strong>autocomplete</strong> attribute specifies whether a
+			form or input field should have autocomplete turned on or off. <br />
+			When autocomplete is on, the browser automatically completes values based on
+			values that the user has entered before. </p>
+			
+		<p> <strong><u>HTML5 added several new input types:</u></strong>
+			<ul>
+				<li>color</li>
+				<li>date</li>
+				<li>datetime</li>
+				<li>datetime-local</li>
+				<li>email</li>
+				<li>month</li>
+				<li>number</li>
+				<li>range</li>
+				<li>search</li>
+				<li>tel</li>
+				<li>time</li>
+				<li>url</li>
+				<li>week</li>
+			</ul>
+		</p>
+		<p>	<strong><u>New input attributes in HTML5:</u></strong>
+			<ul>
+				<li>autofocus</li>
+				<li>form</li>
+				<li>formaction</li>
+				<li>formenctype</li>
+				<li>formmethod</li>
+				<li>formnovalidate</li>
+				<li>formtarget</li>
+				<li>height and width</li>
+				<li>list</li>
+				<li>min and max</li>
+				<li>multiple</li>
+				<li>pattern &lpar;regexp&rpar;</li>
+				<li>placeholder</li>
+				<li>required</li>
+				<li>step</li>
+			</ul>
+		</p>
+		<p> Take note that input types that are not supported by old web browsers, will
+			behave as input type text. </p> <br />
+				
+<!-- ********************************************************************************** -->
+
+<!-- XVII. HTML5 Forms, Part 2 -->
+		<p> <strong><font size="4">XVIII.</font> <u>HTML5 Forms, Part 2</u></strong>			
+<!-- Creating a Search Box -->
+		<p> The new <strong>search</strong> input type can be used to create a search box: </p>
+	<!-- Code -->
+		<p> <u>&lt;input</u> id="mysearch" name="searchitem" 
+			type="<strong>search</strong>" /&gt; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<input id="mysearch" name="searchitem" type="search" />
+		
+		<p> Take note that you must remember to set a name for your input; otherwise,
+			nothing will be submitted. </p>
+			
+<!-- Search Options -->
+		<p> The <strong><font color="blue">&lt;datalist&gt;</font></strong> tag can be used
+			to define a list of pre-defined options for the search field: </p>
+	<!-- Code -->
+		<p> <u>&lt;input</u> id="car" type="text" <strong>list</strong>="colors" /&gt; <br />
+			&lt;<strong>datalist id</strong>="colors"&gt; <br />
+		&emsp;	<u>&lt;option value="Red"&gt;</u> <br />
+		&emsp;	<u>&lt;option value="Green"&gt;</u> <br />
+		&emsp;	<u>&lt;option value="Yellow"&gt;</u> <br />
+			&lt;/datalist&gt; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<input id="car" type="text" list="colors" />
+		<datalist id="colors">
+			<option value="Red">
+			<option value="Green">
+			<option value="Yellow">
+		</datalist>
+
+		<p> <strong><font color="blue">&lt;option&gt;</font></strong> defines the options
+			in a drop-down list for the user to select. </p>
+		<p> Take note that the ID of the datalist element must match with the list
+			attribute of the input box. </p>
+			
+<!-- Creating More Fields -->
+		<p> Some other new input types include <strong>email</strong>, <strong>url</strong>,
+			and <strong>tel</strong>: </p>		
+	<!-- Code -->
+		<p> <u>&lt;input</u> id="email" name="email" type="email" 
+			placeholder="example@example.com" /&gt; <br />
+		<u>&lt;br /&gt;</u> <br />
+		<u>&lt;input</u> id="url" name="url" type="url" 
+			placeholder="example.com" /&gt; <br />
+		<u>&lt;br /&gt;</u> <br />
+		<u>&lt;input</u> id="tel" name="tel" type="tel" 
+			placeholder="555.555.1211" /&gt; </p>
+	<!-- Result -->
+		<p> <strong>Result:</strong> </p>
+		<input id="email" name="email" type="email" placeholder="example@example.com" />
+		<br />
+		<input id="url" name="url" type="url" placeholder="example.com" />
+		<br />
+		<input id="tel" name="tel" type="tel" placeholder="555.555.1211" />
+		
+		<p> These are especially useful when opening a page on a modern mobile device,
+			which recognizes the input types and opens a corresponding keyboard
+			matching the field's type: </p>
+		<img src="https://api.sololearn.com/DownloadFile?id=2570" alt="">
+		<p> Take note that these new types make it easier to structure and validate
+			HTML forms. </p> <br />
+	
+		
+<!-- ************************************* Pages start ************************************* -->
+		<p align="center">
+    
+<!-- Go to top -->	
+		<a href="#top">Go to top</a> <br />
+    
+<!-- Previous Page -->	
+		<a href="../01_My_HTML_Notebook_I/index.html/" 
+      class="previous">&laquo; Previous</a>
+    
+<!-- Page 1 -->	
+		<a href="../01_My_HTML_Notebook_I/index.html/" 
+			target="_self">1</a>
+      
+<!-- Page 2 -->	
+		<a href="#" 
+			target="_self">2</a>
+      
+<!-- Next Page -->	
+		<a href="#"	class="next">Next &raquo;</a>
+		
+<!-- ************************************* Pages end ************************************* -->
+ 
+
+ <!-- ************************************* Footer ************************************* -->
+        <div class="copyright">
+            &copy; 2018 My HTML Notebook. All rights reserved.
+        </div>
+	
+	</body>
+</html>
