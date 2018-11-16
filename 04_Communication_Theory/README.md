@@ -74,6 +74,11 @@ Ver. 1.23: (11/2/18) <br />
 &emsp;	• Added 2 hidden buttons <br />
 &emsp;	• OFFICIALLY MOVED TO GITHUB SERVER
 
-**Ver. 1.24: (11/9/18)** <br />
+Ver. 1.24: (11/9/18) <br />
 &emsp;	• Added link to Lecture 24 Notes <br />
 &emsp;	• Added link to Drill Problem 4.71 Notes
+
+**Ver. 1.25: (11/16/18)** <br />
+&emsp;	• Added link to Lecture 25 Notes <br />
+&emsp;	• Added link to Supplement Notes <br />
+&emsp;	• Added link to Lecture 26 Notes
