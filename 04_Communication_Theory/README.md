@@ -78,7 +78,14 @@ Ver. 1.24: (11/9/18) <br />
 &emsp;	• Added link to Lecture 24 Notes <br />
 &emsp;	• Added link to Drill Problem 4.71 Notes
 
-**Ver. 1.25: (11/16/18)** <br />
+Ver. 1.25: (11/16/18) <br />
 &emsp;	• Added link to Lecture 25 Notes <br />
 &emsp;	• Added link to Supplement Notes <br />
 &emsp;	• Added link to Lecture 26 Notes
+
+**Ver. 1.26: (11/21/18)** <br />
+&emsp;	• Added link to Lecture 27 Notes <br />
+&emsp;	• Added link to Drill Problem 5.7 Notes <br />
+&emsp;	• Added link to Lecture 28 Notes <br />
+&emsp;	• Added link to Drill Problem 5.68 Notes <br />
+&emsp;	• Added hidden button <br />
