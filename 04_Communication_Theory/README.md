@@ -91,7 +91,7 @@ Ver. 1.26: (11/21/18) <br />
 &emsp;	• Added hidden button <br />
 
 **Ver. 1.27: (11/26/18)** <br />
-&emsp;	• Reformatting
+&emsp;	• Reformatting <br />
 &emsp;&emsp;    ○ Exam 2 break <br />
 &emsp;&emsp;    ○ Chapter 3 break  <br />
 &emsp;&emsp;    ○ Exam 3 break <br />
