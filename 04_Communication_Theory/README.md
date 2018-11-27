@@ -83,9 +83,17 @@ Ver. 1.25: (11/16/18) <br />
 &emsp;	• Added link to Supplement Notes <br />
 &emsp;	• Added link to Lecture 26 Notes
 
-**Ver. 1.26: (11/21/18)** <br />
+Ver. 1.26: (11/21/18) <br />
 &emsp;	• Added link to Lecture 27 Notes <br />
 &emsp;	• Added link to Drill Problem 5.7 Notes <br />
 &emsp;	• Added link to Lecture 28 Notes <br />
 &emsp;	• Added link to Drill Problem 5.68 Notes <br />
 &emsp;	• Added hidden button <br />
+
+**Ver. 1.27: (11/26/18)** <br />
+&emsp;	• Reformatting
+&emsp;&emsp;    ○ Exam 2 break <br />
+&emsp;&emsp;    ○ Chapter 3 break  <br />
+&emsp;&emsp;    ○ Exam 3 break <br />
+&emsp;&emsp;    ○ Chapter 5 break <br />
+&emsp;	• Added link to Lecture 29 Notes <br />
