@@ -90,10 +90,14 @@ Ver. 1.26: (11/21/18) <br />
 &emsp;	• Added link to Drill Problem 5.68 Notes <br />
 &emsp;	• Added hidden button <br />
 
-**Ver. 1.27: (11/26/18)** <br />
+Ver. 1.27: (11/26/18) <br />
 &emsp;	• Reformatting <br />
 &emsp;&emsp;    ○ Exam 2 break <br />
 &emsp;&emsp;    ○ Chapter 3 break  <br />
 &emsp;&emsp;    ○ Exam 3 break <br />
 &emsp;&emsp;    ○ Chapter 5 break <br />
 &emsp;	• Added link to Lecture 29 Notes <br />
+
+**Ver. 1.28: (12/1/18)** <br />
+&emsp;	• Added link to Lecture 30 Notes <br />
+&emsp;	• Added link to Exam 3 Solution <br />
