@@ -98,6 +98,14 @@ Ver. 1.27: (11/26/18) <br />
 &emsp;&emsp;    ○ Chapter 5 break <br />
 &emsp;	• Added link to Lecture 29 Notes <br />
 
-**Ver. 1.28: (12/1/18)** <br />
+Ver. 1.28: (12/1/18) <br />
 &emsp;	• Added link to Lecture 30 Notes <br />
 &emsp;	• Added link to Exam 3 Solution <br />
+
+**Ver. 1.29: (12/8/18)** <br />
+&emsp;	• Added link to Lecture 31 Notes <br />
+&emsp;	• Added link to Lecture 32 Notes <br />
+&emsp;	• Added link to Drill Problem 10.21 <br />
+&emsp;	• Added link to Lecture 33 Notes <br />
+&emsp;	• Added link to In-class MATLAB Simulation <br />
+
