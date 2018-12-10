@@ -102,10 +102,19 @@ Ver. 1.28: (12/1/18) <br />
 &emsp;	• Added link to Lecture 30 Notes <br />
 &emsp;	• Added link to Exam 3 Solution <br />
 
-**Ver. 1.29: (12/8/18)** <br />
+Ver. 1.29: (12/8/18) <br />
 &emsp;	• Added link to Lecture 31 Notes <br />
 &emsp;	• Added link to Lecture 32 Notes <br />
 &emsp;	• Added link to Drill Problem 10.21 <br />
 &emsp;	• Added link to Lecture 33 Notes <br />
 &emsp;	• Added link to In-class MATLAB Simulation <br />
 
+**Ver. 1.30: (12/10/18)** <br />
+&emsp;	• Added link to Lecture 34 Notes <br />
+&emsp;	• Thematic breaks <br />
+&emsp;&emsp;		○ Chapters 8/9/10 <br />
+&emsp;&emsp;		○ Final Exam Notes <br />
+&emsp;	• Chapters 3, 4, 5, 8/9/10 breaks <br />
+&emsp;&emsp;		○ Font size changed from 30px --> 24px <br />
+&emsp;	• Chapters 3, 4, 5, 8/9/10 border-lines <br />
+&emsp;&emsp;		○ Height size changed from 20px --> 12px <br />
