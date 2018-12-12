@@ -109,7 +109,7 @@ Ver. 1.29: (12/8/18) <br />
 &emsp;	• Added link to Lecture 33 Notes <br />
 &emsp;	• Added link to In-class MATLAB Simulation <br />
 
-**Ver. 1.30: (12/10/18)** <br />
+Ver. 1.30: (12/10/18) <br />
 &emsp;	• Added link to Lecture 34 Notes <br />
 &emsp;	• Thematic breaks <br />
 &emsp;&emsp;		○ Chapters 8/9/10 <br />
@@ -118,3 +118,6 @@ Ver. 1.29: (12/8/18) <br />
 &emsp;&emsp;		○ Font size changed from 30px --> 24px <br />
 &emsp;	• Chapters 3, 4, 5, 8/9/10 border-lines <br />
 &emsp;&emsp;		○ Height size changed from 20px --> 12px <br />
+
+**Ver. 1.31: (12/12/18)** <br />
+&emsp;	• Added hidden link <br />
