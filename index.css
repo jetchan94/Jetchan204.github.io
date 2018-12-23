@@ -16,7 +16,8 @@ body a {
             background-color: #aaa;
         }
         #frame {
-            float: left;        
+            float: left;
+            position: relative;        
             width: 33.33%;
             margin: 0 auto;
         }
