@@ -16,9 +16,14 @@ body a {
             background-color: #aaa;
         }
         #frame {
+            float: left;        
             width: 33.33%;
             margin: 0 auto;
         }
+        #frame1 {            
+            width: 33.33%;
+            margin: 0 auto;
+        }    
         header {
             background-image: url("http://i.imgur.com/VKQrP9H.jpg");
             background-repeat: no-repeat;
