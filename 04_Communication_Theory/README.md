@@ -119,5 +119,8 @@ Ver. 1.30: (12/10/18) <br />
 &emsp;	• Chapters 3, 4, 5, 8/9/10 border-lines <br />
 &emsp;&emsp;		○ Height size changed from 20px --> 12px <br />
 
-**Ver. 1.31: (12/12/18)** <br />
+Ver. 1.31: (12/12/18) <br />
 &emsp;	• Added hidden link <br />
+
+**Ver. 1.32: (12/22/18)** <br />
+&emsp;	• Added Final Exam Solution <br />
