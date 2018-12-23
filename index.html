@@ -24,9 +24,8 @@
         #frame {
             width: 33.33%;
             margin: 0 auto;
-            -webkit-column-count: 3; /* Chrome, Safari, Opera */
-            -moz-column-count: 3; /* Firefox */
-            column-count: 3;
+            float: left;
+            position: relative;
         }
         header {
             background-image: url("http://i.imgur.com/VKQrP9H.jpg");
@@ -56,7 +55,7 @@
             <p>Striving for success in Web/App Development, alongside Engineering</p>
         </div>
     </header>
-    <div id="frame">
+    <div id="frame" data-columns="3">
         <h2>Programming Projects</h2>
         <ul>
             <li><a href="01_My_HTML_Notebook_I/index.html">Project A01: My HTML Notebook I</a></li>
