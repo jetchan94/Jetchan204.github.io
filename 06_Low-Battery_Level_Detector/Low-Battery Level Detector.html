@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Low-Battery Level Detector</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+<!--    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" 
+		href="javascript:void(0)" onclick="w3_open()"><!--<i class="fa fa-bars"></i></a>	-->
+    <a href="#"><img src="Logo.jpeg" width="50" height="50" class="w3-bar-item w3-button"></a>
+    <a href="file:///C:/Users/Samjat%20Chan/Desktop/UMASS%20Dartmouth/Spring%202018/ECE%20414%20-%20Intro%20Analog%20Integrated%20Circuit%20Design/Design%20Project/Low-Battery%20Level%20Detector/Overview.html" class="w3-bar-item w3-button w3-hide-small w3-hover-red">Overview</a>
+    <a href="file:///C:/Users/Samjat%20Chan/Desktop/UMASS%20Dartmouth/Spring%202018/ECE%20414%20-%20Intro%20Analog%20Integrated%20Circuit%20Design/Design%20Project/Low-Battery%20Level%20Detector/Report.html" class="w3-bar-item w3-button w3-hide-small w3-hover-yellow">Report</a>
+    <a href="file:///C:/Users/Samjat%20Chan/Desktop/UMASS%20Dartmouth/Spring%202018/ECE%20414%20-%20Intro%20Analog%20Integrated%20Circuit%20Design/Design%20Project/Low-Battery%20Level%20Detector/Appendix.html" class="w3-bar-item w3-button w3-hide-small w3-hover-green">Appendix</a>
+    <a href="https://jetchan204.github.io/index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-blue">Project List</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<!--<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+</nav>	-->
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<!-- <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>	-->
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Overview</h1>
+      <p> The Overview depicts the general requirements for the Low-Battery Level Detector. There are different degrees of functionality for the detector and this version 
+		of the project displays certain characteristics. There are also constraints regarding the voltage and charging of the lithium ion battery. The battery has  a
+		safe operating temperature for both charging and discharging phases. </p>
+    </div>
+    <div class="w3-third w3-container">
+      
+      <p class="w3-center"><img src="https://batteryuniversity.com/_img/content/final2.jpg" width="100%" height="100%"></p>
+    </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Report</h1>
+      <p>The Report includes an introduction to this project, the methods applied, the results obtained, lessons learned, and references used. The main design of the 
+		Low-battery level detector consists of the lithium ion battery and voltage comparator circuit. The software used to build this detector was the
+		Galaxy Custom Designer, which includes many functions, such as the Schematic Editor, Simulation and Analysis Environment (SAE), 
+		HSPICE (<b>H</b>ailey <b>S</b>imulation <b>P</b>rogram with <b>I</b>ntegrated <b>C</b>ircuit <b>E</b>mphasis), and netlist. The Schematic Editor is the
+		tool for the schematic capture of the constructed electrical circuits. While the SAE, HSPICE, and netlist work together to construct valid circuits and simulate
+		their function.	</p>
+    </div>
+    <div class="w3-third w3-container">
+      
+      <p class="w3-center"><img src="Figure 2.jpg" width="100%" height="100%"></p>
+	  <p class="w3-center"><img src="Figure 4.jpg" width="100%" height="100%"></p>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Appendix</h1>
+      <p>The Appendix displays the settings and results in the prototype of the detector. They were not included in the main build of the detector because
+		they simulated errors, which did not satisfy the requirements for a valid detector. Figures that were referred from the textbook are also included here. </p>
+    </div>
+    <div class="w3-third w3-container">
+      
+      <p class="w3-center"><img src="Appendix D.jpg" width="100%" height="100%"></p>
+	  
+    </div>
+  </div>
+
+  <!-- Pagination -->
+<!--  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div>	-->
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-8">
+      <h6>&copy; 2018 Jetchan204. All rights reserved.</h6>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<!--
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>	-->
+
+</body>
+</html>
