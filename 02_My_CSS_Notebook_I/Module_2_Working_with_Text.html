@@ -1,0 +1,985 @@
+<!DOCTYPE html>	<!-- enable standards mode for documents written using the HTML syntax -->
+ <html>
+  <head>
+   <title>	My CSS Notebook I </title>
+   <p align="center"><strong><font size="7"> My CSS Notebook I</font></strong>
+<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->  
+   <style>	
+	body {		
+		background-color: teal;	<!-- Website will have teal background -->
+		}
+
+	h1 {
+		color: darkred;	
+		text-align: center;	<!-- All h1 text will have dark red, centered font -->
+		}
+		
+	h2 {
+		color: darkblue;	<!-- All h2 text will have dark blue font -->
+		}
+
+	h3 {
+		color: beige;	<!-- All h2 text will have beige font -->
+		}		
+
+	p {
+		font-family: verdana;
+		font-size: 14px;	<!-- All p text will be 14px verdana text -->
+		}
+   </style>
+  </head>
+  <body>
+
+<!-- ************************************* PAGE 2 ************************************* -->	
+  
+	
+	<p align="center">***** On Monday, 9/3/18, I started 
+		learning the fundamentals of CSS on 
+		<a href= "http://www.sololearn.com"target="_blank"> 
+		sololearn.com</a>. *****</p>
+		
+		<p align="center"> ***** On Tuesday, 1/15/19, I completed
+		the CSS Fundamentals course and was issued the 
+		<a href="https://www.sololearn.com/Certificate/1023-10607947/pdf/" target="_blank">
+		certificate</a>. *****
+		
+	<p align="center"> TAKE NOTE THAT THIS IS NOT A .CSS FILE BECAUSE IT WILL BE A PLAIN TEXT FILE.
+		INSTEAD, CSS WILL BE IMPLEMENTED INTO A .HTML FILE. THIS CAN BE DONE
+		VIA A LINK, EMBED, IMPORT AND/OR INLINE STYLES.</p>	<br />
+		
+<!-- ***** Module 2 Materials ***** -->
+	<h1><u> Module 2: Working with Text </u></h1>
+	
+<!-- ************************************************************************** -->
+	
+<!-- Font-Family -->
+	<h2><strong><font size="h2">I.</font> <u>Font-Family </u></strong></h2>
+<!-- The font-family Property -->	
+	<p> <strong><h3><u>The font-family Property</u></h3></strong> </p>
+	<p> The font-family property specifies the font for an element. <br />
+	There are two types of font family names: <br />
+	<ul>
+	 <li><strong>font family</strong>: a specific font family
+		&lpar;like Times New Roman or Arial&rpar;</li>
+	 <li><strong>generic family</strong>: a group of font families with a 
+		similar look &rpar;like Serif or Monospace&lpar;</li>
+	</ul> </p>
+	<p> Here is an example of different font styles: </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2721" alt="">
+<!-- The HTML -->
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p>&lt;p class="serif"&gt; <br />
+	&emsp; This is a paragraph shown in serif font. <br />
+	&lt;/p&gt; <br />
+	&lt;p class="sansserif"&gt; <br />
+	&emsp; This is a paragraph shown in sans-serif font. <br />
+	&lt;/p&gt; <br />
+	&lt;p class="monospace"&gt; <br />
+	&emsp; This is a paragraph shown in monospace font. <br />
+	&lt;/p&gt; <br />
+	&lt;p class="cursive"&gt; <br />
+	&emsp; This is a paragraph shown in cursive font. <br />
+	&lt;/p&gt; <br />
+	&lt;p class="fantasy"&gt; <br />
+	&emsp; This is a paragraph shown in fantasy font. <br />
+	&lt;/p&gt; <br /> </p>	
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.serif {	<br />
+	&emsp;	<u>font-family:</u> "Times New Roman", Times, <strong>serif</strong>; <br />
+		} <br />
+		p.sansserif {	<br />
+	&emsp;	<u>font-family:</u> Helvetica, Arial, <strong>sans-serif</strong>; <br />
+		} <br />
+		<p> p.monospace {	<br />
+	&emsp;	<u>font-family:</u> "Courier New", Courier, <strong>monospace</strong>; <br />
+		} <br />
+		<p> p.cursive {	<br />
+	&emsp;	<u>font-family:</u> Florence, <strong>cursive</strong>; <br />
+		} <br />
+		<p> p.fantasy {	<br />
+	&emsp;	<u>font-family:</u> Blippo, <strong>fantasy</strong>; <br />
+	} </p>	
+<!-- Link to Result of Example_2.1 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.1.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.1!</a> &larr; </p>
+	<p> Separate each value with a <strong>comma</strong> to indicate that they 
+		are alternatives. <br />
+		If the name of a font family is more than one word, it must be in
+		quotation marks:	<br />
+	<strong>"Times New Roman"</strong>. </p>
+
+	<p> The font-family property should hold several font names as a
+		"fallback" system. When specifying a web font in a CSS style, add more
+		than one font name, in order to avoid unexpected behaviors. If the 
+		client computer for some reason doesn't have the one you choose, 
+		it will try the next one. </p>
+	<p> It is a good practice to specify a generic font family, to let the browser
+		pick a similar font in the generic family, if no other fonts are available. </p>
+	<p> i.e. <strong>Code</strong></p>
+	<p> body { <br />
+	&emsp; <u>font-family:</u> Arial, "Helvetica Neue", Helvetica, sans-serif; <br />
+		}	</p>
+	<p> If the browser does not support the font <strong>Arial</strong>, it tries
+		the next fonts &lpar;<strong>Helvetica Neue</strong>, then
+	<strong>Helvetica</strong>&rpar;. If the browser doesn't have any of them,
+		it will try the generic <strong>sans-serif</strong>. </p>
+	<p> Remember to use quotation marks if the font name consists of 
+		more than one word. </p> <br />	
+
+<!-- ************************************************************************** -->
+		
+<!-- Font-Size -->
+	<h2><strong><font size="h2">II.</font> <u>Font-Size </u></strong></h2>	
+<!-- The font-size Property -->	
+	<p> <strong><h3><u>The font-size Property</u></h3></strong> </p>
+	<p> The font-size property sets the size of a font. One way to set the size
+		of fonts on the web is to use <strong>keywords</strong>. For example,
+	<strong>xx-small</strong>, <strong>small</strong>, <strong>medium</strong>,
+	<strong>large</strong>, <strong>larger</strong>, etc. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar;	</p>
+	<p> &lt;p class="small"&gt; <br />
+	&emsp; Paragraph text set to be small <br />
+	&lt;/p&gt; <br />
+	&lt;p class="medium"&gt; <br />
+	&emsp; Paragraph text set to be medium <br />
+	&lt;/p&gt; <br />	
+	&lt;p class="large"&gt; <br />
+	&emsp; Paragraph text set to be large <br />
+	&lt;/p&gt; <br />	
+	&lt;p class="xlarge"&gt; <br />
+	&emsp; Paragraph text set to be very large <br />
+	&lt;/p&gt; </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.small {	<br />
+	&emsp;	<u>font-size:</u> <strong>small</strong>; <br />
+		} <br />
+		p.medium {	<br />
+	&emsp;	<u>font-size:</u> <strong>medium</strong>; <br />
+		} <br />
+		<p> p.large {	<br />
+	&emsp;	<u>font-size:</u> <strong>large</strong>; <br />
+		} <br />
+		<p> p.xlarge {	<br />
+	&emsp;	<u>font-size:</u> <strong>xlarge</strong>; <br />
+		} </p>
+<!-- Link to Result of Example_2.1 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.2.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.2!</a> &larr; </p>
+	<p> Keywords are useful if you do not want the user to be able to increase the 
+		size of the font because it will adversely affect your site's appearance. </p>
+	<p> You can also use numerical values in <strong>pixels</strong> or
+	<strong>ems</strong> to manipulate font size. <br />
+		Setting the font size in pixel values &lpar;<strong>px</strong>&rpar; is
+		a good choice when you need pixel accuracy, and it gives you full
+		control over the text size. <br />
+		The <strong>em</strong> size unit is another way to set the font size
+	&lpar;<strong>em</strong> is a relative size unit&rpar;. It allows all major
+		browsers to reize the text. If you haven't set the font size anywhere
+		on the page, then it is the browser default size, which is <strong>16px</strong>. </p>
+	<p> To calculate the em size, just use the following formula:
+	<strong>em = pixels / 16 <br />
+		For example:</strong> CSS Code </p>
+<!-- CSS Code -->
+	<p> h1 {	<br />
+	&emsp; <u>font-size:</u> 20 <strong>px</strong>; <br />
+		}	</p>
+	<p>	h1 {	<br />
+	&emsp; <u>font-size:</u> 1.25 <strong>em</strong>; <br />
+		}	</p>
+	<p> Both of the above examples will produce the same result in the browser,
+		because <strong>20/16 = 1.25 em</strong>. </p>
+	<p> Try different combinations of text size and page zooming in a variety of
+		browsers to ensure that the text remains readable. </p> <br />
+
+<!-- ************************************************************************** -->
+		
+<!-- Font-Style -->
+	<h2><strong><font size="h2">III.</font> <u>Font-Style </u></strong></h2>	
+<!-- The font-size Property -->	
+	<p> <strong><h3><u>The font-style Property</u></h3></strong> </p>
+	<p> The font-style property is typically used to specify italic text. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="italic"&gt;This is a paragraph in italic style.&lt;/p&gt; </p>
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.italic { <br />
+	&emsp; <u>font-style:</u> italic; <br />
+		} </p>
+<!-- Link to Result of Example_2.3 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.3.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.3!</a> &larr; </p>		
+
+	<p> The font-style property has three values: <strong>normal</strong>,
+	<strong>italic</strong>, and <strong>oblique</strong>. <br />
+		Oblique is very similar to italic, but less supported. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="normal"&gt;This paragraph is normal.&lt;/p&gt; <br />
+	&lt;p class="italic"&gt;This paragraph is italic.&lt;/p&gt; <br />
+	&lt;p class="oblique"&gt;This paragraph is oblique.&lt;/p&gt; </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.normal { <br />
+	&emsp; <u>font-style:</u> <strong>normal</strong>; <br />
+		}	<br />
+		p.italic { <br />
+	&emsp; <u>font-style:</u> <strong>italic</strong>; <br />
+		} <br />
+		p.oblique { <br />
+	&emsp; <u>font-style:</u> <strong>oblique</strong>; <br />
+		}
+<!-- Link to Result of Example_2.4 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.4.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.4!</a> &larr; </p>
+	<p> Take note that the HTML <strong>&lt;i&gt;</strong> tag will produce 
+	exactly the same result as the <strong>italic font style</strong>. </p> <br />
+
+<!-- ************************************************************************** -->
+		
+<!-- Font-weight -->
+	<h2><strong><font size="h2">IV.</font> <u>Font-Weight </u></strong></h2>	
+<!-- The font-weight Property -->	
+	<p> <strong><h3><u>The font-weight Property</u></h3></strong> </p>
+	<p> The font-weight controls the boldness or thickness of the text. The values
+		can be set as <strong>normal</strong> &lpar;default size&rpar;,
+	<strong>bold</strong>, <strong>bolder</strong>, and <strong>lighter</strong>. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="light"&gt;This is a font with a "lighter" weight.&lt;/p&gt; <br />
+	&lt;p class="bold"&gt;This is a font with a "bold" weight.&lt;/p&gt; <br />
+	&lt;p class="bolder"&gt;This is a font with a "bolder" weight.&lt;/p&gt; </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.light { <br />
+	&emsp; <u>font-weight:</u> <strong>lighter</strong>; <br />
+		}	<br />
+		p.bold { <br />
+	&emsp; <u>font-weight:</u> <strong>bold</strong>; <br />
+		} <br />
+		p.bolder { <br />
+	&emsp; <u>font-weight:</u> <strong>bolder</strong>; <br />
+		}
+<!-- Link to Result of Example_2.5 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.5.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.5!</a> &larr; </p>
+	<p> You can also define the font weight with a number from <strong>100</strong>
+	&lpar;thin&rpar; to <strong>900</strong> &lpar;thick&rpar;, according to how
+		thick you want the text to be. <br />
+		400 is the same as normal, and 700 is the same as bold. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="light"&gt;This is a font with a "lighter" weight.&lt;/p&gt; <br />
+	&lt;p class="thick"&gt;This is a font with a "bold" weight.&lt;/p&gt; <br />
+	&lt;p class="thicker"&gt;This is a font with a "700" weight.&lt;/p&gt; </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.light { <br />
+	&emsp; <u>font-weight:</u> <strong>lighter</strong>; <br />
+		}	<br />
+		p.thick { <br />
+	&emsp; <u>font-weight:</u> <strong>bold</strong>; <br />
+		} <br />
+		p.thicker { <br />
+	&emsp; <u>font-weight:</u> <strong>700</strong>; <br />
+		}
+<!-- Link to Result of Example_2.6 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.6.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.6!</a> &larr; </p>		
+	<p> Take note that the HTML <strong>&lt;strong&gt;</strong> tag also 
+		makes the text <strong>bold</strong>. </p> <br />
+
+<!-- ************************************************************************** -->
+		
+<!-- Font-variant -->
+	<h2><strong><font size="h2">V.</font> <u>Font-Variant </u></strong></h2>	
+<!-- The font-variant Property -->	
+	<p> <strong><h3><u>The font-variant Property</u></h3></strong> </p>
+	<p> The CSS font-variant property allows you to convert your font to all small caps.
+		The values can be set as <strong>normal</strong>, <strong>small-caps</strong>,
+		and <strong>inherit</strong>. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="normal"&gt;Paragraph font variant set to normal.&lt;/p&gt; <br />
+	&lt;p class="small"&gt;Paragraph font variant set to small-caps.&lt;/p&gt; <br />
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.normal { <br />
+	&emsp; <u>font-variant:</u> <strong>normal</strong>; <br />
+		}	<br />
+		p.small { <br />
+	&emsp; <u>font-variant:</u> <strong>small-caps</strong>; <br />
+		} </p>
+
+<!-- Link to Result of Example_2.7 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.7.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.7!</a> &larr; </p>		
+	<p> Take note that not every font supports CSS font-variant, so be sure to test
+		before you publish. </p> <br />
+
+<!-- ************************************************************************** -->
+		
+<!-- Color -->
+	<h2><strong><font size="h2">VI.</font> <u>Color </u></strong></h2>	
+<!-- The color Property -->	
+	<p> <strong><h3><u>The color Property</u></h3></strong> </p>
+	<p> The CSS <strong>color</strong> property specifies the color of the text. <br />
+		One method of specifying the color of the text is using a <strong>color name</strong>:
+		like red, green, blue, etc. <br />
+		Here's an example of changing the color of your font. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="example"&gt;The text inside the paragraph is green.&lt;/p&gt; <br />
+		The text outside the paragraph is black &lpar;by default&rpar; </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.example { <br />
+	&emsp; <strong>color</strong>: green; <br />
+		}	</p>
+
+<!-- Link to Result of Example_2.8 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.8.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.8!</a> &larr; </p>		
+		
+	<p> Another way of defining colors is using <strong>hexadecimal values</strong> and 
+		<strong>RGB</strong>. <br />
+		Hexadecimal form is a pound sign &lpar;<strong>#</strong>&rpar; followed by at most,
+		<strong>6 hex values</strong> &lpar;0-F&rpar;. <br />
+		RGB defines the individual values for <strong>Red</strong>, <strong>Green</strong>,
+		and <strong>Blue</strong>. </p>
+	<p> In the example below, we use hexadecimal value to set the heading color to blue, 
+		and RGB form to make the paragraph red. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;h1&gt;This is a heading&lt;/h1&gt; <br /> 
+	&lt;p class="example"&gt;This is a paragraph&lt;/p&gt; </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> h1 { <br />
+	&emsp; color: <strong>#0000FF;</strong>	<br />
+		}	<br /> 
+		p.example { <br />
+	&emsp; color: <strong>rgb&lpar;255,0,0&rpar;;</strong><br />
+		}	</p>
+
+<!-- Link to Result of Example_2.9 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.9.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.9!</a> &larr; </p> <br />
+
+<!-- ************************************************************************** -->
+		
+<!-- Aligning Text Horizontally -->
+	<h2><strong><font size="h2">VII.</font> <u>Aligning Text Horizontally </u></strong></h2>	
+<!-- The text-align Property -->	
+	<p> <strong><h3><u>The text-align Property</u></h3></strong> </p>			
+	<p> The text-align property specifies the horizontal alignment of text in an element.
+		By default, text on your website is aligned to the left. However, at times you may
+		require a different alignment. </p>
+	<p> text-align property values are as follows: <strong>left</strong>, <strong>right</strong>,
+		<strong>center</strong>, and <strong>justify</strong>. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="left"&gt;This paragraph is aligned to
+			&lt;strong&gt;left.&lt;/strong&gt;&lt;/p&gt; <br />
+		&lt;p class="right"&gt;This paragraph is aligned to
+			&lt;strong&gt;right.&lt;/strong&gt;&lt;/p&gt; <br />
+		&lt;p class="center"&gt;This paragraph is aligned to
+			&lt;strong&gt;center.&lt;/strong&gt;&lt;/p&gt; <br />			
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p>	p.left { <br />
+	&emsp; <u>text-align:</u> <strong>left</strong>; <br />
+		}	<br />
+		p.right { <br />
+	&emsp; <u>text-align:</u> <strong>right</strong>; <br />
+		}	<br />
+		p.center { <br />
+	&emsp; <u>text-align:</u> <strong>center</strong>; <br />
+		}	</p>
+
+<!-- Link to Result of Example_2.10 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.10.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.10!</a> &larr; </p> 
+	<p> Take note that when text-align is set to "<strong>justify</strong>", each line is
+		stretched so that every line has equal width, and the left and right margins
+		are straight &lpar;as in magazines and newspapers&rpar;. </p> <br />
+
+<!-- ************************************************************************** -->
+		
+<!-- Aligning Text Vertically -->
+	<h2><strong><font size="h2">VIII.</font> <u>Aligning Text Vertically </u></strong></h2>	
+<!-- The vertical-align Property -->	
+	<p> <strong><h3><u>The vertical-align Property</u></h3></strong> </p>
+	<p> The vertical-align property sets an element's vertical alignment. Commonly used 
+		values are <strong>top</strong>, <strong>middle</strong>, 
+		and <strong>bottom</strong>. </p>
+	<p> The example below shows how to vertically align the text between the table. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;table border="1" cellpadding="2" cellspacing="0" style="height: 150px;"&gt; <br />
+		&emsp; &lt;tr&gt; <br />
+		&emsp;&emsp; &lt;td class="top"&gt;Top&lt;/td&gt; <br />
+		&emsp;&emsp; &lt;td class="middle"&gt;Middle&lt;/td&gt; <br />
+		&emsp;&emsp; &lt;td class="bottom"&gt;Bottom&lt;/td&gt; <br />
+		&emsp; &lt;/tr&gt; <br />
+		&lt;/table&gt; </p>	
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p>	td.top { <br />
+	&emsp; <strong><u>vertical-align:</u> top</strong>; <br />
+		}	<br />
+		td.middle { <br />
+	&emsp; <strong><u>vertical-align:</u> middle</strong>; <br />	
+		}	<br />
+		td.bottom { <br />
+	&emsp; <strong><u>vertical-align:</u> bottom</strong>; <br />
+		}	</p>		
+
+<!-- Link to Result of Example_2.11 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.11.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.11!</a> &larr; </p>	
+
+	<p> The vertical-align property also takes the following values: 
+	<strong>baseline</strong>, <strong>sub</strong>, <strong>super</strong>,
+	<strong>%</strong>, and <strong>px</strong> &lpar;or pt, cm&rpar;. <br />
+		The example below shows the difference between them. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p&gt;This is an &lt;span class="baseline"&gt;inline text&lt;/span&gt; example.&lt;/p&gt; <br />
+		&lt;p&gt;This is a &lt;span class="sub"&gt;sub line text&lt;/span&gt; example.&lt;/p&gt; <br />
+		&lt;p&gt;This is a &lt;span class="super"&gt;super line text&lt;/span&gt; example.&lt;/p&gt; <br />
+		&lt;p&gt;This is an &lt;span class="pixel"&gt;pixel&lt;/span&gt; example.&lt;/p&gt; 
+	</p>	
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> span.baseline { <br />
+	&emsp; <u>vertical-align:</u> <strong>baseline;</strong> <br />
+		}	<br />
+		span.sub { <br />
+	&emsp; <u>vertical-align:</u> <strong>sub;</strong> <br />	
+		}	<br />
+		span.super { <br />
+	&emsp; <u>vertical-align:</u> <strong>super;</strong> <br />
+		}	<br />
+		span.pixel { <br />
+	&emsp; <u>vertical-align:</u> <strong>-10px;</strong> <br />
+		} </p>		
+
+<!-- Link to Result of Example_2.12 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.12.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.12!</a> &larr; </p>		
+	<p> Take note that instead of <strong>px</strong> values, you can use 
+	<strong>pt</strong>	&lpar;points&rpar;, <strong>cm</strong> &lpar;centimeters&rpar;
+		and <strong>%</strong> &lpar;percentage&rpar; values. </p>
+		
+	<p> Vertical align property does not act the same way for all elements. <br />
+		For example, some additional CSS styling is needed for div elements. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;div class="main"&gt; <br />
+		&emsp; &lt;div class="paragraph"&gt; <br />
+		&emsp; This text is aligned to the middle <br />
+		&emsp; &lt;/div&gt; <br />
+		&lt;/div&gt; </p>	
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> .main { <br />
+	&emsp; height: 150px; width: 400px; <br />
+	&emsp; <u>background-color:</u> LightSkyBlue; <br />
+	&emsp; <u>display:</u> inline-table; <br />
+		} <br />
+		.paragraph { <br />
+	&emsp; <u>display:</u> table-cell; <br />
+	&emsp; <u>vertical-align:</u> middle; <br />
+		} <br />
+	</p>		
+
+<!-- Link to Result of Example_2.13 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.13.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.13!</a> &larr; </p>
+	<p> Take note that <strong><u>display:</u> inline-table;</strong> and
+		<strong><u>display:</u> table-cell;</strong> styling rules are applied to make the
+		vertical-align property work with divs. </p> <br />
+		
+<!-- ************************************************************************** -->
+		
+<!-- text-decoration -->
+	<h2><strong><font size="h2">IX.</font> <u>text-decoration </u></strong></h2>	
+<!-- The text-decoration Property -->	
+	<p> <strong><h3><u>The text-decoration Property</u></h3></strong> </p>
+	<p> The text-decoration property specifies how the text will be decorated. </p>
+	<p> Commonly used values are: <br />
+		<strong>none</strong> - The default value, this defines a normal text <br />
+		<strong>inherit</strong> - Inherits this property from its parent element <br />
+		<strong>overline</strong> - Draws a horizontal line above the text <br />
+		<strong>underline</strong> - Draws a horizontal line below the text <br />
+		<strong>line-through</strong> - draws a horizontal line through the text 
+		&lpar;substitutes the HTML <strong>&lt;s&gt;</strong> tag &rpar; </p>
+	<p> The example below demonstrates the difference between each value. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="none"&gt;This is default style of the text
+			&lpar;none&rpar;.&lt;/p&gt; <br />
+	&lt;p class="inherit"&gt;This text inherits the decoration of the parent.&lt;/p&gt; <br />
+	&lt;p class="overline"&gt;This is overlined text.&lt;/p&gt; <br />
+	&lt;p class="underline"&gt;This is underlined text.&lt;/p&gt; <br />
+	&lt;p class="line-through"&gt;This is lined-through text.&lt;/p&gt; </p>	
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.none { <br />
+	&emsp; <u>text-decoration:</u> <strong>none</strong>; <br />
+		} <br />
+		p.inherit { <br />
+	&emsp; <u>text-decoration:</u> <strong>inherit</strong>; <br />
+		} <br />
+		p.overline { <br />
+	&emsp; <u>text-decoration:</u> <strong>overline</strong>; <br />
+		} <br />
+		p.underline { <br />
+	&emsp; <u>text-decoration:</u> <strong>underline</strong>; <br />
+		} <br />
+		p.line-through { <br />
+	&emsp; <u>text-decoration:</u> <strong>line-through</strong>; <br />
+		} </p>	
+
+<!-- Link to Result of Example_2.14 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.14.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.14!</a> &larr; </p>	
+	<p> Take note that you can combine the <strong>underline</strong>, 
+	<strong>overline</strong>, or <strong>line-through</strong> values in a space-separated
+		list to add multiple decoration lines. </p>
+		
+	<p> Another value of text-decoration property is <strong>blink</strong>, which makes
+		the text blink. </p>
+	<p> <strong>CSS syntax</strong> looks like this: </p>
+	<p>	<u>text-decoration:</u> <strong>blink;</strong>	</p>
+	<p> Take note that this value is valid but is deprecated and most browsers ignore it. </p> <br />
+
+<!-- ************************************************************************** -->
+		
+<!-- Indenting the Text -->
+	<h2><strong><font size="h2">X.</font> <u>Indenting the Text </u></strong></h2>	
+<!-- The text-indent Property -->	
+	<p> <strong><h3><u>The text-indent Property</u></h3></strong> </p>
+	<p> The text-indent property specifies how much horizontal space should be left
+		before the beginning of the first line of the text. Property values are 
+	<strong>length</strong>	&lpar;px, pt, cm, em, etc.&rpar;, %,
+		and <strong>inherit</strong>. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p&gt;This is an example of <br />
+	&lt;strong&gt;text-indent &lt;/strong&gt; property. <br />
+		First line of our text is indented to the right in 60 px. <br />
+		Besides pixels, you can also use other measurement units, <br />
+		like pt, cm, em, etc. &lt;/p&gt; </p>				
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p { <br />
+	&emsp; <strong>text-indent:</strong> 60px; <br />
+		} </p>
+			
+<!-- Link to Result of Example_2.15 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.15.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.15!</a> &larr; </p>			
+	<p> Take note that negative values are allowed. The first line will be indented to the
+		left if the value is negative. </p> <br />		
+		
+<!-- ************************************************************************** -->
+		
+<!-- text-shadow -->
+	<h2><strong><font size="h2">XI.</font> <u>text-shadow </u></strong></h2>	
+<!-- The text-shadow Property -->	
+	<p> <strong><h3><u>The text-shadow Property</u></h3></strong> </p>
+	<p> The text-shadow property adds shadow to text. It takes four values: <br />
+	<ol>
+		<li>The first value defines the distance of the shadow in the 
+			<strong>x</strong> <strong>&lpar;horizontal&rpar; direction</strong>.</li>
+		<li>The second value sets the distance in the <strong>y &lpar;vertical&rpar;
+			direction</strong>.</li>
+		<li>The third value defines the <strong>blur</strong> of the shadow.</li>
+		<li>The fourth value sets the <strong>color</strong>.</li>
+	</ol> </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;h1&gt;Text-shadow example&lt;/h1&gt; </p>				
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> h1 { <br />
+	&emsp; color: blue; <br />
+	&emsp; <u>font-size:</u> 30pt; <br />
+	&emsp; <strong>text-shadow</strong>: 5px 2px 4px grey; <br />
+		} </p>
+	<p> In the example above, we created a shadow using the following parameters: <br />
+	<strong>5px</strong> - the X-coordinate <br />
+	<strong>2px</strong> - the Y-coordinate <br />	
+	<strong>4px</strong> - the blur radius <br />
+	<strong>grey</strong> - the color of the shadow </p>	
+
+<!-- Link to Result of Example_2.16 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.16.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.16!</a> &larr; </p>			
+	<p> To add more than one shadow to the text, add a comma-separated list of shadows. </p>
+
+<!-- text-shadow with Blur Effect -->	
+	<p> <strong><h3><u>text-shadow with Blur Effect</u></h3></strong> </p>
+	<p> When working with shadows, you can use any CSS-supported color format. </p>
+	<p> For the x and y offsets, various types of units can be used 
+		&lpar;like <strong>px, cm, mm, in, pc, pt,</strong> etc&rpar; <br />
+		Negative values are also supported. </p>
+	<p> The example below creates a blue drop-shadow, two pixels higher than the main text,
+		one pixel to the left of it, and with a 0.5em blur: </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;h1&gt;Text-shadow with blur effect&lt;/h1&gt; </p>				
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> h1 { <br />
+	&emsp; <u>font-size:</u> 20pt; <br />
+	&emsp; <strong>text-shadow</strong>: rgba&lpar;0,0,255,1&rpar; -1px -2px 0.5em; <br />
+		} </p>	
+
+<!-- Link to Result of Example_2.17 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.17.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.17!</a> &larr; </p>	<br/>			
+
+<!-- ************************************************************************** -->
+		
+<!-- text-transform -->
+	<h2><strong><font size="h2">XII.</font> <u>text-transform </u></strong></h2>	
+<!-- The text-transform Property -->	
+	<p> <strong><h3><u>The text-transform Property</u></h3></strong> </p>
+	<p> The text-transform CSS property specifies how to capitalize an element's text.
+		For example, it can be used to make text appear with each word capitalized. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="capitalize"&gt; <br />
+	&emsp;	The value capitalize transforms the first <br />
+	&emsp;	character in each word to uppercase; <br />
+	&emsp;	all other characters remain unaffected. <br />
+	&lt;/p&gt; </p>				
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.capitalize { <br />
+	&emsp; <u>text-transform:</u> capitalize; <br />
+		} </p>	
+
+<!-- Link to Result of Example_2.18 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.18.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.18!</a> &larr; </p>		
+			
+<!-- text-transform Values -->	
+	<p> <strong><h3><u>text-transform Values</u></h3></strong> </p>
+	<p> Using text-transform, you can make text appear in all-uppercase or all-lowercase.
+		Here is an example: </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="uppercase"&gt;This value transforms all characters to uppercase.&lt;/p&gt; <br />
+	&lt;p class="lowercase"&gt;This value transforms all characters to lowercase.&lt;/p&gt;</p>				
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.uppercase { <br />
+	&emsp; <u>text-transform:</u> <strong>uppercase;</strong> <br />
+		} <br />
+		p.lowercase { <br />
+	&emsp; <u>text-transform:</u> <strong>lowercase;</strong> <br />
+		} </p>	
+
+<!-- Link to Result of Example_2.19 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.19.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.19!</a> &larr; </p>
+	<p> Take note that the value <strong>none</strong> will produce no capitalization
+		effect at all. </p> <br />
+
+<!-- ************************************************************************** -->
+		
+<!-- letter-spacing -->
+	<h2><strong><font size="h2">XIII.</font> <u>letter-spacing </u></strong></h2>	
+<!-- The letter-spacing Property -->	
+	<p> <strong><h3><u>The letter-spacing Property</u></h3></strong> </p>
+	<p> The letter-spacing property specifies the <strong>space between characters</strong>
+		in a text. The values can be set as: 
+		<ul>
+			<li><strong>normal</strong> defines the default style with no extra 
+				space between characters</li>
+			<li><strong>length</strong> defines an extra space between characters using
+				measurement units like px, pt, cm, mm, etc,;</li>
+			<li><strong>inherit</strong> inherits the property from its parent element;</li>
+		</ul> </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="normal"&gt;This paragraph has no
+		additional letter-spacing applied.&lt;/p&gt; <br />
+	&lt;p class="positive"&gt;This paragraph is letter-spaced at 4px.&lt;/p&gt; </p>				
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.normal { <br />
+	&emsp; <strong><u>letter-spacing:</u> normal;</strong> <br />
+		} <br />
+		p.positive { <br />
+	&emsp; <strong><u>letter-spacing:</u> 4px;</strong> <br />
+		} <br />
+		</p>	
+
+<!-- Link to Result of Example_2.20 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.20.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.20!</a> &larr; </p>	
+			
+<!-- Using Negative Values -->			
+	<p> <strong><h3><u>Using Negative Values</u></h3></strong> </p>
+	<p> For defining an extra space between characters, negative values are also permitted. <br />	
+		Here is an example demonstrating the difference between <strong>positive</strong>
+		and <strong>negative</strong> values: </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="positive"&gt;This paragraph is letter-spaced at 4px.&lt;/p&gt; <br />				
+		&lt;p class="negative"&gt;This paragraph is letter-spaced at -1.5px.&lt;/p&gt; </p>
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.positive { <br />
+	&emsp; <u>letter-spacing:</u> 4px; <br />
+		} <br />
+		p.negative { <br />
+	&emsp; <u>letter-spacing:</u> -1.5px; <br />
+		}
+		</p>	
+
+<!-- Link to Result of Example_2.21 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.21.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.21!</a> &larr; </p>	<br />
+
+<!-- ************************************************************************** -->
+		
+<!-- word-spacing -->
+	<h2><strong><font size="h2">XIV.</font> <u>word-spacing </u></strong></h2>	
+<!-- The word-spacing Property -->	
+	<p> <strong><h3><u>The word-spacing Property</u></h3></strong> </p>
+	<p> The word-spacing property specifies the <strong>space between words</strong> in a text.	
+		Just like the letter-spacing property, you can set the word-spacing values as
+		<strong>normal</strong>, <strong>length</strong>, and <strong>inherit</strong>. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="normal"&gt;This paragraph has no
+		additional word-spacing applied.&lt;/p&gt; <br />
+	&lt;p class="px"&gt;This paragraph is word-spaced at 30px.&lt;/p&gt; </p>				
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.normal { <br />
+	&emsp; <strong><u>word-spacing:</u> normal;</strong> <br />
+		} <br />
+		p.px { <br />
+	&emsp; <strong><u>word-spacing:</u> 30px;</strong> <br />
+		} <br />
+		</p>	
+
+<!-- Link to Result of Example_2.22 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.22.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.22!</a> &larr; </p>
+	<p> Take note that when a weird spacing is used, and it is necessary to keep the selected
+		paragraph with normal word spacing, the <strong>normal</strong> option is usually used. </p>
+		
+<!-- Measurement Units -->	
+	<p> <strong><h3><u>Measurement Units</u></h3></strong> </p>		
+	<p> To define an extra space between words, you can use positive measurement values like
+		<strong>px, pt, pc, cm, mm, inches, em,</strong> and <strong>ex</strong>. <br />
+		Negative values are also permitted. Here is an example to show the difference. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="positive"&gt;This paragraph is word-spaced at 20px.&lt;/p&gt; <br />				
+		&lt;p class="negative"&gt;This paragraph is word-spaced at -5px.&lt;/p&gt; </p>
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.positive { <br />
+	&emsp; <strong><u>word-spacing:</u> 20px</strong>; <br />
+		} <br />
+		p.negative { <br />
+	&emsp; <strong><u>word-spacing:</u> -5px</strong>; <br />
+		}
+		</p>	
+
+<!-- Link to Result of Example_2.23 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.23.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.23!</a> &larr; </p> <br />
+		
+<!-- ************************************************************************** -->
+		
+<!-- white-spacing -->
+	<h2><strong><font size="h2">XV.</font> <u>white-spacing </u></strong></h2>	
+<!-- The white-space Property -->	
+	<p> <strong><h3><u>The white-space Property</u></h3></strong> </p>		
+	<p> The white-space property specifies how white-space inside an element is handled.
+		The values can be set as <strong>normal, inherit, nowrap,</strong> etc. </p>
+	<p> The <strong>nowrap</strong> value makes the text continue on the same line until a
+		&lt;br&gt; tag is encountered, and also collapses all sequences of whitespace
+		into a single whitespace. </p>
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p&gt; <br />
+		This paragraph has &emsp;&emsp;&nbsp; multiple spaces &emsp;&ensp; and <br />
+		a line break, but it will be ignored, as we used the nowrap value. <br />
+	&lt;/p&gt; </p>
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p { <br />
+	&emsp; <u>white-space:</u> nowrap; <br />
+		} </p>	
+
+<!-- Link to Result of Example_2.24 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.24.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.24!</a> &larr; </p>
+	<p> Take note that the text will continue on the same line until a
+		<strong>&lt;br /&gt;</strong> tag is encountered. </p>
+		
+<!-- The white-space Values -->	
+	<p> <strong><h3><u>The white-space Values</u></h3></strong> </p>
+	<p> The white-space property also supports other values:
+		<ul>
+			<li><strong>pre</strong> - text will only wrap on line breaks and white space</li>
+			<li><strong>pre-line</strong> - text will wrap where there is a break in code,
+				but extra white space is still ignored</li>
+			<li><strong>pre-wrap</strong> - text will wrap when necessary, and on line breaks</li>
+		</ul> </p>
+	<p> Here is an example in which all three values are used: </p>	
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;p class="pre"&gt; <br />
+		In the markup, we have multiple&emsp;&emsp;&emsp;spaces <br />
+		and a line break. <br />
+	&lt;/p&gt; <br />
+	&lt;p class="preline"&gt; <br />
+		In the markup, we have multiple&emsp;&emsp;&emsp;spaces <br />
+		and a line break, but in the result, multiple spaces are ignored. <br />
+	&lt;/p&gt; <br />
+	&lt;p class="prewrap"&gt; <br />
+		In the markup, we have&emsp;&emsp;&emsp;&ensp;multiple <br />
+		spaces and a line break. <br />
+	&lt;/p&gt; <br />
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p.pre { <br />
+	&emsp; <strong><u>white-space:</u> pre;</strong> <br />
+		} <br /> 
+		p.preline { <br />
+	&emsp; <strong><u>white-space:</u> pre-line;</strong> <br />
+		} <br />
+		p.prewrap { <br />
+	&emsp; <strong><u>white-space:</u> pre-wrap;</strong> <br />
+		} </p>	
+
+<!-- Link to Result of Example_2.25 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/example_2.25.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_2.25!</a> &larr; </p>
+	<p> Take note that <strong>Pre-wrap</strong> value behaves as the <strong>pre</strong>
+		value, except that it adds extra line breaks to prevent the text breaking out
+		of the element's box. </p> <br />	
+		
+<!-- ****************************** FOOTER ****************************** -->	
+	
+	<br />
+<!-- Pages start -->
+		<p align="center">
+
+	<!-- Go to top -->	
+		<a href="#top">Go to top</a> <br />
+	
+	<!-- Previous Page -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%201/My%20CSS%20Notebook%20-%20Page%201.html" 
+			class="previous">&laquo; Previous </a>
+	
+	<!-- Page 1 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%201/My%20CSS%20Notebook%20-%20Page%201.html" 
+			target="_self">1</a>
+	
+	<!-- Page 2 -->	
+		<a href="#" 
+			target="_self">2</a>
+	
+	<!-- Page 3 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%203/My%20CSS%20Notebook%20-%20Page%203.html" 
+			target="_self">3</a>
+	
+	<!-- Page 4 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%204/My%20CSS%20Notebook%20-%20Page%204.html" 
+			target="_self">4</a>
+	
+	<!-- Page 5 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%205/My%20CSS%20Notebook%20-%20Page%205.html" 
+			target="_self">5</a>
+	
+	<!-- Page 6 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%206/My%20CSS%20Notebook%20-%20Page%206.html" 
+			target="_self">6</a>
+
+	<!-- Page 7 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/My%20CSS%20Notebook%20-%20Page%207.html" 
+			target="_self">7</a>			
+	
+	<!-- Page 8 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/My%20CSS%20Notebook%20-%20Page%208.html" 
+			target="_self">8</a>	
+	
+	<!-- Next Page -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%203/My%20CSS%20Notebook%20-%20Page%203.html"	
+			class="next">Next &raquo;</a>	
+		
+<!-- Pages end -->
+        
+    <!-- Footer -->
+        <div class="copyright">
+            &copy; 2018 My CSS Notebook I. All rights reserved.
+        </div>
+	
+  </body>
+ </html>	

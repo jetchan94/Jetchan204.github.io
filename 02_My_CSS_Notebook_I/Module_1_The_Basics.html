@@ -1,0 +1,449 @@
+<!DOCTYPE html>	<!-- enable standards mode for documents written using the HTML syntax -->
+ <html>
+  <head>
+   <title>	My CSS Notebook I </title>
+   <p align="center"><strong><font size="7"> My CSS Notebook I</font></strong>
+<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->  
+   <style>	
+	body {		
+		background-color: teal;	<!-- Website will have teal background -->
+		}
+
+	h1 {
+		color: darkred;	
+		text-align: center;	<!-- All h1 text will have dark red, centered font -->
+		}
+		
+	h2 {
+		color: darkblue;	<!-- All h2 text will have dark blue font -->
+		}
+
+	h3 {
+		color: beige;	<!-- All h2 text will have beige font -->
+		}		
+
+	p {
+		font-family: verdana;
+		font-size: 14px;	<!-- All p text will be 14px verdana text -->
+		}
+   </style>
+  </head>
+  <body>
+
+<!-- ************************************* PAGE 1 ************************************* -->	
+  
+	
+	<p align="center">***** On Monday, 9/3/18, I started 
+		learning the fundamentals of CSS on 
+		<a href= "http://www.sololearn.com"target="_blank"> 
+		sololearn.com</a>. *****</p>
+		
+		<p align="center"> ***** On Tuesday, 1/15/19, I completed
+		the CSS Fundamentals course and was issued the 
+		<a href="https://www.sololearn.com/Certificate/1023-10607947/pdf/" target="_blank">
+		certificate</a>. *****
+		
+	<p align="center"> TAKE NOTE THAT THIS IS NOT A .CSS FILE BECAUSE IT WILL BE A PLAIN TEXT FILE.
+		INSTEAD, CSS WILL BE IMPLEMENTED INTO A .HTML FILE. THIS CAN BE DONE
+		VIA A LINK, EMBED, IMPORT AND/OR INLINE STYLES.</p>	<br />
+		
+<!-- ***** Module 1 Materials ***** -->
+	<h1><u> Module 1: The Basics </u></h1>
+	
+<!-- ************************************************************************** -->
+	
+<!-- What is CSS? -->
+	<h2><strong><font size="h2">I.</font> <u>What is CSS? </u></strong></h2> 
+	<p>	CSS stands for <strong>C</strong>ascading <strong>S</strong>tyle
+		<strong>S</strong>heets. </p>
+	<p> <ul> 
+	<li><strong> Cascading </strong>refers to the way CSS applies one style
+		on top of another.</li>	
+	<li><strong> Style Sheets </strong> control the look and feel of 
+		web documents.</li>	
+	</ul> </p>
+	<p> <strong>CSS</strong> and <strong>HTML</strong> work hand in hand:	
+	<br /> <ul> 
+	<li> HTML sorts out the page structure.</li>	
+	<li> CSS defines how HTML elements are displayed.</li>	
+	</ul> </p>
+	
+	<p> CSS allows you to apply specific styles to specific HTML elements. </p>
+	<p> The main benefit of CSS is that it allows you to separate 
+		<strong>style</strong> from <strong>content</strong>. </p>
+	<p> Using just HTML, all the styles and formatting are in the same place,
+		which becomes rather difficult to maintain as the page grows.
+		
+	<div style="background-color:gold; width:600px; padding:0px">
+			
+	<p> All formatting can &lpar;and <strong>should</strong>&rpar; be removed
+		from the HTML document and stored in a separate CSS file. </p>	
+	</div> </p> <br />
+	
+<!-- ************************************************************************** -->
+	
+<!-- Inline, Embedded, External CSS -->
+	<h2><strong><font size="h2">II.</font> 
+	<u> Inline, Embedded, External CSS </u></strong></h2>
+<!-- Inline CSS -->	
+	<p> <strong><h3><u>Inline CSS</u></h3></strong> </p>
+	<p> Using an inline style is one of the ways to insert a style sheet.
+	With an inline style, a unique style is applied to a single element. </p>
+	<p> In order to use an inline style, add the 
+	<strong>style attribute</strong> to the <strong>relevant tag</strong>. </p>
+	<p> The example below shows how to create a paragraph with a gray background
+	and white text: </p>
+	<p> <strong>Code:</strong> </p>
+	<p> &lt;p <strong>style</strong>="color:white; 
+	<u> background-color:</u>gray;"&gt; <br />
+		This is an example of inline styling. <br />
+	&lt;/p&gt;	</p>
+	<p> <strong>Result:</strong> </p>
+	<p style="color:white; background-color:gray;">
+		This is an example of inline styling.
+	</p>	
+	<p> Take note that the style attribute can contain any CSS property. </p>
+
+<!-- Embedded/Internal CSS -->	
+	<p> <strong><h3><u>Embedded/Internal CSS</u></h3></strong> </p>
+	<p> Internal styles are defined within the 
+	<strong>&lt;style&gt;</strong> elements, inside the <strong>head</strong>
+		section of an HTML page. </p>
+	<p>For example, the following code styles <strong>all</strong> paragraphs: </p>
+	<p> <strong>Code:</strong> </p>
+	<p> &lt;html&gt; <br />
+	<!-- non-breaking space -->
+	&nbsp; &lt;head&gt; <br />
+	&nbsp;&nbsp; &lt;style&gt; <br />
+	&nbsp;&nbsp; p { <br />
+	&emsp;&emsp; color:white; <br />
+	&emsp;&emsp; <u>background-color:</u>gray; <br />
+	&nbsp;&nbsp; } <br />
+	&nbsp;&nbsp; &lt;/style&gt;	<br />
+	&nbsp; &lt;/head&gt; <br />
+	&nbsp; &lt;body&gt; <br />
+	&nbsp;&nbsp; &lt;p&gt; This is my first paragraph. &lt;/p&gt; <br />
+	&nbsp;&nbsp; &lt;p&gt; This is my second paragraph. &lt;/p&gt; <br />
+	&nbsp; &lt;body&gt; </br />
+	&lt;/html&gt; </p>
+	<p> <strong>Result:</strong> All paragraphs will have a white font
+		and gray background: </p>
+<!-- Link to Result of Example_1.1 -->		
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/CSS/My%20CSS%20Notebook%20-%20Page%201/example_1.1.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_1.1!</a> &larr; </p>
+
+	<p> Take note that an internal style sheet may be used if 
+		one single page has a unique style. </p>
+
+<!-- External CSS -->		
+	<p> <strong><h3><u>External CSS</u></h3></strong> </p>
+	<p> With this method, all styling rules are contained in a single text
+		file, which is saved with the <strong>.css</strong> extension. </p>
+	<p> This CSS file is then referenced in the HTML using the 
+	<strong>&lt;link&gt;</strong> tag. The &lt;link&gt;	element goes
+		inside the head section. </p>
+	<p> i.e. </p>
+<!-- HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar; </p>
+	<p> &lt;head&gt; <br />
+	&emsp; &lt;<strong>link</strong> 
+		rel="stylesheet" href="example.css"&gt; <br />
+	&lt;/head&gt; <br />	
+	&lt;body&gt; <br />
+	&emsp; &lt;p&gt; This is my first paragraph. &lt;/p&gt; <br />
+	&emsp; &lt;p&gt; This is my second paragraph. &lt;/p&gt; <br />
+	&emsp; &lt;p&gt; This is my third paragraph. &lt;/p&gt; <br />
+	&lt;/body&gt; </p>
+	<p> <strong>Result:</strong>
+	<p>
+	<head>
+	 <link rel="stylesheet" href="<!-- example_2.css -->">
+	</head>
+	<body>
+	 <p>This is my first paragraph.</p>
+	 <p>This is my second paragraph. </p>
+	 <p>This is my third paragraph. </p>
+	</body> </p>
+<!-- CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar; </p>
+	<p> p { <br />
+	&emsp; color:white; <br/>
+	&emsp; <u>background-color:</u>gray; <br />
+	} </p>
+	<p> <strong>Result:</strong> &lpar;HTML with External CSS&rpar; </p>
+<!-- Link to Result of example_1.2-->
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/CSS/My%20CSS%20Notebook%20-%20Page%201/example_1.2.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_1.2!</a> &larr; </p>
+	<p> Both relative and absolute paths can be used to define the 
+	<strong>href</strong> for the CSS file. In our example, the path is
+		relative, as the CSS file is in the same directory as the 
+		HTML file. </p> <br />	
+	
+<!-- ************************************************************************** -->
+	
+<!-- CSS Rules and Selectors -->
+	<h2><strong><font size="h2">III.</font> 
+	<u> CSS Rules and Selectors </u></strong></h2>
+	
+<!-- CSS Syntax -->	
+	<p> <strong><h3><u> CSS Syntax </u></h3></strong> </p>
+	<p> CSS is composed of style rules that the browser interprets and then
+		applies to the corresponding elements in your document. <br />
+		A style rule has three parts: <strong>selector</strong>, 
+	<strong>property</strong>, and <strong>value</strong>. </p>
+	<p> For example, the headline color can be defined as: </p>
+	<p> h1 {color: orange;} </p>
+	<p> <strong>Where:</strong> </p>	
+	<img src="https://api.sololearn.com/DownloadFile?id=2584" alt="">
+	<p> The selector points to the HTML element you want to style. </p>
+<!-- Link to Result of Example_1.3 -->	
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/CSS/My%20CSS%20Notebook%20-%20Page%201/example_1.3.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_1.3!</a> &larr; </p>	
+	<p> Take note that the declaration block contains one or more declarations,
+		separated by semicolons. <br />
+		Each declaration includes a property name and a value, 
+		separated by a colon. </p> 
+	
+<!-- Type Selectors -->	
+	<p> <strong><h3><u> Type Selectors </u></h3></strong> </p>
+	<p> The most common and easy way to understand selectors are
+	<strong>type selectors</strong>. This selector targets element types
+		on the page. </p>
+	<p> For example, to target all the paragraphs on the page: </p>
+	<p> p { <br />
+	&emsp; color: red; <br />
+	&emsp; <u>font-size:</u> 130%; <br />	
+		}	</p>
+<!-- Link to Result of Example_1.4 -->	
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/CSS/My%20CSS%20Notebook%20-%20Page%201/example_1.4.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_1.4!</a> &larr; </p>	
+	<p> Take note that a CSS declaration always ends with a semicolon, 
+		and declaration groups are surrounded by curly braces. </p>
+	
+<!-- id and class Selectors -->
+	<p> <strong><h3><u> id and class Selectors </u></h3></strong> </p>
+	<p> <strong>id selectors</strong> allow you to style an HTML element that has an
+	<strong>id</strong> attribute, regardless of their position in the document tree. 
+		Here is an example of an id selector: </p>
+<!-- HTML -->	
+	<strong>The HTML:</strong> &lpar;Code&rpar; 
+	<p> &lt;div <strong>id="intro"</strong>&gt; <br/ >
+	&emsp; &lt;p&gt; This paragraph is in the intro section. &lt;/p&gt; <br />
+	&lt;/div&gt; <br />
+	&lt;p&gt; This paragraph is not in the intro section. &lt;/p&gt; </p>
+	<p> <strong>Result:</strong> </p>
+	<p> <div id="intro">
+		<p> This paragraph is in the intro section.</p>
+		</div>
+		<p> This paragraph is not in the intro section.</p>
+<!-- CSS -->	
+	<strong>The CSS:</strong> &lpar;Code&rpar;
+	<p> #intro { <br />
+	&emsp; color: white;	<br />
+	&emsp; <u>background-color:</u> gray;	<br />
+		}	</p>
+	<p> To select an element with a specific id, use a hash character, and then
+		follow it with the id of the element. </p>
+	<p> <strong>Result:</strong> The paragraph in the intro is affected by CSS. </p>	
+	<!-- Link to Result of example_1.5 -->
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/CSS/My%20CSS%20Notebook%20-%20Page%201/example_1.5.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_1.5!</a> &larr; </p>
+
+	<p> <strong>Class selectors</strong> work in a similar way. The major
+		difference is that IDs can only be applied once per page, while classes 
+		can be used many times on a page as needed. </p>
+	<p> In the example below, both paragraphs having the class "first" will
+		be affected by the CSS: </p>
+<!-- HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar;	</p> 
+	<p> &lt;div&gt; <br />
+	&emsp; &lt;p <strong>class</strong>="first"&gt; This is a paragraph. &lt;/p&gt; <br />
+	&emsp; &lt;p&gt; This is the second paragraph. &lt;/p&gt; <br />		
+	&lt;div&gt; <br />
+	&lt;p <strong>class</strong>="first"&gt; 
+		This is not in the intro section. &lt;/p&gt; <br />
+	&lt;p This second paragraph is not in the intro section. &lt;/p&gt; </p>
+	<p>	<strong>Result:</strong> </p>
+	<p> <div>
+	<p class="first">This is a paragraph</p>
+	<p> This is the second paragraph. </p>
+	</div>
+	<p class="first"> This is not in the intro section</p>
+	<p> The second paragraph is not in the intro section. </p>
+<!-- CSS -->	
+	<strong>The CSS:</strong> &lpar;Code&rpar;
+	<p> .first {<u>font-size:</u> 200%;} </p>
+	<p> <strong>Result:</strong> The font of every first paragraph is doubled. </p>
+	<!-- Link to Result of example_1.6-->
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/CSS/My%20CSS%20Notebook%20-%20Page%201/example_1.6.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_1.6!</a> &larr; </p>
+	<p> To select elements with a specific class, use a period character,
+		followed by the name of the class. <br />
+		Do <strong>NOT</strong> start a class or id name with a number! </p>
+		
+<!-- Descendant Selectors -->
+	<p> <strong><h3><u> Descendant Selectors </u></h3></strong> </p>
+	<p> These selectors are used to select elements that are descendants 
+		of another element. When selecting levels, you can select as many levels
+		deep as you need to. </p>
+	<p> For example, to target only &lt;em&gt; elements in the first
+		paragraph of the "intro" section: </p>
+<!-- HTML -->	
+	<strong>The HTML:</strong> &lpar;Code&rpar; 
+	<p> &lt;div id="intro"&gt; <br/ >
+	&emsp; &lt;p class="first"&gt; 
+		This is a &lt;em&gt; paragraph. &lt;/em&gt; &lt;/p&gt; <br />	
+	&lt;p&gt; This is the second paragraph. &lt;/p&gt; <br />
+	&lt;/div&gt; <br />
+	&lt;p class="first"&gt;	This is not in the intro section. &lt;/p&gt; <br />
+	&lt;p&gt; The second paragraph is not in the intro section. &lt;/p&gt; </p>
+	<p> <strong>Result:</strong> </p>
+	<p> <div id="intro">
+	 <p class="first">This is a <em> paragraph.</em></p>
+	 <p> This is the second paragraph. </p>
+	</div>
+	 <p class="first"> This is not in the intro section.</p>
+	 <p> The second paragraph is not in the intro section. </p>		
+<!-- CSS -->	
+	<strong>The CSS:</strong> &lpar;Code&rpar;
+	<p> #intro .first em { <br />
+	&emsp; color: pink; <br />
+	&emsp; <u>background-color;</u> gray; <br />
+		} </p>
+	<p> <strong>Result:</strong> 
+		The first "paragraph" text is pink, italicized, and has a gray background. </p>
+<!-- Link to Result of example_1.7-->
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/CSS/My%20CSS%20Notebook%20-%20Page%201/example_1.7.html" 
+			target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_1.7!</a> &larr; </p>
+	<p> Take note that the descendant selector matches all elements that are 
+		descendants of a specified element. </p> <br />
+		
+<!-- ************************************************************************** -->
+	
+<!-- CSS Comments -->
+	<h2><strong><font size="h2">IV.</font> 
+	<u> CSS Comments </u></strong></h2>
+	
+<!-- Comments -->	
+	<p> <strong><h3><u> Comments </u></h3></strong> </p>
+	<p> Comments are used to explain your code, and may help you when you edit
+		the source code later. <br />
+		Comments are ignored by browsers. </p>
+	<p> A CSS comment looks like this: </p>
+	<p> <strong>CSS Code:</strong> </p>
+	<p> /* Comment goes here */ </p>
+	<p> <strong>Example code:</strong> </p>	
+	<p> p {	<br />
+	&emsp; color: green; <br />
+	&emsp; /* This is a comment */ <br >
+	&emsp; <u>font-size:</u> 150%; <br />
+		}	</p>
+	<p> The comment does not appear in the browser: </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2587" alt"">
+	<p> Comments can also span multiple lines. </p>	<br />
+
+<!-- ************************************************************************** -->
+	
+<!-- Style Cascade and Inheritance -->
+	<h2><strong><font size="h2">V.</font> 
+	<u> Style Cascade and Inheritance </u></strong></h2>
+	
+<!-- Cascade -->	
+	<p> <strong><h3><u> Cascade </u></h3></strong> </p>
+	<p> The final appearance of a web page is a result of different styling rules. </p>
+	<p> The three main sources of style information that form a cascade are: </p>
+	<p> <ul>
+		<li>The stylesheet created by the <strong>author of the page</strong></li>
+		<li>The <strong>browser's default styles</strong></li>
+		<li>Styles specified <strong>by the user</strong></li>
+	</ul>	</p>
+<!-- Inheritance -->	
+	<p> <strong><h3><u> Inheritance </u></h3></strong> </p>
+	<p> Inheritance refers to the way properties flow through the page.
+		A child element will usually take on the characteristics of the parent element
+		unless otherwise defined. </p>
+	<p> <strong>For example:</strong> Code </p>
+	<p> &lt;html&gt; <br />
+	&emsp; &lt;head&gt; <br />
+    &emsp;&emsp; &lt;style&gt; <br />
+    &emsp;&ensp; body { <br />
+    &emsp;&emsp;&ensp; color: green; <br />
+    &emsp;&emsp;&ensp; <u>font-family:</u> Arial; <br />
+    &emsp;&emsp; } <br />
+    &emsp;&emsp; &lt;/style&gt; <br />
+    &emsp; &lt;/head&gt; <br />
+    &emsp; &lt;body&gt; <br />       
+    &emsp;&emsp; &lt;p&gt; <br />
+    &emsp;&emsp; This is a text inside the paragraph. <br />
+    &emsp;&emsp; &lt;/p&gt; <br />
+	&emsp; &lt/body&gt; <br />
+	&lt;/html&gt;	</p>
+	<p> <strong>Result:</strong> </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2588" alt="">
+	<p> Since the paragraph tag (child element) is inside the 
+		body tag (parent element), it takes on any styles assigned 
+		to the body tag. </p>
+
+
+
+
+
+	
+<!-- ****************************** FOOTER ****************************** -->	
+	
+	<br />
+<!-- Pages start -->
+		<p align="center">
+		
+	<!-- Go to top -->	
+		<a href="#top">Go to top</a> <br />
+	
+	<!-- Previous Page -->	
+		<a href="#" 
+		class="previous">&laquo; Previous</a>
+	
+	<!-- Page 1 -->	
+		<a href="#" 
+			target="_self">1</a>
+	
+	<!-- Page 2 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/My%20CSS%20Notebook%20-%20Page%202.html" 
+			target="_self">2</a>
+	
+	<!-- Page 3 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%203/My%20CSS%20Notebook%20-%20Page%203.html" 
+			target="_self">3</a>
+	
+	<!-- Page 4 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%204/My%20CSS%20Notebook%20-%20Page%204.html" 
+			target="_self">4</a>
+	
+	<!-- Page 5 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%205/My%20CSS%20Notebook%20-%20Page%205.html" 
+			target="_self">5</a>
+
+	<!-- Page 6 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%206/My%20CSS%20Notebook%20-%20Page%206.html" 
+			target="_self">6</a>
+
+	<!-- Page 7 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/My%20CSS%20Notebook%20-%20Page%207.html" 
+			target="_self">7</a>		
+	
+	<!-- Page 8 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/My%20CSS%20Notebook%20-%20Page%208.html" 
+			target="_self">8</a>	
+			
+	<!-- Next Page -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/My%20CSS%20Notebook%20-%20Page%202.html"	
+			class="next">Next &raquo;</a>
+
+<!-- Pages end -->
+        
+<!-- Footer -->
+        <div class="copyright">
+            &copy; 2018 My CSS Notebook I. All rights reserved.
+        </div>
+	
+  </body>
+ </html>

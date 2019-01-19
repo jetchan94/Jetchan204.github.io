@@ -1,0 +1,426 @@
+<!DOCTYPE html>	<!-- enable standards mode for documents written using the HTML syntax -->
+ <html>
+  <head>
+   <title>	My CSS Notebook I </title>
+   <p align="center"><strong><font size="7"> My CSS Notebook I</font></strong>
+<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->  
+   <style>	
+	body {		
+		background-color: teal;	<!-- Website will have teal background -->
+		}
+
+	h1 {
+		color: darkred;	
+		text-align: center;	<!-- All h1 text will have dark red, centered font -->
+		}
+		
+	h2 {
+		color: darkblue;	<!-- All h2 text will have dark blue font -->
+		}
+
+	h3 {
+		color: beige;	<!-- All h2 text will have beige font -->
+		}		
+
+	p {
+		font-family: verdana;
+		font-size: 14px;	<!-- All p text will be 14px verdana text -->
+		}
+   </style>
+  </head>
+  <body>
+
+<!-- ************************************* PAGE 8 ************************************* -->	
+  
+	
+	<p align="center">***** On Monday, 9/3/18, I started 
+		learning the fundamentals of CSS on 
+		<a href= "http://www.sololearn.com"target="_blank"> 
+		sololearn.com</a>. *****</p>
+		
+		<p align="center"> ***** On Tuesday, 1/15/19, I completed
+		the CSS Fundamentals course and was issued the 
+		<a href="https://www.sololearn.com/Certificate/1023-10607947/pdf/" target="_blank">
+		certificate</a>. *****
+		
+	<p align="center"> TAKE NOTE THAT THIS IS NOT A .CSS FILE BECAUSE IT WILL BE A PLAIN TEXT FILE.
+		INSTEAD, CSS WILL BE IMPLEMENTED INTO A .HTML FILE. THIS CAN BE DONE
+		VIA A LINK, EMBED, IMPORT AND/OR INLINE STYLES.</p>	<br />
+		
+<!-- ***** Module 8 Materials ***** -->
+	<h1><u> Module 8: CSS Filters </u></h1>
+	
+<!-- ************************************************************************** -->
+
+<!-- CSS Filters -->
+	<h2><strong><font size="h2">I.</font> <u>CSS Filters </u></strong></h2>
+<!-- CSS Filters -->	
+	<p> <strong><h3><u>CSS Filters</u></h3></strong> </p>
+	<p> The CSS <b>filter</b> property lets you apply graphical effects like <b>blurring</b> or <b>color shifting</b> to an element. <br />
+		Filters are commonly used to <b>adjust the rendering</b> of images, backgrounds, and borders. </p>
+	<p> Image filtering is useful when you want to have different styling for the same image. <br />
+		Instead of uploading multiple images to the website, you can upload only one image and then define visual
+		effects using the <b>filter</b> property. </p>
+	<p> Filter functions include <b>blur&lpar;&rpar;</b>, <b>brightness&lpar;&rpar;</b>, <b>contrast&lpar;&rpar;</b>, <b>drop-shadow&lpar;&rpar;</b>,
+		<b>grayscale&lpar;&rpar;</b>, <b>hue-rotate&lpar;&rpar;</b>, <b>invert&lpar;&rpar;</b>, <b>opacity&lpar;&rpar;</b>, <b>saturate&lpar;&rpar;</b>,
+		and <b>sepia&lpar;&rpar;</b>. </p>
+	<p> Take note that the filter property is not supported in Internet Explorer, Edge 12, Safari 5.1 and earlier. </p>
+	
+<!-- The drop-shadow Function -->	
+	<p> <strong><h3><u>The drop-shadow Function</u></h3></strong> </p>	
+	<p> <b>drop-shadow&lpar;w h b c&rpar;</b> creates a shadow effect that extends beyond an image for the width <b>w</b>
+		and height <b>h</b> with blur <b>b</b> and color <b>c</b>. <br />
+		<b>w</b>, <b>h</b>, and <b>b</b> are values in pixels. </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .dropshadow { <br />
+	&emsp; filter: <b>drop-shadow&lpar;5px 9px 2px blue&rpar;</b>; <br />
+		} </p>
+		
+<!-- Link to Result of Example_8.1 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.1.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.1!</a> &larr; </p>
+		
+	<p> Positive values create the shadow to the <b>right</b> and <b>below</b> the image. <br />
+		Negative <b>width</b> and <b>height</b> values create the shadow <b>above</b> and to the <b>left</b> of the image. </p> <br />
+		
+<!-- ************************************************************************** -->
+
+<!--  Filter Functions -->
+	<h2><strong><font size="h2">II.</font> <u>Filter Functions </u></strong></h2>
+<!-- The grayscale Function -->	
+	<p> <strong><h3><u>The grayscale Function</u></h3></strong> </p>		
+	<p>The <b>grayscale</b> function converts an image to <b>grayscale</b>. <br />
+		The only parameter defines the <b>proportion</b> of the conversion. </p>
+	<p> <b>0%</b> grayscale is the <b>original image</b>, whereas <b>100%</b> makes the image <b>completely grayscale</b>. </p>	
+	<p> Here is an example using a percentage value to make an image completely grayscale: </p>
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .filtered { <br />
+	&emsp; filter: <b>grayscale</b>&lpar;100%&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.2 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.2.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.2!</a> &larr; </p>	
+	<p> Take note that any negative value leaves the image unchanged. </p>
+	
+<!-- The sepia Function -->	
+	<p> <strong><h3><u>The sepia Function</u></h3></strong> </p>	
+	<p> The <b>sepia</b> function converts an image to sepia. <br />
+		This is similar to using <b>grayscale</b> but with a <b>reddish-brown</b> color tone. </p>
+	<p> The idea behind <b>sepia</b> filters is that they can make black and white photos look a bit more
+		eye-catching than the basic grayscale version. </p>
+	<p> <b>0%</b> sepia is the <b>original image</b>, whereas <b>100%</b> converts the image to <b>sepia</b> completely: </p>
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .filtered { <br />
+	&emsp; filter: <b>sepia</b>&lpar;100%&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.3 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.3.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.3!</a> &larr; </p>	
+	
+<!-- The saturate Function -->	
+	<p> <strong><h3><u>The saturate Function</u></h3></strong> </p>	
+	<p> The <b>saturate</b> function controls the <b>color saturation</b> for an image. The only parameter determines
+		the <b>proportion of the saturation</b> that is applied to the image. <br />
+		The parameter can be either a percentage value or a number. </p>
+	<p> <b>0%</b> creates a <b>completely unsaturated</b> image &lpar;<b>grayscale</b>&rpar;, whereas <b>100%</b>
+		is the <b>original image</b>. </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .filtered { <br />
+	&emsp; filter: <b>saturate</b>&lpar;50%&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.4 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.4.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.4!</a> &larr; </p>	
+
+	<p> Here is an example using a number value to make an image <b>super-saturated</b>: </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .filtered { <br />
+	&emsp; filter: <b>saturate</b>&lpar;2.5&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.5 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.5.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.5!</a> &larr; </p>	
+	<p> Take note that the <b>saturate</b> function also accepts values over 100%. </p>
+	
+<!-- The hue-rotate Function -->	
+	<p> <strong><h3><u>The hue-rotate Function</u></h3></strong> </p>	
+	<p> The <b>hue-rotate</b> function applies a hue rotation &lpar;based on the color circle&rpar; to an image. <br />
+		The function takes an <b>angle of rotation</b> as its parameter. The value of angle defines the number of
+		<b>degrees</b> around the <b>color circle</b> and the input samples will be adjusted. </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=3295" width="25%" height="25%" alt="">		
+	<p> When you use <b>hue-rotate&lpar;&rpar;</b> to rotate the <b>hue</b>, you are rotating around this color circle. </p>
+	<p> If the image contains red color, which is at 0 degrees on the color circle, rotating the hue by 240deg will
+		make the red color blue. </p>
+	<p> Here is an example of a <b>hue rotation</b>: </p>	
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .filtered { <br />
+	&emsp; filter: <b>hue-rotate</b>&lpar;180deg&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.6 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.6.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.6!</a> &larr; </p>	
+	<p> Take note that 0 and 360deg rotations leave the image unchanged. </p>
+	
+<!-- The invert Function -->	
+	<p> <strong><h3><u>The invert Function</u></h3></strong> </p>	
+	<p> The <b>invert</b> function inverts the colors of an image to make <b>dark areas bright</b> and
+		<b>bright areas dark</b>. <br />
+		The function takes the <b>proportion of the conversion</b> as its parameter. </p>
+	<p> The parameter can be either a <b>percentage value</b> or a <b>number</b>. <br />
+		<b>0% invert</b> leaves the image unchanged, whereas <b>100%</b> creates a <b>completely inverted</b>
+		image that is similar to a photographic negative. </p>
+	<p> Here is an example using a percentage value to make the image <b>partially inverted</b>: </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .filtered { <br />
+	&emsp; filter: <b>invert</b>&lpar;70%&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.7 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.7.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.7!</a> &larr; </p>	
+	<p> Take note that the specification allows values over 100%, but that will have no further effect on the image. </p> <br />
+
+<!-- ************************************************************************** -->
+
+<!--  Opacity & Brightness -->
+	<h2><strong><font size="h2">III.</font> <u>Opacity & Brightness </u></strong></h2>
+<!-- The opacity Function -->	
+	<p> <strong><h3><u>The opacity Function</u></h3></strong> </p>
+	<p> The <b>opacity</b> function sets the opacity of an image to change its transparency. </p>
+	<p> <b>0%</b> opacity creates a <b>completely transparent</b> image, whereas <b>100%</b> is the <b>original image</b>. <br />
+		<b>For example:</b> </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .filtered { <br />
+	&emsp; filter: <b>opacity</b>&lpar;70%&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.8 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.8.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.8!</a> &larr; </p>		
+	
+<!-- The brightness Function -->	
+	<p> <strong><h3><u>The brightness Function</u></h3></strong> </p>
+	<p> The <b>brightness&lpar;amount&rpar;</b> function adjusts the brightness of an image, making it appear brighter or darker. <br />
+		The <b>amount</b> parameter determines the brightness level of the image. The parameter can take either a
+		percentage value or a number. </p>
+	<p> A value of <b>0%</b> results in an image that is <b>completely black</b>. <br />
+		A value of <b>100%</b> results in an image that is <b>unchanged</b>. <br />
+		Any amount <b>over 100%</b> produces a <b>brighter image</b>. </p>
+	<p> Here is an example using a percentage value to make the image darker: </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .filtered { <br />
+	&emsp; filter: <b>brightness</b>&lpar;50%&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.9 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.9.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.9!</a> &larr; </p>	
+	<p> Take note that a value under 100% darkens the image, while a value over 100% brightens it. </p>
+	
+	<p> a number value of 0.5 has the same effect as the percentage value of 50%. A value of 1 is <b>the same</b> as 100%. </p>
+	<p> Here is an example using a number value to make the image brighter: </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .filtered { <br />
+	&emsp; filter: <b>brightness</b>&lpar;1.9&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.10 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.10.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.10!</a> &larr; </p>	
+	<p> Take note that any negative value will make the image black. </p>
+	
+<!-- The contrast Function -->	
+	<p> <strong><h3><u>The contrast Function</u></h3></strong> </p>	
+	<p> The <b>contrast</b> function adjusts the contrast of the image. <br />
+		The <b>amount</b> parameter can take either a percentage value or a number. </p>
+	<p> A value <b>under 100% decreases</b> the contrast, while a value over 100% increases it. <br />
+		A value of <b>0%</b> will create an image that is <b>completely gray</b>, while a value of 100% leaves the image <b>unchanged</b>. <br />
+		The value <b>0.5</b> corresponds to <b>50%</b> while 1 is the same as <b>100%</b>. </p>
+	<p> Here is an example using a percentage value to give the image more contrast: </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .filtered { <br />
+	&emsp; filter: <b>contrast</b>&lpar;140%&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.11 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.11.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.11!</a> &larr; </p>
+	<p> Take note that any negative value leaves the image unchanged. </p>
+	
+<!-- The blur Function -->	
+	<p> <strong><h3><u>The blur Function</u></h3></strong> </p>	
+	<p> The <b>blur</b> function applies a <b>blur effect</b> to an image. <br />
+		The blur function has only one parameter, <b>radius</b>, which defines how many <b>pixels</b> on the screen
+		blend into each other &lpar;a large value creates more blur&rpar;. <br />
+		<b>For example:</b> </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .blurred { <br />
+	&emsp; filter: <b>blur</b>&lpar;5px&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.12 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.12.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.12!</a> &larr; </p>
+	<p> Take note that the parameter is specified as a CSS length, but does not accept percentage values. </p>
+
+	<p> If no parameter	is provided, then the default value 0 is used, which leaves the image unchanged. <br />
+		<b>For example:</b> </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .blurred { <br />
+	&emsp; /* Both have no effect on the picture */ <br />
+	&emsp; blur&lpar;&rpar;; /* If no parameter is provided, then a value of 0 is used. */ <br />
+	&emsp; blur&lpar;0&rpar;; /* A value of 0 leaves the input unchanged. */ <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.13 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.13.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.13!</a> &larr; </p> <br />		
+	
+<!-- ************************************************************************** -->
+
+<!--  Using Multiple CSS Filters -->
+	<h2><strong><font size="h2">IV.</font> <u>Using Multiple CSS Filters </u></strong></h2>
+<!-- Using Multiple CSS Filters -->	
+	<p> <strong><h3><u>Using Multiple CSS Filters</u></h3></strong> </p>	
+	<p>	Multiple CSS filters can be used together by separating them with spaces. <br />
+		The following code demonstrates the use of the <b>blur</b> and the <b>hue-rotate</b> functions. </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .filtered { <br />
+	&emsp; filter: <b>blur</b>&lpar;5px&rpar; <b>hue-rotate</b>&lpar;180deg&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.14 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.14.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.14!</a> &larr; </p> 		
+		
+	<p><b>Another Example:</b></p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .filtered { <br />
+	&emsp; filter: <b>saturate</b>&lpar;30%&rpar; <b>drop-shadow</b>&lpar;5px 9px 2px gray&rpar; <b>blur</b>&lpar;1px&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.15 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.15.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.15!</a> &larr; </p> 
+	
+	<p>Another example from the 19th century: </p>
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> .filtered { <br />
+	&emsp; filter: <b>brightness</b>&lpar;150%&rpar; <b>sepia</b>&lpar;100%&rpar;; <br />
+		} </p>	
+	
+<!-- Link to Result of Example_8.16 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/example_8.16.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_8.16!</a> &larr; </p> 	
+	
+<!-- ****************************** FOOTER ****************************** -->	
+	
+	<br />
+<!-- Pages start -->
+		<p align="center">
+		
+	<!-- Go to top -->	
+		<a href="#top">Go to top</a> <br />
+	
+	<!-- Previous Page -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/My%20CSS%20Notebook%20-%20Page%207.html" 
+			class="previous">&laquo; Previous</a>
+	
+	<!-- Page 1 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%201/My%20CSS%20Notebook%20-%20Page%201.html#" 
+			target="_self">1</a>
+	
+	<!-- Page 2 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/My%20CSS%20Notebook%20-%20Page%202.html" 
+			target="_self">2</a>
+	
+	<!-- Page 3 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%203/My%20CSS%20Notebook%20-%20Page%203.html" 
+			target="_self">3</a>
+	
+	<!-- Page 4 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%204/My%20CSS%20Notebook%20-%20Page%204.html" 
+			target="_self">4</a>
+	
+	<!-- Page 5 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%205/My%20CSS%20Notebook%20-%20Page%205.html" 
+			target="_self">5</a>
+			
+	<!-- Page 6 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%206/My%20CSS%20Notebook%20-%20Page%206.html" 
+			target="_self">6</a>
+
+	<!-- Page 7 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/My%20CSS%20Notebook%20-%20Page%207.html" 
+			target="_self">7</a>			
+	
+	<!-- Page 8 -->	
+		<a href="#" 
+			target="_self">8</a>	
+	
+	<!-- Next Page -->	
+		<a href="#"	
+			class="next">Next &raquo;</a>
+
+<!-- Pages end -->
+        
+<!-- Footer -->
+        <div class="copyright">
+            &copy; 2018 My CSS Notebook I. All rights reserved.
+        </div>
+	
+  </body>
+ </html>

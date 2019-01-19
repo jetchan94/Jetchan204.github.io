@@ -1,0 +1,678 @@
+<!DOCTYPE html>	<!-- enable standards mode for documents written using the HTML syntax -->
+ <html>
+  <head>
+   <title>	My CSS Notebook I </title>
+   <p align="center"><strong><font size="7"> My CSS Notebook I</font></strong>
+<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->  
+   <style>	
+	body {		
+		background-color: teal;	<!-- Website will have teal background -->
+		}
+
+	h1 {
+		color: darkred;	
+		text-align: center;	<!-- All h1 text will have dark red, centered font -->
+		}
+		
+	h2 {
+		color: darkblue;	<!-- All h2 text will have dark blue font -->
+		}
+
+	h3 {
+		color: beige;	<!-- All h2 text will have beige font -->
+		}		
+
+	p {
+		font-family: verdana;
+		font-size: 14px;	<!-- All p text will be 14px verdana text -->
+		}
+   </style>
+  </head>
+  <body>
+
+<!-- ************************************* PAGE 7 ************************************* -->	
+  
+	
+	<p align="center">***** On Monday, 9/3/18, I started 
+		learning the fundamentals of CSS on 
+		<a href= "http://www.sololearn.com"target="_blank"> 
+		sololearn.com</a>. *****</p>
+		
+		<p align="center"> ***** On Tuesday, 1/15/19, I completed
+		the CSS Fundamentals course and was issued the 
+		<a href="https://www.sololearn.com/Certificate/1023-10607947/pdf/" target="_blank">
+		certificate</a>. *****
+		
+	<p align="center"> TAKE NOTE THAT THIS IS NOT A .CSS FILE BECAUSE IT WILL BE A PLAIN TEXT FILE.
+		INSTEAD, CSS WILL BE IMPLEMENTED INTO A .HTML FILE. THIS CAN BE DONE
+		VIA A LINK, EMBED, IMPORT AND/OR INLINE STYLES.</p>	<br />
+		
+<!-- ***** Module 7 Materials ***** -->
+	<h1><u> Module 7: Transitions & Transforms </u></h1>
+	
+<!-- ************************************************************************** -->
+
+<!-- Transitions -->
+	<h2><strong><font size="h2">I.</font> <u>Transitions </u></strong></h2>
+<!-- CSS3 Transitions -->	
+	<p> <strong><h3><u>CSS3 Transitions</u></h3></strong> </p>
+	<p> CSS3 transitions allow us to change from one property value to another over a given duration. 
+		<ul>
+			<li><b>transition-property</b> - specifies the property to be transitioned</li>
+			<li><b>transition-duration</b> - specifies the duration over which transitions should occur</li>
+			<li><b>transition-timing-function</b> - specifies how the pace of the transition changes over its duration</li>
+			<li><b>transition-delay</b> - specifies a delay &lpar;in seconds&rpar; for the transition effect</li>
+		</ul> </p>
+	<p> In the example below, we set the transition property to <b>transform</b>, with a <b>duration</b>	of 5 seconds,
+		and with an <b>ease-in</b> timing function that specifies a transition effect with a slow start. </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>transition:</u> transform 5s ease-in; </p>
+	<p>	Take note that transition effects can be applied to a wide variety of CSS properties, including <b>background-color</b>,
+		<b>width</b>, <b>height</b>, <b>opacity</b>, and many more. </p>
+	
+<!-- The Transition Property -->	
+	<p> <strong><h3><u>The Transition Property</u></h3></strong> </p>
+	<p> In the example below, the div element has width and height of 50px, with a green background. We specified a transition
+		effect for the width property, with a duration of 3 seconds: </p>
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div { <br />
+	&emsp; width: 50px; <br />
+	&emsp; height: 50px; <br />
+	&emsp; background: #32CD32; <br />
+	&emsp; <b><u>transition:</u> width 3s;</b> <br />
+		} <br />
+		div<u>:hover</u> { <br />
+	&emsp; <b>width: 250px;</b>	<br />
+		} </p>
+		
+<!-- Link to Result of Example_7.1 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.1.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.1!</a> &larr; </p>
+	<p> If you hover over the div element, it will move from left to right. </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2706" alt=""> 
+	<p> Take note that when the cursor is moused out of the element, it will gradually change back to its original style. </p>
+			
+<!-- transition-timing-function -->	
+	<p> <strong><h3><u>transition-timing-function</u></h3></strong> </p>
+	<p> The <b>transition-timing-function</b> property specifies the speed curve of the transition effect. <br />
+		It can have the following values.
+		<ul>
+			<li><b>ease</b> - the animation starts slowly, then accelerates quickly.</li>
+			<li><b>ease-in</b> - starts slowly, then accelerates, and stops abruptly.</li>
+			<li><b>ease-out</b> - starts quickly, but decelerates to a stop.</li>
+			<li><b>ease-in-out</b> - similar to ease, but with more subtle acceleration and deceleration.</li>
+			<li><b>linear</b> - constant speed throughout the animation, often best for color or opacity changes.</li>
+			<li><b>cubic-bezier()</b> -  allows you to define <b>your own values in the cubic-bezier function</b>.
+				Possible values are numeric values from 0 to 1.</li>
+		</ul>	</p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div { <br />
+	&emsp; width: 50px; <br />
+	&emsp; height: 50px; <br />
+	&emsp; background: #32CD32; <br />
+	&emsp; <u>transition-timing-function:</u> <b>cubic-bezier&lpar;0,0,1,1&rpar;</b>; <br />
+	&emsp; transition: width 3s; <br />
+		} <br />
+		div:hover { <br />
+	&emsp; width: 250px; <br />
+		} </p>
+		
+<!-- Link to Result of Example_7.2 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.2.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.2!</a> &larr; </p>		
+	<p> Take note that if no timing function is specified, then the <b>default</b> value is <b>ease</b>. </p> <br />
+
+<!-- ************************************************************************** -->
+
+<!-- transform: rotate() -->
+	<h2><strong><font size="h2">II.</font> <u>transform: rotate() </u></strong></h2>
+<!-- CSS3 Transforms -->	
+	<p> <strong><h3><u>CSS3 Transforms</u></h3></strong> </p>
+	<p> CSS3 transforms allow you to translate, rotate, scale, and skew elements. <br />
+		A transformation is an effect that lets an element change shape, size, and position. <br />
+		CSS3 supports 2D and 3D transformations. Let's take a look at the rotate transformation. </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div { <br />
+	&emsp; width: 200px; <br />
+	&emsp; height: 100px; <br />
+	&emsp; margin-top: 30px; <br />
+	&emsp; <u>background-color:</u> #32CD32; <br />
+		} </p>
+		
+<!-- Link to Result of Example_7.3 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.3.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.3!</a> &larr; </p>	
+
+	<p> Now let's apply the div element to rotate by <b>10deg</b>: </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div { <br />
+	&emsp; width: 200px; <br />
+	&emsp; height: 100px; <br />
+	&emsp; margin-top: 30px; <br />
+	&emsp; <u>background-color:</u> #32CD32; <br />
+	&emsp; <b>transform: rotate&lpar;10deg&rpar;</b>; <br />
+		} </p>
+		
+<!-- Link to Result of Example_7.4 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.4.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.4!</a> &larr; </p>
+	<p> The rotate&lpar&rpar; method rotates an element clockwise or counter-clockwise, according to a given degree. </p>
+	<p> Take note that a <b>negative value</b> will result in a counter-clockwise direction. </p>	
+	
+<!-- Using Negative Values -->	
+	<p> <strong><h3><u>Using Negative Values</u></h3></strong> </p>
+	<p> As previously mentioned, using a positive value will rotate an element <b>clockwise</b>, and using a negative value
+		will rotate the element <b>counter-clockwise</b>. </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div.positive { <br />
+	&emsp; width: 200px; <br />
+	&emsp; height: 100px; <br />
+	&emsp; margin-top: 30px; <br />
+	&emsp; <u>background-color:</u> #32CD32; <br />
+	&emsp; transform: <b>rotate&lpar;10deg&rpar;</b>; <br />
+		} <br />
+		div { <br />
+	&emsp; width: 200px; <br />
+	&emsp; height: 100px; <br />
+	&emsp; margin-top: 30px; <br />
+	&emsp; <u>background-color:</u> #32CD32; <br />
+	&emsp; transform: <b>rotate&lpar;-10deg&rpar;</b>; <br />
+		} </p>
+		
+<!-- Link to Result of Example_7.5 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.5.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.5!</a> &larr; </p>		
+	
+<!-- ************************************************************************** -->
+
+<!-- transform origin, translate(), skew() -->
+	<h2><strong><font size="h2">III.</font> <u>transform origin, translate(), skew() </u></strong></h2>
+<!-- transform-origin -->	
+	<p> <strong><h3><u>transform-origin</u></h3></strong> </p>	
+	<p> The <b>transform-origin</b> property allows you to change the position of transformed elements. The default
+		value for the property is 50% 50%, which corresponds to the center of the element. <br />
+		In the example below, we use the <b>transform-origin</b> property together with <b>transform-rotate</b>. The
+		origin of the x-axis &lpar;horizontal&rpar; is set to 25% from the left. The origin for the y-axis 
+		&lpar;vertical&rpar; is set to 75% from above. </p>
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div.empty-div { <br />
+	&emsp; position: relative; <br />
+	&emsp; height: 100px; <br />
+	&emsp; width: 100px; <br />
+	&emsp; <u>margin:</u> 30px; <br />
+	&emsp; <u>padding:</u> 10px; <br />
+	&emsp; <u>border:</u> 1px solid black; <br />
+		} <br />
+		div.green-div { <br />
+	&emsp; <u>padding:</u> 50px; <br />
+	&emsp; position: absolute; <br />
+	&emsp; <u>background-color:</u> #8bc34a; <br />
+	&emsp; <u>border:</u> 1px solid white; <br />
+	&emsp; transform: rotate&lpar;15deg&rpar;; <br />
+	&emsp; <b>transform-origin: 25% 75%</b>; <br />
+		} </p>
+		
+<!-- Link to Result of Example_7.6 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.6.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.6!</a> &larr; </p>	
+	<p> Take note that <b>0.0</b> is the same value as <b>top left</b>, and <b>100% 100%</b> is the same value as <b>bottom right</b>. <br />
+		The transform-origin property must be used together with the transform property. </p>
+	
+<!-- The translate() Method -->	
+	<p> <strong><h3><u>The translate() Method</u></h3></strong> </p>
+	<p> The <b>translate&lpar;&rpar;</b> method moves an element from its current position 
+		&lpar;according to the parameters given for the x-axis and the y-axis&rpar;. Positive values will push an element down and to the right
+		of its default position, while negative values will pull an element up and to the left of its default position. </p>
+	<p> In the example below, the div element is moved <b>100px to the right</b> and <b>50px down</b>: </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div { <br />
+	&emsp; <u>padding:</u> 50px; <br />
+	&emsp; position: absolute; <br />
+	&emsp; <u>background-color:</u> #32CD32; <br />
+	&emsp; <b>transform: translate(100px, 50px)</b>; <br />
+		} </p>
+		
+<!-- Link to Result of Example_7.7 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.7.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.7!</a> &larr; </p>	
+	<p> Take note that an element can also be moved by setting the margins or by positioning the element, although translate is a better
+		choice for animating elements. </p>
+	
+<!-- The skew() Method -->	
+	<p> <strong><h3><u>The skew() Method</u></h3></strong> </p>	
+	<p> The <b>skew()</b> method skews an element along the x-axis and the y-axis by the given angles. </p>
+	<p> The following example skews the &lt;div&gt; element by 30 degrees along the X-axis: </p>
+	
+	<p><b>Syntax:</b></p>
+	<p> transform: skew&lpar;30deg&rpar;; </p>
+	
+<!-- Link to Result of Example_7.8 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.8.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.8!</a> &larr; </p>	
+	<p> Take note that if the second parameter is not specified, it has a zero value. </p> <br />
+	
+<!-- ************************************************************************** -->
+
+<!-- scale(), Multiple Transformations -->
+	<h2><strong><font size="h2">IV.</font> <u>scale(), Multiple Transformations </u></strong></h2>
+<!-- The scale() Method -->	
+	<p> <strong><h3><u>The scale() Method</u></h3></strong> </p>	
+	<p> The <b>scale&lpar;&rpar;</b> method increases or decreases the size of an element, according to the parameters
+		given for the width and height. 1 stands for the original size, 2 for twice the original size, and so on. </p>
+	<p> In the example below, we decreased the first div by the factor 0.7 both horizontally and vertically, and
+		increased the second div by a factor of 1.5 horizontally and vertically. </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div.first { <br />
+	&emsp; width: 200px; <br />
+	&emsp; height: 100px; <br />
+	&emsp; <u>background-color:</u> #8BC34A; <br />
+	&emsp; <b>transform: scale(0.7, 0.7)</b>; <br />
+	&emsp; color: white; <br />
+		} <br />
+		div.second { <br />
+	&emsp; <u>margin:</u> 60px; <br />	
+	&emsp; width: 200px; <br />
+	&emsp; height: 100px; <br />
+	&emsp; <u>background-color:</u> #8BC34A; <br />
+	&emsp; <b>transform: scale(1.5, 1.5)</b>; <br />
+	&emsp; color: white; <br />
+		}
+		
+<!-- Link to Result of Example_7.9 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.9.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.9!</a> &larr; </p>		
+	<p> Take note that if only one parameter is passed to the scale&lpar;&rpar; method, it will apply that factor
+		for both the height and the width. </p>
+	
+<!-- Multiple Transforms -->	
+	<p> <strong><h3><u>Multiple Transforms</u></h3></strong> </p>
+	<p> Multiple transforms	can be used at once. Rotating and scaling the size of an element at the same
+		time is an example of that. <br />
+		Applying multiple transforms to an element is simple; just separate them using <b>spaces</b>. </p>
+	<p> Here's an example with two transforms defined: </p>
+	<p><b>Syntax:</b></p>
+	<p> transform: rotate&lpar;45deg&rpar; translate&lpar;100px&rpar; </p>
+	
+<!-- Link to Result of Example_7.10 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.10.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.10!</a> &larr; </p>	
+	<p> Take note that if you use <b>commas</b> to separate the functions, none of the functions will be applied,
+		so keep in mind not to use commas. </p> <br />
+	
+<!-- ************************************************************************** -->
+
+<!-- Keyframes & Animation -->
+	<h2><strong><font size="h2">V.</font> <u>Keyframes & Animation </u></strong></h2>
+<!-- CSS3 Animations -->	
+	<p> <strong><h3><u>CSS3 Animations</u></h3></strong> </p>
+	<p> An animation lets an element gradually change from one style to another. <br />
+		You can change as many CSS properties as you want to, as many times as you want to. <br />
+		<b>Keyframes</b> hold the styles th element will have at certain times. </p>
+	<p> <b>The @keyframes Rule</b> </p>	
+	<p> When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the
+		current style to the new style at certain times. <br />
+		To get an animation to work, you must bind the animation to an element. </p>
+	<p> The following example will change the background color of an element three times: when the animation
+		is 50% complete, 70% complete, and when the animation is 100% complete. </p>
+		
+	<p><b>Syntax:</b></p>
+	<p> @keyframes example { <br />
+	&emsp; <b>0%</b> {<u>background-color:</u> red;} <br />
+	&emsp; <b>50%</b> {<u>background-color:</u> yellow;} <br />
+	&emsp; <b>70%</b> {<u>background-color:</u> blue;} <br />
+	&emsp; <b>100%</b> {<u>background-color:</u> green;} <br />
+		} </p>
+	<p>	Take note that <b>example</b> is the name of the animation. You can choose any name for your animation. </p>
+
+<!-- The @keyframes Rule -->	
+	<p> <strong><h3><u>The @keyframes Rule</u></h3></strong> </p>
+	<p> As an alternative to using percentages, you can use <b>from</b> and <b>to</b> keywords, where:
+	<ul>
+		<li><b>from</b> - starting offset of <b>0%</b></li>
+		<li><b>to</b> - ending offset of <b>100%</b></li>
+	</ul> </p>
+	<p> The two examples below are equivalent, and produce the same result: </p>
+	
+	<p><b>Syntax:</b></p>
+	<p> @keyframes colorchange { <br />
+	&emsp; <b>0%</b> {<u>background-color:</u> red;} <br />
+	&emsp; <b>100%</b> {<u>background-color:</u> green;} <br />
+		} </p> <br />
+	<p> @keyframes colorchange { <br />
+	&emsp; <b>from</b> {<u>background-color:</u> red;} <br />
+	&emsp; <b>to</b> {<u>background-color:</u> green;} <br />
+		} </p>
+
+	<p> To get an animation to work, you must bind the animation to an element. <br />
+		In the example below, the animation lasts one second, and changes the background color of the 
+		red div to green and then to blue. </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div { <br />
+	&emsp; width: 100px; <br />
+	&emsp; height: 100px; <br />
+	&emsp; <u>background-color:</u> <b>red</b>; <br />
+	&emsp; <b><u>animation-name:</u></b> colorchange; <br />
+	&emsp; <b><u>animation-duration:</u></b> 1s; <br />
+		} <br />
+		@keyframes example { <br />
+	&emsp; <b>0%</b> {<u>background-color:</u> red;} <br />
+	&emsp; <b>50%</b> {<u>background-color:</u> green;} <br />
+	&emsp; <b>100%</b> {<u>background-color:</u> blue;} <br />
+		} </p>		
+		
+<!-- Link to Result of Example_7.11 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.11.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.11!</a> &larr; </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2715" alt="">
+	<p> The <b>animation-name</b> property specifies the animation to be used for the element. <br />
+		The <b>animation-duration</b> property specifies the duration of the selected animation. </p>
+	<p> Take note that if the animation-duration property is not specified, the animation will have no effect,
+		because the default value is 0. </p> <br />
+	
+<!-- ************************************************************************** -->
+
+<!-- Animation Properties -->
+	<h2><strong><font size="h2">VI.</font> <u>Animation Properties </u></strong></h2>
+<!-- The animation-name Property -->	
+	<p> <strong><h3><u>The animation-name Property</u></h3></strong> </p>	
+	<p> <b>animation-name</b> property defines which animation to use. <br />
+		In this example, the name of the animation is set to <b>colorchange</b>, which matches the defined keyframes. </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div { <br />
+	&emsp; <u>animation-name:</u> <b>colorchange</b>; <br />
+	&emsp; <u>animation-duration:</u> 5s; <br />
+		} <br />
+		@keyframes <b>colorchange</b> { <br />
+	&emsp; from { width: 0px; } <br />
+	&emsp; to { width: 100px; } <br />
+		} </p>		
+		
+<!-- Link to Result of Example_7.12 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.12.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.12!</a> &larr; </p>		
+	<p> The <b>animation-duration</b> property specifies the duration of the selected animation in seconds. </p>
+	<p> Take note that if the animation does not match any keyframe rule, the animation <b>will not execute</b>. </p>
+	
+<!-- Animation Properties -->	
+	<p> <strong><h3><u>Animation Properties</u></h3></strong> </p>
+	<p> The <b>animation-timing-function</b> specifies the speed curve of an animation. It can have the following values:
+		<ul>
+			<li><b>ease</b> - specifes an animation with a slow start, then fast, then slowly &lpar;this is default&rpar;</li>
+			<li><b>linear</b> - specifies an animation with the same speed from start to end</li>
+			<li><b>ease-in</b> - specifes an animation with a slow start</li>
+			<li><b>ease-out</b> - specifies an animation with a slow end</li>
+			<li><b>ease-in-out</b> - specifes an animation with a slow start and end</li>
+			<li><b>cubic-bezier&lpar;n,n,n,n&rpar;</b> - lets you define you own values in a cubic-bezier function</li>
+		</ul> </p>
+		
+	<p><b>Syntax:</b></p>
+	<p> animation-timing-function: linear; </p>
+
+<!-- Link to Result of Example_7.13 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.13.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.13!</a> &larr; </p>	
+	
+	<p> <b>animation-delay</b> - defines the delay before an animation starts. </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>animation-delay:</u> 2px; </p>
+	
+<!-- Link to Result of Example_7.14 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.14.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.14!</a> &larr; </p>	
+	<p> Take note that the animation-delay and animation-duration values can be defined in <b>seconds &lpar;s&rpar;</b>
+		or <b>milliseconds &lpar;ms&rpar;</b>. </p>
+	
+<!-- More Animation Properties -->	
+	<p> <strong><h3><u>More Animation Properties</u></h3></strong> </p>	
+	<p> The <b>animation-iteration-count</b> property determines the number of times an animation repeats. <br />
+		For example, you can set the animation to run <b>5 times</b>: </p>
+	
+	<p><b>Syntax:</b></p>	
+	<p>animation-iteration-count: 5;</p>
+
+<!-- Link to Result of Example_7.15 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.15.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.15!</a> &larr; </p>	
+	
+	<p> To make the animation repeat <b>forever</b>, just use the <b>infinite</b> value: </p>
+	
+	<p><b>Syntax:</b></p>	
+	<p>animation-iteration-count: <b>infinite</b>;</p>
+
+<!-- Link to Result of Example_7.16 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.16.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.16!</a> &larr; </p>
+		
+	<p> The <b>animation-direction</b> indicates how the keyframe should be applied. The values can be set as:
+		<ul>
+			<li><b>normal</b> - the default value, which means it plays forward from 0% to 100%</li>
+			<li><b>reverse</b> - plays the keyframe in an opposite direction from 100% to 0%</li>
+			<li><b>alternate</b> - the animation first runs forward, then backward, then forward</li>
+			<li><b>alternate reverse</b> - the animation first runs backward, then forward, then backward</li>
+		</ul> </p>
+	<p> Take note that if you use 0 or a negative number for the <b>animation-iteration-count</b>, the animation will never start. </p>	
+		
+<!-- animation Property -->	
+	<p> <strong><h3><u>animation Property</u></h3></strong> </p>
+	<p> Consider the following example: </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div { <br />
+	&emsp; animation-<b>name</b>: colorchange; <br />
+	&emsp; animation-<b>duration</b>: 3s; <br />
+	&emsp; animation-<b>timing-function</b>: ease-in; <br />
+	&emsp; animation-<b>delay</b>: 1s; <br />
+	&emsp; animation-<b>iteration-count</b>: infinite; <br />
+	&emsp; animation-<b>direction</b>: reverse; <br />
+		} </p>		
+		
+<!-- Link to Result of Example_7.17 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.17.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.17!</a> &larr; </p>		
+		
+	<p> A single <b>animation</b> property can be used to achieve the same result as the above code: </p>	
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div { <br />
+	&emsp; <u>animation:</u> colorchange 3s ease-in 1s infinite reverse; <br />
+		} </p>
+		
+<!-- Link to Result of Example_7.18 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.18.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.18!</a> &larr; </p>	
+	<p> Take note that the order in which each property is declared in the shorthand declaration is important and cannot
+		be altered, or the animation will not work properly. </p> <br />
+		
+<!-- ************************************************************************** -->
+
+<!-- 3D Transforms -->
+	<h2><strong><font size="h2">VII.</font> <u>3D Transforms </u></strong></h2>
+<!-- 3D Transforms -->	
+	<p> <strong><h3><u>3D Transforms</u></h3></strong> </p>
+	<p> Along with the x and y axes, 3D Transforms introduce the <b>Z-axis</b>, which enables 3D manipulations. <br />
+		3D Transforms are quite similar to 2D Transforms: <br />
+		rotateX&lpar;&rpar;, rotateY&lpar;&rpar; and rotateZ&lpar;&rpar; rotate an element in 3D space around
+		the corresponding axis at a given degree. </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div.X { <br />
+	&emsp; transform: <b>rotateX&lpar;150deg&rpar;</b>; <br />
+		} <br />
+		div.Y { <br />
+	&emsp; transform: <b>rotateY&lpar;150deg&rpar;</b>; <br />
+		} <br />
+		div.Z { <br />
+	&emsp; transform: <b>rotateZ&lpar;150deg&rpar;</b>; <br />
+		} </p>
+		
+<!-- Link to Result of Example_7.19 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.19.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.19!</a> &larr; </p>		
+		
+	<p> Take note that you can switch off all transformations applied to an element using the none function: <br />
+		<b>transform: none;</b> </p>
+		
+<!-- Translations -->	
+	<p> <strong><h3><u>Translations</u></h3></strong> </p>		
+	<p> 3D translate methods allow you to move the element <b>horizontally</b> &lpar;translateX&rpar;,
+		<b>vertically</b> &lpar;translateY&rpar; and <b>into or out of the screen</b> &lpar;translateZ&rpar;, using any CSS length units
+		&lpar;px, em, %, etc.&rpar;. <br />
+		Positive values moves the element toward the viewer, negative values away. </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> #mybox1 { <br />
+	&emsp; transform: translateX&lpar;29px&rpar; <br />
+	&emsp;&emsp; translateY&lpar;5em&rpar; <br />
+	&emsp;&emsp; translateZ&lpar;-13px&rpar;; <br />
+		} </p>
+		
+<!-- Link to Result of Example_7.20 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.20.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.20!</a> &larr; </p>	
+
+	<p><b>Result</b> &lpar;Before translation&rpar;</p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2722" alt="">
+
+	<p><b>Result</b> &lpar;After translation&rpar;</p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2718" alt="">
+	
+	<p> The <b>translate3d&lpar;&rpar;</b> method allows us to pass the x, y, and z offsets, all at once and in the following order: </p>	
+	
+	<p><b>Syntax:</b></p>
+	<p> #mybox1 { <br />
+	&emsp; transform: translate3d&lpar;-20px, 4em, 10px&rpar;; <br />
+		}	</p>
+	
+<!-- Link to Result of Example_7.21 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.21.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.21!</a> &larr; </p>		
+	<p> Like the translate3d&lpar;&rpar; method, there are also <b>scale3d&lpar;&rpar;</b> and <b>rotate3d&lpar;&rpar;</b>, which
+		are applicable for scaling and rotating elements in 3D. </p>
+	<p> Take note that translation of an element is similar to relative positioning - it doesn't affect the document's flow.
+		The translated element will keep its position in the flow and will only appear to have moved. </p>
+	
+<!-- Perspective -->	
+	<p> <strong><h3><u>Perspective</u></h3></strong> </p>
+	<p> Perspective defines how the depth of the 3D scene is rendered. Think of perspective as a distance from the viewer 
+		to the object. The greater the value, the further the distance, so the less intense the visual effect. <br />
+		When defining the perspective property for an element, it is the <b><i>child</i></b> elements that get the 
+		perspective view, <b><i>not</i></b> the element itself. </p>
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> div.empty-div { <br />
+	&emsp; <b>perspective: 100px</b>; <br />
+		} <br />
+		div.green-div { <br />
+	&emsp; <b>transform: rotateX&lpar;45deg&rpar;</b>; <br />
+		} </p>
+		
+<!-- Link to Result of Example_7.22 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/example_7.22.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_7.22!</a> &larr; </p>	
+	<p> Take note that the perspective property only affects 3D transformed elements. </p>	
+	
+<!-- ****************************** FOOTER ****************************** -->	
+	
+	<br />
+<!-- Pages start -->
+		<p align="center">
+		
+	<!-- Go to top -->	
+		<a href="#top">Go to top</a> <br />
+	
+	<!-- Previous Page -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%206/My%20CSS%20Notebook%20-%20Page%206.html" 
+			class="previous">&laquo; Previous</a>
+	
+	<!-- Page 1 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%201/My%20CSS%20Notebook%20-%20Page%201.html#" 
+			target="_self">1</a>
+	
+	<!-- Page 2 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%202/My%20CSS%20Notebook%20-%20Page%202.html" 
+			target="_self">2</a>
+	
+	<!-- Page 3 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%203/My%20CSS%20Notebook%20-%20Page%203.html" 
+			target="_self">3</a>
+	
+	<!-- Page 4 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%204/My%20CSS%20Notebook%20-%20Page%204.html" 
+			target="_self">4</a>
+	
+	<!-- Page 5 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%205/My%20CSS%20Notebook%20-%20Page%205.html" 
+			target="_self">5</a>
+			
+	<!-- Page 6 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%206/My%20CSS%20Notebook%20-%20Page%206.html" 
+			target="_self">6</a>
+
+	<!-- Page 7 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%207/My%20CSS%20Notebook%20-%20Page%207.html" 
+			target="_self">7</a>			
+	
+	<!-- Page 8 -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/My%20CSS%20Notebook%20-%20Page%208.html" 
+			target="_self">8</a>	
+	
+	<!-- Next Page -->	
+		<a href="file:///C:/Users/Samjat%20Chan/Desktop/Coding/Client-Side%20Programming/CSS/My%20CSS%20Notebook%20-%20Page%208/My%20CSS%20Notebook%20-%20Page%208.html"	
+			class="next">Next &raquo;</a>
+
+<!-- Pages end -->
+        
+<!-- Footer -->
+        <div class="copyright">
+            &copy; 2018 My CSS Notebook I. All rights reserved.
+        </div>
+	
+  </body>
+ </html>	
