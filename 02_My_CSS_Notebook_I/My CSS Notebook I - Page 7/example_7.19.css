@@ -1,0 +1,30 @@
+div.original {
+    width:250px;
+    height:100px;
+    color:white;
+    background-color:green;
+}	
+div.X {
+    width:250px;
+    height:100px;
+    color:white;
+    background-color:green;
+    transform: rotateX(150deg);
+    -webkit-transform: rotateX(150deg);
+}
+div.Y {
+    width:250px;
+    height:100px;
+    color:white;
+    background-color:green;
+    transform: rotateY(150deg);
+    -webkit-transform: rotateY(150deg);
+}
+div.Z {
+    width:250px;
+    height:100px;
+    color:white;
+    background-color:green;
+    transform: rotateZ(150deg);
+    -webkit-transform: rotateZ(150deg);
+}

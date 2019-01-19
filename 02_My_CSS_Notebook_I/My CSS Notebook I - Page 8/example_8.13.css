@@ -1,0 +1,5 @@
+.blurred {
+  /* Both have no effect on the picture */
+  blur(); /* If no parameter is provided, then a value of 0 is used. */
+  blur(0); /* A value of 0 leaves the input unchanged. */
+}
