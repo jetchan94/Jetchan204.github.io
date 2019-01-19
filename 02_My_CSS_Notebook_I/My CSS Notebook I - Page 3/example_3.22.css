@@ -1,0 +1,9 @@
+table.table1 {
+   border-collapse: separate;
+   empty-cells: hide;
+}
+
+table.table2 {
+   border-collapse: separate;
+   empty-cells: show;
+}
