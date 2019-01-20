@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Page Title</title>
+  </head>	
+  <body>
+	<button id="demo">Start</button>
+	<script>
+	//function Example12() {
+	//var myWindow = window.open('', '', 'width=400, height=200')
+	
+		var btn = document.getElementById("demo");
+		btn.addEventListener("click", myFunction);
+
+		function myFunction() {
+			alert(Math.random());
+			btn.removeEventListener("click", myFunction);
+		}
+	//}	
+	</script>
+  </body>
+</html>
