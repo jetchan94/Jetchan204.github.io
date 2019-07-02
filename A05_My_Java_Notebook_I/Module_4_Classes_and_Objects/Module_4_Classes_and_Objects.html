@@ -1,0 +1,1415 @@
+<!DOCTYPE html>	<!-- enable standards mode for documents written using the HTML syntax -->
+ <html lang="en">
+  <head>
+<!-- The viewport meta tag tells the browser that the width of the screen should be considered the "Full Width" of the page. 
+	Meaning no matter the width of the device you are on, whether on desktop or mobile. the website will follow the width of the device the user is on -->  
+  <meta charset="UTF-8" name="viweport" content="width=device-width, initial-scale=1">
+   <title> My Java Notebook I </title>
+   <p class="sansserif" align="center"><strong><font size="7"> My Java Notebook I</font></strong>
+<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->  
+   <style>	
+	body {		
+		background:url("https://d1yn1kh78jj1rr.cloudfront.net/image/preview/rDtN98Qoishumwih/light-blue-background_GkNvxFHd_SB_PM.jpg");
+		background-repeat: repeat;
+		background-size: 100% 100%;	
+		}
+		
+	h1 {
+		font-family: Helvetica, Arial, sans-serif;
+		color: brown;	
+		text-align: center;	<!-- All h1 text will have brown, centered font -->
+		font-weight: bold;
+		}
+	h2 {
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: bold;
+		color: crimson;	<!-- All h2 text will have crimson font -->
+		}
+	h3 {
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: bold;
+		color: purple;	<!-- All h2 text will have purple font -->
+		}		
+	
+	mark {
+		background-color: orange;
+	}
+	
+	p.sansserif {
+		font-family: Helvetica, Arial, sans-serif;
+	}	
+	p {
+		font-family: verdana;
+		font-size: 14px;	<!-- All p text will be 14px arial text -->
+		}
+		
+	div.border {
+		padding: 10px;
+		border: 5px solid green;
+	}	
+			
+	nav {
+		padding: 10px 0;
+		min-width: 500px;
+	}
+	nav ul {
+		background: linear-gradient(90deg, 
+			rgba(255, 255, 255, 0) 0%, 
+			rgba(255, 255, 255, 0.2) 25%, 
+			rgba(255, 255, 255, 0.2) 75%, 
+			rgba(255, 255, 255, 0) 100%);
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+			inset 0 0 1px rgba(255, 255, 255, 0.6);
+	}	
+	nav ul li {
+		display: inline-block;
+	}
+	nav ul li a {
+		padding: 10px; 
+		color: #000000;
+		font-size: 18px;
+		font-family: Arial;
+		text-decoration: none;
+		display: block;
+	}
+	
+	a:link {
+		text-decoration: none;
+	}
+	a:hover {
+		color: crimson;
+		text-decoration: none;
+	}
+	
+	span.noteBlock {
+		border: 1px solid #DDD;
+		margin: 10px 20px;
+		background: #EEEA87;
+		display: block;
+	}
+	span.note {
+		padding: 10px;
+		border-left: 5px solid #C9C54C;
+		display: block;
+	}
+	span.codeBlock {
+		border: 1px solid #DDD;
+		margin: 10px 20px;
+		background: #ECF0F1;
+		display: block;
+	}
+	span.code {
+		padding: 10px;
+		border-left: 5px solid #589D32;
+		display: block;
+	}
+	
+	.accordion {
+		background-color: lightcyan;
+		color: #444;
+		cursor: pointer;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		font-size: 15px;
+		transition: 0.4s;
+	}
+	.active, .accordion:hover {
+		background-color: #ccc; 
+	}
+	.panel {
+		padding: 0 18px;
+		display: none;
+		background-color: lightcyan;
+		overflow: hidden;
+	}
+	.accordion1 {
+		background-color: black;
+		color: #444;
+		cursor: pointer;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		font-size: 15px;
+		transition: 0.4s;
+	}
+	
+	h2.solid {
+		border-style: solid;
+		border-color: blue;
+	}
+   </style>
+  </head>
+  <body>
+
+<!-- ******************************************************************************************************** --> 
+  
+<!-- Navigation Bar -->  
+	<nav>
+		<ul align="center">
+			<li><a href="Module_1_Basic_Concepts.html"><span title="Basic Concepts"><b>Module 1</b></span></a></li>
+			<li><a href="Module_2_Conditionals_and_Loops.html"><span title="Conditionals and Loops"><b>Module 2</b></span></a></li>
+			<li><a href="Module_3_Arrays.html"><span title="Arrays"><b>Module 3</b></span></a></li>
+			<li><a href="#"><span title="Classes and Objects"><b>Module 4</b></span></a></li>
+			<li><a href="Module_5_More_on_Classes.html"><span title="More on Classes"><b>Module 5</b></span></a></li>
+			<li><a href="Module_6_Exceptions_Lists_Threads_&_Files.html"><span title="Exceptions, Lists, Threads & Files"><b>Module 6</b></span></a></li>
+		</ul>
+	</nav>
+  
+<!-- ******************************************************************************************************** -->	
+   <button class="accordion"><p align="center">
+		***** On Monday, 1/21/19, I started 
+			learning the fundamentals of Java on 
+			<a href= "http://www.sololearn.com"target="_blank"> 
+			sololearn.com</a>. *****</p>
+		
+		<p align="center"> ***** On Tuesday, 6/18/19, I completed
+		the Java Tutorial course and was issued the 
+		<a href="https://www.sololearn.com/Certificate/1068-10607947/pdf/" target="_blank">
+		certificate</a>. *****	
+	</button>
+	<div class="panel">
+		<p align="center"> TAKE NOTE THAT THIS IS NOT A .JAVA FILE BECAUSE IT WILL BE A PLAIN TEXT FILE.
+		INSTEAD, JAVA WILL BE COMPILED VIA THE METHOD SHOWN IN THIS 
+		<a href="https://www.youtube.com/watch?time_continue=9&v=J83DFnEe_Uc" target="_blank">VIDEO</a>.</p>
+
+<!-- TL;DW for video above -->		
+	<p> <b><u>TL;DW</u></b> 
+		<ol>
+			<li>On notepad++, click "<b>Plugin</b>" &rarr; "<b>Plugin Manager</b>" &rarr; "<b>Show Plugin Manager</b>" </li>
+			<li>In "Available" tab, check off "<b>NppExec</b>" and go through the installation process.</li>
+			<li>Upon coding Java syntax, press the F6 key to bring up the "<b>Execute...</b>" command box.</li>
+			<li>Change the current directory to <b>D:</b> (or any parent folder that holds your source code) 
+				and then move to <b>programs</b> (or any subfolder that holds your source code).</li>
+				<ol type="a">
+					<li>i.e. &emsp; <b><mark>cd</mark></b> d:</li>
+					<li>i.e. &emsp; <b><mark>cd</mark></b> programs</li>
+				</ol>
+			<li>Now execute the Java file.</li>
+				<ol type="a">
+					<li>i.e. &emsp; <b><mark>javac</mark></b> HelloWorld.java <br />
+						&emsp;&emsp;&ensp; <b><mark>java</mark></b> HelloWorld			
+					</li>				
+				</ol>
+		</ol>
+	</p>	
+
+	<p> Skip to <b>steps 3 - 5</b> if "NppExec" is already installed. <br />
+		Skip to <b>step 5</b> to execute the Java file that is already in the desired directory. </p>
+	</div>
+
+	<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		});
+	}
+	</script>
+		
+<!-- **************************************************** PAGE 4 **************************************************** -->	
+	
+<!-- ***** Module 4 Materials ***** -->
+	<h1><u> Module 4: Classes and Objects </u></h1>
+	<br />
+	
+<!-- Object-Oriented Programming -->
+	<h2><strong>I. <u>Object-Oriented Programming</u></strong></h2>
+	
+<!-- Object-Orientation -->	
+	<p> <strong><h3><u>Object-Orientation</u></h3></strong> </p>
+	<p> Java uses <b>O</b>bject - <b>O</b>riented <b>P</b>rogramming (OOP), a programming style that is intended to make thinking about programming closer to thinking
+		about the real world. <br />
+		In OOP, each object is an independent unit with a <b>unique identity</b>, just as objects in the real world are. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				 An apple is an object; so is a mug. Each has its unique <b>identity</b>. It's possible to have two mugs that look identical, but they are still 
+				 separate, unique objects.
+			</span>
+		</span>	
+	
+	<p> Objects also have <b>characteristics</b>, which are used to describe them. <br />
+		For example, a car can be red or blue, a mug can be full or empty, and so on. These characteristics are also called <b>attributes</b>. An attribute describes the
+		current state of an object. <br />
+		In the real world, each object behaves in its own way. The car moves, the phone rings, and so on. <br />
+		The same applies to objects: <b>behavior</b> is specific to the object's type. </p>
+
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				 In summary, in object oriented programming, each object has three dimensions: <b>identity</b>, <b>attributes</b>, and <b>behavior</b>. <br />
+				 Attributes describe the object's current state, and what the object is capable of doing is demonstrated through the object's behavior.
+			</span>
+		</span> <br />
+		
+	<p><b><font size="4">Classes</font></b>	<br />
+		A <b>class</b> describes what the object will be, but is separate from the object itself. <br />
+		In other words, classes can be described as blueprints, descriptions, or definitions for an object. <br />
+		You can use the same class as a blueprint for creating multiple objects. The first step is to define the class, which then becomes a blueprint for object creation. </p>
+		
+	<p> Each class has a name, and each is used to define <b>attributes</b>	and <b>behavior</b>. <br />	
+		Some examples of attributes and behavior: </p>
+		<img src="https://api.sololearn.com/DownloadFile?id=2429">
+
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				 In other words, an object is an <u><span title="each object is called an instance of a class">instance</span></u> of a class.
+			</span>
+		</span> <br />
+
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Methods -->
+	<h2><strong>II. <u>Methods</u></strong></h2>
+	
+<!-- Methods -->	
+	<p> <strong><h3><u>Methods</u></h3></strong> </p>
+	<p> Methods define <b>behavior</b>. A 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> is a
+		collection of statements that are grouped together to perform an operation. System.out.println() is an example of a 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>. <br />
+		You can define your own methods to perform your desired tasks. <br />
+		Let's consider the following code: </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				class MyClass { <br /><br />
+				&emsp;<u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> <b>sayHello()</b> { <br />
+				&emsp;&emsp; System.out.println("Hello World!"); <br />
+				&emsp;} <br /><br />
+				&emsp;public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <b>sayHello();</b> <br />
+				&emsp; } <br />
+				} <br />
+				// Outputs "Hello World!"
+			</span>
+		</span>
+
+	<p> The code above declares a 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> called
+		"sayHello", which prints a text, and then gets called in <b>main</b>. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				To call a <u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u>, type its
+				name and then follow the name with a set of parentheses. 		
+			</span>
+		</span>	
+
+<!-- Calling Methods -->	
+	<p> <strong><h3><u>Calling Methods</u></h3></strong> </p>
+	<p> You can call a <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		as many times as necessary. <br />
+		When a <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> runs,
+		the code jumps down to where the 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> is defined,
+		executes the code inside of it, then goes back and proceeds to the next line. <br />
+		<b>Example:</b> </p>
+
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				class MyClass { <br /><br />
+				&emsp;<u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> sayHello() { <br />
+				&emsp;&emsp; System.out.println("Hello World!"); <br />
+				&emsp;} <br /><br />
+				&emsp;public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; sayHello(); <br />
+				&emsp;&emsp; sayHello(); <br />
+				&emsp;&emsp; sayHello(); <br />
+				&emsp; } <br />
+				} <br /><br />
+				// Hello World! <br />
+				// Hello World! <br />
+				// Hello World!
+			</span>
+		</span>	<br />
+
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				In cases like the one above, where the same thing is repeated over and over, you can achieve the same result using loops (while or for). 		
+			</span>
+		</span>
+
+<!-- Method Parameters -->	
+	<p> <strong><h3><u>Method Parameters</u></h3></strong> </p>
+	<p> You can also create a <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		that takes some data, called <b>parameters</b>, along with it when you call it. Write parameters within the
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>'s parentheses. <br />
+		For example, we can modify our <b>sayHello()</b>
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> to take
+		and output a <b><font color="crimson"><span title="a sequence of characters">String</span></font></b> parameter. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				class MyClass { <br /><br />
+				&emsp;<u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> 
+						sayHello(<b><u><span title="a sequence of characters">String</span></u> name</b>) { <br />
+				&emsp;&emsp; System.out.println("Hello " + <b>name</b>); <br />
+				&emsp;} <br /><br />
+				&emsp;public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; sayHello("David"); <br />
+				&emsp;&emsp; sayHello("Amy"); <br />
+				&emsp; } <br /><br />
+				} <br />
+				// Hello David <br />
+				// Hello Amy
+			</span>
+		</span>
+
+	<p> The <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		above takes a <font color="crimson"><span title="a sequence of characters">String</span></font> called <b>name</b> as a parameter, which is used in the 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>'s body. <br />
+		Then, when calling the 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>, we pass
+		the parameter's value inside the parentheses. <br />
+		Methods can take multiple, comma-separated parameters. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				The advantages of using methods instead of simple statements include the following:
+				<ul>
+					<li><b>code reuse</b>: You can write a 
+						<span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span> once, and use it
+						multiple times, without having to rewrite the code each time.</li>
+					<li><b>parameters</b>: Based on the parameters passed in, methods can perform various actions.</li>
+				</ul>	
+			</span>
+		</span>	
+
+	<p><b>Result:</b> <a href ="MyClass.java" target="_blank">(MyClass.java)</a></p>
+	<img src="MyClass.JPG" width="68%" height="68%"></img> &emsp;
+	<img src="Run&Compile-MyClass_Result.JPG" width="29%" height="29%"></img> <p></p><br />
+
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Method Return Types -->
+	<h2><strong>III. <u>Method Return Types</u></strong></h2>
+	
+<!-- The Return Type -->	
+	<p> <strong><h3><u>The Return Type</u></h3></strong> </p>
+	<p> The <b>return</b> keyword can be used in methods to return a value. <br />
+		For example, we could define a  
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> 
+		named <b>sum</b> that returns the sum of its two parameters. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<b><u><span title="used to declare an integer variable">int</span></u></b> sum(<u><span title="used to declare an integer variable">int</span></u>
+					val1, <u><span title="used to declare an integer variable">int</span></u> val2) { <br />
+				&emsp;<b>return</b> val1 + val2; <br />
+				}
+			</span>
+		</span>	
+
+	<p> Notice that in the <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		definition , we defined the <b>return type</b> before we defined the
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> name.
+		For our sum <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>,
+		it is <b><font color="crimson"><span title="used to declare an integer variable">int</span></font></b>, as it takes two parameters of the type 
+		<b><font color="crimson"><span title="used to declare an integer variable">int</span></font></b> and returns their sum,
+		which is also an <b><font color="crimson"><span title="used to declare an integer variable">int</span></font></b>. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				The <b><u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u></b> keyword will be discussed
+				in a future lesson.
+			</span>
+		</span>	
+
+	<p> Now, we can use the <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		in our main. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				class MyClass { <br /><br />
+				&emsp;<u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="used to declare an integer variable">int</span></u> sum(<u><span title="used to declare an integer variable">int</span></u>
+					val1, <u><span title="used to declare an integer variable">int</span></u> val2) { <br />
+				&emsp;&emsp;return val1 + val2; <br />
+				} <br /><br />
+				&emsp;public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <u><span title="used to declare an integer variable">int</span></u> x = <b>sum</b>(2, 5); <br />
+				&emsp;&emsp;System.out.println(x); <br />
+				&emsp; } <br />
+				}	
+			</span>
+		</span>	
+
+	<p> As the <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		returns a value, we can assign it to a variable. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				When you do not need to return any value from your 
+				<u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u>, use the keyword 
+				<b><u><span title="indicates that a method does not return a value">void</span></u></b>. <br />
+				Notice the <b><u><span title="indicates that a method does not return a value">void</span></u></b> keyword in the definition of the main 
+					<u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u> - this means that 
+				main does not return anything.
+			</span>
+		</span>	
+
+	<p> Take a look at the same code from our previous lesson with explaining comments, so you can better understand how it works: </p>
+	
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<b>// returns an <u><span title="used to declare an integer variable">int</span></u> value 5</b> <br />
+				<u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="used to declare an integer variable">int</span></u> returnFive() { <br />
+				&emsp; return 5; <br />
+				} <br /><br />
+				<b>// has a parameter</b> <br />
+				<u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> sayHelloTo(<u><span title="a sequence of characters">String</span></u> name) { <br />
+				&emsp;System.out.println("Hello " + name); <br />
+				} <br /><br />
+				<b>// simply prints "Hello World!"</b> <br />
+				<u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> sayHello() { <br />
+				&emsp;System.out.println("Hello World!"); <br />
+				}	
+			</span>
+		</span>
+
+	<p> Having gained knowledge of <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		return types and parameters, let's take another look at the definition of the main 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>. </p>
+
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<b><u><span title="indicates that a method does not return a value">void</span></u></b> main(<u><span title="a sequence of characters">String</span></u>[] args)			
+			</span>
+		</span> <br />
+
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				This definition indicates that the <b>main</b>
+				<u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u> takes an
+				<u><span title="array is a collection of variables of the same type">array</span></u> of Strings as its parameters, and does not return a value.
+			</span>
+		</span>
+	
+	<p> Let's create a <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		that takes two parameters of type <b><font color="crimson"><span title="used to declare an integer variable">int</span></font></b> 
+		and returns the greater one, then call it in <b>main</b>:
+	
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<b><u><span title="indicates that a method does not return a value">void</span></u></b> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp; <u><span title="used to declare an integer variable">int</span></u> res = max(7, 42); <br />
+				&emsp; System.out.println(res); // 42 <br />
+				} <br /><br />
+				<u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u> 
+					<b><u><span title="used to declare an integer variable">int</span></u></b> max(<b><u><span title="used to declare an integer variable">int</span></u></b> a,
+					<b><u><span title="used to declare an integer variable">int</span></u></b> b) { <br />
+				&emsp; if(a &gt; b) { <br />		
+				&emsp;&emsp; <b>return</b> a; <br />
+				&emsp; } <br />
+				&emsp; else { <br />
+				&emsp;&emsp; <b>return</b> b; <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span>	<br />
+
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				A <u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u> can have one type of
+				parameter (or parameters) and return another, different type. For example, it can take two doubles and
+				return an <u><span title="used to declare an integer variable">int</span></u>.
+			</span>
+		</span>
+	
+	<p><b>Result:</b> <a href ="MyClass1.java" target="_blank">(MyClass1.java)</a></p>
+	<img src="MyClass1.JPG" width="50%" height="50%"></img> &emsp;
+	<img src="Run&Compile-MyClass1_Result.JPG" width="44%" height="44%"></img> <p></p><br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Creating Classes & Objects -->
+	<h2><strong>IV. <u>Creating Classes & Objects</u></strong></h2>
+	
+<!-- Creating Classes -->	
+	<p> <strong><h3><u>Creating Classes</u></h3></strong> </p>	
+	<p> In order to create your own custom objects, you must first create the corresponding classes. This is accomplished by right clicking on the <b>src</b> folder in Eclipse
+		and selecting Create &rarr; New &rarr; Class. <br />
+		Give your class a name and click <b>Finish</b> to add the new class to your project: </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2866">
+
+	<p> As you can see, Eclipse has already added the initial code for the class. <br />
+		Now let's create a simple <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		in our new class. <br />
+		<b><u>Animal.java</u></b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class Animal { <br />
+				&emsp; <u><span title="indicates that a method does not return a value">void</span></u> bark() { <br />
+				&emsp;&emsp; System.out.println("Woof-Woof"); <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span>	
+		
+	<p> We declared a <b>bark()</b> <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		in our <b>Animal</b> class. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Now, in order to use the class and its methods, we need to declare an <b>object</b> of that class.
+			</span>
+		</span>	
+	
+<!-- Creating Objects -->	
+	<p> <strong><h3><u>Creating Objects</u></h3></strong> </p>	
+	<p> Let's head over to our <b>main</b> and create a new object of our class. <br />
+		<b><u>MyClass.java</u></b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />					
+				&emsp;&emsp; <b>Animal dog = new Animal();</b> <br />
+				&emsp;&emsp; <b>dog.bark();</b> <br />
+				&emsp; } <br />
+				} <br />
+				// Outputs "Woof-Woof"
+			</span> 
+		</span>	
+	
+	<p> Now, <b>dog</b> is an object of type <b>Animal</b>. Thus, we can call its <b>bark()</b> 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>, using
+		the name of the object and a <b>dot</b>. <br />
+		The <b>dot</b> notation is used to access the object's <b>attributes</b> and <b>methods</b>. </p>
+	
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				You have just created your first object!
+			</span>
+		</span>
+	
+	<p><b>Result:</b> <a href ="MyClass2.java" target="_blank">(MyClass2.java)</a> <a href ="Animal.java" target="_blank">(Animal.java)</a></p>
+	<img src="MyClass2.JPG" width="48%" height="48%"></img> &emsp;
+	<img src="Animal.JPG" width="48%" height="48%"></img> <p></p><br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Class Attributes -->
+	<h2><strong>V. <u>Class Attributes</u></strong></h2>
+	
+<!-- Defining Attributes -->	
+	<p> <strong><h3><u>Defining Attributes</u></h3></strong> </p>	
+	<p> A class has <b>attributes</b> and <b>methods</b>. The attributes are basically variables within a class. <br />
+		Let's create a class called <b>Vehicle</b>, with its corresponding attributes and methods. </p>
+
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class Vehicle { <br />
+				&emsp; <u><span title="used to declare an integer variable">int</span></u> maxSpeed; <br />
+				&emsp; <u><span title="used to declare an integer variable">int</span></u> wheels; <br />
+				&emsp; <u><span title="a sequence of characters">String</span></u> color; <br />
+				&emsp; double fuelCapacity; <br /><br />	
+				&emsp; <u><span title="indicates that a method does not return a value">void</span></u> horn() { <br />
+				&emsp;&emsp; System.out.println("Beep!"); <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span>		
+	
+	<p> <b>maxSpeed</b>, <b>wheels</b>, <b>color</b>, and <b>fuelCapacity</b> are the attributes of our Vehicle class, and <b>horn()</b> is the only
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				You can define as many attributes and methods as necessary.
+			</span>
+		</span>	
+	
+<!-- Creating Objects -->	
+	<p> <strong><h3><u>Creating Objects</u></h3></strong> </p>	
+	<p> Next, we can create multiple objects of our <b>Vehicle</b> class, and use the dot syntax to access their attributes and methods. </p>
+	
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; Vehicle v1 = new Vehicle(); <br />
+				&emsp;&emsp; Vehicle v2 = new Vehicle(); <br />
+				&emsp;&emsp; v1.color = "red"; <br />
+				&emsp;&emsp; v2.horn(); <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span> <br />
+	
+	<h2 class="solid" align="center"> <b> From here on out, Eclipse is going to be used as the IDE </b> </h2><br />
+	
+	<p><b>Result:</b> <a href ="Vehicle.java" target="_blank">(Vehicle.java)</a> <a href ="MyClass3.java" target="_blank">(MyClass3.java)</a> </p>
+	<img src="MyClass3.JPG" width="100%" height="100%"></img> <p></p><br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Access Modifiers -->
+	<h2><strong>VI. <u>Access Modifiers</u></strong></h2>
+	
+<!-- Access Modifiers -->	
+	<p> <strong><h3><u>Access Modifiers</u></h3></strong> </p>	
+	<p> Now let's discuss the <b>public</b> keyword in front of the main
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<b>public</b> <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args)
+			</span> 
+		</span>	
+	
+	<p> <b>public</b> - is an <b>access modifier</b>, meaning that it is used to set the level of access. You can use access modifiers for classes, attributes, and methods. </p>
+	
+	<p> For classes, the available modifiers are public or default (left blank), as described below: 
+		<ul>
+			<li><b>public</b>: The class is accessible by any other class.</li>
+			<li><b>default</b>: The class is accessible only by classes in the same <font color="crimson"><span title="a group of similar types of classes">package</span></font></li>
+		</ul> </p>
+
+	<p>The following choices are available for attributes and methods:
+		<ul>
+			<li><b>default</b>: A variable or 
+				<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+				declared with no access control modifier is available to any other class in the same 
+				<font color="crimson"><span title="a group of similar types of classes">package</span></font>.</li>
+			<li><b>public</b>: Accessible from any other class.</li>
+			<li><b>protected</b>: Provides the same access as the default access modifier, with the addition that subclasses can access protected methods and variables
+				of the superclass (Subclasses and superclasses are covered in upcoming lessons).</li>
+			<li><b>private</b>: Accessible only within the declared class itself.</li>
+		</ul>	<br />
+		<b>Example:</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class Vehicle { <br />
+				&emsp; <b>private</b> <u><span title="used to declare an integer variable">int</span></u> maxSpeed; <br />
+				&emsp; <b>private</b> <u><span title="used to declare an integer variable">int</span></u> wheels; <br />
+				&emsp; <b>private</b> <u><span title="a sequence of characters">String</span></u> color; <br />
+				&emsp; <b>private</b> double fuelCapacity; <br /><br />	
+				&emsp; <b>public</b> <u><span title="indicates that a method does not return a value">void</span></u> horn() { <br />
+				&emsp;&emsp; System.out.println("Beep!"); <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span>	<br />
+	
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				It's a best practice to keep the variables within a class private. The variables are accessible and modified using <b>Getters</b> and <b>Setters</b>
+			</span>
+		</span> <br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Getters and Setters -->
+	<h2><strong>VII. <u>Getters and Setters</u></strong></h2>
+	
+<!-- Getters & Setters -->	
+	<p> <strong><h3><u>Getters & Setters</u></h3></strong> </p>	
+	<p> <b>Getters</b> and <b>Setters</b> are used to effectively protect your data, particularly when creating classes. <br />
+		For each variable, the <b>get</b> 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> returns
+		its value, while the <b>set</b> 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> sets the value. </p>
+		
+	<ul>
+		<li><b>Getters</b> start with <b>get</b>, followed by the variable name, with the first letter of the variable name capitalized.</li>
+		<li><b>Setters</b> start with <b>set</b>, followed by the variable name, with the first letter of the variable name capitalized.</li>
+	</ul>	
+	<b>Example:</b>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class Vehicle { <br />
+				&emsp; private <u><span title="a sequence of characters">String</span></u> color; <br /><br />
+				&emsp; // Getter <br />
+				&emsp; public <u><span title="a sequence of characters">String</span></u> <b>getColor()</b> { <br />
+				&emsp;&emsp; return color; <br />
+				&emsp; } <br /><br />
+				&emsp; // Setter <br />
+				&emsp; public <u><span title="indicates that a method does not return a value">void</span></u> 
+					<b>setColor</b>(<u><span title="a sequence of characters">String</span></u> c) { <br />
+				&emsp;&emsp; this.color = c; <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span>	
+	
+	<p> The <font color="crimson"><b><span title="The getter method returns the value of the attribute">getter</span></b>
+		<span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> returns the value of the attribute. <br />
+		The <font color="crimson"><b><span title="The setter method takes a parameter and assigns it to the attribute">setter</span></b>
+		<span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> takes a parameter and assigns
+		it to the attribute. </p>
+
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				The keyword <b>this</b> is used to refer to the current object. Basically, <b>this.color</b> is the <b>color</b> attribute of the current object.
+			</span>
+		</span>		
+	
+	<p> Once our <font color="crimson"><span title="The getter method returns the value of the attribute">getter</span></font> and 
+		<font color="crimson"><span title="The setter method takes a parameter and assigns it to the attribute">setter</span></font> have been defined, we can use it in our <b>main</b>: </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp; Vehicle v1 = new Vehicle(); <br />
+				&emsp; v1.setColor("Red"); <br />
+				&emsp; System.out.println(v1.getColor()); <br />
+				} <br /><br />
+				// Outputs "Red"
+			</span> 
+		</span>	
+	
+	<p> Getters and setters allow us to have control over the values. You may, for example, validate the given value in the
+		<font color="crimson"><span title="The setter method takes a parameter and assigns it to the attribute">setter</span></font> before actually setting the value. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Getters and setters are fundamental building blocks for <b><u><span title="the packing of data and methods into a single component">encapsulation</span></u></b>,
+				which will be covered in the next module.
+			</span>
+		</span>	
+	
+	<p><b>Result:</b> <a href ="Vehicle1.java" target="_blank">(Vehicle1.java)</a> <a href ="Program.java" target="_blank">(Program.java)</a></p>
+	<img src="Program.JPG" width="100%" height="100%"></img> <p></p><br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Constructors -->
+	<h2><strong>VIII. <u>Constructors</u></strong></h2>
+	
+<!-- Constructors -->	
+	<p> <strong><h3><u>Constructors</u></h3></strong> </p>	
+	<p> <b>Constructors</b> are special methods invoked when an object is created and are used to initialize them. <br />
+		A <font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font> can
+		be used to provide initial values for object attributes.
+	<ul>
+		<li>A <font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font>
+			name must be the same as its class name.</li>
+		<li>A <font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font>
+			must have no explicit return type.</li>
+	</ul>
+
+	Example of a <font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font>: </p>
+
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class Vehicle { <br />
+				&emsp; private <u><span title="a sequence of characters">String</span></u> color; <br />
+				&emsp; <b>Vehicle()</b> { <br />
+				&emsp;&emsp; color = "Red"; <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span>
+	
+	<p> The <b>Vehicle()</b> <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		is the <font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font>
+		of our class, so whenever an object of that class is created, the color attribute will be set to "Red". <br />
+		A <font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font>
+		can also take parameters to initialize attributes. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class Vehicle { <br />
+				&emsp; private <u><span title="a sequence of characters">String</span></u> color; <br />
+				&emsp; <b>Vehicle(<u><span title="a sequence of characters">String</span></u> c)</b> { <br />
+				&emsp;&emsp; color = c; <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span> <br />	
+	
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				You can think of constructors as methods that will set up your class by default, so you don't need to repeat the same code every time.
+			</span>
+		</span>
+	
+<!-- Using Constructors -->	
+	<p> <strong><h3><u>Using Constructors</u></h3></strong> </p>	
+	<p> The <font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font>
+		is called when you create an object using the <b>new</b> keyword. <br />
+		<b>Example:</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; Vehicle v = new <b>Vehicle("Blue");</b> <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span> <br />	
+	
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				This will call the <u><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></u>,
+				which will set the <b>color</b> attribute to "Blue".
+			</span>
+		</span>	
+	
+<!-- Constructors -->	
+	<p> <strong><h3><u>Constructors</u></h3></strong> </p>
+	<p> A single class can have multiple constructors with different numbers of parameters. <br />
+		The <font color="crimson"><span title="The setter method takes a parameter and assigns it to the attribute">setter</span></font> methods inside the constructors
+		can be used to set the attribute values. <br /><br />
+		<b>Example:</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class Vehicle { <br />
+				&emsp; private <u><span title="a sequence of characters">String</span></u> color; <br /><br />
+				&emsp; Vehicle() { <br />
+				&emsp;&emsp; this.setColor("Red"); <br />
+				&emsp; } <br />
+				&emsp; Vehicle(<u><span title="a sequence of characters">String</span></u> c) { <br />
+				&emsp;&emsp; this.setColor(c); <br />
+				&emsp; } <br /><br />
+				&emsp; // Setter <br />
+				&emsp; public <u><span title="indicates that a method does not return a value">void</span></u> 
+					setColor(<u><span title="a sequence of characters">String</span></u> c) { <br />
+				&emsp;&emsp; this.color = c; <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span>	
+	
+	<p> The class above has two constructors, one without any parameters setting the color attribute to a default value of "Red", and another 
+		<font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font> that
+		accepts a parameter and assigns it to the attribute. <br /><br />
+		Now, we can use the constructors to create objects of our class. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				// color will be "Red" <br />
+				Vehicle v1 = new Vehicle(); <br /><br />
+				// color will be "Green" <br />
+				Vehicle v2 = new Vehicle("Green");
+			</span> 
+		</span> <br />	
+	
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Java automatically provides a default 
+				<u><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></u>, so all classes have a
+				<u><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></u>, whether one is
+				specifically defined or not.
+			</span>
+		</span>	
+	
+	<p><b>Result:</b> <a href ="Vehicle2.java" target="_blank">(Vehicle2.java)</a> <a href ="Program1.java" target="_blank">(Program1.java)</a></p>
+	<img src="Program1.JPG" width="100%" height="100%"></img> <p></p><br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Value & Reference Types -->
+	<h2><strong>IX. <u>Value & Reference Types</u></strong></h2>
+	
+<!-- Value Types -->	
+	<p> <strong><h3><u>Value Types</u></h3></strong> </p>	
+	<p> <b>Value types</b> are the basic types, and include byte, short, <font color="crimson"><span title="used to declare an integer variable">int</span></font>, long, 
+		<font color="crimson"><span title="used to declare a floating point variable">float</span></font>, double, 
+		<font color="crimson"><span title="used to declare a Boolean variable, which returns just two possible values: true and false">boolean</span></font>, and 
+		<font color="crimson"><span title="used to declare a character variable">char</span></font>. <br />
+		These data types store the values assigned to them in the corresponding memory locations. <br />
+		So, when you pass them to a <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>,
+		you basically operate on the variable's <b>value</b>, rather than on the variable itself. <br />
+		<b>Example:</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <b><u><span title="used to declare an integer variable">int</span></u> x = 5;</b> <br />
+				&emsp;&emsp; addOneTo(<b>x</b>); <br />
+				&emsp;&emsp; System.out.println(<b>x</b>); <br />
+				&emsp; } <br />
+				&emsp; <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> addOneTo(<u><span title="used to declare an integer variable">int</span></u> num) { <br />
+				&emsp;&emsp; num = num + 1; <br />
+				&emsp; } <br />
+				} <br />
+				// Outputs "<b>5</b>"
+			</span> 
+		</span> <br />	
+	
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				The <u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u> from the example
+				above takes the <b>value</b> of its parameter, which is why the original variable is not affected and 5 remains as its value.
+			</span>
+		</span>
+	
+<!-- Reference Types -->	
+	<p> <strong><h3><u>Reference Types</u></h3></strong> </p>	
+	<p> A <b>reference type</b> stores a reference (or address) to the memory location where the corresponding data is stored. <br />
+		When you create an object using the 
+		<font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font>, you
+		create a reference variable. <br />
+		For example, consider having a <b>Person</b> class defined: </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; Person j;</b> <br />
+				&emsp;&emsp; j = new Person("John"); <br />
+				&emsp;&emsp; j.setAge(20); <br />
+				&emsp;&emsp; celebrateBirthday(j); <br />
+				&emsp;&emsp; System.out.println(j.getAge()); <br />
+				&emsp; } <br />
+				&emsp; <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> celebrateBirthday(Person p) { <br />
+				&emsp;&emsp; p.setAge(p.setAge() + 1); <br />
+				&emsp; } <br />
+				} <br />
+				// Outputs "<b>21</b>"
+			</span> 
+		</span>	
+	
+	<p> The <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		<b>celebrateBirthday</b> takes a Person object as its parameter, and increments its attribute. <br />
+		Because <b>j</b> is a reference type, the
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> affects
+		the object itself, and is able to change the actual value of its attribute. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				<b>Array</b> and <b>Strings</b> are also reference data types. 
+			</span>
+		</span>	
+	
+	<p><b>Result:</b> <a href ="Person.java" target="_blank">(Person.java)</a> <a href ="MyClass4.java" target="_blank">(MyClass4.java)</a></p>
+	<img src="MyClass4.JPG" width="100%" height="100%"></img> <p></p><br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- The Math Class -->
+	<h2><strong>X. <u>The Math Class</u></strong></h2>
+	
+<!-- The Math Class -->	
+	<p> <strong><h3><u>The Math Class</u></h3></strong> </p>	
+	<p> The <b>JDK</b> defines a number of useful classes, one of them being the <b>Math</b> class, which provides predefined methods for mathematical operations. <br />
+		You do not need to create an object of the <b>Math</b> class to use it. To access it, just type in <b>Math.</b> and the corresponding
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>. </p>
+		
+	<p> <b>Math.ab()</b> returns the absolute value of its parameter. </p>
+
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<u><span title="used to declare an integer variable">int</span></u> a = Math.abs(10); // 10 <br />
+				<u><span title="used to declare an integer variable">int</span></u> b = Math.abs(-20); // 20
+			</span> 
+		</span>	
+	
+	<p> <b>Math.ceil()</b> rounds a floating point value up to the nearest <font color="crimson"><span title="whole number">integer</span></font> value. The rounded
+		value is returned as a <b>double</b>. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				double c = Math.ceil(7.342); // 8.0 
+			</span> 
+		</span>	
+	
+	<p> Similarly, <b>Math.floor()</b> rounds a floating point value down to the nearest <font color="crimson"><span title="whole number">integer</span></font> value. </p>
+	
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				double f = Math.floor(7.343); // 7.0 
+			</span> 
+		</span>
+	
+	<p> <b>Math.max()</b> returns the largest of its parameters. </p>
+	
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<u><span title="used to declare an integer variable">int</span></u> m = Math.max(10, 20); // 20
+			</span> 
+		</span>
+	
+	<p> Conversely, <b>Math.min()</b> returns the smallest parameter. </p>
+	
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<u><span title="used to declare an integer variable">int</span></u> m = Math.min(10, 20); // 10
+			</span> 
+		</span>
+	
+	<p> <b>Math.pow()</b> takes two parameters and returns the first parameter raised to the power of the second parameter. </p>
+	
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				double p = Math.pow(2, 3); // 8.0 
+			</span> 
+		</span> <br />
+	
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				There are a number of other methods available in the Math class, including: <br />
+				<b>sqrt()</b> for square root, <b>sin()</b> for sin, <b>cos()</b> for cosine, and others.
+			</span>
+		</span>
+	
+	<p><b>Result:</b> <a href ="Program2.java" target="_blank">(Program2.java)</a></p>
+	<img src="Program2.JPG" width="100%" height="100%"></img> <p></p><br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Static -->
+	<h2><strong>XI. <u>Static</u></strong></h2>
+	
+<!-- Static -->	
+	<p> <strong><h3><u>Static</u></h3></strong> </p>
+	<p> When you declare a variable or a 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> as
+		<b><font color="crimson"><span title="static variables and methods belong to the class instead of a specific instance">static</span></font></b>, it belongs to the
+		class, rather than to a specific <font color="crimson"><span title="each object is called an instance of a class">instance</span></font>. This means that only one
+		<font color="crimson"><span title="each object is called an instance of a class">instance</span></font> of a
+		<b><font color="crimson"><span title="static variables and methods belong to the class instead of a specific instance">static</span></font></b> member exists, even if
+		you create multiple objects of the class, or if you don't create any. It will be shared by all objects. <br />
+		<b>Example:</b> </p>
+
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class Counter { <br />
+				&emsp; public <b><u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u></b>
+					<u><span title="used to declare an integer variable">int</span></u> COUNT = 0; <br />
+				&emsp; Counter() { <br />
+				&emsp;&emsp; COUNT++; <br />
+				&emsp; } <br />	
+				} 
+			</span> 
+		</span>		
+	
+	<p> The <b>COUNT</b> variable will be shared by all objects of that class. <br />
+		Now, we can create objects of our Counter class in <b>main</b>, and access the 
+		<font color="crimson"><span title="static variables and methods belong to the class instead of a specific instance">static</span></font> variable. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; Counter c1 = new Counter(); <br />
+				&emsp;&emsp; Counter c2 = new Counter(); <br />		
+				&emsp;&emsp; System.out.println(<b>Counter.COUNT</b>); <br />
+				&emsp; } <br />
+				} <br />
+				// Outputs "2"
+			</span> 
+		</span>	
+	
+	<p> The output is 2, because the <b>COUNT</b> variable is
+		<font color="crimson"><span title="static variables and methods belong to the class instead of a specific instance">static</span></font> and get incremented by one
+		each time a new object of the Counter class is created. In the code above, we created 2 objects. <br />
+		You can also access the <font color="crimson"><span title="static variables and methods belong to the class instead of a specific instance">static</span></font>
+		variable using any object of that class, such as <b>c1.COUNT</b>. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				It's a common practice to use upper case when naming a 
+				<u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u> variable, although not mandatory.
+			</span>
+		</span>	
+	
+	<p> The same concept applies to <b><u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u></b> methods. </p>
+	
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class Vehicle { <br />
+				&emsp; public <b><u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u></b>
+					<u><span title="indicates that a method does not return a value">void</span></u> horn() { <br />
+				&emsp;&emsp; System.out.println("Beep"); <br />
+				&emsp; } <br />
+				} 
+			</span> 
+		</span>	
+	
+	<p> Now, the <b>horn</b> 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> can
+		be called without creating an object: </p>
+	
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; Vehicle.horn(); <br />
+				&emsp; } <br />
+				} 
+			</span> 
+		</span>	
+	
+	<p> Another example of <font color="crimson"><span title="static variables and methods belong to the class instead of a specific instance">static</span></font> methods
+		are those of the <b>Math</b> class, which is why you can call them without creating a <b>Math</b> object. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Also, the <b>main</b> <u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u>
+				must always be <b><u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u></b>.
+			</span>
+		</span>	
+	
+	<p><b>Result:</b> <a href ="Counter.java" target="_blank">(Counter.java)</a> <a href ="Vehicle3.java" target="_blank">(Vehicle3.java)</a> 
+		<a href ="MyClass5.java" target="_blank">(MyClass5.java)</a></p>
+	<img src="MyClass5.JPG" width="100%" height="100%"></img> <p></p><br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Final -->
+	<h2><strong>XII. <u>Final</u></strong></h2>
+	
+<!-- final -->	
+	<p> <strong><h3><u>final</u></h3></strong> </p>	
+	<p> Use the <b>final</b> keyword to mark a variable constant, so that it can be assigned only once. <br />
+		<b>Example:</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<b>final</b> double PI = 3.14; <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; System.out.println(PI); <br />
+				&emsp; } <br />
+				} 
+			</span> 
+		</span>	
+		
+	<p> <b>PI</b> is now a constant. Any attempt to assign it a value will cause an error. </p>
+
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Methods and classes can also be marked <b>final</b>. This serves to restrict methods so that they can't be overridden and classes so that they can't be subclassed. <br />
+				These concepts will be covered in the next module.
+			</span>
+		</span>	<br />
+		
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Packages -->
+	<h2><strong>XIII. <u>Packages</u></strong></h2>
+	
+<!-- Packages -->	
+	<p> <strong><h3><u>Packages</u></h3></strong> </p>		
+	<p> <b>Packages</b> are used to avoid name conflicts and to control access to classes. <br />
+		A <b><font color="crimson"><span title="a group of similar types of classes">package</span></font></b> can be defined as a group made up of similar types of
+		classes, along with sub-packages. <br /><br />
+		
+		Creating a <font color="crimson"><span title="a group of similar types of classes">package</span></font> in Java is quite easy. Simply right click on your
+		<b>src</b> directory and click New &rarr; Package. Give your <font color="crimson"><span title="a group of similar types of classes">package</span></font>
+		a name and click <b>Finish</b>. <br />
+		You will notice that the new <font color="crimson"><span title="a group of similar types of classes">package</span></font> appears in the project directory. Now you
+		can move and create classes inside that <font color="crimson"><span title="a group of similar types of classes">package</span></font>. We have moved our
+		<b>Vehicle</b>, <b>Counter</b> and <b>Animal</b> classes to the <font color="crimson"><span title="a group of similar types of classes">package</span></font> <b>samples</b>. </p>
+		<img src="https://api.sololearn.com/DownloadFile?id=2868">
+		
+	<p>	When you move/create a class in your <font color="crimson"><span title="a group of similar types of classes">package</span></font>, the following code will 
+		appear at the top of the list of files. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<b><u><span title="a group of similar types of classes">package</span></u></b> samples;
+			</span> 
+		</span>	
+	
+	<p> This indicates the <font color="crimson"><span title="a group of similar types of classes">package</span></font> to which the class belongs. <br />
+		Now, we need to import the classes that are inside a <font color="crimson"><span title="a group of similar types of classes">package</span></font> in our main to be
+		able to use them. <br />
+		The following example shows how to use the <b>Vehicle</b> class of the <b>samples</b> <font color="crimson"><span title="a group of similar types of classes">package</span></font>. </p>
+	
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<b>import samples.Vehicle;</b> <br /><br />
+				class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; Vehicle v1 = new Vehicle(); <br />
+				&emsp;&emsp; v1.horn(); <br />
+				&emsp; } <br />
+				} 
+			</span> 
+		</span>
+	
+	<p> Two major results occur when a class is placed in a <font color="crimson"><span title="a group of similar types of classes">package</span></font>. First, the name of
+		the <font color="crimson"><span title="a group of similar types of classes">package</span></font> becomes a part of the name of the class. Second, the name of the
+		<font color="crimson"><span title="a group of similar types of classes">package</span></font> must match the directory structure where the corresponding class file resides. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Use a wildcard to import all classes in a <u><span title="a group of similar types of classes">package</span></u>. <br />
+				For example, <b>import samples.*</b> will import all classes in the samples <u><span title="a group of similar types of classes">package</span></u>.
+			</span>
+		</span>	<br />	
+	
+	
+	
+<!-- ******************************************************** Helpful Tips from the Comments ******************************************************** -->	
+	
+	<button class="accordion1">
+	<p align="center"><font color="#FFF"><b>****************************** Helpful Tips from the Comments ******************************</b></font></p>
+	</button>
+	
+	<div class="panel">
+	<!-- Object-Oriented Programming -->	
+	<p>	<strong><h3>Object-Oriented Programming</h3></strong> </p>
+	<p> Class: Human being <br />
+		&emsp; Object : Man, Woman <br /><br />
+		Class : Fruit <br />
+		&emsp; Object : Apple, Banana, Mango ... <br /><br />
+		Class : Mobile Phone <br />
+		&emsp; Object : Apple , Samsung , LG ... <br /><br />    
+		Class : Food <br />
+		&emsp; Object : Pizza, Rice ....
+	</p> <br />
+
+	<p> In Java programming you can create any kind of program that you want. <br /><br />
+		Android : javaSE, androidJDK, androidNDK, <br />
+        &emsp;&emsp;&emsp;&emsp;&ensp; but if you want create a very securely. <br />      
+        &emsp;&emsp;&emsp;&emsp;&ensp; program then you can use Qt (framework for C++). <br /><br />
+		Desktop app : javaSE, <br />
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; in this case java has good <br />
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; framework. but with more RAM in <br />
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; your pc.(Linux, Windows, Mac)
+	</p> <br />
+	
+	<p> Advantage of OOPs over Procedure-oriented programming language
+		<ol>
+			<li>OOPs makes development and maintenance easier where as in Procedure-oriented programming language it is not easy to manage if code grows as project size grows.</li><br />
+			<li>OOPs provides data hiding whereas in Procedure-oriented programming language a global data can be accessed from anywhere.</li><br />
+			<li>OOPs provides ability to simulate real-world event much more effectively. We can provide the solution of real word problem if we are using the 
+				Object-Oriented Programming language.</li>
+		</ol>	
+	</p> <br />
+
+	</div>
+
+	<script>
+	var acc = document.getElementsByClassName("accordion1");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		});
+	}
+	</script>	
+	
+<!-- ********************************************* FOOTER ********************************************* -->  
+  
+<!-- Scroll to Top Button  -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" >var scrolltotop={setting:{startline:100,scrollto:0,scrollduration:1e3,fadeduration:[500,100]},controlHTML:'<img src="https://i1155.photobucket.com/albums/p559/scrolltotop/arrow40.png" />',controlattrs:{offsetx:5,offsety:5},anchorkeyword:"#top",state:{isvisible:!1,shouldvisible:!1},scrollup:function(){this.cssfixedsupport||this.$control.css({opacity:0});var t=isNaN(this.setting.scrollto)?this.setting.scrollto:parseInt(this.setting.scrollto);t="string"==typeof t&&1==jQuery("#"+t).length?jQuery("#"+t).offset().top:0,this.$body.animate({scrollTop:t},this.setting.scrollduration)},keepfixed:function(){var t=jQuery(window),o=t.scrollLeft()+t.width()-this.$control.width()-this.controlattrs.offsetx,s=t.scrollTop()+t.height()-this.$control.height()-this.controlattrs.offsety;this.$control.css({left:o+"px",top:s+"px"})},togglecontrol:function(){var t=jQuery(window).scrollTop();this.cssfixedsupport||this.keepfixed(),this.state.shouldvisible=t>=this.setting.startline?!0:!1,this.state.shouldvisible&&!this.state.isvisible?(this.$control.stop().animate({opacity:1},this.setting.fadeduration[0]),this.state.isvisible=!0):0==this.state.shouldvisible&&this.state.isvisible&&(this.$control.stop().animate({opacity:0},this.setting.fadeduration[1]),this.state.isvisible=!1)},init:function(){jQuery(document).ready(function(t){var o=scrolltotop,s=document.all;o.cssfixedsupport=!s||s&&"CSS1Compat"==document.compatMode&&window.XMLHttpRequest,o.$body=t(window.opera?"CSS1Compat"==document.compatMode?"html":"body":"html,body"),o.$control=t('<div id="topcontrol">'+o.controlHTML+"</div>").css({position:o.cssfixedsupport?"fixed":"absolute",bottom:o.controlattrs.offsety,right:o.controlattrs.offsetx,opacity:0,cursor:"pointer"}).attr({title:"Scroll to Top"}).click(function(){return o.scrollup(),!1}).appendTo("body"),document.all&&!window.XMLHttpRequest&&""!=o.$control.text()&&o.$control.css({width:o.$control.width()}),o.togglecontrol(),t('a[href="'+o.anchorkeyword+'"]').click(function(){return o.scrollup(),!1}),t(window).bind("scroll resize",function(t){o.togglecontrol()})})}};scrolltotop.init();</script>
+	<noscript>Not seeing a <a href="https://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
+<!-- End Scroll to Top -->
+	
+	<br /> <br /> <br /> <br /> <br />
+	<div class="copyright">
+            &copy; 2019 Jetchan204. All rights reserved.
+    </div>
+	
+  </body>
+ </html>	

@@ -1,0 +1,1672 @@
+<!DOCTYPE html>	<!-- enable standards mode for documents written using the HTML syntax -->
+ <html lang="en">
+  <head>
+<!-- The viewport meta tag tells the browser that the width of the screen should be considered the "Full Width" of the page. 
+	Meaning no matter the width of the device you are on, whether on desktop or mobile. the website will follow the width of the device the user is on -->  
+  <meta charset="UTF-8" name="viweport" content="width=device-width, initial-scale=1">
+   <title> My Java Notebook I </title>
+   <p class="sansserif" align="center"><strong><font size="7"> My Java Notebook I</font></strong>
+<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->  
+   <style>	
+	body {		
+		background:url("https://d1yn1kh78jj1rr.cloudfront.net/image/preview/rDtN98Qoishumwih/light-blue-background_GkNvxFHd_SB_PM.jpg");
+		background-repeat: repeat;
+		background-size: 100% 100%;	
+		}
+		
+	h1 {
+		font-family: Helvetica, Arial, sans-serif;
+		color: brown;	
+		text-align: center;	<!-- All h1 text will have brown, centered font -->
+		font-weight: bold;
+		}
+	h2 {
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: bold;
+		color: crimson;	<!-- All h2 text will have crimson font -->
+		}
+	h3 {
+		font-family: Helvetica, Arial, sans-serif;
+		font-weight: bold;
+		color: purple;	<!-- All h2 text will have purple font -->
+		}		
+	
+	mark {
+		background-color: orange;
+	}
+	
+	p.sansserif {
+		font-family: Helvetica, Arial, sans-serif;
+	}	
+	p {
+		font-family: verdana;
+		font-size: 14px;	<!-- All p text will be 14px arial text -->
+		}
+		
+	div.border {
+		padding: 10px;
+		border: 5px solid green;
+	}	
+			
+	nav {
+		padding: 10px 0;
+		min-width: 500px;
+	}
+	nav ul {
+		background: linear-gradient(90deg, 
+			rgba(255, 255, 255, 0) 0%, 
+			rgba(255, 255, 255, 0.2) 25%, 
+			rgba(255, 255, 255, 0.2) 75%, 
+			rgba(255, 255, 255, 0) 100%);
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+			inset 0 0 1px rgba(255, 255, 255, 0.6);
+	}	
+	nav ul li {
+		display: inline-block;
+	}
+	nav ul li a {
+		padding: 10px; 
+		color: #000000;
+		font-size: 18px;
+		font-family: Arial;
+		text-decoration: none;
+		display: block;
+	}
+	
+	a:link {
+		text-decoration: none;
+	}
+	a:hover {
+		color: crimson;
+		text-decoration: none;
+	}
+	
+	span.noteBlock {
+		border: 1px solid #DDD;
+		margin: 10px 20px;
+		background: #EEEA87;
+		display: block;
+	}
+	span.note {
+		padding: 10px;
+		border-left: 5px solid #C9C54C;
+		display: block;
+	}
+	span.codeBlock {
+		border: 1px solid #DDD;
+		margin: 10px 20px;
+		background: #ECF0F1;
+		display: block;
+	}
+	span.code {
+		padding: 10px;
+		border-left: 5px solid #589D32;
+		display: block;
+	}
+	
+	.accordion {
+		background-color: lightcyan;
+		color: #444;
+		cursor: pointer;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		font-size: 15px;
+		transition: 0.4s;
+	}
+	.active, .accordion:hover {
+		background-color: #ccc; 
+	}
+	.panel {
+		padding: 0 18px;
+		display: none;
+		background-color: lightcyan;
+		overflow: hidden;
+	}
+	.accordion1 {
+		background-color: black;
+		color: #444;
+		cursor: pointer;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		font-size: 15px;
+		transition: 0.4s;
+	}
+	
+	h2.solid {
+		border-style: solid;
+		border-color: blue;
+	}
+   </style>
+  </head>
+  <body>
+
+<!-- ******************************************************************************************************** --> 
+  
+<!-- Navigation Bar -->  
+	<nav>
+		<ul align="center">
+			<li><a href="Module_1_Basic_Concepts.html"><span title="Basic Concepts"><b>Module 1</b></span></a></li>
+			<li><a href="Module_2_Conditionals_and_Loops.html"><span title="Conditionals and Loops"><b>Module 2</b></span></a></li>
+			<li><a href="Module_3_Arrays.html"><span title="Arrays"><b>Module 3</b></span></a></li>
+			<li><a href="Module_4_Classes_and_Objects.html"><span title="Classes and Objects"><b>Module 4</b></span></a></li>
+			<li><a href="Module_5_More_on_Classes.html"><span title="More on Classes"><b>Module 5</b></span></a></li>
+			<li><a href="#"><span title="Exceptions, Lists, Threads & Files"><b>Module 6</b></span></a></li>
+		</ul>
+	</nav>
+  
+<!-- ******************************************************************************************************** -->	
+   <button class="accordion"><p align="center">
+		***** On Monday, 1/21/19, I started 
+			learning the fundamentals of Java on 
+			<a href= "http://www.sololearn.com"target="_blank"> 
+			sololearn.com</a>. *****</p>
+		
+		<p align="center"> ***** On Tuesday, 6/18/19, I completed
+		the Java Tutorial course and was issued the 
+		<a href="https://www.sololearn.com/Certificate/1068-10607947/pdf/" target="_blank">
+		certificate</a>. *****	-->
+	</button>
+	<div class="panel">
+		<p align="center"> TAKE NOTE THAT THIS IS NOT A .JAVA FILE BECAUSE IT WILL BE A PLAIN TEXT FILE.
+		INSTEAD, JAVA WILL BE COMPILED VIA THE METHOD SHOWN IN THIS 
+		<a href="https://www.youtube.com/watch?time_continue=9&v=J83DFnEe_Uc" target="_blank">VIDEO</a>.</p>
+
+<!-- TL;DW for video above -->		
+	<p> <b><u>TL;DW</u></b> 
+		<ol>
+			<li>On notepad++, click "<b>Plugin</b>" &rarr; "<b>Plugin Manager</b>" &rarr; "<b>Show Plugin Manager</b>" </li>
+			<li>In "Available" tab, check off "<b>NppExec</b>" and go through the installation process.</li>
+			<li>Upon coding Java syntax, press the F6 key to bring up the "<b>Execute...</b>" command box.</li>
+			<li>Change the current directory to <b>D:</b> (or any parent folder that holds your source code) 
+				and then move to <b>programs</b> (or any subfolder that holds your source code).</li>
+				<ol type="a">
+					<li>i.e. &emsp; <b><mark>cd</mark></b> d:</li>
+					<li>i.e. &emsp; <b><mark>cd</mark></b> programs</li>
+				</ol>
+			<li>Now execute the Java file.</li>
+				<ol type="a">
+					<li>i.e. &emsp; <b><mark>javac</mark></b> HelloWorld.java <br />
+						&emsp;&emsp;&ensp; <b><mark>java</mark></b> HelloWorld			
+					</li>				
+				</ol>
+		</ol>
+	</p>	
+
+	<p> Skip to <b>steps 3 - 5</b> if "NppExec" is already installed. <br />
+		Skip to <b>step 5</b> to execute the Java file that is already in the desired directory. </p>
+	</div>
+
+	<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		});
+	}
+	</script>
+		
+<!-- **************************************************** PAGE 6 **************************************************** -->	
+	
+<!-- ***** Module 6 Materials ***** -->
+	<h1><u> Module 6: Exceptions, Lists, Threads, &amp; Files </u></h1>
+	<br />
+	
+<!-- Exception Handling -->
+	<h2><strong>I. <u>Exception Handling</u></strong></h2>
+	
+<!-- Exceptions -->	
+	<p> <strong><h3><u>Exceptions</u></h3></strong> </p>
+	<p> An <b><font color="crimson"><span title="an error or anomaly that occurs as a program is executing">exception</span></font></b> is a problem that occurs during
+		program execution. Exceptions cause abnormal termination of the program. <br />
+		<b>Exception handling</b> is a powerful mechanism that handles runtime errors to maintain normal application flow. </p>
+	
+	<p> An <font color="crimson"><span title="an error or anomaly that occurs as a program is executing">exception</span></font> can occur for many different reasons. Some examples: 
+		<ul>
+			<li>A user has entered invalid data.</li>
+			<li>A file that needs to be opened cannot be found.</li>
+			<li>A network connection has been lost in the middle of communications.</li>
+			<li>Insufficient memory and other issues related to physical resources.</li>
+		</ul> </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				As you can see, exceptions are caused by user error, programmer error, or physical resource issues. However, a well-written program should handle
+				all possible exceptions.
+			</span>
+		</span>	
+	
+<!-- Exception Handling -->	
+	<p> <strong><h3><u>Exception Handling</u></h3></strong> </p>	
+	<p> Exceptions can be caught using a combination of the <b>try</b> and <b>catch</b> keywords. <br />
+		A try/catch block is placed around the code that might generate an 
+		<font color="crimson"><span title="an error or anomaly that occurs as a program is executing">exception</span></font>. <br />
+		<b>Syntax:</b> </p>
+
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<b>try</b> { <br />
+				&emsp; // some code <br />
+				} <b>catch (Exception e)</b> { <br />
+				&emsp; // some code to handle errors <br />	
+				}
+			</span> 
+		</span>		
+	
+	<p> A <b>catch</b> statement involves declaring the type of <font color="crimson"><span title="an error or anomaly that occurs as a program is executing">exception</span></font>
+		you are trying to catch. If an <font color="crimson"><span title="an error or anomaly that occurs as a program is executing">exception</span></font> occurs in the
+		<b>try</b> block, the <b>catch</b> block that follows the <b>try</b> is checked. If the type of
+		<font color="crimson"><span title="an error or anomaly that occurs as a program is executing">exception</span></font> that occurred is listed in a <b>catch</b> block,
+		the <font color="crimson"><span title="an error or anomaly that occurs as a program is executing">exception</span></font> is passed to the <b>catch</b> block much as
+		an <font color="crimson"><span title="a piece of data that is passed into a method or program. Also known as parameter">argument</span></font> is passed into a
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> parameter. <br />
+		The <b>Exception</b> type can be used to catch all possible exceptions. </p>
+		
+	<p> The example below demonstrates <font color="crimson"><span title="an error or anomaly that occurs as a program is executing">exception</span></font> handling
+		when trying to access an <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> index that does not exist: </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <b>try</b> { <br />
+				&emsp;&emsp;&emsp; <u><span title="used to declare an integer variable">int</span></u> a[] = new <u><span title="used to declare an integer variable">int</span></u>[2]; <br />
+				&emsp;&emsp;&emsp; System.out.println(a[5]); <br />
+				&emsp;&emsp; } <b>catch</b> (Exception e) { <br />
+				&emsp;&emsp;&emsp; System.out.println("An error occurred"); <br />
+				&emsp;&emsp; } <br />
+				&emsp; } <br />				
+				} <br />
+				// Outputs "An error occurred"
+			</span> 
+		</span>	
+	
+	<p> Without the <b>try/catch</b> block this code should crash the program, as a[5] does not exist. </p>
+
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Notice the (<b>Exception e</b>) statement in the <b>catch</b> block - it is used to catch all possible Exceptions.
+			</span>
+		</span>	
+	
+	<p><b>Result:</b> <a href ="src/MyClass.java" target="_blank">(MyClass.java)</a> </p>
+	<img src="exception_handling.JPG" width="100%" height="100%"></img> <p></p> <br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Multiple Exceptions -->
+	<h2><strong>II. <u>Multiple Exceptions</u></strong></h2>
+	
+<!-- throw -->	
+	<p> <strong><h3><u>throw</u></h3></strong> </p>	
+	<p> The <b>throw</b> keyword allows you to manually generate exceptions from your methods. Some of the numerous available
+		<font color="crimson"><span title="an error or anomaly that occurs as a program is executing">exception</span></font> types include the IndexOutOfBoundsException,
+		IllegalArgumentException, ArithmeticException, and so on. <br />
+		For example, we can throw an ArithmeticException in our
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		when the parameter is 0. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<u><span title="used to declare an integer variable">int</span></u> div(<u><span title="used to declare an integer variable">int</span></u> a,
+					<u><span title="used to declare an integer variable">int</span></u> b) <b>throws ArithmeticException</b> { <br />
+					&emsp; if(b == 0) { <br />
+					&emsp;&emsp; <b>throw new ArithmeticException("Division by Zero");</b> <br />
+					&emsp; } else { <br />
+					&emsp;&emsp; return a / b; <br />
+					&emsp; } <br />				
+					}			
+			</span> 
+		</span>	
+	
+	<p> The <b>throws</b> statement in the
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		definition defines the type of Exception(s) the
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> can throw. <br />
+		Next, the <b>throw</b> keyword throws the corresponding 
+		<font color="crimson"><span title="an error or anomaly that occurs as a program is executing">exception</span></font>, along with a custom message. <br />
+		If we call the <b>div</b> 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> with
+		the second parameter equal to 0, it will throw an ArithmeticException with the message "Division by Zero". </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Multiple exceptions can be defined in the throws statement using a <b>comma-separated</b> list.
+			</span>
+		</span>	
+	
+<!-- Exception Handling -->	
+	<p> <strong><h3><u>Exception Handling</u></h3></strong> </p>	
+	<p> A single try block contain multiple catch blocks that handle different exceptions separately. <br />
+		<b>Example:</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				try { <br />
+				&emsp; // some code <br />
+				} <b>catch</b> (ExceptionType1 e1) { <br />
+				&emsp; // Catch block <br />	
+				} <b>catch</b> (ExceptionType2 e2) { <br />
+				&emsp; // Catch block <br />	
+				} <b>catch</b> (ExceptionType3 e3) { <br />
+				&emsp; // Catch block <br />	
+				}				
+			</span> 
+		</span>	<br />
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				All catch blocks should be ordered from most specific to most general. <br />
+				Following the specific exceptions, you can use the <b>Exception</b> type to handle all other exceptions as the last catch.
+			</span>
+		</span>	
+	
+	<p><b>Result:</b> <a href ="src/Program.java" target="_blank">(Program.java)</a> </p>
+	<img src="throw.JPG" width="100%" height="100%"></img> <p></p> <br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Threads -->
+	<h2><strong>III. <u>Threads</u></strong></h2>
+	
+<!-- Threads -->	
+	<p> <strong><h3><u>Threads</u></h3></strong> </p>
+	<p> Java is a <b>multi-threaded</b> programming language. This means that our program can make optimal use of available resources by running two or more components
+		concurrently, with each component handling a different task. <br />
+		You can subdivide specific operations within a single application into individual <b>threads</b> that all run in parallel. <br />
+		The following diagram shows the life-cycle of a thread. </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2880">
+
+	<p> There are two ways to create a thread.	</p>
+	
+	<p> <b>1. Extend the Thread class</b> <br />
+		Inherit from the <b>Thread</b> class, override its <b>run()</b>
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>, and write
+		the functionality of the thread in the <b>run()</b>
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>. <br />
+		Then you create a new object of your class and call its <b>start</b>
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		to run the thread. <br />
+		<b>Example</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				class Loader <b><u><span title="used to inherit a subclass">extends</span></u> Thread</b> { <br />
+				&emsp; public <u><span title="indicates that a method does not return a value">void</span></u> <b>run()</b> { <br />
+				&emsp;&emsp; System.out.println("Hello"); <br />
+				&emsp; } <br />				
+				} <br /><br />
+				class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; Loader obj = new Loader(); <br />
+				&emsp;&emsp; obj.<b>start()</b>; <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span>	
+	
+	<p> As you can see, our Loader <font color="crimson"><span title="used to inherit a subclass">extends</span></font> the Thread class and overrides its <b>run()</b>
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>. <br />
+		When we create the <b>obj</b> object and call its <b>start()</b>
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>, the 
+		<b>run()</b> <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		statements execute on a different thread. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Every Java thread is prioritized to help the operating system determine the order in which to schedule threads. The priorities range from 1 to 10, with each
+				thread defaulting to priority 5. You can set the thread priority with the <b>setPriority()</b>
+				<u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u>.	
+			</span>
+		</span>	<br />
+			
+	<p> <b>2. Implementing the Runnable <font color="crimson"><span title="a completely abstract class, that contains only abstract methods">interface</span></font></b> <br />
+		Implement the <b>run()</b> 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>. Then,
+		create a new Thread object, pass the Runnable class to its 
+		<font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font>,
+		and start the Thread by calling the <b>start()</b>
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>. <br />
+		<b>Example:</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				class Loader <b>implements Runnable</b> { <br />
+				&emsp; public <u><span title="indicates that a method does not return a value">void</span></u> <b>run()</b> { <br />
+				&emsp;&emsp; System.out.println("Hello"); <br />
+				&emsp; } <br />				
+				} <br /><br />
+				class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <b>Thread t = new Thread(new Loader());</b> <br />
+				&emsp;&emsp; t.<b>start()</b>; <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span>	
+	
+	<p> The <b>Thread.sleep()</b> 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> pauses a
+		Thread for a specified period of time. For example, calling <b>Thread.sleep(1000);</b> pauses the thread for one second. Keep in mind that <b>Thread.sleep()</b> 
+		throws an InterruptedException, so be sure to surround it with a <b>try/catch</b> block. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				It may seem that implementing the Runnable <span title="a completely abstract class, that contains only abstract methods">interface</span> is a bit more
+				complex than extending from the Thread class. However, implementing the Runnable 
+				<span title="a completely abstract class, that contains only abstract methods">interface</span> is the preferred way to start a Thread, because it enables you
+				to extend from another class, as well.
+			</span>
+		</span>	
+	
+	<p><b>Result:</b> <a href ="src/MyClass1.java" target="_blank">(MyClass1.java)</a> <a href ="src/Loader.java" target="_blank">(Loader.java)</a> 
+		<a href ="src/MyClass2.java" target="_blank">(MyClass2.java)</a> <a href ="src/Loader1.java" target="_blank">(Loader1.java)</a> </p>
+	<img src="thread.JPG" width="100%" height="100%"></img> <p></p> 
+	<img src="runnable.JPG" width="100%" height="100%"></img> <p></p> <br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Runtime vs. Checked Exceptions -->
+	<h2><strong>IV. <u>Runtime vs. Checked Exceptions</u></strong></h2>
+	
+<!-- Types of Exceptions -->	
+	<p> <strong><h3><u>Types of Exceptions</u></h3></strong> </p>
+	<p> There are two <font color="crimson"><span title="an error or anomaly that occurs as a program is executing">exception</span></font> types, <b>checked</b> and
+		<b>unchecked</b> (also called runtime). The main difference is that checked exceptions are checked when compiled, while unchecked exceptions are checked at runtime. <br />
+		As mentioned in our previous lesson, Thread.sleep() throws an 
+		<a href="https://www.yegor256.com/2015/10/20/interrupted-exception.html" target="_blank">InterruptedException</a>. This is an example of a <b>checked</b> 
+		<font color="crimson"><span title="an error or anomaly that occurs as a program is executing">exception</span></font>. Your code will not compile until
+		you've handled the <font color="crimson"><span title="an error or anomaly that occurs as a program is executing">exception</span></font>. </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2879">	
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; try { <br />
+				&emsp;&emsp;&emsp; <b>Thread.sleep(1000);</b> <br />
+				&emsp;&emsp; } catch (InterruptedException e) { <br />
+				&emsp;&emsp;&emsp; // some code <br />
+				&emsp;&emsp; } <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span>
+	
+	<p> We have seen examples of <b>unchecked</b> exceptions, which are checked at runtime, in previous lessons. <br /> Example (when attempting to divide by 0): </p>
+	
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <u><span title="used to declare an integer variable">int</span></u> value = 7; <br />
+				&emsp;&emsp; value = value / 0; <br />
+				&emsp; } <br />
+				} <br />
+				/* <br />
+				Exception in thread "main" java.lang.ArithmeticException: / by zero <br />
+				&emsp; at MyClass.main(MyClass.java:4) <br />
+				*/
+			</span> 
+		</span> <br />
+	
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				It is good to know the Types of Exceptions because they can help you debug your code faster.
+			</span>
+		</span>
+	
+	<p><b>Result:</b> <a href ="src/MyClass3.java" target="_blank">(MyClass3.java)</a> <a href ="src/MyClass4.java" target="_blank">(MyClass4.java)</a> </p>
+	<img src="checked_exception.JPG" width="100%" height="100%"></img> <p></p> 
+	<img src="unchecked_exception.JPG" width="100%" height="100%"></img> <p></p> <br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- ArrayList -->
+	<h2><strong>V. <u>ArrayList</u></strong></h2>
+	
+<!-- ArrayList -->	
+	<p> <strong><h3><u>ArrayList</u></h3></strong> </p>
+	<p> The Java <font color="crimson"><span title="Application Program Interface">API</span></font> provides special classes to store and manipulate groups of objects. <br />
+		One such class is the <b><font color="crimson"><span title="a resizable array">ArrayList</span></font></b>. Standard Java arrays are of a fixed length, which means that
+		after they are created, they cannot expand or shrink. <br /><br />
+		
+		On the other hand, <b>ArrayLists</b> are created with an initial size, but when this size is exceeded, the collection is automatically enlarged. <br />
+		When objects are removed, the <font color="crimson"><span title="a resizable array">ArrayList</span></font> may shrink in size. Note that the
+		<font color="crimson"><span title="a resizable array">ArrayList</span></font> class is in the <b>java.util</b>
+		<font color="crimson"><span title="a group of similar types of classes">package</span></font>, so it's necessary to import it before using it. <br /><br />
+		
+		Create an <font color="crimson"><span title="a resizable array">ArrayList</span></font> as you would any object. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				import <b>java.util.<u><span title="a resizable array">ArrayList</span></u>;</b> <br />
+				// ... <br />
+				<b><u><span title="a resizable array">ArrayList</span></u></b> colors = new <b><u><span title="a resizable array">ArrayList</span></u></b>();
+			</span> 
+		</span>	
+	
+	<p> You can optionally specify a <b>capacity</b> and <b>type</b> of objects the <font color="crimson"><span title="a resizable array">ArrayList</span></font> will hold: </p>
+	
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<u><span title="a resizable array">ArrayList</span></u><b>&lt;<u><span title="a sequence of characters">String</span></u>&gt;</b> colors =
+					new <u><span title="a resizable array">ArrayList</span></u><b>&lt;<u><span title="a sequence of characters">String</span></u>(10)</b>;
+			</span> 
+		</span>
+	
+	<p> The code above defines an <font color="crimson"><span title="a resizable array">ArrayList</span></font> of Strings with 10 as its initial size. </p>
+	
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				ArrayLists store objects. Thus, the type specified must be a class type. You cannot pass, for example,
+				<b><u><span title="used to declare an integer variable">int</span></u></b> as the objects' type. Instead, use the special <b>class types</b> that correspond
+				to the desired value type, such as <b>Integer</b> for <u><span title="used to declare an integer variable">int</span></u>, <b>Double</b> for double, and so on.
+			</span>
+		</span>
+	
+	<p> The <b><font color="crimson"><span title="a resizable array">ArrayList</span></font></b> class provides a number of useful methods for manipulating its objects. <br />
+		The <b>add()</b> <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		adds new objects to the <font color="crimson"><span title="a resizable array">ArrayList</span></font>. Conversely, the <b>remove()</b> methods remove
+		objects from the <font color="crimson"><span title="a resizable array">ArrayList</span></font>. <br />
+		<b>Example:</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				import java.util.<u><span title="a resizable array">ArrayList</span></u>; <br /><br />
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <u><span title="a resizable array">ArrayList</span></u>&lt;<u><span title="a sequence of characters">String</span></u>&gt; colors = 
+					new <u><span title="a resizable array">ArrayList</span></u>&lt;<u><span title="a sequence of characters">String</span></u>&gt;(); <br />
+				&emsp;&emsp; colors.<b>add</b>("Red"); <br />
+				&emsp;&emsp; colors.<b>add</b>("Blue"); <br />
+				&emsp;&emsp; colors.<b>add</b>("Green"); <br />
+				&emsp;&emsp; colors.<b>add</b>("Orange"); <br />
+				&emsp;&emsp; colors.<b>remove</b>("Green"); <br /><br />
+				&emsp;&emsp; System.out.println(colors); <br />
+				&emsp; } <br />
+				} <br />
+				// Output: [Red, Blue, Orange]
+			</span> 
+		</span>	<br />
+
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Other useful methods include the following:
+				<ul>
+					<li><b>contains()</b>: Returns true if the list contains the specific element</li>
+					<li><b>get</b>(<u><span title="used to declare an integer variable">int</span></u> index): Returns the element at the specified position in the list</li>
+					<li><b>size()</b>: Returns the number of elements in the list</li>
+					<li><b>clear()</b>: Removes all of the elements from the list</li>
+				</ul>
+				Note: As with arrays, the indexing starts with <b>0</b>.
+			</span>
+		</span>
+
+	<p><b>Result:</b> <a href ="src/MyClass5.java" target="_blank">(MyClass5.java)</a> </p>
+	<img src="arraylist.JPG" width="100%" height="100%"></img> <p></p> <br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- LinkedList -->
+	<h2><strong>VI. <u>LinkedList</u></strong></h2>
+	
+<!-- LinkedList -->	
+	<p> <strong><h3><u>LinkedList</u></h3></strong> </p>
+	<p> The <b><font color="crimson"><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+		LinkedList</span></font></b> is very similar in syntax to the <b><font color="crimson"><span title="a resizable array">ArrayList</span></font></b>. <br />
+		You can easily change an <font color="crimson"><span title="a resizable array">ArrayList</span></font> to a 
+		<font color="crimson"><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+		LinkedList</span></font> by changing the object type. </p>
+
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				import java.util.<b><u><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">LinkedList</span></u></b>; <br /><br />
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <b><u><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+					LinkedList</span></u></b>&lt;<u><span title="a sequence of characters">String</span></u>&gt; c = new
+					<b><u><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+					LinkedList</span></u></b>&lt;<u><span title="a sequence of characters">String</span></u>&gt;(); <br />
+				&emsp;&emsp; c.add("Red"); <br />
+				&emsp;&emsp; c.add("Blue"); <br />
+				&emsp;&emsp; c.add("Green"); <br />
+				&emsp;&emsp; c.add("Orange"); <br />
+				&emsp;&emsp; c.remove("Green"); <br />
+				&emsp;&emsp; System.out.println(c); <br />
+				&emsp; } <br />
+				} <br />
+				// Output: [Red, Blue, Orange]
+			</span> 
+		</span>	<br />
+
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				You cannot specify an initial capacity for the <b><u><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+					LinkedList</span></u></b>.
+			</span>
+		</span>
+
+<!-- LinkedList vs. ArrayList -->	
+	<p> <strong><h3><u>LinkedList vs. ArrayList</u></h3></strong> </p>
+	<p> The most notable difference between the <b><font color="crimson"><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+		LinkedList</span></font></b> and the <b><font color="crimson"><span title="a resizable array">ArrayList</span></font></b> is in the way they store objects. <br />
+		The <font color="crimson"><span title="a resizable array">ArrayList</span></font> is better for <b>storing</b> and <b>accessing</b> data, as it is very similar
+		to a normal <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>. <br />
+		The <font color="crimson"><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+		LinkedList</span></font> is better for <b>manipulating</b> data, such as making numerous inserts and deletes. </p>
+		
+	<p> In addition to storing the object, the <font color="crimson"><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+		LinkedList</span></font> stores the memory address (or link) of the element that follows it. It's called a
+		<font color="crimson"><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+		LinkedList</span></font> because each element contains a link to the neighboring element. </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2443">
+	
+	<p> You can use the enhanced for loop to iterate over its elements.
+			
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<u><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+					LinkedList</span></u>&lt;<u><span title="a sequence of characters">String</span></u>&gt; c = new
+					<u><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+					LinkedList</span></u>&lt;<u><span title="a sequence of characters">String</span></u>&gt;(); <br />
+				&emsp; c.add("Red"); <br />
+				&emsp; c.add("Blue"); <br />
+				&emsp; c.add("Green"); <br />
+				&emsp; c.add("Orange"); <br />
+				&emsp; c.remove("Green"); <br /><br />
+				for(<u><span title="a sequence of characters">String</span></u> s: c) { <br /> 
+				&emsp; System.out.println(s); <br />
+				} <br />
+				/* Output: <br />
+				Red <br />
+				Blue <br />
+				Orange <br />
+				*/
+			</span> 
+		</span>	<br />
+	
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Summary: <br />				
+					- Use an <b><u><span title="a resizable array">ArrayList</span></u></b> when you need rapid access to your data. <br />
+					- Use a <b><u><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+						LinkedList</span></u></b> when you need to make a large number of inserts and/or deletes.				
+			</span>
+		</span>
+
+	<p><b>Result:</b> <a href ="src/MyClass6.java" target="_blank">(MyClass6.java)</a> </p>
+	<img src="linkedlist.JPG" width="100%" height="100%"></img> <p></p> <br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- HashMap -->
+	<h2><strong>VII. <u>HashMap</u></strong></h2>
+	
+<!-- HashMap -->	
+	<p> <strong><h3><u>HashMap</u></h3></strong> </p>
+	<p> Arrays and Lists store elements as ordered collections, with each element given an <font color="crimson"><span title="whole number">integer</span></font> index. <br />
+		<b><font color="crimson"><span title="used for storing collection of the data in the form of key and value pairs">HashMap</span></font></b> is used for storing data
+		collections as keys and value pairs. One object is used as a key (index) to another object (the value). <br />
+		The <b>put</b>, <b>remove</b>, and <b>get</b> methods are used to add, delete, and access values in the 
+		<font color="crimson"><span title="used for storing collection of the data in the form of key and value pairs">HashMap</span></font>. <br />
+		<b>Example:</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<b>import java.util.<u><span title="used for storing collection of the data in the form of key and value pairs">HashMap</span></u>;</b> <br />
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <b><u><span title="used for storing collection of the data in the form of key and value pairs">HashMap</span></u></b>&lt;<u><span title="a sequence of characters">String</span></u>,
+					Integer&gt; points = new 
+					<b><u><span title="used for storing collection of the data in the form of key and value pairs">HashMap</span></u></b>&lt;<u><span title="a sequence of characters">String</span></u>,
+					Integer&gt;(); <br />
+				&emsp;&emsp; points.<b>put</b>("Amy", 154); <br />
+				&emsp;&emsp; points.<b>put</b>("Dave", 42); <br />
+				&emsp;&emsp; points.<b>put</b>("Rob", 733); <br />
+				&emsp;&emsp; System.out.println(points.<b>get</b>("Dave")); <br />
+				&emsp; } <br />
+				} <br />
+				// Outputs 42
+			</span> 
+		</span>
+
+	<p> We have created a <font color="crimson"><span title="used for storing collection of the data in the form of key and value pairs">HashMap</span></font> with Strings as
+		its keys and Integers as its values. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Use the <b>get</b> <u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u>
+				and the corresponding key to access the <u><span title="used for storing collection of the data in the form of key and value pairs">HashMap</span></u> elements.
+			</span>
+		</span>	
+
+	<p> A <b><font color="crimson"><span title="used for storing collection of the data in the form of key and value pairs">HashMap</span></font></b> cannot contain duplicate
+		keys. Adding a new item with a key that already exists overwrites the old element. <br />
+		The <font color="crimson"><span title="used for storing collection of the data in the form of key and value pairs">HashMap</span></font> class provides
+		<b>containsKey</b> and <b>containsValue</b> methods that determine the presence of a specified key or value. <br />
+		If you try to get a value that is not present in your map, it returns the value of <b><font color="crimson"><span title="absence of value">null</span></font></b>. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				<b><u><span title="absence of value">null</span></u></b> is a special type that represents the absence of a value.
+			</span>
+		</span>	
+
+	<p><b>Result:</b> <a href ="src/MyClass7.java" target="_blank">(MyClass7.java)</a> </p>
+	<img src="hashmap.JPG" width="100%" height="100%"></img> <p></p> <br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Sets -->
+	<h2><strong>VIII. <u>Sets</u></strong></h2>
+	
+<!-- Sets -->	
+	<p> <strong><h3><u>Sets</u></h3></strong> </p>
+	<p> A <b>Set</b> is a collection that cannot contain duplicate elements. It models the mathematical set abstraction. <br />
+		One of the implementations of the Set is the <b>HashSet</b> class. <br />
+		<b>Example:</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<b>import java.util.HashSet;</b> <br /><br />
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <b>HashSet</b>&lt;<u><span title="a sequence of characters">String</span></u>&gt; set = new 
+					<b>HashSet</b>&lt;<u><span title="a sequence of characters">String</span></u>&gt;(); <br />
+				&emsp;&emsp; set.add("A"); <br />
+				&emsp;&emsp; set.add("B"); <br />
+				&emsp;&emsp; set.add("C"); <br />
+				&emsp;&emsp; System.out.println(set); <br />
+				&emsp; } <br />
+				} <br />
+				// Output: [A, B, C]
+			</span> 
+		</span>	<br />
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				You can use the <b>size()</b> <u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u>
+				to get the number of elements in the HashSet.
+			</span>
+		</span>	
+
+<!-- LinkedHashSet -->	
+	<p> <strong><h3><u>LinkedHashSet</u></h3></strong> </p>
+	<p> The HashSet class does not automatically retain the order of the elements as they're added. To order the elements, use a <b>LinkedHashSet</b>, which maintains a linked
+		list of the set's elements in the order in which they were inserted. </p>
+		
+	<p> <b><font size="3">What is hashing?</font></b> <br />
+		A hash table stores information through a mechanism called hashing, in which a key's informational content is used to determine a unique value called a hash code. <br />
+		So, basically, each element in the HashSet is associated with its unique hash code. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				You've learned about the various collection types that are available in Java, including <b>Lists</b>, <b>Maps</b>, and <b>Sets</b>. The choice of which
+				one to use is specific to the data you need to store and manipulate.
+			</span>
+		</span>	
+		
+	<p><b>Result:</b> <a href ="src/MyClass8.java" target="_blank">(MyClass8.java)</a> </p>
+	<img src="sets.JPG" width="100%" height="100%"></img> <p></p> <br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Sorting Lists -->
+	<h2><strong>IX. <u>Sorting Lists</u></strong></h2>
+	
+<!-- Sorting Lists -->	
+	<p> <strong><h3><u>Sorting Lists</u></h3></strong> </p>
+	<p> For the manipulation of data in different collection types, the Java <font color="crimson"><span title="Application Program Interface">API</span></font> provides
+		a <b>Collections</b> class, which is included in the java.util <font color="crimson"><span title="a group of similar types of classes">package</span></font>. <br />
+		One of the most popular <b>Collections</b> class methods is <b>sort()</b>, which sorts the elements of your collection type. The methods in the <b>Collections</b>
+		class are <b><font color="crimson"><span title="static variables and methods belong to the class instead of a specific instance">static</span></font></b>, so you
+		don't need a Collections object to call them. <br />
+		<b>Example:</b> </p>
+
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <u><span title="a resizable array">ArrayList</span></u>&lt;<u><span title="a sequence of characters">String</span></u>&gt; animals = new 
+					<u><span title="a resizable array">ArrayList</span></u>&lt;<u><span title="a sequence of characters">String</span></u>&gt;(); <br />
+				&emsp;&emsp; animals.add("tiger"); <br />
+				&emsp;&emsp; animals.add("cat"); <br />
+				&emsp;&emsp; animals.add("snake"); <br />
+				&emsp;&emsp; animals.add("dog"); <br /><br />
+				&emsp;&emsp; <b>Collections.sort(animals);</b> <br /><br />
+				&emsp;&emsp; System.out.println(animals); <br />
+				&emsp; } <br />
+				} <br />
+				/* Outputs: <br />
+				[cat, dog, snake, tiger] <br />
+				*/
+			</span> 
+		</span>	<br />
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				As you can see, the elements have been sorted alphabetically.
+			</span>
+		</span>
+
+	<p> You can call the <b>sort()</b> methods on different types of Lists, such as Integers. </p>
+	
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				import java.util.<u><span title="a resizable array">ArrayList</span></u>; <br />
+				import java.util.Collections; <br /><br />
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <u><span title="a resizable array">ArrayList</span></u>&lt;Integer&gt; nums = new 
+					<u><span title="a resizable array">ArrayList</span></u>&lt;Integer&gt;(); <br />
+				&emsp;&emsp; nums.add(3); <br />
+				&emsp;&emsp; nums.add(36); <br />
+				&emsp;&emsp; nums.add(73); <br />
+				&emsp;&emsp; nums.add(40); <br />
+				&emsp;&emsp; nums.add(1); <br /><br />
+				&emsp;&emsp; <b>Collections.sort(nums);</b> <br />
+				&emsp;&emsp; System.out.println(nums); <br />
+				&emsp; } <br />
+				} <br />
+				/* Outputs: <br />
+				[1, 3, 36, 40, 73] <br />
+				*/
+			</span> 
+		</span>	<br />
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Other useful methods in the <b>Collections</b> class: <br />
+				<b>max</b>(Collection c): Returns the maximum element in c as determined by natural ordering. <br />
+				<b>min</b>(Collection c): Returns the minimum element in c as determined by natural ordering. <br />
+				<b>reverse</b>(List list): Reverses the sequence list. <br />
+				<b>shuffle</b>(List list): Shuffles (i.e. randomizes) the elements in list.
+			</span>
+		</span>
+
+	<p><b>Result:</b> <a href ="src/MyClass9.java" target="_blank">(MyClass9.java)</a> </p>
+	<img src="sorting_lists.JPG" width="100%" height="100%"></img> <p></p> <br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Iterators -->
+	<h2><strong>X. <u>Iterators</u></strong></h2>
+	
+<!-- Iterators -->	
+	<p> <strong><h3><u>Iterators</u></h3></strong> </p>
+	<p> An <b><font color="crimson"><span title="an object, that enables to cycle through a collection">Iterator</span></font></b> is an object that enables to cycle through
+		a collection, obtain or remove elements. <br />
+		Before you can access a collection through an iterator, you must obtain one. Each of the collection classes provides an <b>iterator()</b>
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> that returns
+		an iterator to the start of the collection. By using this iterator object, you can access each element in the collection, one element at a time. </p>
+		
+	<p>	The <font color="crimson"><span title="an object, that enables to cycle through a collection">Iterator</span></font> class provides the following methods: 
+		<ul>
+			<li><b>hasNext()</b>: Returns true if there is at least one more element; otherwise, it returns false.</li>
+			<li><b>next()</b>: Returns the next object and advances the iterator.</li>
+			<li><b>remove()</b>: Removes the last object that was returned by next from the collection.</li>
+		</ul> </p>
+		
+	<p> The <font color="crimson"><span title="an object, that enables to cycle through a collection">Iterator</span></font> class must be imported from the
+		<b>java.util</b> <font color="crimson"><span title="a group of similar types of classes">package</span></font>. <br />
+		<b>Example:</b> </p>
+
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<b>import java.util.<u><span title="an object, that enables to cycle through a collection">Iterator</span></u>;</b> <br />
+				import java.util.<u><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">LinkedList</span></u>; <br /><br />
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <u><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+					LinkedList</span></u>&lt;<u><span title="a sequence of characters">String</span></u>&gt; 
+					animals = new <u><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+					LinkedList</span></u>&lt;<u><span title="a sequence of characters">String</span></u>&gt;(); <br />
+				&emsp;&emsp; animals.add("fox"); <br />
+				&emsp;&emsp; animals.add("cat"); <br />
+				&emsp;&emsp; animals.add("dog"); <br />
+				&emsp;&emsp; animals.add("rabbit"); <br /><br />
+				&emsp;&emsp; <b><u><span title="an object, that enables to cycle through a collection">Iterator</span></u>&lt;<u><span title="a sequence of characters">String</span></u>&gt; 
+					it = animals.iterator();</b> <br />
+				&emsp;&emsp; <u><span title="a sequence of characters">String</span></u> value = <b>it.next();</b> <br />	
+				&emsp;&emsp; System.out.println(value); <br />
+				&emsp; } <br />
+				} <br />
+				// Outputs "fox"
+			</span> 
+		</span>	<br />
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				<b>it.next()</b> returns the first element in the list and then moves the iterator on to the next element. <br />
+				Each time you call <b>it.next()</b>, the iterator moves to the next element of the list.
+			</span>
+		</span>
+
+	<p> Typically, <b>iterators</b> are used in the loops. At each iteration of the loop, you can access the corresponding list element. <br />
+		<b>Example:</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				import java.util.<u><span title="an object, that enables to cycle through a collection">Iterator</span></u>; <br />
+				import java.util.<u><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">LinkedList</span></u>; <br /><br />
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; <u><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+					LinkedList</span></u>&lt;<u><span title="a sequence of characters">String</span></u>&gt; 
+					animals = new <u><span title="a data structure consisting of a group of nodes which together represent a sequence. Each node is composed of data and a link to the next node in the sequence">
+					LinkedList</span></u>&lt;<u><span title="a sequence of characters">String</span></u>&gt;(); <br />
+				&emsp;&emsp; animals.add("fox"); <br />
+				&emsp;&emsp; animals.add("cat"); <br />
+				&emsp;&emsp; animals.add("dog"); <br />
+				&emsp;&emsp; animals.add("rabbit"); <br /><br />
+				&emsp;&emsp; <u><span title="an object, that enables to cycle through a collection">Iterator</span></u>&lt;<u><span title="a sequence of characters">String</span></u>&gt; 
+					it = animals.iterator(); <br />
+				&emsp;&emsp; <b>while(it.hasNext()) { <br />	
+				&emsp;&emsp;&emsp; <u><span title="a sequence of characters">String</span></u> value = <b>it.next();</b> <br />	
+				&emsp;&emsp;&emsp; System.out.println(value); <br />
+				&emsp;&emsp; }</b> <br />
+				&emsp; } <br />
+				} <br />
+				/* <br />
+				fox <br />
+				cat <br />
+				dog <br />
+				rabbit <br />
+				*/
+			</span> 
+		</span>	<br />
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Here, the <b>while</b> loop determines whether the iterator has additional elements, prints the value of the element, and advances the iterator to the next.
+			</span>
+		</span>	
+
+	<p><b>Result:</b> <a href ="src/MyClass10.java" target="_blank">(MyClass10.java)</a> </p>
+	<img src="iterators.JPG" width="100%" height="100%"></img> <p></p> <br />
+	
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Working with Files -->
+	<h2><strong>XI. <u>Working with Files</u></strong></h2>
+	
+<!-- Working with Files -->	
+	<p> <strong><h3><u>Working with Files</u></h3></strong> </p>
+	<p> The <b>java.io</b> <font color="crimson"><span title="a group of similar types of classes">package</span></font> includes a <b>File</b> class that allows you to work with files. <br />
+		To start, create a <b>File</b> object and specify the path of the file in the 
+		<font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font>. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<b>import java.io.File;</b> <br />
+				... <br />
+				<b>File</b> file = new <b>File</b>("C:\\data\\input-file.txt");
+			</span> 
+		</span>
+
+	<p> With the <b>exists()</b> <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>,
+		you can determine whether a file exists.
+
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				import java.io.File; <br /><br />
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; File x = new File("C:\\sololearn\\test.txt"); <br />
+				&emsp;&emsp; if(x.<b>exists()</b>) { <br />
+				&emsp;&emsp;&emsp; System.out.println(x.getName() + "exists!"); <br />
+				&emsp;&emsp; } <br />
+				&emsp;&emsp; else { <br />
+				&emsp;&emsp;&emsp; System.out.println("The file does not exist."); <br />
+				&emsp;&emsp; }</b> <br />
+				&emsp; } <br />
+				} <br />
+			</span> 
+		</span>
+
+	<p> The code above prints a message stating whether or not the file exists at the specified path. </p>
+	
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				The <b>getName()</b> <u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u>
+				returns the name of the file. <br />
+				Note that we used double backslashes in the path, as one backslash should be escaped in the path <u><span title="a sequence of characters">String</span></u>. 
+			</span>
+		</span> 
+		
+	<p><b>Result:</b> <a href ="src/MyClass11.java" target="_blank">(MyClass11.java)</a> </p>
+	<img src="work_files.JPG" width="100%" height="100%"></img> <p></p> <br />	
+
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Reading a File -->
+	<h2><strong>XII. <u>Reading a File</u></strong></h2>
+	
+<!-- Reading a File -->	
+	<p> <strong><h3><u>Reading a File</u></h3></strong> </p>
+	<p> Files are useful for storing and retrieving data, and there are a number of ways to read from a file. <br />
+		One of the simplest ways is to use the <b>Scanner</b> class from the <b>java.util</b> <font color="crimson"><span title="a group of similar types of classes">package</span></font>. <br />
+		The <font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font>
+		of the <b>Scanner</b> class can take a <b>File</b> object as input. </p>
+		
+	<p> To read the contents of a text file at the path "C:\\sololearn\\text.txt", we would need to create a File object with the corresponding path and pass it 
+		to the Scanner object. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				try { <br />
+				&emsp; <b>File</b> x = new <b>File</b>("C:\\sololearn\\test.txt"); <br />
+				&emsp; <b>Scanner</b> sc = new <b>Scanner</b>(x); <br />
+				} <br />
+				catch(FileNotFoundException e) { <br />
+				<br />
+				}
+			</span> 
+		</span>	<br />
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				We surrounded the code with a try/catch block, because there's a chance that the file may not exist.
+			</span>
+		</span>	
+
+	<p> The <b>scanner</b> class inherits from the <b><font color="crimson"><span title="an object, that enables to cycle through a collection">Iterator</span></font></b>,
+		so it behaves like one. <br />
+		We can use the Scanner object's <b>next()</b> 
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		to read the file's contents. </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				try { <br />
+				&emsp; File x = new File("C:\\sololearn\\test.txt"); <br />
+				&emsp; Scanner sc = new Scanner(x); <br />
+				&emsp; <b>while(sc.hasNext()) { <br />
+				&emsp;&emsp; System.out.println(sc.next()); <br />
+				&emsp; }</b> <br />
+				&emsp; sc.close(); <br />
+				} catch(FileNotFoundException e) { <br />
+				&emsp; System.out.println("Error"); <br />
+				}
+			</span> 
+		</span>	
+	
+	<p> The file's contents are output word by word, because the <b>next()</b>
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		returns each word separately. </p>
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				It is always good practice to close a file when finished working with it. One way to do this is to use the Scanner's <b>close()</b>
+				<u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u>.
+			</span>
+		</span>
+		
+	<p><b>Result:</b> <a href ="src/readfile.java" target="_blank">(readfile.java)</a> </p>
+	<img src="read_files.JPG" width="100%" height="100%"></img> <p></p> <br />	
+		
+<!-- **************************************************************************************************************** -->	
+	
+<!-- Creating & Writing Files -->
+	<h2><strong>XIII. <u>Creating &amp; Writing Files</u></strong></h2>
+	
+<!-- Creating Files -->	
+	<p> <strong><h3><u>Creating Files</u></h3></strong> </p>		
+	<p> <b>Formatter</b>, another useful class in the java.util <font color="crimson"><span title="a group of similar types of classes">package</span></font>, is used to
+		create content and write it to files. <br />
+		<b>Example:</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				<b>import java.util.Formatter;</b> <br /><br />
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; try { <br />
+				&emsp;&emsp;&emsp; <b>Formatter</b> f = new <b>Formatter</b>("C:\\sololearn\\test.txt"); <br />
+				&emsp;&emsp; } catch(Exception e) { <br />
+				&emsp;&emsp;&emsp; System.out.println("Error"); <br />
+				&emsp;&emsp; } <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span> 
+
+	<p> This creates an empty file at the specified path. If the file already exists, this will overwrite it. </p>		
+
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Again, you need to surround the code with a <b>try/catch</b> block, as the operation can fail.
+			</span>
+		</span>
+
+	<!-- Writing to Files -->	
+	<p> <strong><h3><u>Writing to Files</u></h3></strong> </p>
+	<p> Once the file is created, you can write content to it using the same Formatter object's <b>format()</b>
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>. <br />
+		<b>Example:</b> </p>
+		
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				import java.util.Formatter; <br /><br />
+				public class MyClass { <br />
+				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
+					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
+				&emsp;&emsp; try { <br />
+				&emsp;&emsp;&emsp; Formatter f = new Formatter("C:\\sololearn\\test.txt"); <br />
+				&emsp;&emsp;&emsp; <b>f.format("%s %s %s", "1", "John", "Smith \r\n"); <br />
+				&emsp;&emsp;&emsp; f.format("%s %s %s", "2", "Amy", "Brown");</b> <br />
+				&emsp;&emsp;&emsp; f.close(); <br />
+				&emsp;&emsp; } catch(Exception e) { <br />
+				&emsp;&emsp;&emsp; System.out.println("Error"); <br />
+				&emsp;&emsp; } <br />
+				&emsp; } <br />
+				}
+			</span> 
+		</span>	
+
+	<p> The <b>format()</b> <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
+		formats its parameters according to its first parameter. 
+		<ul>
+			<li><b>%s</b> - a string that gets replaced by the first parameter after the format.</li>
+			<li>The second <b>%s</b> gets replaced by the next one, and so on.</li>
+			<li>So, the format <b>%s %s %s</b> denotes three strings that are separated with spaces.</li>
+		</ul>	
+		Note: <b>\r\n</b> is the newline symbol in Windows. </p>
+		
+	<p> The code above creates a file with the following content: </p>
+
+	<!-- span.codeBlock & span.code-->	
+		<span class="codeBlock">
+			<span class="code">
+				1 John Smith <br />
+				2 Amy Brown
+			</span> 
+		</span>	<br />
+		
+	<!-- span.noteBlock & span.note-->	
+		<span class="noteBlock">
+			<span class="note">
+				Don't forget to <b>close</b> the file once you're finished writing to it!
+			</span>
+		</span>	
+
+	<p><b>Result:</b> <a href ="src/writefile.java" target="_blank">(writefile.java)</a> </p>
+	<img src="write_files.JPG" width="100%" height="100%"></img> <p></p> 
+	<img src="test.JPG" width="100%" height="100%"></img> <p></p> <br />
+
+<!-- ******************************************************** Helpful Tips from the Comments ******************************************************** -->	
+	
+	<button class="accordion1">
+	<p align="center"><font color="#FFF"><b>****************************** Helpful Tips from the Comments ******************************</b></font></p>
+	</button>
+	
+	<div class="panel">
+	<!-- Exceptions -->	
+	<p>	<strong><h3>Exceptions</h3></strong> </p>
+	<p> <b>try/catch</b> is for things that go wrong and are outside of your control and not in the normal program flow. For example, trying to write to a 
+		file and the file system is full? That situation should typically be handled with try/catch. <br /><br />
+
+		<b>if statements</b> should be normal flow and ordinary error checking. So, for example, user fails to populate a required input field? Use if for that, not try/catch. </p>
+
+	<p>	<b><u>Helpful Example</u></b>: <br />
+		<a href="http://beginnersbook.com/2013/04/java-checked-unchecked-exceptions-with-examples/" target="_blank">
+			http://beginnersbook.com/2013/04/java-checked-unchecked-exceptions-with-examples/</a> </p> <br />
+			
+	<!-- Exception Handling -->	
+	<p>	<strong><h3>Exception Handling</h3></strong> </p>
+	<p> Try using <mark>System.out.println(e);</mark> to see what type of exception occur instead of System.out.println("An error occurred."); <br /><br />
+		<mark>e.printStackTrace();</mark> gives more details about the error occurred if any. </p> <br />
+
+	<!-- throw -->	
+	<p>	<strong><h3>throw</h3></strong> </p>
+	<p> Here, <b>throws</b> and <b>throw</b> keywords are not the same as try and catch... <br /><br />
+		
+		When we write something illogical in our code, like declaring an array of 2 elements and asking the program to print element 5 which is not present,
+		then the console window says error with exception array out of bounds ...something like that. <br />
+		So, <b>throws</b> and <b>throw</b> keywords are used to throw messages by the user instead of compiler. <br />
+		Like when we create classes and when somebody uses our classes in a wrong way, then the compiler shows error without any message .... <br />
+		So <b>throws</b> and <b>throw</b> keywords are used to say what the errors are to the programmers who are using our classes. </p> <br />
+	
+	<!-- Multiple Exceptions -->	
+	<p>	<strong><h3>Multiple Exceptions</h3></strong> </p>
+	<p> catch (ExceptionType1 | ExceptionType2 | ExceptionType3 e) <br />
+		{// equal handling} <br /><br />
+
+		=> shorter and easier to handle if you have only one kind of treatment </p>
+		
+	<p> <b><u>syntax for multiple exceptions</u></b> <br /><br />
+
+		<font color="red">try</font> { <br />
+		//main logic <br />
+		} <br />
+		<font color="blue">catch (specificException e)</font> { <br />
+		//handles specific exception <br /> 
+		} <br />
+		<font color="blue">catch (lessSpecificException e)</font> { <br />
+		//handle less specific exception <br />
+		} <br />
+		<font color="blue">catch (Exception e)</font> { <br />
+		//handle everything else that might happen <br />
+		} <br />
+		<font color="green">finally</font> { <br />
+		//tidy up - this code will always be executed <br />
+		} <br />
+		//if code is successful <br /> 
+		//or exception is caught and <br />
+		//handled, execution will continue <br />
+		//here	</p> <br />
+	
+	<!-- Threads -->	
+	<p>	<strong><h3>Threads</h3></strong> </p>
+	<p> We use threads to make Java application faster by doing multiple things at the same time. A Java program may have multiple threads running concurrently to 
+		provide the ability of multitasking to the user. <br /><br />
+
+		For example, when you are using the WordPad program, you can edit a document and can also print another document at the same time. 
+		This is only possible because of multiple threads in execution at the same time in WordPad program, where one thread is looking after editing the document 
+		and the other thread looking after printing a document. </p>
+	<p> Assume that a game is based on 2 threads (DrawImage &amp; PlayMusic) running in parallel, so the game codes are similar to the codes below: <br /><br />
+
+		class DrawImage extends Thread { <br />
+		&emsp; public void run() { <br />
+		&emsp;&emsp; System.out.println("drawing image...."); <br />
+		&emsp; } <br />
+		} <br /><br />
+
+		class PlayMusic extends Thread { <br />
+		&emsp; public void run(){ <br />
+		&emsp;&emsp; System.out.println("playing music..."); <br />
+		&emsp; } <br />
+		} <br /><br />
+
+		class MyGame{ <br />
+		&emsp; public static void main(String[ ] args) { <br /><br />
+
+		&emsp;&emsp; DrawImage diObj= new DrawImage(); <br />
+		&emsp;&emsp; diObj.start(); <br /><br />
+
+		&emsp;&emsp; PlayMusic pmObj= new PlayMusic(); <br />
+		&emsp;&emsp; pmObj.start(); <br /> <br />
+
+		&emsp; } <br />
+		} </p>
+	
+	<p> <b>Priority level:</b> <br />
+		1 = Min, 5 = Medium, 10 = high  <br />
+		(Generally all of the threads have 5 level priority) <br />
+		have look at following <br />
+		<a href="https://www.tutorialspoint.com/java/java_multithreading.htm" target="_blank">https://www.tutorialspoint.com/java/java_multithreading.htm</a> </p>
+	
+	<p> If a class extends Thread, it can not extend any class else. because class only extends once. <br />
+		If a class implements Runnable interface, it has the ability to extend another class, example: <br /><br />
+		   class A extends B implements Runnable { <br />
+		} <br /><br />
+		-> that's why Runnable interface exists. </p> <br />
+		
+	<!-- Types of Exceptions -->	
+	<p>	<strong><h3>Types of Exceptions</h3></strong> </p>	
+	<p> Unchecked exceptions: <br />
+		  -> represent defects in the program (bugs), often invalid arguments passed to a non-private method. <br />
+		  -> you don't need to establish a policy for them. <br /><br />
+
+		Checked exceptions:
+		  -> represent invalid conditions in areas outside the immediate control of the program, often invalid user input, database problems, network, absent files. <br />
+		  -> you must establish a policy for them by a try/catch block. </p> <br />
+		  
+	<!-- ArrayList -->	
+	<p>	<strong><h3>ArrayList</h3></strong> </p>	  
+	<p> It will help you: <br /><br />
+
+		import java.util.ArrayList; <br /><br />
+
+		public class MyClass { <br />
+		&emsp; public static void main(String[ ] args) { <br />
+		&emsp;&emsp; ArrayList&lt;String&gt; colors = new ArrayList&lt;String&gt;(3); <br />
+		&emsp;&emsp; <font color="green">/* As you can see initial size is 3 but <br />
+		&emsp;&emsp; but I added 5 values. So the size is <br />
+		&emsp;&emsp; automatically increased. */ </font> <br />
+		&emsp;&emsp; colors.add("Red"); <br />
+		&emsp;&emsp; colors.add("Blue"); <br />
+		&emsp;&emsp; colors.add("Green"); <br />
+		&emsp;&emsp; colors.add("Orange"); <br />
+		&emsp;&emsp; colors.remove("Green"); <br />
+		&emsp;&emsp; colors.add("Pink"); <br />
+		&emsp;&emsp; colors.add("Yellow"); <br />
+		&emsp;&emsp; <font color="green">/* color.clear() is used <br />
+		&emsp;&emsp; to clear the ArrayList */ </font> <br />
+		&emsp;&emsp; System.out.println(colors.get(1)); <br />   
+		&emsp;&emsp; System .out .println(colors.contains("Orange")); <br />
+		&emsp;&emsp; System.out.println(colors.size()); <br />
+		&emsp;&emsp; System.out.println(colors); <br />
+		&emsp; } <br />
+		} <br /><br />
+
+		/* Output: <br />
+		&emsp; Blue <br />
+		&emsp; true <br />
+		&emsp; 5 <br />
+		&emsp; [Red,Blue,Orange,Pink,Yellow]  */ </p> <br />
+	
+	<p> If you are confused about what's written in the yellow box: <br /><br />
+
+		'int' is a primitive type. Variables of type int store the actual binary value for the integer you want to represent. <br /><br />
+
+		'Integer' is a class with a single field of type int (in other words: Integer is a 'wrapper class' for int). This class is used where you need an 'int' to be 
+		treated like any other objects (for example to store integers in an ArrayList, which can ONLY contain objects). <br /><br />
+
+		Every primitive type in Java has an equivalent wrapper class: <br /><br /> 
+
+		byte has Byte, short has Short, int has Integer, long has Long, boolean has Boolean, char has Character, float has Float, double has Double. </p> <br />
+	
+	<p> In java 8, best practice is <br />
+		List&lt;String&gt; someName = new() ArrayList&lt;&gt;(); <br />
+		This way you can swap ArrayList for LinkedList in cases where a linked list would improve performance. <br />
+		The type is only declared on the left, lists only handle objects not primitives hence use of Integer instead of int. <br />
+		The &lt;&gt; is called the "diamond operator", if you are curious. </p>
+	
+	<p> Please note that add and remove are overloaded methods. <br />
+		In the lesson it is shown only one for each of them (both return boolean): <br />
+		add(E e)  // Appends the specified element to the end of this list. <br />
+		remove(Object o)  // Removes the first occurrence of the specified element from this list, if it is present. <br /><br />
+
+		It is possible to also use the index where to insert or to remove the element/object: <br />
+		add(int index, E element)  // Inserts the specified element at the specified position in this list. Return void <br />
+		remove(int index)  // Removes the element at the specified position in this list. Return removed element <br /><br />
+
+		It is important to know that if the element is an object of Integer in the statement lista.remove(intero) the passed parameter intero is considered as index 
+		and not as an object, to force the compiler to remove the object intero, it should be used lista.remove(new Integer(intero)). </p>
+	
+	<p> You can import the whole package instead of any sub package, if you need > 1. <br />
+
+		You can use .* after main package, <br /><br />
+
+		like : <br /><br />
+
+		<mark>java.util.*;</mark> <br /><br />
+
+		- <b>It imports the whole java utility package and all sub-packages</b> </p> <br />
+	
+	<!-- LinkedList -->	
+	<p>	<strong><h3>LinkedList</h3></strong> </p>
+	<p> Array size can be changed in Arraylist during runtime and each element is stored in sequence memory location. <br /><br />
+
+		Linked list is a data structure where size cannot be initialized and each node is linked to other node. 
+		Node consists of data and address of next node. These are stored at random memory locations. </p>
+	
+	<p> 1) As explained above, the insert and remove operations give good performance (O(1)) in LinkedList compared to ArrayList(O(n)). 
+		Hence if there is a requirement of frequent addition and deletion in application, then LinkedList is the best choice. <br /><br />
+
+		2) Search (get method) operations are fast in Arraylist (O(1)) but not in LinkedList (O(n)). So if there are less add and remove operations and more 
+		search operations requirement, ArrayList would be your best bet. </p>
+
+	<p> <b><u>Helpful Example</u></b>: <br />
+		<a href="https://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%20Lists/linked%20lists.html" target="_blank">
+		https://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%20Lists/linked%20lists.html</a> </p>
+	
+	<p> <b>Search</b>: ArrayList search operation is pretty fast compared to the LinkedList search operation. get(int index) in ArrayList gives the performance 
+		of O(1) while LinkedList performance is O(n). <br /><br />
+
+		<b>Reason</b>: ArrayList maintains index based system for its elements as it uses array data structure implicitly, which makes it faster for searching an element in 
+		the list. On the other side LinkedList implements doubly linked list which requires the traversal through all the elements for searching an element. <br /><br />
+
+		<b>Deletion</b>: LinkedList remove operation gives O(1) performance while ArrayList gives variable performance: O(n) in worst case (while removing first element) 
+		and O(1) in best case (While removing last element). <br /><br />
+
+		<b>Conclusion</b>: LinkedList element deletion is faster compared to ArrayList. <br /><br />
+
+		<b>Reason</b>: LinkedList’s each element maintains two pointers (addresses) which points to both neighbor elements in the list. 
+		Hence removal only requires change in the pointer location in the two neighbor nodes (elements) of the node. </p> <br />
+	
+	<!-- HashMap -->	
+	<p>	<strong><h3>HashMap</h3></strong> </p>
+	<p> import java.util.HashMap; <br /><br />
+
+		public class MyClass { <br />
+		&emsp; public static void main(String[ ] args) { <br />
+		&emsp;&emsp; HashMap&lt;String, Integer&gt; points = new HashMap&lt;String, Integer&gt;(); <br />
+		&emsp;&emsp; points.put("Amy", 154); <br />
+		&emsp;&emsp; points.put("Dave", 42); <br />
+		&emsp;&emsp; points.put("Dave", 733); <br />
+		<font color="green">// Dave is the containskey which leads to the containsvalue, if we have duplicated key "dave"  dave will 
+		only show the second value 733 because the first value 42 is overwrited</font> <br />
+		&emsp;&emsp; System.out.println(points.get("Dave")); <br />
+		<font color="green">//output 733</font> <br />
+		&emsp;&emsp; System.out.println(points.get("Rane")); <br />
+		<font color="green"> //output null <br />
+		//because this key is not presented in the map</font> <br />
+		&emsp; } <br />
+		} </p> <br />
+		
+	<!-- Iterators -->	
+	<p>	<strong><h3>Iterators</h3></strong> </p>	
+	<p> Also here the variable "value" is not necessary. Following code does the same: <br /><br /> 
+
+		Iterator&lt;String&gt; it = animals.iterator(); <br />
+		while(it.hasNext()) { <br />
+		System.out.println(it.next()); </p>
+		
+	<p> Note that it is simpler to write a loop using: <br />
+		ArrayList&lt;Integer&gt; a; <br />
+		... <br />
+		... <br />
+		for (Integer i : a) { <br />
+		... <br /><br /> 
+
+		rather than use an iterator. <br />
+		Use iterators when you need something more complex such as iterating several arrays in parallel. </p>
+
+	<p> <b><u>Example Syntax</u></b> <br /><br />
+		<font color="green">// using enhanced for loop</font> <br />
+		import java.util.Iterator; <br />
+		import java.util.LinkedList; <br /><br />
+
+		public class MyClass { <br />
+		&emsp; public static void main(String[ ] args) { <br />
+		&emsp;&emsp; LinkedList&lt;String&gt; animals = new LinkedList&lt;String&gt;(); <br />
+		&emsp;&emsp; animals.add("fox"); <br />
+		&emsp;&emsp; animals.add("cat"); <br />
+		&emsp;&emsp; animals.add("dog"); <br />
+		&emsp;&emsp; animals.add("rabbit"); <br /><br />
+		   
+		&emsp; for(String s : animals) <br /><br /> 
+			
+		&emsp; System.out.println(s); <br /><br />
+				
+		<font color="green">/* Iterator&lt;String&gt; it = animals.iterator(); <br />
+		&emsp; while(it.hasNext()) { <br />
+		&emsp;&emsp; String value = it.next(); <br />
+		&emsp;&emsp; System.out.println(value); <br />  
+		&emsp;&emsp; } */</font> <br />
+		&emsp; } <br />
+		} </p> <br />
+	
+	<!-- Working with Files -->	
+	<p>	<strong><h3>Working with Files</h3></strong> </p>
+	<p> If you are working on Linux, its even simpler: <br />
+		<b>File x = new File("/home/username/Desktop/a.txt");</b> </p> <br />
+		
+	<!-- Reading a File -->	
+	<p>	<strong><h3>Reading a File</h3></strong> </p>	
+	<p> 3 ways to read files in Java by using: <br /><br />
+
+		- Scanner <br />
+		- FileReader <br />
+		- BufferedReader <br /><br />
+
+		Never forget to: <br /><br />
+
+		- use try/catch <br />
+		- never let the catch empty! (print msg at least) <br />
+		- close the file after reading/writing </p>
+		
+	<p> Better Code way!! <br /><br />
+
+        try { <br />
+		&emsp; File x = new File("C:\\sololearn\\test.txt"); <br />
+		&emsp; Scanner sc = new Scanner(x); <br />
+		&emsp; while(sc.hasNext()) { <br />
+		&emsp;&emsp; System.out.println(sc.next()); <br />
+		&emsp; } <br />
+		} catch (FileNotFoundException e) { <br />
+		&emsp; System.out.println("Error"); <br />
+		} finally{ <br />
+		&emsp; sc.close(); <br /><br />
+
+		}	</p> <br />
+	
+	<!-- Creating Files -->	
+	<p>	<strong><h3>Creating Files</h3></strong> </p>
+	<p> To append to file, instead of overwriting you could use FileWriter...see example below: <br /><br />
+
+		import java.io.FileWriter; <br />
+		import java.util.Formatter; <br /><br />
+
+		public class Program <br />
+		{ <br />
+		&emsp; public static void main(String[] args) { <br />
+        &emsp;&emsp; try{ <br /><br />
+        
+        &emsp;&emsp; FileWriter fw = new FileWriter("test.txt",true); <br /><br />
+        
+        &emsp;&emsp; Formatter f = new Formatter(fw); <br /><br />
+        
+        &emsp;&emsp; f.format("%s : %s","1","Tiger"); <br />
+        &emsp;&emsp; f.format("%s : %s","2","Cat"); <br /><br />
+        
+        &emsp;&emsp; f.close(); <br /><br />
+        
+        &emsp;&emsp; System.out.println("File saved"); <br /><br />
+            
+        &emsp;&emsp; } catch(Exception e){ <br />
+        &emsp;&emsp;&emsp; e.printStackTrace(); <br />
+        &emsp;&emsp;} <br />
+		&emsp; } <br />
+		} </p>
+
+	<p> Just to add to this, never close your readers, writers or database connections in the try block. Close them inside a finally block. 
+		That way, if your try block throws an exception, you'll still be able to close your objects, which will prevent memory leaks. </p>	
+	
+	<p> If Any one had Question to Where To go after here? <br />
+		the answer is <br /><br />
+
+		<a href="https://www.youtube.com/channel/UC59K-uG2A5ogwIrHw4bmlEg" target="_blank">https://www.youtube.com/channel/UC59K-uG2A5ogwIrHw4bmlEg</a> <br /><br />
+
+		check it believe me... </p>
+
+	<p> Windows uses "\r\n" to separate lines. Linux/Mac use "\n". A better solution is to use "System.getProperty("line.separator")", 
+		which chooses the appropriate one for you. </p>
+	
+	<p> The example provided by SoloLearn is flawed, replace those two lines with the following which is cross-platform: <br />
+		f.format("%s %s %s %n", "1","John", "Smith"); <br />
+		f.format("%s %s %s %n", "2","Amy", "Brown"); <br /><br />
+
+		We should be writing the format string argument as above. When using the Formatter class you can use %n for newline which is a platform specific. Hope this helps! </p>
+	
+	</div>
+
+	<script>
+	var acc = document.getElementsByClassName("accordion1");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		});
+	}
+	</script>	
+	
+<!-- ********************************************* FOOTER ********************************************* -->  
+  
+<!-- Scroll to Top Button  -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" >var scrolltotop={setting:{startline:100,scrollto:0,scrollduration:1e3,fadeduration:[500,100]},controlHTML:'<img src="https://i1155.photobucket.com/albums/p559/scrolltotop/arrow40.png" />',controlattrs:{offsetx:5,offsety:5},anchorkeyword:"#top",state:{isvisible:!1,shouldvisible:!1},scrollup:function(){this.cssfixedsupport||this.$control.css({opacity:0});var t=isNaN(this.setting.scrollto)?this.setting.scrollto:parseInt(this.setting.scrollto);t="string"==typeof t&&1==jQuery("#"+t).length?jQuery("#"+t).offset().top:0,this.$body.animate({scrollTop:t},this.setting.scrollduration)},keepfixed:function(){var t=jQuery(window),o=t.scrollLeft()+t.width()-this.$control.width()-this.controlattrs.offsetx,s=t.scrollTop()+t.height()-this.$control.height()-this.controlattrs.offsety;this.$control.css({left:o+"px",top:s+"px"})},togglecontrol:function(){var t=jQuery(window).scrollTop();this.cssfixedsupport||this.keepfixed(),this.state.shouldvisible=t>=this.setting.startline?!0:!1,this.state.shouldvisible&&!this.state.isvisible?(this.$control.stop().animate({opacity:1},this.setting.fadeduration[0]),this.state.isvisible=!0):0==this.state.shouldvisible&&this.state.isvisible&&(this.$control.stop().animate({opacity:0},this.setting.fadeduration[1]),this.state.isvisible=!1)},init:function(){jQuery(document).ready(function(t){var o=scrolltotop,s=document.all;o.cssfixedsupport=!s||s&&"CSS1Compat"==document.compatMode&&window.XMLHttpRequest,o.$body=t(window.opera?"CSS1Compat"==document.compatMode?"html":"body":"html,body"),o.$control=t('<div id="topcontrol">'+o.controlHTML+"</div>").css({position:o.cssfixedsupport?"fixed":"absolute",bottom:o.controlattrs.offsety,right:o.controlattrs.offsetx,opacity:0,cursor:"pointer"}).attr({title:"Scroll to Top"}).click(function(){return o.scrollup(),!1}).appendTo("body"),document.all&&!window.XMLHttpRequest&&""!=o.$control.text()&&o.$control.css({width:o.$control.width()}),o.togglecontrol(),t('a[href="'+o.anchorkeyword+'"]').click(function(){return o.scrollup(),!1}),t(window).bind("scroll resize",function(t){o.togglecontrol()})})}};scrolltotop.init();</script>
+	<noscript>Not seeing a <a href="https://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
+<!-- End Scroll to Top -->
+	
+	<br /> <br /> <br /> <br /> <br />
+	<div class="copyright">
+            &copy; 2019 Jetchan204. All rights reserved.
+    </div>
+	
+  </body>
+ </html>	
