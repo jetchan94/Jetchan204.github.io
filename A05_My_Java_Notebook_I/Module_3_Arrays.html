@@ -1,22 +1,24 @@
 <!DOCTYPE html>	<!-- enable standards mode for documents written using the HTML syntax -->
  <html lang="en">
   <head>
-<!-- The viewport meta tag tells the browser that the width of the screen should be considered the "Full Width" of the page. 
-	Meaning no matter the width of the device you are on, whether on desktop or mobile. the website will follow the width of the device the user is on -->  
+<!-- The viewport meta tag tells the browser that the width of the screen should be considered the "Full Width" of the page.
+	Meaning no matter the width of the device you are on, whether on desktop or mobile. the website will follow the width of the device the user is on -->
   <meta charset="UTF-8" name="viweport" content="width=device-width, initial-scale=1">
    <title> My Java Notebook I </title>
-   <p class="sansserif" align="center"><strong><font size="7"> My Java Notebook I</font></strong>
-<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->  
-   <style>	
-	body {		
+   <p class="sansserif" align="center"><strong><font size="7">
+     <a href="../index.html">My Java Notebook I</a>
+   </font></strong>
+<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->
+   <style>
+	body {
 		background:url("https://d1yn1kh78jj1rr.cloudfront.net/image/preview/rDtN98Qoishumwih/light-blue-background_GkNvxFHd_SB_PM.jpg");
 		background-repeat: repeat;
-		background-size: 100% 100%;	
+		background-size: 100% 100%;
 		}
-		
+
 	h1 {
 		font-family: Helvetica, Arial, sans-serif;
-		color: brown;	
+		color: brown;
 		text-align: center;	<!-- All h1 text will have brown, centered font -->
 		font-weight: bold;
 		}
@@ -29,50 +31,50 @@
 		font-family: Helvetica, Arial, sans-serif;
 		font-weight: bold;
 		color: purple;	<!-- All h2 text will have purple font -->
-		}		
-	
+		}
+
 	mark {
 		background-color: orange;
 	}
-	
+
 	p.sansserif {
 		font-family: Helvetica, Arial, sans-serif;
-	}	
+	}
 	p {
 		font-family: verdana;
 		font-size: 14px;	<!-- All p text will be 14px arial text -->
 		}
-		
+
 	div.border {
 		padding: 10px;
 		border: 5px solid green;
-	}	
-			
+	}
+
 	nav {
 		padding: 10px 0;
 		min-width: 500px;
 	}
 	nav ul {
-		background: linear-gradient(90deg, 
-			rgba(255, 255, 255, 0) 0%, 
-			rgba(255, 255, 255, 0.2) 25%, 
-			rgba(255, 255, 255, 0.2) 75%, 
+		background: linear-gradient(90deg,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 0.2) 25%,
+			rgba(255, 255, 255, 0.2) 75%,
 			rgba(255, 255, 255, 0) 100%);
 		box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
 			inset 0 0 1px rgba(255, 255, 255, 0.6);
-	}	
+	}
 	nav ul li {
 		display: inline-block;
 	}
 	nav ul li a {
-		padding: 10px; 
+		padding: 10px;
 		color: #000000;
 		font-size: 18px;
 		font-family: Arial;
 		text-decoration: none;
 		display: block;
 	}
-	
+
 	a:link {
 		text-decoration: none;
 	}
@@ -80,7 +82,7 @@
 		color: crimson;
 		text-decoration: none;
 	}
-	
+
 	span.noteBlock {
 		border: 1px solid #DDD;
 		margin: 10px 20px;
@@ -103,7 +105,7 @@
 		border-left: 5px solid #589D32;
 		display: block;
 	}
-	
+
 	.accordion {
 		background-color: lightcyan;
 		color: #444;
@@ -116,7 +118,7 @@
 		transition: 0.4s;
 	}
 	.active, .accordion:hover {
-		background-color: #ccc; 
+		background-color: #ccc;
 	}
 	.panel {
 		padding: 0 18px;
@@ -139,9 +141,9 @@
   </head>
   <body>
 
-<!-- ******************************************************************************************************** --> 
-  
-<!-- Navigation Bar -->  
+<!-- ******************************************************************************************************** -->
+
+<!-- Navigation Bar -->
 	<nav>
 		<ul align="center">
 			<li><a href="Module_1_Basic_Concepts.html"><span title="Basic Concepts"><b>Module 1</b></span></a></li>
@@ -149,34 +151,34 @@
 			<li><a href="#"><span title="Arrays"><b>Module 3</b></span></a></li>
 			<li><a href="Module_4_Classes_and_Objects.html"><span title="Classes and Objects"><b>Module 4</b></span></a></li>
 			<li><a href="Module_5_More_on_Classes.html"><span title="More on Classes"><b>Module 5</b></span></a></li>
-			<li><a href="Module_6_Exceptions_Lists_Threads_&_Files.html"><span title="Exceptions, Lists, Threads & Files"><b>Module 6</b></span></a></li>
+			<li><a href="Module_6_Exceptions_Lists_Threads_&amp;_Files.html"><span title="Exceptions, Lists, Threads & Files"><b>Module 6</b></span></a></li>
 		</ul>
 	</nav>
-  
-<!-- ******************************************************************************************************** -->	
+
+<!-- ******************************************************************************************************** -->
    <button class="accordion"><p align="center">
-		***** On Monday, 1/21/19, I started 
-			learning the fundamentals of Java on 
-			<a href= "http://www.sololearn.com"target="_blank"> 
+		***** On Monday, 1/21/19, I started
+			learning the fundamentals of Java on
+			<a href= "http://www.sololearn.com"target="_blank">
 			sololearn.com</a>. *****</p>
-		
+
 		<p align="center"> ***** On Tuesday, 6/18/19, I completed
-		the Java Tutorial course and was issued the 
+		the Java Tutorial course and was issued the
 		<a href="https://www.sololearn.com/Certificate/1068-10607947/pdf/" target="_blank">
-		certificate</a>. *****	
+		certificate</a>. *****
 	</button>
 	<div class="panel">
 		<p align="center"> TAKE NOTE THAT THIS IS NOT A .JAVA FILE BECAUSE IT WILL BE A PLAIN TEXT FILE.
-		INSTEAD, JAVA WILL BE COMPILED VIA THE METHOD SHOWN IN THIS 
+		INSTEAD, JAVA WILL BE COMPILED VIA THE METHOD SHOWN IN THIS
 		<a href="https://www.youtube.com/watch?time_continue=9&v=J83DFnEe_Uc" target="_blank">VIDEO</a>.</p>
 
-<!-- TL;DW for video above -->		
-	<p> <b><u>TL;DW</u></b> 
+<!-- TL;DW for video above -->
+	<p> <b><u>TL;DW</u></b>
 		<ol>
 			<li>On notepad++, click "<b>Plugin</b>" &rarr; "<b>Plugin Manager</b>" &rarr; "<b>Show Plugin Manager</b>" </li>
 			<li>In "Available" tab, check off "<b>NppExec</b>" and go through the installation process.</li>
 			<li>Upon coding Java syntax, press the F6 key to bring up the "<b>Execute...</b>" command box.</li>
-			<li>Change the current directory to <b>D:</b> (or any parent folder that holds your source code) 
+			<li>Change the current directory to <b>D:</b> (or any parent folder that holds your source code)
 				and then move to <b>programs</b> (or any subfolder that holds your source code).</li>
 				<ol type="a">
 					<li>i.e. &emsp; <b><mark>cd</mark></b> d:</li>
@@ -185,11 +187,11 @@
 			<li>Now execute the Java file.</li>
 				<ol type="a">
 					<li>i.e. &emsp; <b><mark>javac</mark></b> HelloWorld.java <br />
-						&emsp;&emsp;&ensp; <b><mark>java</mark></b> HelloWorld			
-					</li>				
+						&emsp;&emsp;&ensp; <b><mark>java</mark></b> HelloWorld
+					</li>
 				</ol>
 		</ol>
-	</p>	
+	</p>
 
 	<p> Skip to <b>steps 3 - 5</b> if "NppExec" is already installed. <br />
 		Skip to <b>step 5</b> to execute the Java file that is already in the desired directory. </p>
@@ -211,137 +213,137 @@
 		});
 	}
 	</script>
-		
-<!-- **************************************************** PAGE 3 **************************************************** -->	
-	
+
+<!-- **************************************************** PAGE 3 **************************************************** -->
+
 <!-- ***** Module 3 Materials ***** -->
 	<h1><u> Module 3: Arrays </u></h1>
 	<br />
-	
+
 <!-- Arrays -->
 	<h2><strong>I. <u>Arrays</u></strong></h2>
-	
-<!-- Arrays -->	
-	<p> <strong><h3><u>Arrays</u></h3></strong> </p>	
+
+<!-- Arrays -->
+	<p> <strong><h3><u>Arrays</u></h3></strong> </p>
 	<p> An <b><font color="crimson"><span title="array is a collection of variables of the same type">array</span></font></b> is a collection of variables of the same type. <br />
-		When you need to store a list of values, such as numbers, you can store them in an 
+		When you need to store a list of values, such as numbers, you can store them in an
 		<font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>, instead of declaring separate variables for each number. </p>
-		
+
 	<p> To declare an <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>, you need to define the type of the elements
 		with <b>square brackets</b>. <br />
 		For example, to declare an <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> of integers: </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
-				<b><u><span title="used to declare an integer variable">int</span></u>[]</b> arr; 
+				<b><u><span title="used to declare an integer variable">int</span></u>[]</b> arr;
 			</span>
-		</span>	
-	
+		</span>
+
 	<p> The name of the <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> is <b>arr</b>. The type of elements it
 		will hold is <b><font color="crimson"><span title="used to declare an integer variable">int</span></font></b>. </p>
-		
+
 	<p> Now, you need to define the <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>'s capacity, or the number
 		of elements it will hold. To accomplish this, use the keyword <b>new</b>. </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
-				<u><span title="used to declare an integer variable">int</span></u>[] arr = <b>new</b> <u><span title="used to declare an integer variable">int</span></u>[5]; 
+				<u><span title="used to declare an integer variable">int</span></u>[] arr = <b>new</b> <u><span title="used to declare an integer variable">int</span></u>[5];
 			</span>
-		</span>	
-	
+		</span>
+
 	<p> The code above declares an <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> of 5 integers. <br />
 		In an <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>, the elements are ordered and each has a specific
 		and constant position, which is called an <b>index</b>. </p>
-		
-	<p> To reference elements in an <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>, type the name of the 
+
+	<p> To reference elements in an <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>, type the name of the
 		<font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> followed by the index position within a
 		pair of square brackets. <br />
 		<b>Example:</b> </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
-				<b>arr[2]</b> = 42; 
+				<b>arr[2]</b> = 42;
 			</span>
-		</span>	
-	
+		</span>
+
 	<p> This assigns a value of 42 to the element with 2 as its index. </p>
-	
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				Note that elements in the <u><span title="array is a collection of variables of the same type">array</span></u> are identified with <b>zero-based</b>
-				index numbers, meaning that the first element's index is 0 rather than one. So, the maximum index of the 
+				index numbers, meaning that the first element's index is 0 rather than one. So, the maximum index of the
 				<u><span title="array is a collection of variables of the same type">array</span></u> <u><span title="used to declare an integer variable">int</span></u>[5] is 4.
 			</span>
 		</span>
-	
-<!-- Initializing Arrays -->	
-	<p> <strong><h3><u>Initializing Arrays</u></h3></strong> </p>	
+
+<!-- Initializing Arrays -->
+	<p> <strong><h3><u>Initializing Arrays</u></h3></strong> </p>
 	<p> Java provides a shortcut for instantiating arrays of primitive types and strings. <br />
 		If you already know what values to insert into the <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>, you can
 		use an <b><font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> literal</b>. <br />
 		Example of an <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> literal: </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				<u><span title="a sequence of characters">String</span></u>[] myNames = {"A", "B", "C", "D"}; <br />
 				System.out.println(myNames[2]); <br /><br />
-				// Outputs "C"	
+				// Outputs "C"
 			</span>
-		</span>	
-		
+		</span>
+
 	<p> Place the values in a <b>comma-separated</b> list, enclosed in curly braces. <br />
 		The code above automatically initializes an <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> containing
 		4 elements, and stores the provided values. </p>
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				Sometimes you might see the square brackets placed after the <u><span title="array is a collection of variables of the same type">array</span></u> name,
 				which also works, but the preferred way is to place the brackets after the
-				<u><span title="array is a collection of variables of the same type">array</span></u>'s data type. 
+				<u><span title="array is a collection of variables of the same type">array</span></u>'s data type.
 			</span>
 		</span>	<br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Summing Elements in Arrays -->
 	<h2><strong>II. <u>Summing Elements in Arrays</u></strong></h2>
-	
-<!-- Array Length -->	
-	<p> <strong><h3><u>Array Length</u></h3></strong> </p>	
+
+<!-- Array Length -->
+	<p> <strong><h3><u>Array Length</u></h3></strong> </p>
 	<p> You can access the length of an <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>
 		(the number of elements it stores) via its <b>length</b> property. <br />
 		<b>Example:</b> </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				<u><span title="used to declare an integer variable">int</span></u>[] intArr = new <u><span title="used to declare an integer variable">int</span></u>[5]; <br />
 				System.out.println(<b>intArr.length</b>); <br /><br />
-				// Outputs 5	
+				// Outputs 5
 			</span>
 		</span>	<br />
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				Don't forget that in arrays, indexes start from 0. So, in the example above, the last index is 4.
 			</span>
-		</span>	
-	
-<!-- Arrays -->	
-	<p> <strong><h3><u>Arrays</u></h3></strong> </p>	
+		</span>
+
+<!-- Arrays -->
+	<p> <strong><h3><u>Arrays</u></h3></strong> </p>
 	<p> Now that we know how to set and get <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> elements, we can
 		calculate the sum of all elements in an <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> by using loops. <br />
-		The <b>for</b> loop is the most used loop when working with arrays, as we can use the <b>length</b> of the 
+		The <b>for</b> loop is the most used loop when working with arrays, as we can use the <b>length</b> of the
 		<font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> to determine how many times to run the loop. </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				<u><span title="used to declare an integer variable">int</span></u>[] myArr = {6, 42, 3, 7}; <br />
@@ -350,37 +352,37 @@
 				&emsp; sum += myArr[x]; <br />
 				} <br />
 				System.out.println(sum); <br /><br />
-				// 58	
+				// 58
 			</span>
-		</span>	
-	
+		</span>
+
 	<p> In the code above, we declared a variable <b>sum</b> to store the result and assigned it 0. <br />
 		Then we used a <b>for</b> loop to iterate through the <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>,
 		and added each element's value to the variable. </p>
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				The condition of the <b>for</b> loop is x &lt; myArr.length, as the last element's index is <b>myArr.length-1</b>.
 			</span>
-		</span>	
-	
+		</span>
+
 	<p><b>Result:</b> <a href ="Program.java" target="_blank">(Program.java)</a></p>
 	<img src="Program.JPG" width="70%" height="70%"></img> &emsp;
 	<img src="Run&Compile-Program_Result.JPG" width="21%" height="21%"></img> <p></p><br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Enhanced for Loop -->
 	<h2><strong>III. <u>Enhanced for Loop</u></strong></h2>
-	
-<!-- Enhanced for Loop -->	
-	<p> <strong><h3><u>Enhanced for Loop</u></h3></strong> </p>	
+
+<!-- Enhanced for Loop -->
+	<p> <strong><h3><u>Enhanced for Loop</u></h3></strong> </p>
 	<p> The <b>enhanced for loop</b> (sometimes called a "for each" loop) is used to traverse elements in arrays. <br />
 		The advantages are that it eliminates the possibility of bugs and makes the code easier to read. <br />
 		<b>Example:</b> </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				<u><span title="used to declare an integer variable">int</span></u>[] primes = {2, 3, 5, 7}; <br /><br />
@@ -394,144 +396,144 @@
 				7 <br />
 				*/
 			</span>
-		</span>	
-	
-	<p> The <b>enhanced for loop</b> declares a variable of a type compatible with the elements of the 
+		</span>
+
+	<p> The <b>enhanced for loop</b> declares a variable of a type compatible with the elements of the
 		<font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> being accessed. The variable will be available within the
 		<b>for</b> block, and its value will be the same as the current <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>
 		element. <br />
-		So, on each iteration of the loop, the variable <b>t</b> will be equal to the corresponding element in the 
+		So, on each iteration of the loop, the variable <b>t</b> will be equal to the corresponding element in the
 		<font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>. </p>
-	
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				Notice the <b>colon</b> after the variable in the syntax.
 			</span>
 		</span>
-	
+
 	<p><b>Result:</b> <a href ="Program1.java" target="_blank">(Program1.java)</a></p>
 	<img src="Program1.JPG" width="70%" height="70%"></img> &emsp;
 	<img src="Run&Compile-Program1_Result.JPG" width="23%" height="23%"></img> <p></p><br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Multidimensional Arrays -->
 	<h2><strong>IV. <u>Multidimensional Arrays</u></strong></h2>
-	
-<!-- Multidimensional Arrays -->	
-	<p> <strong><h3><u>Multidimensional Arrays</u></h3></strong> </p>	
+
+<!-- Multidimensional Arrays -->
+	<p> <strong><h3><u>Multidimensional Arrays</u></h3></strong> </p>
 	<p> <b>Multidimensional</b> arrays are <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> that contains other
 		arrays. The two-dimensional <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> is the most basic
 		multidimensional <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>. <br />
 		To create multidimensional arrays, place each <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> within
 		its own set of square brackets. <br />
 		Example of a two-dimensional <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>: </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
-				<b><u><span title="used to declare an integer variable">int</span></u>[][]</b> sample = { {1, 2, 3}, {4, 5, 6} }; 
+				<b><u><span title="used to declare an integer variable">int</span></u>[][]</b> sample = { {1, 2, 3}, {4, 5, 6} };
 			</span>
-		</span>	
-	
+		</span>
+
 	<p> This declares an <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> with two arrays as its elements. <br />
 		To access an element in the two-dimensional <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>, provide two
 		indexes, one for the <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>, and another for the element
 		inside that <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>. <br />
 		The following example accesses the first element in the second <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>
 		of sample. </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				<u><span title="used to declare an integer variable">int</span></u> x = sample<b>[1][0]</b>; <br />
 				System.out.println(x); <br /><br />
-				// Outputs 4	
+				// Outputs 4
 			</span>
 		</span>	<br />
-	
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
-				The <u><span title="array is a collection of variables of the same type">array</span></u>'s two indexes are called <b>row index</b> and <b>column index</b>.		
+				The <u><span title="array is a collection of variables of the same type">array</span></u>'s two indexes are called <b>row index</b> and <b>column index</b>.
 			</span>
 		</span>
-		
-	<p> You can get and set a multidimensional <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>'s elements 
+
+	<p> You can get and set a multidimensional <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font>'s elements
 		using the same pair of square brackets. <br />
 		<b>Example:</b>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				<u><span title="used to declare an integer variable">int</span></u>[][] myArr = { {1, 2, 3}, {4}, {5, 6, 7} }; <br />
 				myArr[0][2] = 42; <br />
 				<u><span title="used to declare an integer variable">int</span></u> x = myArr[1][0]; // 4
 			</span>
-		</span>	
-	
+		</span>
+
 	<p> The above two-dimensional <font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> contains three arrays. The first
 		<font color="crimson"><span title="array is a collection of variables of the same type">array</span></font> has three elements, the second has a single element
 		and the last of these has three elements.
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				In Java, you're not limited to just two-dimensional arrays. Arrays can be nested within arrays to as many levels as your program needs. All you need to declare
 				<u><span title="array is a collection of variables of the same type">array</span></u> with more than two dimensions, is to add as many sets of empty
 				brackets as you need. <br />
 				However, these are harder to maintain. <br />
-				Remember, that all <u><span title="array is a collection of variables of the same type">array</span></u> members must be of the same type.	
+				Remember, that all <u><span title="array is a collection of variables of the same type">array</span></u> members must be of the same type.
 			</span>
-		</span>	
-	
+		</span>
+
 	<p><b>Result:</b> <a href ="Program2.java" target="_blank">(Program2.java)</a></p>
 	<img src="Program2.JPG" width="62%" height="62%"></img> &emsp;
 	<img src="Run&Compile-Program2_Result.JPG" width="25%" height="25%"></img> <p></p><br />
-	
-<!-- ******************************************************** Helpful Tips from the Comments ******************************************************** -->	
-	
+
+<!-- ******************************************************** Helpful Tips from the Comments ******************************************************** -->
+
 	<button class="accordion1">
 	<p align="center"><font color="#FFF"><b>****************************** Helpful Tips from the Comments ******************************</b></font></p>
 	</button>
-	
+
 	<div class="panel">
-<!-- Arrays -->	
+<!-- Arrays -->
 	<p>	<strong><h3>Arrays</h3></strong> </p>
 	<p> Think of arrays as boxes that you put you data but instead of starting to count from 1 with arrays the index starts from 0. <br />
 		So you have five boxes from 0-4. Like this. <br /><br />
 		Array index &emsp; 0 1 2 3 4 <br />
 		Int   value &emsp;&emsp;&nbsp; 9 8 7 6 8 </p>
-	
-<!-- Enhanced for Loop -->	
-	<p>	<strong><h3>Enhanced for Loop</h3></strong> </p>	
+
+<!-- Enhanced for Loop -->
+	<p>	<strong><h3>Enhanced for Loop</h3></strong> </p>
 	<p> The Colon <b><font color="crimson">:</font></b> in the For loop is read as "<b><font color="crimson">in</font></b>".. <br />
 		When the colon : is embraced with parenthesis ()  it is read as "<b><font color="crimson">eyes</font></b>" <b><font color="crimson">(:)</font></b>
-	
-<!-- Multidimensional Arrays -->	
-	<p>	<strong><h3>Multidimensional Arrays</h3></strong> </p>	
+
+<!-- Multidimensional Arrays -->
+	<p>	<strong><h3>Multidimensional Arrays</h3></strong> </p>
 	<p> The multidimensional array ARE array that CONTAIN OTHER ARRAY.(need to capitalize here) <br />
 		Meaning: <br /><br />
 		int[ ][ ] sample = { {1, 2, 3}, {4, 5, 6} };  <br />
 		int x = sample[1][0]; <br />
 		System.out.println(x); <br /><br />
 		// Outputs 4 <br /><br />
-		
-		The output is 4 because the first "[]" chooses the array of the two categories (for example pretend {1,2,3} and {4,5,6} are 2 arrays with something inside. 
+
+		The output is 4 because the first "[]" chooses the array of the two categories (for example pretend {1,2,3} and {4,5,6} are 2 arrays with something inside.
 		So the first "[]" chooses the BRACKET, not element inside the array, and the second "[]" chooses the ELEMENT inside the array. <br /><br />
-		
+
 		FOR SIMPLE and EASY understanding example: <br /><br />
 		I have 2 boxes with number plates in them. Box one has 5,6,8 and box two has 7,8,9. <br />
 		<ol>
 			<li>First, I choose the box that I want to open. </li>
 			<li>Then, I choose the number plate I want to take. </li>
-		</ol>	
+		</ol>
 		If the statement is: <br /><br />
 		int (boxes) = sample[1][0] <br /><br />
-		I will take the second box (since array start counting from 0) and take out the plate number "7" (array counting from 0, so 7 is the "0"). </p>	
-	
-	
+		I will take the second box (since array start counting from 0) and take out the plate number "7" (array counting from 0, so 7 is the "0"). </p>
+
+
 	</div>
 
 	<script>
@@ -549,20 +551,20 @@
 			}
 		});
 	}
-	</script>	
-	
-<!-- ********************************************* FOOTER ********************************************* -->  
-  
+	</script>
+
+<!-- ********************************************* FOOTER ********************************************* -->
+
 <!-- Scroll to Top Button  -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" >var scrolltotop={setting:{startline:100,scrollto:0,scrollduration:1e3,fadeduration:[500,100]},controlHTML:'<img src="https://i1155.photobucket.com/albums/p559/scrolltotop/arrow40.png" />',controlattrs:{offsetx:5,offsety:5},anchorkeyword:"#top",state:{isvisible:!1,shouldvisible:!1},scrollup:function(){this.cssfixedsupport||this.$control.css({opacity:0});var t=isNaN(this.setting.scrollto)?this.setting.scrollto:parseInt(this.setting.scrollto);t="string"==typeof t&&1==jQuery("#"+t).length?jQuery("#"+t).offset().top:0,this.$body.animate({scrollTop:t},this.setting.scrollduration)},keepfixed:function(){var t=jQuery(window),o=t.scrollLeft()+t.width()-this.$control.width()-this.controlattrs.offsetx,s=t.scrollTop()+t.height()-this.$control.height()-this.controlattrs.offsety;this.$control.css({left:o+"px",top:s+"px"})},togglecontrol:function(){var t=jQuery(window).scrollTop();this.cssfixedsupport||this.keepfixed(),this.state.shouldvisible=t>=this.setting.startline?!0:!1,this.state.shouldvisible&&!this.state.isvisible?(this.$control.stop().animate({opacity:1},this.setting.fadeduration[0]),this.state.isvisible=!0):0==this.state.shouldvisible&&this.state.isvisible&&(this.$control.stop().animate({opacity:0},this.setting.fadeduration[1]),this.state.isvisible=!1)},init:function(){jQuery(document).ready(function(t){var o=scrolltotop,s=document.all;o.cssfixedsupport=!s||s&&"CSS1Compat"==document.compatMode&&window.XMLHttpRequest,o.$body=t(window.opera?"CSS1Compat"==document.compatMode?"html":"body":"html,body"),o.$control=t('<div id="topcontrol">'+o.controlHTML+"</div>").css({position:o.cssfixedsupport?"fixed":"absolute",bottom:o.controlattrs.offsety,right:o.controlattrs.offsetx,opacity:0,cursor:"pointer"}).attr({title:"Scroll to Top"}).click(function(){return o.scrollup(),!1}).appendTo("body"),document.all&&!window.XMLHttpRequest&&""!=o.$control.text()&&o.$control.css({width:o.$control.width()}),o.togglecontrol(),t('a[href="'+o.anchorkeyword+'"]').click(function(){return o.scrollup(),!1}),t(window).bind("scroll resize",function(t){o.togglecontrol()})})}};scrolltotop.init();</script>
 	<noscript>Not seeing a <a href="https://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
 <!-- End Scroll to Top -->
-	
+
 	<br /> <br /> <br /> <br /> <br />
 	<div class="copyright">
             &copy; 2019 Jetchan204. All rights reserved.
     </div>
-	
+
   </body>
- </html>	
+ </html>

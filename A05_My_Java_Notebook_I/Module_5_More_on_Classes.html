@@ -1,22 +1,24 @@
 <!DOCTYPE html>	<!-- enable standards mode for documents written using the HTML syntax -->
  <html lang="en">
   <head>
-<!-- The viewport meta tag tells the browser that the width of the screen should be considered the "Full Width" of the page. 
-	Meaning no matter the width of the device you are on, whether on desktop or mobile. the website will follow the width of the device the user is on -->  
+<!-- The viewport meta tag tells the browser that the width of the screen should be considered the "Full Width" of the page.
+	Meaning no matter the width of the device you are on, whether on desktop or mobile. the website will follow the width of the device the user is on -->
   <meta charset="UTF-8" name="viweport" content="width=device-width, initial-scale=1">
    <title> My Java Notebook I </title>
-   <p class="sansserif" align="center"><strong><font size="7"> My Java Notebook I</font></strong>
-<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->  
-   <style>	
-	body {		
+   <p class="sansserif" align="center"><strong><font size="7">
+     <a href="../index.html">My Java Notebook I</a>
+   </font></strong>
+<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->
+   <style>
+	body {
 		background:url("https://d1yn1kh78jj1rr.cloudfront.net/image/preview/rDtN98Qoishumwih/light-blue-background_GkNvxFHd_SB_PM.jpg");
 		background-repeat: repeat;
-		background-size: 100% 100%;	
+		background-size: 100% 100%;
 		}
-		
+
 	h1 {
 		font-family: Helvetica, Arial, sans-serif;
-		color: brown;	
+		color: brown;
 		text-align: center;	<!-- All h1 text will have brown, centered font -->
 		font-weight: bold;
 		}
@@ -29,50 +31,50 @@
 		font-family: Helvetica, Arial, sans-serif;
 		font-weight: bold;
 		color: purple;	<!-- All h2 text will have purple font -->
-		}		
-	
+		}
+
 	mark {
 		background-color: orange;
 	}
-	
+
 	p.sansserif {
 		font-family: Helvetica, Arial, sans-serif;
-	}	
+	}
 	p {
 		font-family: verdana;
 		font-size: 14px;	<!-- All p text will be 14px arial text -->
 		}
-		
+
 	div.border {
 		padding: 10px;
 		border: 5px solid green;
-	}	
-			
+	}
+
 	nav {
 		padding: 10px 0;
 		min-width: 500px;
 	}
 	nav ul {
-		background: linear-gradient(90deg, 
-			rgba(255, 255, 255, 0) 0%, 
-			rgba(255, 255, 255, 0.2) 25%, 
-			rgba(255, 255, 255, 0.2) 75%, 
+		background: linear-gradient(90deg,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 0.2) 25%,
+			rgba(255, 255, 255, 0.2) 75%,
 			rgba(255, 255, 255, 0) 100%);
 		box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
 			inset 0 0 1px rgba(255, 255, 255, 0.6);
-	}	
+	}
 	nav ul li {
 		display: inline-block;
 	}
 	nav ul li a {
-		padding: 10px; 
+		padding: 10px;
 		color: #000000;
 		font-size: 18px;
 		font-family: Arial;
 		text-decoration: none;
 		display: block;
 	}
-	
+
 	a:link {
 		text-decoration: none;
 	}
@@ -80,7 +82,7 @@
 		color: crimson;
 		text-decoration: none;
 	}
-	
+
 	span.noteBlock {
 		border: 1px solid #DDD;
 		margin: 10px 20px;
@@ -103,7 +105,7 @@
 		border-left: 5px solid #589D32;
 		display: block;
 	}
-	
+
 	.accordion {
 		background-color: lightcyan;
 		color: #444;
@@ -116,7 +118,7 @@
 		transition: 0.4s;
 	}
 	.active, .accordion:hover {
-		background-color: #ccc; 
+		background-color: #ccc;
 	}
 	.panel {
 		padding: 0 18px;
@@ -135,7 +137,7 @@
 		font-size: 15px;
 		transition: 0.4s;
 	}
-	
+
 	h2.solid {
 		border-style: solid;
 		border-color: blue;
@@ -144,9 +146,9 @@
   </head>
   <body>
 
-<!-- ******************************************************************************************************** --> 
-  
-<!-- Navigation Bar -->  
+<!-- ******************************************************************************************************** -->
+
+<!-- Navigation Bar -->
 	<nav>
 		<ul align="center">
 			<li><a href="Module_1_Basic_Concepts.html"><span title="Basic Concepts"><b>Module 1</b></span></a></li>
@@ -154,34 +156,34 @@
 			<li><a href="Module_3_Arrays.html"><span title="Arrays"><b>Module 3</b></span></a></li>
 			<li><a href="Module_4_Classes_and_Objects.html"><span title="Classes and Objects"><b>Module 4</b></span></a></li>
 			<li><a href="#"><span title="More on Classes"><b>Module 5</b></span></a></li>
-			<li><a href="Module_6_Exceptions_Lists_Threads_&_Files.html"><span title="Exceptions, Lists, Threads & Files"><b>Module 6</b></span></a></li>
+			<li><a href="Module_6_Exceptions_Lists_Threads_&amp;_Files.html"><span title="Exceptions, Lists, Threads & Files"><b>Module 6</b></span></a></li>
 		</ul>
 	</nav>
-  
-<!-- ******************************************************************************************************** -->	
+
+<!-- ******************************************************************************************************** -->
    <button class="accordion"><p align="center">
-		***** On Monday, 1/21/19, I started 
-			learning the fundamentals of Java on 
-			<a href= "http://www.sololearn.com"target="_blank"> 
+		***** On Monday, 1/21/19, I started
+			learning the fundamentals of Java on
+			<a href= "http://www.sololearn.com"target="_blank">
 			sololearn.com</a>. *****</p>
-		
+
 		<p align="center"> ***** On Tuesday, 6/18/19, I completed
-		the Java Tutorial course and was issued the 
+		the Java Tutorial course and was issued the
 		<a href="https://www.sololearn.com/Certificate/1068-10607947/pdf/" target="_blank">
-		certificate</a>. *****	
+		certificate</a>. *****
 	</button>
 	<div class="panel">
 		<p align="center"> TAKE NOTE THAT THIS IS NOT A .JAVA FILE BECAUSE IT WILL BE A PLAIN TEXT FILE.
-		INSTEAD, JAVA WILL BE COMPILED VIA THE METHOD SHOWN IN THIS 
+		INSTEAD, JAVA WILL BE COMPILED VIA THE METHOD SHOWN IN THIS
 		<a href="https://www.youtube.com/watch?time_continue=9&v=J83DFnEe_Uc" target="_blank">VIDEO</a>.</p>
 
-<!-- TL;DW for video above -->		
-	<p> <b><u>TL;DW</u></b> 
+<!-- TL;DW for video above -->
+	<p> <b><u>TL;DW</u></b>
 		<ol>
 			<li>On notepad++, click "<b>Plugin</b>" &rarr; "<b>Plugin Manager</b>" &rarr; "<b>Show Plugin Manager</b>" </li>
 			<li>In "Available" tab, check off "<b>NppExec</b>" and go through the installation process.</li>
 			<li>Upon coding Java syntax, press the F6 key to bring up the "<b>Execute...</b>" command box.</li>
-			<li>Change the current directory to <b>D:</b> (or any parent folder that holds your source code) 
+			<li>Change the current directory to <b>D:</b> (or any parent folder that holds your source code)
 				and then move to <b>programs</b> (or any subfolder that holds your source code).</li>
 				<ol type="a">
 					<li>i.e. &emsp; <b><mark>cd</mark></b> d:</li>
@@ -190,11 +192,11 @@
 			<li>Now execute the Java file.</li>
 				<ol type="a">
 					<li>i.e. &emsp; <b><mark>javac</mark></b> HelloWorld.java <br />
-						&emsp;&emsp;&ensp; <b><mark>java</mark></b> HelloWorld			
-					</li>				
+						&emsp;&emsp;&ensp; <b><mark>java</mark></b> HelloWorld
+					</li>
 				</ol>
 		</ol>
-	</p>	
+	</p>
 
 	<p> Skip to <b>steps 3 - 5</b> if "NppExec" is already installed. <br />
 		Skip to <b>step 5</b> to execute the Java file that is already in the desired directory. </p>
@@ -216,17 +218,17 @@
 		});
 	}
 	</script>
-		
-<!-- **************************************************** PAGE 5 **************************************************** -->	
-	
+
+<!-- **************************************************** PAGE 5 **************************************************** -->
+
 <!-- ***** Module 5 Materials ***** -->
 	<h1><u> Module 5: More on Classes </u></h1>
 	<br />
-	
+
 <!-- Encapsulation -->
 	<h2><strong>I. <u>Encapsulation</u></strong></h2>
-	
-<!-- Encapsulation -->	
+
+<!-- Encapsulation -->
 	<p> <strong><h3><u>Encapsulation</u></h3></strong> </p>
 	<p> There are 4 core concepts in OOP:
 		<ul>
@@ -235,18 +237,18 @@
 			<li><b><font color="crimson">
 				<span title="polymorphism means that a call to a member method will cause a different method to be executed depending on the type of object that invokes the method">polymorphism</span></font></b></li>
 			<li><b>abstraction</b></li>
-		</ul> </p>	
-	
+		</ul> </p>
+
 	<p> The idea behind <b><font color="crimson"><span title="the packing of data and methods into a single component">encapsulation</span></font></b> is to ensure that
 		implementation details are not visible to users. <br />
 		The variables of one class will be hidden from the other classes, accessible only through the methods of the current class. This is called <b>data hiding</b>. <br />
 		To achieve <font color="crimson"><span title="the packing of data and methods into a single component">encapsulation</span></font> in Java, declare the class' variables
 		as <b>private</b> and provide public <b><font color="crimson"><span title="The setter method takes a parameter and assigns it to the attribute">setter</span></font></b>
 		and <b><font color="crimson"><span title="The getter method returns the value of the attribute">getter</span></font></b> methods to modify and view the variables' values. </p>
-		
+
 	<p> <b>For example:</b> </p>
 
-	<!-- span.codeBlock & span.code-->	
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				class BankAccount { <br />
@@ -257,14 +259,14 @@
 				&emsp;&emsp; } <br />
 				&emsp; } <br />
 				}
-			</span> 
-		</span>	
-	
-	<p> This implementation hides the <b>balance</b> variable, enabling access to it only through the <b>deposit</b> 
-		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>, which validates the amount 
+			</span>
+		</span>
+
+	<p> This implementation hides the <b>balance</b> variable, enabling access to it only through the <b>deposit</b>
+		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>, which validates the amount
 		to be deposited before modifying the variable. </p>
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				In summary, <b><u><span title="the packing of data and methods into a single component">encapsulation</span></u></b> provides the following benefits:
@@ -275,44 +277,44 @@
 				</ul>
 			</span>
 		</span>	<br />
-		
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Inheritance -->
 	<h2><strong>II. <u>Inheritance</u></strong></h2>
-	
-<!-- Inheritance -->	
-	<p> <strong><h3><u>Inheritance</u></h3></strong> </p>		
+
+<!-- Inheritance -->
+	<p> <strong><h3><u>Inheritance</u></h3></strong> </p>
 	<p> <b>Inheritance</b> is the process that enables one class to acquire the properties (methods and variables) of another. With
 		<font color="crimson"><span title="a process by which one class inherits the members and methods of another class">inheritance</span></font>, the information
 		is placed in a more manageable, hierarchical order. </p>
-		
-	<p> The class inheriting the properties of another is the <b>subclass</b> (also called derived class, or child class); the class whose properties are inherited is the 
+
+	<p> The class inheriting the properties of another is the <b>subclass</b> (also called derived class, or child class); the class whose properties are inherited is the
 		<b>superclass</b> (base class, or parent class). </p>
-		
+
 	<p> To inherit from a class, use the <b><font color="crimson"><span title="used to inherit a subclass">extends</span></font></b> keyword. <br />
 		This example shows how to have the class <b>Dog</b> to inherit from the class <b>Animal</b>. </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				class Dog <b><u><span title="used to inherit a subclass">extends</span></u></b> Animal { <br />
 				&emsp; // some code <br />
 				}
-			</span> 
-		</span> <br />	
-	
-	<!-- span.noteBlock & span.note-->	
+			</span>
+		</span> <br />
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				Here, Dog is the <b>subclass</b>, and Animal is the <b>superclass</b>.
 			</span>
 		</span>
-	
+
 	<p> When one class is inherited from another class, it inherits all of the superclass' <b>non-private</b> variables and methods. <br />
 		<b>Example:</b> </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				class Animal { <br />
@@ -326,15 +328,15 @@
 				&emsp;&emsp; <b>legs</b> = 4; <br />
 				&emsp; } <br />
 				}
-			</span> 
-		</span>	
-	
+			</span>
+		</span>
+
 	<p> As you can see, the Dog class inherits the legs variable from the Animal class. <br />
-		We can now declare a Dog object and call the <b>eat</b> 
+		We can now declare a Dog object and call the <b>eat</b>
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 		of its superclass: </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				class MyClass { <br />
@@ -344,22 +346,22 @@
 				&emsp;&emsp; <b>d.eat();</b> <br />
 				&emsp; } <br />
 				}
-			</span> 
-		</span> <br />	
-	
-	<!-- span.noteBlock & span.note-->	
+			</span>
+		</span> <br />
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				Recall the <b>protected</b> access modifier, which makes the members visible only to the subclasses.
 			</span>
 		</span>
-	
+
 	<p> Constructors are not member methods, and so are not inherited by subclasses. <br />
 		However, the <font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font>
 		of the superclass is called when the subclass is instantiated. <br />
 		<b>Example:</b> </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				class A { <br />
@@ -375,45 +377,45 @@
 				class Program { <br />
 				&emsp; public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
 					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
-				&emsp;&emsp; B obj = new B(); <br />	
+				&emsp;&emsp; B obj = new B(); <br />
 				&emsp; } <br />
 				} <br /><br />
 				/* Outputs <br />
 				"New A" <br />
 				"New B" <br />
 				*/
-			</span> 
-		</span> <br />	
-	
-	<!-- span.noteBlock & span.note-->	
+			</span>
+		</span> <br />
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				You can access the superclass from the subclass using the <b>super</b> keyword. <br />
 				For example, <b>super.var</b> accesses the var member of the superclass.
 			</span>
-		</span>	
-	
+		</span>
+
 	<p><b>Result:</b> <a href ="src/Animal.java" target="_blank">(Animal.java)</a> <a href ="src/Dog.java" target="_blank">(Dog.java)</a> <a href ="src/MyClass.java" target="_blank">(MyClass.java)</a>
 		| <a href ="src/A.java" target="_blank">(A.java)</a> <a href ="src/B.java" target="_blank">(B.java)</a> <a href ="src/Program.java" target="_blank">(Program.java)</a> </p>
 	<img src="MyClass.JPG" width="100%" height="100%"></img> <p></p>
 	<img src="Program.JPG" width="100%" height="100%"></img> <p></p><br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Polymorphism -->
 	<h2><strong>III. <u>Polymorphism</u></strong></h2>
-	
-<!-- Polymorphism -->	
-	<p> <strong><h3><u>Polymorphism</u></h3></strong> </p>	
-	<p> <b>Polymorphism</b>, which refers to the idea of "having many forms", occurs when there is a hierarchy of classes related to each other through 
+
+<!-- Polymorphism -->
+	<p> <strong><h3><u>Polymorphism</u></h3></strong> </p>
+	<p> <b>Polymorphism</b>, which refers to the idea of "having many forms", occurs when there is a hierarchy of classes related to each other through
 		<font color="crimson"><span title="a process by which one class inherits the members and methods of another class">inheritance</span></font>. <br />
 		A call to a member <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
-		will cause a different implementation to be executed, depending on the type of the object invoking the 
+		will cause a different implementation to be executed, depending on the type of the object invoking the
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>. <br />
 		Here is an example: <b>Dog</b> and <b>Cat</b> are classes that inherit from the <b>Animal</b> class. Each class has its own implementation of the <b>makeSound()</b>
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>. </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				class Animal { <br />
@@ -431,67 +433,67 @@
 				&emsp;&emsp; System.out.println("Woof"); <br />
 				&emsp; } <br />
 				}
-			</span> 
-		</span>	
-	
+			</span>
+		</span>
+
 	<p> As all <b>Cat</b> and <b>Dog</b> objects are <b>Animal</b> objects, we can do the following in <b>main</b>: </p>
-	
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
 					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
-				&emsp; <b>Animal</b> a = new <b>Dog()</b>; <br />	
+				&emsp; <b>Animal</b> a = new <b>Dog()</b>; <br />
 				&emsp; <b>Animal</b> b = new <b>Cat()</b>; <br />
 				}
-			</span> 
+			</span>
 		</span>
-	
+
 	<p> We've created two reference variables of type Animal, and pointed them to the <b>Cat</b> and <b>Dog</b> objects. <br />
 		Now, we can call the makeSound() methods. </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				a.makeSound(); <br />
 				// Outputs "<b>Woof</b>" <br /><br />
 				b.makeSound(); <br />
 				// Outputs "<b>Meow</b>"
-			</span> 
-		</span>	
-	
+			</span>
+		</span>
+
 	<p> As the reference variable <b>a</b> contains a Dog object, the makeSound()
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 		of the Dog class will be called. <br />
 		The same applies to the <b>b</b> variable. </p>
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				This demonstrates that you can use the <b>Animal</b> variable without actually knowing that it contains an object of the subclass. <br />
 				This is very useful when you have multiple subclasses of the superclass.
 			</span>
-		</span>	
-	
-	<p><b>Result:</b> <a href ="src/Animal1.java" target="_blank">(Animal1.java)</a> <a href ="src/Cat.java" target="_blank">(Cat.java)</a> 
+		</span>
+
+	<p><b>Result:</b> <a href ="src/Animal1.java" target="_blank">(Animal1.java)</a> <a href ="src/Cat.java" target="_blank">(Cat.java)</a>
 		<a href ="src/Dog1.java" target="_blank">(Dog1.java)</a> <a href ="src/Program1.java" target="_blank">(Program1.java)</a></p>
 	<img src="Program1.JPG" width="100%" height="100%"></img> <p></p> <br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Overriding & Overloading -->
 	<h2><strong>IV. <u>Overriding & Overloading</u></strong></h2>
-	
-<!-- Method Overriding -->	
-	<p> <strong><h3><u>Method Overriding</u></h3></strong> </p>	
+
+<!-- Method Overriding -->
+	<p> <strong><h3><u>Method Overriding</u></h3></strong> </p>
 	<p> As we saw in the previous lesson, a subclass can define a behavior that's specific to the subclass type, meaning that a subclass can implement a parent class
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 		based on its requirement. <br />
-		This feature is known as 
+		This feature is known as
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> <b>overriding</b>. <br />
 		<b>Example:</b> </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				class Animal { <br />
@@ -503,15 +505,15 @@
 				&emsp; <b>public <u><span title="indicates that a method does not return a value">void</span></u> makeSound()</b> { <br />
 				&emsp;&emsp; System.out.println("Meow"); <br />
 				&emsp; } <br />
-				} 
-			</span> 
-		</span>	
-	
-	<p> In the code above, the Cat class overrides the <b>makeSound()</b> 
+				}
+			</span>
+		</span>
+
+	<p> In the code above, the Cat class overrides the <b>makeSound()</b>
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 		of its superclass Animal. </p>
-		
-	<p> <b>Rules for Method Overriding:</b> 
+
+	<p> <b>Rules for Method Overriding:</b>
 		<ul>
 			<li>Should have the <b>same</b> return type and arguments</li>
 			<li>The <b>access level</b> cannot be more restrictive than the overridden
@@ -520,36 +522,36 @@
 				is declared public, the overriding <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 				in the sub class can be neither private nor protected)</li>
 			<li>A <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
-				declared <b>final</b> or 
+				declared <b>final</b> or
 				<b><font color="crimson"><span title="static variables and methods belong to the class instead of a specific instance">static</span></font></b> cannot be overridden</li>
 			<li>If a <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 				cannot be inherited, it cannot be overridden</li>
 			<li>Constructors cannot be overridden</li>
 		</ul>
-	
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				Method overriding is also known as <b>runtime
-				<u><span title="polymorphism means that a call to a member method will cause a different method to be executed depending on the type of object that invokes the method">polymorphism</span></u></b>. 
+				<u><span title="polymorphism means that a call to a member method will cause a different method to be executed depending on the type of object that invokes the method">polymorphism</span></u></b>.
 			</span>
 		</span>
-	
+
 	<p>
-	
+
 	<p> When methods have the same name, but different parameters, it is known as
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> <b>overloading</b>. <br />
-		This can be very useful when you need the same 
+		This can be very useful when you need the same
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 		functionality for different types of parameters. <br />
-		The following example illustrates a 
+		The following example illustrates a
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 		that returns the maximum of its two parameters. </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
-				<b><u><span title="used to declare an integer variable">int</span></u></b> 
+				<b><u><span title="used to declare an integer variable">int</span></u></b>
 					max(<b><u><span title="used to declare an integer variable">int</span></u></b> a, <b><u><span title="used to declare an integer variable">int</span></u></b> b) { <br />
 					&emsp; if(a &gt; b) { <br />
 					&emsp;&emsp; return a; <br />
@@ -558,15 +560,15 @@
 					&emsp;&emsp; return b; <br />
 					&emsp; } <br />
 					}
-			</span> 
-		</span>	
-	
+			</span>
+		</span>
+
 	<p> The <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 		shown above will only work for parameters of type <b><font color="crimson"><span title="whole number">integer</span></font></b>. <br />
 		However, we might want to use it for <b>doubles</b>, as well. For that, you need to overload the <b>max</b>
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>: </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				<b>double</b> max(<b>double</b> a, <b>double</b> b) { <br />
@@ -577,42 +579,42 @@
 					&emsp;&emsp; return b; <br />
 					&emsp; } <br />
 					}
-			</span> 
-		</span>	
-	
+			</span>
+		</span>
+
 	<p> Now, our <b>max</b> <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 		will also work with <b>doubles</b>. <br />
 		An overloaded <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 		<b>must</b> have a different <font color="crimson"><span title="a piece of data that is passed into a method or program. Also known as parameter">argument</span></font>
 		list; the parameters should differ in their type, number, or both. </p>
 
-	<!-- span.noteBlock & span.note-->	
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				Another name for <u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u>
 				overloading is <b>compile-time
-				<u><span title="polymorphism means that a call to a member method will cause a different method to be executed depending on the type of object that invokes the method">polymorphism</span></u></b>. 
+				<u><span title="polymorphism means that a call to a member method will cause a different method to be executed depending on the type of object that invokes the method">polymorphism</span></u></b>.
 			</span>
-		</span>		
-	
+		</span>
+
 	<p><b>Result:</b> <a href ="src/Program2.java" target="_blank">(Program2.java)</a></p>
 	<img src="Program2.JPG" width="100%" height="100%"></img> <p></p> <br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Abstract Classes -->
 	<h2><strong>V. <u>Abstract Classes</u></strong></h2>
-	
-<!-- Abstraction -->	
-	<p> <strong><h3><u>Abstraction</u></h3></strong> </p>	
+
+<!-- Abstraction -->
+	<p> <strong><h3><u>Abstraction</u></h3></strong> </p>
 	<p> Data <b>abstraction</b> provides the outside world with essential information, in a process of representing essential features without including implementation details. <br />
 		A good real-world example is a <i>book</i>. When you hear the term book, you don't know the exact specifics, such as the page count, the color, or the size, but you
 		understand the idea, or abstraction, of a book. <br />
 		The concept of <b>abstraction</b> is that we focus on essential qualities, rather than the specific characteristics of one particular example. </p>
-		
+
 	<p> In Java, abstraction is achieved using <b>abstract classes</b> and <b>interfaces</b>. <br />
 		An <font color="crimson"><span title="If a class is declared abstract it cannot be instantiated, and you have to inherit from it. Any class that contains an abstract
-		method, should be defined as abstract">abstract class</span></font> is defined using the <b>abstract</b> keyword. 
+		method, should be defined as abstract">abstract class</span></font> is defined using the <b>abstract</b> keyword.
 		<ul>
 			<li>If a class is declared abstract it cannot be instantiated (you cannot create objects of that type).</li>
 			<li>To use an <font color="crimson"><span title="If a class is declared abstract it cannot be instantiated, and you have to inherit from it. Any class that contains an abstract
@@ -620,8 +622,8 @@
 			<li>Any class that contains an abstract <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 				should be defined as abstract.</li>
 		</ul> </p>
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				An abstract <u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u> is a
@@ -629,28 +631,28 @@
 				without an implementation (without braces, and followed by a semicolon): <br />
 				<b>abstract <u><span title="indicates that a method does not return a value">void</span></u> walk();</b>
 			</span>
-		</span>	
-	
-<!-- Abstract Class -->	
-	<p> <strong><h3><u>Abstract Class</u></h3></strong> </p>	
+		</span>
+
+<!-- Abstract Class -->
+	<p> <strong><h3><u>Abstract Class</u></h3></strong> </p>
 	<p> For example, we can define our Animal class as abstract: </p>
-	
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				<b>abstract</b> class Animal { <br />
 				&emsp; <u><span title="used to declare an integer variable">int</span></u> legs = 0; <br />
 				&emsp; <b>abstract</b> <u><span title="indicates that a method does not return a value">void</span></u> makeSound(); <br />
 				}
-			</span> 
+			</span>
 		</span>
-	
+
 	<p> The makeSound <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 		is also abstract, as it has no implementation in the superclass. <br />
-		We can inherit from the Animal class and define the makeSound() 
+		We can inherit from the Animal class and define the makeSound()
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> for the subclass: </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				class Cat <u><span title="used to inherit a subclass">extends</span></u> Animal { <br />
@@ -658,10 +660,10 @@
 				&emsp;&emsp; System.out.println("Meow"); <br />
 				&emsp; ) <br />
 				}
-			</span> 
+			</span>
 		</span>	<br />
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				Every Animal makes a sound, but each has a different way of doing it. That's why we define an
@@ -670,18 +672,18 @@
 				This is used when there is no meaningful definition for the
 				<u><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></u> in the superclass.
 			</span>
-		</span>	
-	
+		</span>
+
 	<p><b>Result:</b> <a href ="src/Animal2.java" target="_blank">(Animal2.java)</a> <a href ="src/Cat1.java" target="_blank">(Cat1.java)</a> <a href ="src/Program3.java" target="_blank">(Program3.java)</a></p>
 	<img src="Program3.JPG" width="100%" height="100%"></img> <p></p> <br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Interfaces -->
 	<h2><strong>VI. <u>Interfaces</u></strong></h2>
-	
-<!-- Interfaces -->	
-	<p> <strong><h3><u>Interfaces</u></h3></strong> </p>	
+
+<!-- Interfaces -->
+	<p> <strong><h3><u>Interfaces</u></h3></strong> </p>
 	<p> An <b><font color="crimson"><span title="a completely abstract class, that contains only abstract methods">interface</span></font></b> is a completely
 		<font color="crimson"><span title="If a class is declared abstract it cannot be instantiated, and you have to inherit from it. Any class that contains an abstract
 		method, should be defined as abstract">abstract class</span></font> that contains only abstract methods. <br />
@@ -695,40 +697,40 @@
 			<li>Interfaces can extend other interfaces.</li>
 			<li>A class can implement any number of interfaces.</li>
 		</ul> </p>
-		
-	<p> An example of a simple <font color="crimson"><span title="a completely abstract class, that contains only abstract methods">interface</span></font>: </p>	
-	
-	<!-- span.codeBlock & span.code-->	
+
+	<p> An example of a simple <font color="crimson"><span title="a completely abstract class, that contains only abstract methods">interface</span></font>: </p>
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				<b><u><span title="a completely abstract class, that contains only abstract methods">interface</span></u></b> Animal { <br />
 				&emsp; public <u><span title="indicates that a method does not return a value">void</span></u> eat(); <br />
 				&emsp; public <u><span title="indicates that a method does not return a value">void</span></u> makeSound(); <br />
 				}
-			</span> 
+			</span>
 		</span>
-	
-	<p> Interfaces have the following properties: 
+
+	<p> Interfaces have the following properties:
 		<ul>
 			<li>An <font color="crimson"><span title="a completely abstract class, that contains only abstract methods">interface</span></font> is implicitly abstract.
-				You do not need to use the abstract keyword while declaring an 
+				You do not need to use the abstract keyword while declaring an
 				<font color="crimson"><span title="a completely abstract class, that contains only abstract methods">interface</span></font>.</li>
-			<li>Each <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> 
+			<li>Each <font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>
 				in an <font color="crimson"><span title="a completely abstract class, that contains only abstract methods">interface</span></font> is also implicitly
 				abstract, so the abstract keyword is not needed.</li>
 			<li>Methods in an <font color="crimson"><span title="a completely abstract class, that contains only abstract methods">interface</span></font> are implicitly public.</li>
 		</ul> </p>
-	
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				A class can inherit from just <b>one</b> superclass, but can implement <b>multiple</b> interfaces!
 			</span>
 		</span>
-	
+
 	<p> Use the <b>implement</b> keyword to use an <font><span title="a completely abstract class, that contains only abstract methods">interface</span></font> with your class. </p>
-	
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				<u><span title="a completely abstract class, that contains only abstract methods">interface</span></u> Animal { <br />
@@ -743,120 +745,120 @@
 				&emsp;&emsp; System.out.println("omnomnom"); <br />
 				&emsp; } <br />
 				}
-			</span> 
+			</span>
 		</span> <br />
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				When you implement an <u><span title="a completely abstract class, that contains only abstract methods">interface</span></u>, you need to override all of its methods.
 			</span>
-		</span>	
-	
+		</span>
+
 	<p><b>Result:</b> <a href ="src/Animal3.java" target="_blank">(Animal3.java)</a> <a href ="src/Cat2.java" target="_blank">(Cat2.java)</a> <a href ="src/Program4.java" target="_blank">(Program4.java)</a></p>
 	<img src="Program4.JPG" width="100%" height="100%"></img> <p></p> <br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Casting -->
 	<h2><strong>VII. <u>Casting</u></strong></h2>
-	
-<!-- Type Casting -->	
+
+<!-- Type Casting -->
 	<p> <strong><h3><u>Type Casting</u></h3></strong> </p>
 	<p> Assigning a value of one type to a variable of another type is known as <b>Type Casting</b>. </p>
-	
+
 	<p> To cast a value to a specific type, place the type in parentheses and position it in front of the value. <br />
 		<b>Example:</b> </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				<u><span title="used to declare an integer variable">int</span></u> a = (<b><u><span title="used to declare an integer variable">int</span></u></b>) 3.14; <br />
 				System.out.println(a); <br />
 				// Outputs 3
-			</span> 
-		</span>	
-	
+			</span>
+		</span>
+
 	<p> The code above is casting the value 3.14 to an <font color="crimson"><span title="whole number">integer</span></font>, with 3 as the resulting value. <br />
 		<b>Another example:</b> </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				double a = 42.571; <br />
 				<u><span title="used to declare an integer variable">int</span></u> b = {<b><u><span title="used to declare an integer variable">int</span></u></b>} a; <br />
 				System.out.println(b); <br />
 				// Outputs 42
-			</span> 
+			</span>
 		</span>	<br />
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				Java supports automatic type casting of integers to floating points, since there is no loss of precision. <br />
 				On the other hand, type casting is mandatory when assigning floating point values to  <u><span title="whole number">integer</span></u> variables.
 			</span>
-		</span>	
-	
+		</span>
+
 	<p><b>Result:</b> <a href ="src/Program5.java" target="_blank">(Program5.java)</a></p>
 	<img src="Program5.JPG" width="100%" height="100%"></img> <p></p> <br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Downcasting -->
 	<h2><strong>VIII. <u>Downcasting</u></strong></h2>
-	
-<!-- Type Casting -->	
-	<p> <strong><h3><u>Type Casting</u></h3></strong> </p>	
+
+<!-- Type Casting -->
+	<p> <strong><h3><u>Type Casting</u></h3></strong> </p>
 	<p> For classes, there are two types of casting. </p>
-	
+
 	<p><b><font size="3">Upcasting</font></b><br />
 		You can cast an <font color="crimson"><span title="each object is called an instance of a class">instance</span></font> of a subclass to its superclass. <br />
-		Consider the following example, assuming that Cat is a subclass of Animal. </p> 
-	
-	<!-- span.codeBlock & span.code-->	
+		Consider the following example, assuming that Cat is a subclass of Animal. </p>
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
-				Animal a = new Cat(); 
-			</span> 
+				Animal a = new Cat();
+			</span>
 		</span>
-	
+
 	<p> Java automatically upcasted the Cat type variable to the Animal type. </p>
-	
+
 	<p><b><font size="3">Downcasting</font></b><br />
 		Casting an object of a superclass to its subclass is called <b>downcasting</b>. <br />
 		<b>Example:</b> </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				Animal a = new Cat(); <br />
 				(<b>(Cat)</b>a).makeSound();
-			</span> 
-		</span>	
-	
+			</span>
+		</span>
+
 	<p> This will try to cast the variable a to the <b>Cat</b> type and call its makeSound()
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>. </p>
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				Why is upcasting automatic, and downcasting manual? Well, upcasting can never fail. But if you have a group of different Animals and want to downcast them
 				all to a Cat, then there's a chance that some of these Animals are actually Dogs, so the process fails.
 			</span>
 		</span>	<br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Anonymous Classes -->
 	<h2><strong>IX. <u>Anonymous Classes</u></strong></h2>
-	
-<!-- Anonymous Classes -->	
-	<p> <strong><h3><u>Anonymous Classes</u></h3></strong> </p>	
+
+<!-- Anonymous Classes -->
+	<p> <strong><h3><u>Anonymous Classes</u></h3></strong> </p>
 	<p> <b>Anonymous classes</b> are a way to extend the existing classes on the fly. <br />
 		For example, consider having a class Machine: </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				class Machine { <br />
@@ -864,18 +866,18 @@
 				&emsp;&emsp; System.out.println("Starting..."); <br />
 				&emsp; } <br />
 				}
-			</span> 
-		</span>	
-	
-	<p> When creating the Machine object, we can change the start 
+			</span>
+		</span>
+
+	<p> When creating the Machine object, we can change the start
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> on the fly. </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
 					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
-				&emsp; Machine m = new Machine() { <br />	
+				&emsp; Machine m = new Machine() { <br />
 				&emsp;&emsp; @Override public <u><span title="indicates that a method does not return a value">void</span></u> start(); <br />
 				&emsp;&emsp;&emsp; System.out.println("Wooooo"); <br />
 				&emsp;&emsp; } <br />
@@ -883,26 +885,26 @@
 				&emsp; m.start(); <br />
 				} <br />
 				// Outputs "Wooooo";
-			</span> 
-		</span>	
-	
+			</span>
+		</span>
+
 	<p> After the <font color="crimson"><span title="special methods that are used to initialize objects, and are invoked at the time of object creation">constructor</span></font>
 		call, we have opened the curly braces and have overridden the <b>start</b>
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>'s
 		implementation on the fly. </p>
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				The <b>@Override</b> annotation is used to make your code easier to understand, because it makes it more obvious when methods are overridden.
 			</span>
-		</span>	
-	
+		</span>
+
 	<p> The modification is applicable only to the current object, and not the class itself. So if we create another object of the class, the start
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>'s
 		implementation will be the one defined in the class. </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				class Machine { <br />
@@ -912,7 +914,7 @@
 				} <br />
 				public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
 					<u><span title="indicates that a method does not return a value">void</span></u> main(<u><span title="a sequence of characters">String</span></u>[] args) { <br />
-				&emsp; Machine m = new Machine() { <br />	
+				&emsp; Machine m = new Machine() { <br />
 				&emsp;&emsp; @Override public <u><span title="indicates that a method does not return a value">void</span></u> start() { <br />
 				&emsp;&emsp;&emsp; System.out.println("Wooooo"); <br />
 				&emsp;&emsp; } <br />
@@ -921,25 +923,25 @@
 				&emsp; m2.start(); <br />
 				} <br />
 				// Outputs "Starting...";
-			</span> 
-		</span>	
-	
+			</span>
+		</span>
+
 	<p><b>Result:</b> <a href ="src/Machine.java" target="_blank">(Machine.java)</a> <a href ="src/Program6.java" target="_blank">(Program6.java)</a></p>
 	<img src="Program6.JPG" width="100%" height="100%"></img> <p></p> <br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Inner Classes -->
 	<h2><strong>X. <u>Inner Classes</u></strong></h2>
-	
-<!-- Inner Classes -->	
-	<p> <strong><h3><u>Inner Classes</u></h3></strong> </p>	
+
+<!-- Inner Classes -->
+	<p> <strong><h3><u>Inner Classes</u></h3></strong> </p>
 	<p> Java supports <b>nesting</b> classes; a class can be a member of another class. <br />
 		Creating an inner class is quite simple. Just write a class within a class. Unlike a class, an inner class can be private. Once you declare an inner class private,
 		it cannot be accessed from an object outside the class. <br />
 		<b>Example:</b> </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				class Robot { <br />
@@ -948,39 +950,39 @@
 				&emsp;&emsp; id = i; <br />
 				&emsp;&emsp; Brain b = new Brain(); <br />
 				&emsp;&emsp; b.think(); <br />
-				&emsp; } <br /><br />				
+				&emsp; } <br /><br />
 				&emsp; <b>private class Brain { <br />
 				&emsp;&emsp; public <u><span title="indicates that a method does not return a value">void</span></u> think() { <br />
 				&emsp;&emsp;&emsp; System.out.println(id + " is thinking"); <br />
 				&emsp;&emsp; } <br />
 				&emsp; }</b> <br />
-				} 
-			</span> 
+				}
+			</span>
 		</span>	<br />
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				The class <b>Robot</b> has an inner class <b>Brain</b>. The inner class can access all of the member variables and methods of its outer class, but it cannot
 				be accessed from any outside class.
 			</span>
-		</span>		
-	
+		</span>
+
 	<p><b>Result:</b> <a href ="src/Robot.java" target="_blank">(Robot.java)</a> <a href ="src/Program7.java" target="_blank">(Program7.java)</a></p>
 	<img src="Program7.JPG" width="100%" height="100%"></img> <p></p> <br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- The equals() method -->
 	<h2><strong>XI. <u>The equals() method</u></strong></h2>
-	
-<!-- Comparing Objects -->	
+
+<!-- Comparing Objects -->
 	<p> <strong><h3><u>Comparing Objects</u></h3></strong> </p>
 	<p> Remember that when you create objects, the variables store references to the objects. <br />
 		So, when you compare objects using the equality testing operator (<b>==</b>), it actually compares the references and not the object values. <br />
 		<b>Example:</b> </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				class Animal { <br />
@@ -997,21 +999,21 @@
 				&emsp;&emsp; System.out.println(<b>a1 == a2</b>); <br />
 				&emsp; } <br />
 				} <br />
-				// Outputs <b>false</b> 
-			</span> 
+				// Outputs <b>false</b>
+			</span>
 		</span>	<br />
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
-				Despite having two objects with the same name, the equality testing returns false, because we have two different objects 
+				Despite having two objects with the same name, the equality testing returns false, because we have two different objects
 				(two different references or memory locations).
 			</span>
-		</span>	
-	
-<!-- equals() -->	
-	<p> <strong><h3><u>equals()</u></h3></strong> </p>	
-	<p> Each object has a predefined <b>equals</b> 
+		</span>
+
+<!-- equals() -->
+	<p> <strong><h3><u>equals()</u></h3></strong> </p>
+	<p> Each object has a predefined <b>equals</b>
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> that
 		is used for semantical equality testing. <br />
 		But, to make it work for our classes, we need to override it and check the conditions we need. <br />
@@ -1020,10 +1022,10 @@
 		than writing it manually. <br />
 		Just right click in you class, go to <b>Source &rarr; Generate hashCode() and equals()...</b> </p>
 	<img src="https://api.sololearn.com/DownloadFile?id=2439">
-		
+
 	<p> This will automatically create the necessary methods. </p>
 
-	<!-- span.codeBlock & span.code-->	
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				class Animal { <br />
@@ -1055,16 +1057,16 @@
 				&emsp;&emsp; return true; <br />
 				&emsp; } <br />
 				}
-			</span> 
-		</span>	
-		
-	<p> The automatically generated hashCode() 
+			</span>
+		</span>
+
+	<p> The automatically generated hashCode()
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> is used
 		to determine where to store the object internally. Whenever you implement <b>equals</b>, you MUST also implement <b>hashCode</b>. <br />
 		We can run the test again, using the <b>equals</b>
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font>: </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				public <u><span title="static variables and methods belong to the class instead of a specific instance">static</span></u>
@@ -1073,61 +1075,61 @@
 				&emsp; Animal a2 = new Animal("Robby"); <br />
 				&emsp; System.out.println(a1.equals(a2)); <br />
 				} <br />
-				// Outputs <b>true</b> 
-			</span> 
+				// Outputs <b>true</b>
+			</span>
 		</span>	<br />
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				You can use the same menu to generate other useful methods, such as <b>getters</b> and <b>setters</b> for your class attributes.
 			</span>
-		</span>	
-	
+		</span>
+
 	<p><b>Result:</b> <a href ="src/Animal4.java" target="_blank">(Animal4.java)</a> <a href ="src/Program8.java" target="_blank">(Program8.java)</a></p>
 	<img src="Program8.JPG" width="100%" height="100%"></img> <p></p> <br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Enums -->
 	<h2><strong>XII. <u>Enums</u></strong></h2>
-	
-<!-- Enums -->	
-	<p> <strong><h3><u>Enums</u></h3></strong> </p>	
+
+<!-- Enums -->
+	<p> <strong><h3><u>Enums</u></h3></strong> </p>
 	<p> An Enum is a special type used to define collections of constants. <br />
 		Here is a simple Enum example: </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				<b><u><span title="a collection of constants">enum</span></u></b> Rank { <br />
 				&emsp; SOLDIER, <br />
 				&emsp; SERGEANT, <br />
 				&emsp; CAPTAIN <br />
-				} 
-			</span> 
-		</span>	
-	
+				}
+			</span>
+		</span>
+
 	<p> Note that the values are <b>comma-separated</b>. <br />
 		You can refer to the constants in the <font color="crimson"><span title="a collection of constants">enum</span></font> above with the <b>dot</b> syntax. </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
-				 Rank a = Rank.<b>SOLDIER</b>; 
-			</span> 
+				 Rank a = Rank.<b>SOLDIER</b>;
+			</span>
 		</span>	<br />
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				Basically, Enums define variables that represent members of a fixed set.
 			</span>
-		</span>	
-	
+		</span>
+
 	<p> After declaring an Enum, we can check for the corresponding values with, for example, a <b>switch</b> statement. </p>
-	
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
 				Rank a = Rank.SOLDIER; <br /><br />
@@ -1142,65 +1144,65 @@
 				&emsp;&emsp; System.out.println("Captain says Welcome!"); <br />
 				&emsp;&emsp; break; <br />
 				} <br />
-				// Outputs "Soldier says hi!"	
-			</span> 
+				// Outputs "Soldier says hi!"
+			</span>
 		</span>
-	
+
 	<p> You should always use Enums when a variable (especially a
 		<font color="crimson"><span title="a collection of statements that are grouped together to perform an operation (also called a function)">method</span></font> parameter)
 		can only take one out of a small set of possible values. <br />
 		If you use Enums instead of integers (or <font color="crimson"><span title="a sequence of characters">String</span></font> codes), you increase compile-time checking and
 		avoid errors from passing in invalid constants, and you document which values are legal to use. </p>
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				Some sample Enum uses include month names, days of the week, deck of cards, etc.
 			</span>
-		</span>	
-	
+		</span>
+
 	<p><b>Result:</b> <a href ="src/Program9.java" target="_blank">(Program9.java)</a></p>
 	<img src="Program9.JPG" width="100%" height="100%"></img> <p></p> <br />
-	
-<!-- **************************************************************************************************************** -->	
-	
+
+<!-- **************************************************************************************************************** -->
+
 <!-- Using the Java API -->
 	<h2><strong>XIII. <u>Using the Java API</u></strong></h2>
-	
-<!-- Java API -->	
-	<p> <strong><h3><u>Java API</u></h3></strong> </p>	
+
+<!-- Java API -->
+	<p> <strong><h3><u>Java API</u></h3></strong> </p>
 	<p> The Java <font color="crimson"><span title="Application Program Interface">API</span></font> is a collection of classes and interfaces that have been written for you to use. <br />
 		The Java <font color="crimson"><span title="Application Program Interface">API</span></font> Documentation with all of the available APIs can be located on the Oracle
 		website at <b><a href="http://docs.oracle.com/javase/7/docs/api/" target="_blank">http://docs.oracle.com/javase/7/docs/api/</a></b> <br /><br />
 		Once you locate the <font color="crimson"><span title="a group of similar types of classes">package</span></font> you want to use, you need to import it into your code. <br />
 		The <font color="crimson"><span title="a group of similar types of classes">package</span></font> can be imported using the import keyword. <br />
 		<b>For example:</b> </p>
-		
-	<!-- span.codeBlock & span.code-->	
+
+	<!-- span.codeBlock & span.code-->
 		<span class="codeBlock">
 			<span class="code">
-				 import java.awt.*; 
-			</span> 
-		</span>	
-	
+				 import java.awt.*;
+			</span>
+		</span>
+
 	<p> The <b>awt</b> <font color="crimson"><span title="a group of similar types of classes">package</span></font> contains all of the classes for creating user interfaces
 		and for painting graphics and images. </p>
-		
-	<!-- span.noteBlock & span.note-->	
+
+	<!-- span.noteBlock & span.note-->
 		<span class="noteBlock">
 			<span class="note">
 				The wildcard character (<b>*</b>) is used to import all of the classes in the <u><span title="a group of similar types of classes">package</span></u>.
 			</span>
-		</span>	<br />	
-	
-<!-- ******************************************************** Helpful Tips from the Comments ******************************************************** -->	
-	
+		</span>	<br />
+
+<!-- ******************************************************** Helpful Tips from the Comments ******************************************************** -->
+
 	<button class="accordion1">
 	<p align="center"><font color="#FFF"><b>****************************** Helpful Tips from the Comments ******************************</b></font></p>
 	</button>
-	
+
 	<div class="panel">
-	<!-- Object-Oriented Programming -->	
+	<!-- Object-Oriented Programming -->
 	<p>	<strong><h3>Object-Oriented Programming</h3></strong> </p>
 
 
@@ -1227,20 +1229,20 @@
 			}
 		});
 	}
-	</script>	
-	
-<!-- ********************************************* FOOTER ********************************************* -->  
-  
+	</script>
+
+<!-- ********************************************* FOOTER ********************************************* -->
+
 <!-- Scroll to Top Button  -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" >var scrolltotop={setting:{startline:100,scrollto:0,scrollduration:1e3,fadeduration:[500,100]},controlHTML:'<img src="https://i1155.photobucket.com/albums/p559/scrolltotop/arrow40.png" />',controlattrs:{offsetx:5,offsety:5},anchorkeyword:"#top",state:{isvisible:!1,shouldvisible:!1},scrollup:function(){this.cssfixedsupport||this.$control.css({opacity:0});var t=isNaN(this.setting.scrollto)?this.setting.scrollto:parseInt(this.setting.scrollto);t="string"==typeof t&&1==jQuery("#"+t).length?jQuery("#"+t).offset().top:0,this.$body.animate({scrollTop:t},this.setting.scrollduration)},keepfixed:function(){var t=jQuery(window),o=t.scrollLeft()+t.width()-this.$control.width()-this.controlattrs.offsetx,s=t.scrollTop()+t.height()-this.$control.height()-this.controlattrs.offsety;this.$control.css({left:o+"px",top:s+"px"})},togglecontrol:function(){var t=jQuery(window).scrollTop();this.cssfixedsupport||this.keepfixed(),this.state.shouldvisible=t>=this.setting.startline?!0:!1,this.state.shouldvisible&&!this.state.isvisible?(this.$control.stop().animate({opacity:1},this.setting.fadeduration[0]),this.state.isvisible=!0):0==this.state.shouldvisible&&this.state.isvisible&&(this.$control.stop().animate({opacity:0},this.setting.fadeduration[1]),this.state.isvisible=!1)},init:function(){jQuery(document).ready(function(t){var o=scrolltotop,s=document.all;o.cssfixedsupport=!s||s&&"CSS1Compat"==document.compatMode&&window.XMLHttpRequest,o.$body=t(window.opera?"CSS1Compat"==document.compatMode?"html":"body":"html,body"),o.$control=t('<div id="topcontrol">'+o.controlHTML+"</div>").css({position:o.cssfixedsupport?"fixed":"absolute",bottom:o.controlattrs.offsety,right:o.controlattrs.offsetx,opacity:0,cursor:"pointer"}).attr({title:"Scroll to Top"}).click(function(){return o.scrollup(),!1}).appendTo("body"),document.all&&!window.XMLHttpRequest&&""!=o.$control.text()&&o.$control.css({width:o.$control.width()}),o.togglecontrol(),t('a[href="'+o.anchorkeyword+'"]').click(function(){return o.scrollup(),!1}),t(window).bind("scroll resize",function(t){o.togglecontrol()})})}};scrolltotop.init();</script>
 	<noscript>Not seeing a <a href="https://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
 <!-- End Scroll to Top -->
-	
+
 	<br /> <br /> <br /> <br /> <br />
 	<div class="copyright">
             &copy; 2019 Jetchan204. All rights reserved.
     </div>
-	
+
   </body>
- </html>	
+ </html>
