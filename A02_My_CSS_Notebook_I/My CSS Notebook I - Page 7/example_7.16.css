@@ -1,0 +1,21 @@
+div {
+    animation-name: colorchange;   
+    animation-duration: 5s;
+	animation-timing-function: linear;
+    height: 100px;
+	width: 0px;
+    background-color:red;
+	/*animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards; *//* fill the element until you established */
+    -webkit-animation-name: colorchange; 
+	-webkit-animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+}
+@keyframes colorchange {
+    from { width: 0px; }
+    to { width: 100px; }
+}
+@-webkit-keyframes colorchange {
+    from { width: 0px; }
+    to { width: 100px; }
+}

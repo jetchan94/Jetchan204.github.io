@@ -1,0 +1,6 @@
+p.position_static {
+   position:static;
+   top: 30px;
+   right: 5px;
+   color: red;
+}

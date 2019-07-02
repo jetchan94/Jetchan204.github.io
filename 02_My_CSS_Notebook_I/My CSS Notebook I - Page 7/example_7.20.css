@@ -1,8 +1,0 @@
-#mybox1 {
-    transform: translateX(29px) translateY(5em) translateZ(-13px);
-    -webkit-transform: translateX(29px) translateY(5em) translateZ(-13px);
-    width:250px;
-    height:100px;
-    color:white;
-    background-color:green;
-}

@@ -1,5 +1,0 @@
-var x = 10;
-var y = x + 5 + 22 + 45 + 6548;
-document.write(y);
-
-//Outputs 6630

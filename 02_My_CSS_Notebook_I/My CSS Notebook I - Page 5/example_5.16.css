@@ -1,8 +1,0 @@
-p::-moz-selection {
-	background: #8bc34a;	/* Moderate green */
-	color: #fff;	/* White */
-}
-p::selection {
-	background: #8bc34a;	/* Moderate green */
-	color: #fff;	/* White */
-}

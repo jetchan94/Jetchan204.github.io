@@ -1,0 +1,4 @@
+#parent p:first-child {
+	color: green;
+	text-decoration: underline;
+}

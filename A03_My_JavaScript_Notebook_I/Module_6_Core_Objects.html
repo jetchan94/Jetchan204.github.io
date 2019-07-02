@@ -1,0 +1,560 @@
+<!DOCTYPE html>	<!-- enable standards mode for documents written using the HTML syntax -->
+ <html>
+  <head>
+   <title> My JavaScript Notebook I </title>
+   <p align="center"><strong><font size="7"> 
+	   <a href="../index.html">My JavaScript Notebook I</a>
+   </font></strong>
+<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->  
+   <style>	
+	body {		
+		background-color: gray;	<!-- Website will have gray background -->
+		}
+
+	h1 {
+		color: darkblue;	
+		text-align: center;	<!-- All h1 text will have dark blue, centered font -->
+		}
+		
+	h2 {
+		color: darkgreen;	<!-- All h2 text will have dark green font -->
+		}
+
+	h3 {
+		color: tan;	<!-- All h2 text will have tan font -->
+		}		
+
+	p {
+		font-family: arial;
+		font-size: 14px;	<!-- All p text will be 14px arial text -->
+		}
+   </style>
+  </head>
+  <body>
+
+<!-- ************************************************************************ PAGE 6 ************************************************************************ -->	
+  
+	
+	<p align="center">***** On Monday, 9/10/18, I started 
+		learning the fundamentals of JavaScript on 
+		<a href= "http://www.sololearn.com"target="_blank"> 
+		sololearn.com</a>. *****</p>
+	<p	align="center">***** On Saturday, 1/12/19, I completed the JavaScript Tutorial course and was issued the 
+		<a href= "https://www.sololearn.com/Certificate/1024-10607947/pdf/" target="_blank">certificate</a>. *****</p>	
+	<p align="center"> TAKE NOTE THAT THIS IS NOT A .JS FILE BECAUSE IT WILL BE A 
+		PLAIN TEXT FILE. INSTEAD, JAVASCRIPT WILL BE IMPLEMENTED INTO A .HTML FILE. 
+		THIS CAN BE DONE VIA INTERNAL JAVASCRIPT OR EXTERNAL JAVASCRIPT.</p> <br />
+	
+<!-- ***** Module 6 Materials ***** -->
+	<h1><u> Module 6: Core Objects </u></h1>
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Arrays -->
+	<h2><strong><font size="h2">I.</font> <u>Arrays</u></strong></h2>
+<!-- JavaScript Arrays -->	
+	<p> <strong><h3><u>JavaScript Arrays</u></h3></strong> </p>
+	<p> <b>Arrays</b> store multiple values in a single 
+		<font color="blue">variable</font>. </p>
+	<p> To store three course names, you need three variables. </p>
+	<p><b>Syntax:</b></p>
+	<p> var course1 = "HTML"; <br />
+		var course2 = "CSS"; <br />
+		var course3 = "JS"; </p>
+	<p> But what if you had 500 courses? The solution is an
+		<b><font color="blue">array</font></b>. </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> courses = <b>new Array</b>&lpar;"HTML", "CSS", "JS"&rpar;; </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		This syntax declares an <u>array</u> named <b>courses</b>, which stores
+		three values, or elements.
+	</div>	
+	
+<!-- Accessing an Array -->	
+	<p> <strong><h3><u>Accessing an Array</u></h3></strong> </p>
+	<p> You refer to an <font color="blue">array</font>	element by referring to the
+		<b>index number</b> written in <b>square brackets</b>. <br />
+		This statement accesses the value of the first element in <b>courses</b>
+		and changes the value of the second element. </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> courses = new Array&lpar;"HTML", "CSS", "JS"&rpar;; <br />	
+		<u>var</u> course = courses<b>[0]</b>; // HTML <br />
+		courses<b>[1]</b> = "C++"; // Changes the second element </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		[0] is the first element in an <u>array</u>. [1] is the second.
+		Array indexes start with <b>0</b>.
+	</div>	
+	
+	<p> Attempting to access an index outside of the <font color="blue">array</font>,
+		returns the value <b><font color="blue">undefined</font></b>. </p>
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> courses = new Array&lpar;"HTML", "CSS", "JS"&rpar;; <br />
+		document.write&lpar;courses[10]&rpar;; <br />
+		// Outputs "<b><u>undefined</u></b>" </p>
+
+<!-- ********** Example 6.1: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_1.js"></script>
+<!-- ********** End Example 6.1 JS File ********** -->
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example1()">CLICK HERE FOR RESULT OF EXAMPLE 6.1!</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>	
+	<div style="background-color:gold; width:600px; padding:1px">
+		Our <b>courses</b> <u>array</u> has 3 elements, so the 10th index, 
+		which is the 11th element, does not exist &lpar;is <u>undefined</u>&rpar;.
+	</div> <br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Other Ways to Create Arrays -->
+	<h2><strong><font size="h2">II.</font> <u>Other Ways to Create Arrays</u></strong></h2>
+<!-- Creating Arrays -->	
+	<p> <strong><h3><u>Creating Arrays</u></h3></strong> </p>
+	<p>	You can also declare an <font color="blue">array</font>, tell it the number of 
+		elements it will store, and add the elements later. </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> courses = new Array&lpar;<b>3</b>&rpar;; <br />
+		courses[0] = "HTML"; <br />
+		courses[1] = "CSS"; <br />
+		courses[2] = "JS"; </p>
+		
+<!-- ********** Example 6.2: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_2.js"></script>
+<!-- ********** End Example 6.2 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example2()">CLICK HERE FOR RESULT OF EXAMPLE 6.2!</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>		
+	<div style="background-color:gold; width:620px; padding:1px">
+		An <u>array</u> is a special type of <b><u>object</u></b>. <br />
+		An <u>array</u> uses <b>numbers</b> to access its elements, and an
+			<u>object</u> uses <b>names</b> to access its members.	
+	</div>
+	
+	<p> JavaScript arrays are dynamic, so you can declare an <font color="blue">array</font>
+		and not pass any arguments with the Array&lpar;&rpar; 
+		<font color="blue">constructor</font>. You can then add the elements dynamically. </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> courses = new Array<b>&lpar;&rpar;</b>; <br />
+		courses[0] = "HTML"; <br />
+		courses[1] = "CSS"; <br />
+		courses[2] = "JS"; <br />
+		courses[3] = "C++"; </p>
+		
+<!-- ********** Example 6.3: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_3.js"></script>
+<!-- ********** End Example 6.3 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example3()">CLICK HERE FOR RESULT OF EXAMPLE 6.3!</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		You can add as many elements as you need to.
+	</div>
+<!-- Array Literal -->	
+	<p> <strong><h3><u>Array Literal</u></h3></strong> </p>
+	<p> For	greater simplicity, readability, and execution speed, you can also declare
+		arrays using the <b><font color="blue">array</font> literal</b> syntax. </p>
+	<p><b>Syntax:</b></p>	
+	<p> <u>var</u> courses = ["HTML", "CSS", "JS"]; </p>
+	
+<!-- ********** Example 6.4: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_4.js"></script>
+<!-- ********** End Example 6.4 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example4()">CLICK HERE FOR RESULT OF EXAMPLE 6.4!</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>
+	<p> This results is the same <font color="blue">array</font> as the one created
+		with the <b>new Array&lpar;&rpar;</b> syntax. </p>
+	<div style="background-color:gold; width:620px; padding:1px">	
+		You can access and modify the elements of the <u>array</u> using the index number,
+		as you did before. <br />
+		The <b><u>array</u> literal</b> syntax is the recommended way to declare arrays.
+	</div> <br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Array Properties & Methods -->
+	<h2><strong><font size="h2">III.</font> <u>Array Properties & Methods</u></strong></h2>
+<!-- The length Property -->	
+	<p> <strong><h3><u>The length Property</u></h3></strong> </p>
+	<p> JavaScript arrays have useful <b>built-in</b> properties and methods. </p>
+	<p> An <font color="blue">array</font>'s <b>length</b> property returns the 
+		number of its elements. </p> 
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> courses = ["HTML", "CSS", "JS"]; <br />
+		document.write&lpar;<b>courses.length</b>&rpar;; <br />
+		// Outputs 3 </p>
+
+<!-- ********** Example 6.5: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_5.js"></script>
+<!-- ********** End Example 6.5 JS File ********** -->
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example5()">CLICK HERE FOR RESULT OF EXAMPLE 6.5!</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>	
+	<div style="background-color:gold; width:600px; padding:1px">
+		The <b>length</b> property is always one more than the highest <u>array</u> index. <br />
+		If the <u>array</u> is empty, the length property returns <b>0</b>.
+	</div>	
+	
+<!-- Combining Arrays -->	
+	<p> <strong><h3><u>Combining Arrays</u></h3></strong> </p>
+	<p> JavaScript's <b>concat&lpar;&rpar;</b> <font color="blue">method</font> allows you to
+		join arrays and create an entirely new <font color="blue">array</font>. </p>
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> c1 = ["HTML", "CSS"]; <br />
+		<u>var</u> c2 = ["JS", "C++"]; <br />
+		<u>var</u> <b>courses</b> = <b>c1.concat&lpar;c2&rpar;</b>; </p>
+
+<!-- ********** Example 6.6: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_6.js"></script>
+<!-- ********** End Example 6.6 JS File ********** -->
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example6()">CLICK HERE FOR RESULT OF EXAMPLE 6.6!</button> 
+	&ensp;<font size="6">&larr;</font>	
+	<p> The <b>courses</b> <font color="blue">array</font> that results contains
+		4 elements &lpar;HTML, CSS, JS, C++&rpar;. </p>	
+	<div style="background-color:gold; width:600px; padding:1px">	
+		The <b>concat</b> operation does not affect the <i>c1</i> and <i>c2</i> arrays - 
+		it returns the resulting concatenation as a new <u>array</u>.
+	</div> <br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Associative Arrays -->
+	<h2><strong><font size="h2">IV.</font> <u>Associative Arrays</u></strong></h2>
+<!-- Associative Arrays -->	
+	<p> <strong><h3><u>Associative Arrays</u></h3></strong> </p>
+	<p> While many programming languages support arrays with named indexes
+		&lpar;text instead of numbers&rpar;, called <b>associative arrays</b>, 
+		JavaScript <b>does not</b>. <br />
+		However, you still can use the named <font color="blue">array</font> syntax,
+		which will produce an <font color="blue">object</font>. <br />
+		<b>For example</b>: </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> person = []; //empty <u>array</u> <br />
+		person["name"] = "John"; <br />
+		person["age"] = 46; <br />
+		document.write&lpar;person["age"]&rpar;; <br />
+		//Outputs "46" </p>
+
+<!-- ********** Example 6.7: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_7.js"></script>
+<!-- ********** End Example 6.7 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example7()">CLICK HERE FOR RESULT OF EXAMPLE 6.7!</button> 
+	&ensp;<font size="6">&larr;</font>	
+	<p> Now, person is treated as an <font color="blue">object</font>, instead of being an
+		<font color="blue">array</font>. <br />
+		The name indexes "name" and "age" become properties of the person
+		<font color="blue">object</font>. </p> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">	
+		As the person <u>array</u> is treated as an <u>object</u>, the standard <u>array</u>
+		methods and properties will produce incorrect results. For example,
+		<b>person.length</b> will return 0.
+	</div>
+	
+	<p> Remember that JavaScript <b>does not</b> support arrays with named indexes. <br />
+		In JavaScript, arrays always use numbered indexes <br />
+		It is better to use an <b><font color="blue">object</font></b> when you want the
+		index to be a <b><font color="blue">string</font></b> &lpar;text&rpar;. <br />
+		Use an <b><font color="blue">array</font></b> when you want the 
+		index to be a <b>number</b>. </p> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">	
+		If you use a named index, JavaScript will redefine the <u>array</u>
+		to a standard object.
+	</div>	<br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- The Math Object -->
+	<h2><strong><font size="h2">V.</font> <u>The Math Object</u></strong></h2>
+<!-- The Math Object -->	
+	<p> <strong><h3><u>The Math Object</u></h3></strong> </p>
+	<p> The <font color="blue">Math object</font> allows you to perform mathematical
+		tasks, and includes several properties. </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2767" alt="">
+	<p><b>For example</b>:</p>
+	<p><b>Syntax:</b></p>
+	<p> document.write&lpar;<b><u>Math</u>.PI</b>&rpar;; <br />
+		//Outputs 3.141592653589793 </p>
+		
+<!-- ********** Example 6.8: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_8.js"></script>
+<!-- ********** End Example 6.8 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example8()">CLICK HERE FOR RESULT OF EXAMPLE 6.8!</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>	
+	<div style="background-color:gold; width:600px; padding:1px">	
+		<u>Math</u> has no <u>constructor</u>. There's no need to create a
+		<u>Math object</u> first.
+	</div>
+	
+<!-- Math Object Methods -->	
+	<p> <strong><h3><u>Math Object Methods</u></h3></strong> </p>	
+	<p> The <font color="blue">Math object</font> contains a number of methods
+		that are used for calculations: </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2769" alt="">
+	<p> For example, the following will calculate the <b>square root</b> of a number. </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> number = <u>Math</u>.<b>sqrt</b>&lpar;4&rpar;; <br />
+		document.write&lpar;number&rpar;; <br />
+		//Outputs 2 </p> 
+		
+<!-- ********** Example 6.9: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_9.js"></script>
+<!-- ********** End Example 6.9 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example9()">CLICK HERE FOR RESULT OF EXAMPLE 6.9!</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>	
+	<div style="background-color:gold; width:600px; padding:1px">	
+		To get a random number between 1 - 10, use <u>Math</u>.random&lpar;&rpar;,
+		which gives you a number between 0 - 1. Then multiply the number by 10, 
+		and then take <u>Math</u>.ceil&lpar;&rpar; from it: 
+		<u>Math</u>.ceil&lpar;<u>Math</u>.random&lpar;&rpar; * 10&rpar;.		
+	</div>
+	
+<!-- The Math Object -->	
+	<p> <strong><h3><u>The Math Object</u></h3></strong> </p>
+	<p> Let's create a program that will ask the user to input a number 
+		and alert its square root. </p>
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> n = prompt&lpar;"Enter a number",""&rpar;; <br />
+		<u>var</u> answer = <u>Math</u>.sqrt&lpar;n&rpar;; <br />
+		alert&lpar;"The square root of " + n + " is " + answer </p>
+
+<!-- ********** Example 6.10: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_10.js"></script>
+<!-- ********** End Example 6.10 JS File ********** -->
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example10()">CLICK HERE FOR RESULT OF EXAMPLE 6.10!</button> 
+	&ensp;<font size="6">&larr;</font>
+	<p><b>Result:</b></p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2770" alt=""> 
+	<p> Enter a number, such as 64. </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2771" alt=""> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">	 
+		<u>Math</u> is a handy <u>object</u>. You can save a lot of time using
+		<u>Math</u>, instead of writing your own functions every time.		
+	</div> <br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- The Date Object -->
+	<h2><strong><font size="h2">VI.</font> <u>The Date Object</u></strong></h2>
+<!-- setInterval -->	
+	<p> <strong><h3><u>setInterval</u></h3></strong> </p>	
+	<p> The <b><font color="blue">setInterval</font>&lpar;&rpar;</b>
+		<font color="blue">method</font> calls a function or evaluates an expression
+		at specified intervals &lpar;in milliseconds&rpar;. <br />
+		It will continue calling the function until <b>clearInterval&lpar;&rpar;</b>
+		is called or the window is closed. </p>
+	<p><b>For example:</b></p>
+	<p><b>Syntax:</b></p>
+	<p>	function myAlert&lpar;&rpar; { <br />
+	&emsp; alert&lpar;"Hi"&rpar;; <br />
+		} <br />
+	<b><u>setInterval</u>&lpar;myAlert, 3000&rpar;;</b> </p>	
+	
+<!-- ********** Example 6.11: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_11.js"></script>
+<!-- ********** End Example 6.11 JS File ********** -->
+
+<!-- ********** Example 6.11.1: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Stop_Alert.js"></script>
+<!-- ********** End Example 6.11.1 JS File ********** -->
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example11()">CLICK HERE FOR RESULT OF EXAMPLE 6.11! 
+		<br /> (BEWARE!! It will run forever.)</button> 
+	&ensp;<font size="6">&larr;</font>
+	&ensp;
+	<button onclick="Example11_1()">Stop Alert!</button>
+	<p> This will call the myAlert function every 3 seconds 
+		&lpar;1000 ms = 1 second&rpar;. </p> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">	 
+		Write the <b>name</b> of the function without parentheses when passing it into
+		the <u><b>setInterval</b> method</u>.	
+	</div>
+	
+<!-- The Date Object -->	
+	<p> <strong><h3><u>The Date Object</u></h3></strong> </p>
+	<p> The <font color="blue"><b>Date</b> object</font> enables us to work with dates. <br />
+		A date consists of:
+		<ol>
+			<li>a year</li>
+			<li>a month</li>
+			<li>a day</li>
+			<li>an hour</li>
+			<li>a minute</li>
+			<li>a second</li>
+			<li>milliseconds</li>
+		</ol> </p>
+	<p>	Using <b>new <font color="blue">Date</font>&lpar;&rpar;</b>, create a new date 
+		<font color="blue">object</font> with the <b>current date and time</b>. </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> d = new <u>Date</u>&lpar;&rpar;; <br />
+		// d stores the current date and time </p>
+	<p> The other ways to initialize dates allow for the creation of new date objects
+		from the <b>specified date and time</b>. </p>
+	<p><b>Syntax:</b></p>
+	<p> new <u>Date</u>&lpar;milliseconds&rpar; <br />	
+		new <u>Date</u>&lpar;dateString&rpar; <br />
+		new <u>Date</u>&lpar;year, month, day, hours, minutes, seconds, milliseconds&rpar; </p> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">	 
+		JavaScript dates are calculated in milliseconds from 01 January, 1970 00:00:00 <br />
+		Universal Time &lpar;UTC&rpar;. One day contains 86,400,400 milliseconds.	
+	</div>	
+	<p><b>For example</b></p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> //Thu Jan 01 1970 19:00:00 <br /> 
+		<u>var</u> d1 = new <u>Date</u>&lpar;86400000&rpar;; </p>
+	<p> //Fri Jan 02 2015 10:42:00 <br /> 
+		<u>var</u> d2 = new <u>Date</u>&lpar;"January 2, 2015 10:42:00"&rpar;; </p>
+	<p> //Sat Jun 11 1988 11:42:00 <br /> 
+		<u>var</u> d3 = new <u>Date</u>&lpar;88,5,11,11,42,0,0&rpar;; </p>		
+
+<!-- ********** Example 6.12: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_12.js"></script>
+<!-- ********** End Example 6.12 JS File ********** -->
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example12()">CLICK HERE FOR RESULT OF EXAMPLE 6.12!</button> 
+	&ensp;<font size="6">&larr;</font> <p></p>	
+	<div style="background-color:gold; width:600px; padding:1px">	 
+		JavaScript counts months from 0 to 11. January is 0, and December is 11. <br />
+		<u>Date</u> objects are static, rather than dynamic. The computer time is ticking,
+		but date objects don't change, once created.
+	</div>
+
+<!-- Date Methods -->	
+	<p> <strong><h3><u>Date Methods</u></h3></strong> </p>	
+	<p> When a <font color="blue">Date object</font> is created, a number of <b>methods</b>
+		make it possible to perform operations on it. </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2772" alt="">
+	<p><b>For example:</b></p>
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> d = new <u>Date</u>&lpar;&rpar; <br />
+		<u>var</u> hours = d.<b>getHours&lpar;&rpar;</b> <br />
+		// hours is equal to the current hour </p>
+		
+<!-- ********** Example 6.13: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_13.js"></script>
+<!-- ********** End Example 6.13 JS File ********** -->
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example13()">CLICK HERE FOR RESULT OF EXAMPLE 6.13!</button> 
+	&ensp;<font size="6">&larr;</font>
+	<p> Let's create a program that prints the current time to the browser once
+		every second. </p>
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> function printTime&lpar;&rpar; { <br /> 
+	&emsp; <u>var</u> d = new <u>Date</u>&lpar;&rpar;; <br />
+	&emsp; <u>var</u> hours = d.<b>getHours&lpar;&rpar;</b>; <br />
+	&emsp; <u>var</u> mins = d.<b>getMinutes&lpar;&rpar;</b>; <br />
+	&emsp; <u>var</u> secs = d.<b>getSeconds&lpar;&rpar;</b>; <br />
+	&emps; document.body.<u>innerHTML</u> = hours+":"+mins+":"+secs; <br />
+		} <br />
+	<u>setInterval</u>&lpar;printTime, 1000&rpar;; </p>		
+
+<!-- ********** Example 6.14: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 6/Example6_14.js"></script>
+<!-- ********** End Example 6.14 JS File ********** -->
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example14()">CLICK HERE FOR RESULT OF EXAMPLE 6.14!</button> 
+	&ensp;<font size="6">&larr;</font>		
+	<p> We declared a function <b>printTime&lpar;&rpar;</b>, which gets the current time
+		from the date <font color="blue">object</font>, and prints it to the screen. <br />
+		We then called the function once every second, using the 
+		<font color="blue"><b>setInterval</b> method</font>. </p>
+	<div style="background-color:gold; width:600px; padding:1px">	 
+		The <b><u>innerHTML</u></b> property sets or returns the HTML content of an element. <br />
+		In our case, we are changing the HTML content of our document's body. This overwrites
+		the content every second, instead of printing it repeatedly to the screen.
+	</div>	<br />
+		
+<!-- ****************************** FOOTER ****************************** -->	
+	
+	<p></p><br />
+<!-- Pages start -->
+		<p align="center">
+		
+	<!-- Go to top -->	
+		<a href="#top">Go to top</a> <br />
+	
+	<!-- Previous Page -->	
+		<a href="Module_5_Objects.html"
+			class="previous">&laquo Previous</a>
+	
+	<!-- Page 1 -->	
+		<a href="Module_1_Introduction_to_JavaScript.html" 
+			target="_self">1</a>
+	
+	<!-- Page 2 -->	
+		<a href="Module_2_Basic_Concepts.html" 
+			target="_self">2</a>
+	
+	<!-- Page 3 -->	
+		<a href="Module_3_Conditionals_and_Loops.html" 
+			target="_self">3</a>
+	
+	<!-- Page 4 -->	
+		<a href="Module_4_Functions.html" 
+			target="_self">4</a>
+	
+	<!-- Page 5 -->	
+		<a href="Module_5_Objects.html" 
+			target="_self">5</a>
+	
+	<!-- Page 6 -->	
+		<a href="#" 
+			target="_self">6</a>
+	
+	<!-- Page 7 -->	
+		<a href="Module_7_DOM_&_Events.html" 
+			target="_self">7</a>
+
+	<!-- Page 8 -->	
+		<a href="Module_8_ECMAScript6.html" 
+			target="_self">8</a>
+	
+	
+	<!-- Next Page -->	
+		<a href="Module_7_DOM_&_Events.html"	
+			class="next">Next &raquo;</a>
+<!-- Pages end -->
+        
+<!-- Footer -->
+        <div class="copyright">
+            &copy; 2018 My JavaScript Notebook I. All rights reserved.
+        </div>
+	
+  </body>
+ </html>	

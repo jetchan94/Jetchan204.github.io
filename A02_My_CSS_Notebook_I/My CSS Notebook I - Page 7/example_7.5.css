@@ -1,0 +1,16 @@
+div.positive {
+    width: 200px;
+    height: 100px;
+    margin-top: 30px;
+    background-color: #32CD32;
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+}
+div.negative {
+    width: 200px;
+    height: 100px;
+    margin-top: 30px;
+    background-color: #32CD32;
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+}

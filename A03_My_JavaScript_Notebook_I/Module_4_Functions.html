@@ -1,0 +1,585 @@
+<!DOCTYPE html>	<!-- enable standards mode for documents written using the HTML syntax -->
+ <html>
+  <head>
+   <title> My JavaScript Notebook I </title>
+   <p align="center"><strong><font size="7"> 
+	   <a href="../index.html">My JavaScript Notebook I</a>
+   </font></strong>
+<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->  
+   <style>	
+	body {		
+		background-color: gray;	<!-- Website will have gray background -->
+		}
+
+	h1 {
+		color: darkblue;	
+		text-align: center;	<!-- All h1 text will have dark blue, centered font -->
+		}
+		
+	h2 {
+		color: darkgreen;	<!-- All h2 text will have dark green font -->
+		}
+
+	h3 {
+		color: tan;	<!-- All h2 text will have tan font -->
+		}		
+
+	p {
+		font-family: arial;
+		font-size: 14px;	<!-- All p text will be 14px arial text -->
+		}
+   </style>
+  </head>
+  <body>
+
+<!-- ************************************* PAGE 4 ************************************* -->	
+  
+	
+	<p align="center">***** On Monday, 9/10/18, I started 
+		learning the fundamentals of JavaScript on 
+		<a href= "http://www.sololearn.com"target="_blank"> 
+		sololearn.com</a>. *****</p>
+	<p	align="center">***** On Saturday, 1/12/19, I completed the JavaScript Tutorial course and was issued the 
+		<a href= "https://www.sololearn.com/Certificate/1024-10607947/pdf/" target="_blank">certificate</a>. *****</p>	
+	<p align="center"> TAKE NOTE THAT THIS IS NOT A .JS FILE BECAUSE IT WILL BE A 
+		PLAIN TEXT FILE. INSTEAD, JAVASCRIPT WILL BE IMPLEMENTED INTO A .HTML FILE. 
+		THIS CAN BE DONE VIA INTERNAL JAVASCRIPT OR EXTERNAL JAVASCRIPT.</p> <br />
+	
+<!-- ***** Module 4 Materials ***** -->
+	<h1><u> Module 4: Functions </u></h1>
+	
+<!-- ************************************************************************** -->
+	
+<!-- User-Defined Functions -->
+	<h2><strong><font size="h2">I.</font> <u>User-Defined Functions</u></strong></h2>
+<!-- JavaScript Functions -->	
+	<p> <strong><h3><u>JavaScript Functions</u></h3></strong> </p>	
+	<p> A JavaScript <strong>function</strong> is a block of code designed to perform a 
+		particular task. <br />
+		The main advantages of using functions: <br />
+		Code <strong>reuse</strong>: Define the code once, and use it many times. <br />
+		Use the same code many times with different <strong>arguments</strong>, to 
+		produce different results. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		A JavaScript function is execeuted when "something" invokes, or calls, it.
+	</div>
+	
+<!-- Defining a Function -->	
+	<p> <strong><h3><u>Defining a Function</u></h3></strong> </p>
+	<p> To define a JavaScript function, use the <strong>function</strong> keyword, followed by	
+		a <strong>name</strong>, followed by a set of <strong>parentheses &lpar;&rpar;</strong>. </p>
+	<p>	The code to be execeuted by the function is placed inside curly brackets {}. </p>
+	<p> <strong>Syntax:</strong> </p>
+	<p> <strong>function</strong> name&lpar;&rpar; { <br />
+	&emsp; //code to be executed <br />
+		} </p> 	
+	<div style="background-color:gold; width:600px; padding:1px">
+		Function names can contain letters, digits, underscores, and dollar signs
+		&lpar;same rules as variables&rpar;.
+	</div>
+	
+<!-- Calling a Function -->	
+	<p> <strong><h3><u>Calling a Function</u></h3></strong> </p>	
+	<p> To execute the function, you need to call it. <br />
+		To call a function, start with the name of the function, then follow it with the
+		arguments in parentheses. </p>
+	<p> <strong>Example:</strong> </p>
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> function <strong>myFunction</strong>&lpar;&rpar; { <br />
+	&emsp; alert&lpar;"Calling a Function!"&rpar;; <br />
+	} </p>
+	<p> <strong>myFunction</strong>&lpar;&rpar;; <br />
+		//Alerts "Calling a Function!" </p>
+<!-- ********** Example 4.1: Internal JavaScript Code ********** -->
+	<script>
+	function Example1() {
+		function myFunction() {
+			alert("Calling a Function!");
+			}
+		
+		myFunction();
+		// Alerts "Calling a Function!"
+	}	
+	</script>
+<!-- ********** End Example 4.1 JS Code ********** -->	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example1()">CLICK HERE FOR RESULT OF EXAMPLE 4.1!</button> 
+	&ensp;<font size="6">&larr;</font> <p></p>	
+	<div style="background-color:gold; width:600px; padding:1px">
+		Always remember to end the statement with a <strong>semicolon</strong> after
+		calling the function.
+	</div>
+	
+<!-- Calling Functions -->	
+	<p> <strong><h3><u>Calling Functions</u></h3></strong> </p>	
+	<p> Once the function is defined, JavaScript allows you to call it as many times
+		as you want to. </p>
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> function <strong>myFunction</strong>&lpar;&rpar; { <br />
+	&emsp; alert&lpar;"Alert box!"&rpar;; <br />
+	} </p>
+	<p> <strong>myFunction</strong>&lpar;&rpar;; <br />
+		//"Alert box!" </p>
+	<p> // some other code </p>
+	<p> <strong>myFunction</strong>(); <br />
+		//"Alert box!" </p>
+<!-- ********** Example 4.2: Internal JavaScript Code ********** -->
+	<script>
+	function Example2() {
+		function myFunction() {
+			alert("Alert box!");
+			}
+		
+		myFunction();
+		// "Alert box!"
+		
+		// some other code
+		
+		myFunction();
+		// "Alert box!"
+	}	
+	</script>
+<!-- ********** End Example 4.2 JS Code ********** -->	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example2()">CLICK HERE FOR RESULT OF EXAMPLE 4.2!</button> 
+	&ensp;<font size="6">&larr;</font> <p></p>	
+	<div style="background-color:gold; width:600px; padding:1px">
+		You can also call a function using this syntax: myFunction.call&lpar;&rpar;.
+		The difference is that when calling in this way, you're passing the 'this' keyword
+		to a function. You'll learn about it later.
+	</div> <br />
+	
+<!-- ************************************************************************** -->
+	
+<!-- Function Parameters -->
+	<h2><strong><font size="h2">II.</font> <u>Function Parameters</u></strong></h2>
+<!-- Function Parameters -->	
+	<p> <strong><h3><u>Function Parameters</u></h3></strong> </p>	
+	<p> Functions can take <strong>parameters</strong>. <br />
+		Function <strong>parameters</strong> are the names listed in the function's definition. </p>
+	<p> <strong>Syntax:</strong>
+	<p> functionName&lpar;param1, param2, param3&rpar; { <br />
+	&emsp; // some code <br />
+		} </p>
+	<div style="background-color:gold; width:600px; padding:1px"> 
+		As with variables, parameters should be given <strong>names</strong>, which are
+		<strong>separated by commas</strong> within the parentheses.
+	</div>	
+	
+<!-- Using Parameters -->	
+	<p> <strong><h3><u>Using Parameters</u></h3></strong> </p>	
+	<p> After defining the parameters, you can use them inside the function. </p>
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> function sayHello&lpar;name&rpar; { <br />
+	&emsp; alert&lpar;"Hi," + name&rpar;; <br />
+	} </p>
+	<p> sayHello&lpar;"Samjat"&rpar;; <br />
+		// Alerts "Hi, Samjat" </p>
+<!-- ********** Example 4.3: Internal JavaScript Code ********** -->
+	<script>
+	function Example3() {
+		function sayHello(name) {
+			alert("Hi, " + name);
+			}
+		
+		sayHello("Samjat");
+		// Alerts "Hi, Samjat"
+	}	
+	</script>
+<!-- ********** End Example 4.3 JS Code ********** -->	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example3()">CLICK HERE FOR RESULT OF EXAMPLE 4.3!</button> 
+	&ensp;<font size="6">&larr;</font> 	
+	<p> This function takes in one parameter, which is called <strong>name</strong>. When
+		calling the function, provide the parameter's value &lpar;argument&rpar; inside
+		the parentheses. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		Function <strong>arguments</strong> are the real values passed to 
+		&lpar;and received by&rpar; the function.
+	</div>	
+	
+<!-- Function Parameters -->	
+	<p> <strong><h3><u>Function Parameters</u></h3></strong> </p>	
+	<p> You can define a single function, and pass different parameter values
+		&lpar;arguments&rpar; to it. </p>
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> function sayHello&lpar;name&rpar; { <br />
+	&emsp; alert&lpar;"Hi," + name&rpar;; <br />
+	} </p>
+	<p> sayHello&lpar;"<strong>Samjat</strong>"&rpar;; <br />
+		sayHello&lpar;"<strong>Abe</strong>"&rpar;; <br />
+		sayHello&lpar;"<strong>Michael</strong>"&rpar;; </p>
+<!-- ********** Example 4.4: Internal JavaScript Code ********** -->
+	<script>
+	function Example4() {
+		function sayHello(name) {
+			alert("Hi, " + name);
+			}
+		
+		sayHello("Samjat");
+		sayHello("Abe");
+		sayHello("Michael");
+	}	
+	</script>
+<!-- ********** End Example 4.4 JS Code ********** -->	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example4()">CLICK HERE FOR RESULT OF EXAMPLE 4.4!</button> 
+	&ensp;<font size="6">&larr;</font> <p></p>	
+	<div style="background-color:gold; width:600px; padding:1px">
+		This will execute the function's code each time for the provided argument.
+	</div> <br />
+	
+<!-- ************************************************************************** -->
+	
+<!-- Using Multiple Parameters with Functions -->
+	<h2><strong><font size="h2">III.</font> <u>Using Multiple Parameters with Functions</u></strong></h2>
+<!-- Multiple Parameters -->	
+	<p> <strong><h3><u>Multiple Parameters</u></h3></strong> </p>	
+	<p> You can define multiple parameters for a function by <strong>comma-separating</strong>
+		them. </p>
+	<p> <strong>Syntax:</strong> </p>
+	<p> function myFunc&lpar;x, y&rpar; { <br />
+	&emsp; // some code <br />
+		} </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		The example above defines the function <strong>myFunc</strong> to take two parameters.
+	</div>	
+	
+	<p> The parameters are used within the function's definition. </p>
+	<p> <strong>Syntax:</strong>
+	<p> function sayHello&lpar;<strong>name</strong>, <strong>age</strong>&rpar; { <br />
+	&emsp; document.write&lpar;<strong> name</strong> + " is " + 
+		<strong>age</strong> + " years old."&rpar;; <br />
+		} </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		Function parameters are the names listed in the function definition.
+	</div>
+	
+	<p> When calling the function, provide the arguments in the same order in 
+		which you defined them. </p>
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> function sayHello&lpar;name, age&rpar; { <br />
+	&emsp; document.write&lpar; name + " is " + age + "years old."&rpar;; <br />
+	} </p>
+	<p> sayHello&lpar;"<strong>Samjat</strong>", <strong>24</strong>&rpar;; <br />
+	&emsp; // Outputs " Samjat is 24 years old." </p>
+<!-- ********** Example 4.5: Internal JavaScript Code ********** -->
+	<script>
+	function Example5() {
+		var myWindow = window.open("", "", "width=400,height=200");
+		function sayHello(name, age) {
+			myWindow.document.write(name + " is " + age + " years old.");
+			}
+		
+		sayHello("Samjat", 24);
+		// Outputs "Samjat is 24 years old."
+	}	
+	</script>
+<!-- ********** End Example 4.5 JS Code ********** -->	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example5()">CLICK HERE FOR RESULT OF EXAMPLE 4.5!</button> 
+	&ensp;<font size="6">&larr;</font> <p></p>			
+	<div style="background-color:gold; width:600px; padding:1px">
+		If you pass more arguments than are defined, they will be assigned to an <u>array</u>
+		called arguments. They can be used like this: arguments[0], arguments[1], etc.	
+	</div>	
+		
+	<p> After defining the function, you can call it as many times as needed. <br />
+		JavaScript functions do not check the number of arguments received. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		If a function is called with missing arguments &lpar;fewer than declared&rpar;,
+		then the missing values are set to <strong><u>undefined</u></strong>, which indicates
+		that a <u>variable</u> has not been assigned a value.
+	</div>	<br />
+	
+<!-- ************************************************************************** -->
+	
+<!-- The return Statement -->
+	<h2><strong><font size="h2">IV.</font> <u>The return Statement</u></strong></h2>
+<!-- Function Return -->	
+	<p> <strong><h3><u>Function Return</u></h3></strong> </p>	
+	<p> A function can have an optional <strong>return</strong> statement. It is used to
+		return a value from the function. </p>
+	<p> This statement is useful when making calculations that require a result. </p>	
+	<div style="background-color:gold; width:600px; padding:1px">
+		When JavaScript reaches a <strong>return</strong> statement, the function stops executing.
+	</div>	
+	
+	<p> Use the <strong>return</strong> statement to return a value. </p>
+	<p> For example, let's calculate the product of two numbers, and return the result. </p>
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> function myFunction&lpar;a, b&rpar; { <br />
+	&emsp; <strong>return</strong> a * b; <br />
+	} </p>
+	<p> <u>var</u> x = myFunction&lpar;5, 6&rpar;; <br />
+		// Return value will end up in x <br />
+		// x equals 30	</p>
+<!-- ********** Example 4.6: Internal JavaScript Code ********** -->
+	<script>
+	function Example6() {
+		var myWindow = window.open("", "", "width=400,height=200");
+		function myFunction(a, b) {
+			return a * b;
+		}
+		
+		var x = myFunction(5, 6);	
+		myWindow.document.write(x);
+		// Return value will end up in x
+		// x equals 30
+	}	
+	</script>
+<!-- ********** End Example 4.6 JS Code ********** -->	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example6()">CLICK HERE FOR RESULT OF EXAMPLE 4.6!</button> 
+	&ensp;<font size="6">&larr;</font> <p></p>	
+	<div style="background-color:gold; width:600px; padding:1px">
+		If you do not return anything from a function, it will return 
+		<strong><u>undefined</u></strong>.
+	</div>
+	
+	<p> Another example: </p>
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> function addNumbers&lpar;a, b&rpar; { <br />
+	&emsp; <u>var</u> c = a+b; <br />
+	&emsp; <strong>return c</strong>; <br />
+	} <br />
+	<p> document.write&lpar; addNumbers&lpar;40, 2&rpar; &rpar;; <br />
+		// Outputs 42	</p>
+<!-- ********** Example 4.7: Internal JavaScript Code ********** -->
+	<script>
+	function Example7() {
+		var myWindow = window.open("", "", "width=400,height=200");
+		function addNumbers(a, b) {
+			var c = a+b;
+			return c;
+		}			
+		myWindow.document.write( addNumbers(40, 2) );
+		// Outputs 42
+	}	
+	</script>
+<!-- ********** End Example 4.7 JS Code ********** -->	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example7()">CLICK HERE FOR RESULT OF EXAMPLE 4.7!</button> 
+	&ensp;<font size="6">&larr;</font> <p></p>	
+	<div style="background-color:gold; width:600px; padding:1px">
+		The document.write command outputs the value returned by the function, which is
+		the sum of the two parameters.
+	</div> <br />
+	
+<!-- ************************************************************************** -->
+	
+<!-- Alert, Prompt, Confirm -->
+	<h2><strong><font size="h2">V.</font> <u>Alert, Prompt, Confirm</u></strong></h2>
+<!-- The Alert Box -->	
+	<p> <strong><h3><u>The Alert Box</u></h3></strong> </p>	
+	<p> JavaScript offers three types of popup boxes, the <b>Alert</b>, <b>Prompt</b>.
+		and <b>Confirm</b> boxes. </p>
+	<p><font size="4"><b>Alert Box</b></font><br />
+		An <b>alert box</b> is used when you want to ensure that information gets
+		through to the user. <br />
+		When an alert box pops up, the user must click OK to proceed. <br />
+		The <b>alert</b> function takes a single parameter, which is the text
+		displayed in the popup box. </p>
+	<p> <b>Example:</b> </p>
+	<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> <b>alert</b>&lpar;"Do you really want to leave this page?"&rpar;; </p>
+<!-- ********** Example 4.8: Internal JavaScript Code ********** -->
+	<script>
+	function Example8() {
+		alert("Do you really want to leave this page?")
+			
+		myWindow.document.write(alert);
+	}	
+	</script>
+<!-- ********** End Example 4.8 JS Code ********** -->
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example8()">CLICK HERE FOR RESULT OF EXAMPLE 4.8!</button> 
+	&ensp;<font size="6">&larr;</font>
+	<p> To display <b>line breaks</b> within a popup box, use a backslash followed
+		by the character "n". </p>
+	<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> <b>alert</b>&lpar;"Hello<b>\n</b>How are you?"&rpar;; </p>
+<!-- ********** Example 4.9: Internal JavaScript Code ********** -->
+	<script>
+	function Example9() {
+		alert("Hello\nHow are you?")
+			
+		myWindow.document.write(alert);
+	}	
+	</script>
+<!-- ********** End Example 4.9 JS Code ********** -->
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example9()">CLICK HERE FOR RESULT OF EXAMPLE 4.9!</button> 
+	&ensp;<font size="6">&larr;</font> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		Be careful when using alert boxes, as the user can continue using the page
+		only after clicking OK.
+	</div>
+
+<!-- The Prompt Box -->	
+	<p> <strong><h3><u>The Prompt Box</u></h3></strong> </p>
+	<p> A <b>prompt box</b> is often used to have the user input a value before
+		entering a page. <br />
+		When a prompt box pops up, the user will have to click either OK or Cancel
+		to proceed after entering the input value. <br />
+		If the user clicks OK, the box <b>returns the input value</b>. If the user
+		clicks Cancel, the box returns <b><font color="blue">null</font></b>. </p>
+	<p> The <b>prompt&lpar;&rpar;</b> <font color="blue">method</font> takes
+		<b>two parameters</b>.
+		<ul>
+			<li>The first is the label, which you want to display in the text box.</li>
+			<li>The second is a default <font color="blue">string</font> to
+				display in the text box &lpar;optional&rpar;.</li>
+		</ul>
+	<p> <b>Example:</b> </p>
+	<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> <u>var</u> user = prompt&lpar;"Please enter your name"&rpar;; <br />
+		alert&lpar;user&rpar;; </p>
+<!-- ********** Example 4.10: Internal JavaScript Code ********** -->
+	<script>
+	function Example10() {
+		var user = prompt("Please enter your name")
+		alert(user);
+			
+		myWindow.document.write(alert);
+	}	
+	</script>
+<!-- ********** End Example 4.10 JS Code ********** -->
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example10()">CLICK HERE FOR RESULT OF EXAMPLE 4.10!</button> 
+	&ensp;<font size="6">&larr;</font> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		When a prompt box pops up, the user will have to click either "OK" or "Cancel"
+		to proceed after entering an input value. Do not overuse this <u>method</u>,
+		because it prevents the user from accessing other parts of the page until
+		the box is closed.
+	</div>
+	
+<!-- The Confirm Box -->	
+	<p> <strong><h3><u>The Confirm Box</u></h3></strong> </p>
+	<p>	A <b>confirm box</b> is often used to have the user verify or accept something. <br />
+		When a confirm box pops up, the user must click either OK or Cancel to proceed. <br />
+		If the user clicks OK, the box returns <b>true</b>. If the user clicks Cancel,
+		the box returns <b>false</b>. </p>
+	<p> <b>Example:</b> </p>
+	<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> <u>var</u> result = <b>confirm</b>&lpar;"Do you really want to leave this page?"&rpar;; <br />
+		if &lpar;result == true&rpar; { <br />
+	&emsp;	alert&lpar;"Thanks for visiting"&rpar;; <br />
+		} <br />
+		else { <br />
+	&emsp;	alert&lpar;"Thanks for staying with us"&rpar;; <br />
+		}	</p>
+<!-- ********** Example 4.11: Internal JavaScript Code ********** -->
+	<script>
+	function Example11() {
+		var result = confirm("Do you really want to leave this page?");
+		if (result == true) {
+			alert("Thanks for visiting");
+		}
+		else {
+			alert("Thanks for staying with us");
+		}	
+			
+		myWindow.document.write(alert);
+	}	
+	</script>
+<!-- ********** End Example 4.11 JS Code ********** -->
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example11()">CLICK HERE FOR RESULT OF EXAMPLE 4.11!</button> 
+	&ensp;<font size="6">&larr;</font> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">		
+		Do not overuse this <u>method</u>, becaue it also prevents the user from
+		accessing other parts of the page until the box is closed.
+	</div> <br />	
+<!-- ****************************** FOOTER ****************************** -->	
+	
+	<p></p><br />
+<!-- Pages start -->
+		<p align="center">
+		
+	<!-- Go to top -->	
+		<a href="#top">Go to top</a> <br />
+	
+	<!-- Previous Page -->	
+		<a href="Module_3_Conditionals_and_Loops.html"
+			class="previous">&laquo Previous</a>
+	
+	<!-- Page 1 -->	
+		<a href="Module_1_Introduction_to_JavaScript.html" 
+			target="_self">1</a>
+	
+	<!-- Page 2 -->	
+		<a href="Module_2_Basic_Concepts.html" 
+			target="_self">2</a>
+	
+	<!-- Page 3 -->	
+		<a href="Module_3_Conditionals_and_Loops.html" 
+			target="_self">3</a>
+	
+	<!-- Page 4 -->	
+		<a href="#" 
+			target="_self">4</a>
+	
+	<!-- Page 5 -->	
+		<a href="Module_5_Objects.html" 
+			target="_self">5</a>
+	
+	<!-- Page 6 -->	
+		<a href="Module_6_Core_Objects.html" 
+			target="_self">6</a>
+	
+	<!-- Page 7 -->	
+		<a href="Module_7_DOM_&_Events.html" 
+			target="_self">7</a>
+
+	<!-- Page 8 -->	
+		<a href="Module_8_ECMAScript6.html" 
+			target="_self">8</a>
+	
+	
+	<!-- Next Page -->	
+		<a href="Module_5_Objects.html"	
+			class="next">Next &raquo;</a>
+<!-- Pages end -->
+        
+<!-- Footer -->
+        <div class="copyright">
+            &copy; 2018 My JavaScript Notebook I. All rights reserved.
+        </div>
+	
+  </body>
+ </html>	

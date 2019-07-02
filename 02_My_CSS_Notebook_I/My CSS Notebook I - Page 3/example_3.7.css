@@ -1,8 +1,0 @@
-p.first {
-   border: 5px solid green;    
-   min-height: 100px;       
-}
-p.second {
-   border: 5px solid green;    
-   max-width: 100px;       
-}

@@ -1,0 +1,950 @@
+<!DOCTYPE html>	<!-- enable standards mode for documents written using the HTML syntax -->
+ <html>
+  <head>
+   <title> My JavaScript Notebook I </title>
+   <p align="center"><strong><font size="7"> 
+	   <a href="../index.html">My JavaScript Notebook I</a>
+   </font></strong>
+<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->  
+   <style>	
+	body {		
+		background-color: gray;	<!-- Website will have gray background -->
+		}
+
+	h1 {
+		color: darkblue;	
+		text-align: center;	<!-- All h1 text will have dark blue, centered font -->
+		}
+		
+	h2 {
+		color: darkgreen;	<!-- All h2 text will have dark green font -->
+		}
+
+	h3 {
+		color: tan;	<!-- All h2 text will have tan font -->
+		}		
+
+	p {
+		font-family: arial;
+		font-size: 14px;	<!-- All p text will be 14px arial text -->
+		}
+   </style>
+  </head>
+  <body>
+
+<!-- ************************************************************************ PAGE 7 ************************************************************************ -->	
+  
+	
+	<p align="center">***** On Monday, 9/10/18, I started 
+		learning the fundamentals of JavaScript on 
+		<a href= "http://www.sololearn.com"target="_blank"> 
+		sololearn.com</a>. *****</p>
+	<p	align="center">***** On Saturday, 1/12/19, I completed the JavaScript Tutorial course and was issued the 
+		<a href= "https://www.sololearn.com/Certificate/1024-10607947/pdf/" target="_blank">certificate</a>. *****</p>	
+	<p align="center"> TAKE NOTE THAT THIS IS NOT A .JS FILE BECAUSE IT WILL BE A 
+		PLAIN TEXT FILE. INSTEAD, JAVASCRIPT WILL BE IMPLEMENTED INTO A .HTML FILE. 
+		THIS CAN BE DONE VIA INTERNAL JAVASCRIPT OR EXTERNAL JAVASCRIPT.</p> <br />
+	
+<!-- ***** Module 7 Materials ***** -->
+	<h1><u> Module 7: DOM & Events </u></h1>
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- What is DOM? -->
+	<h2><strong><font size="h2">I.</font> <u>What is DOM?</u></strong></h2>
+<!-- The DOM -->	
+	<p> <strong><h3><u>The DOM</u></h3></strong> </p>
+	<p> When you open any webpage in a browser, the HTML of the page is 
+		loaded and rendered visually on the screen. <br />
+		To accomplish that, the browser builds the <b>Document Object Model</b>
+		of that page, which is an <font color="blue">object</font> oriented
+		model of its logical structure. <br />
+		The <font color="blue">DOM</font> of an HTML document can be 
+		represented as a nested set of boxes. </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2773" alt=""> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">	 
+		JavaScript can be used to manipulate the <u>DOM</u> of a page dynamically to
+		add, delete and modify elements.
+	</div>	
+	
+<!-- DOM Tree -->	
+	<p> <strong><h3><u>DOM Tree</u></h3></strong> </p>	
+	<p> The <font color="blue">DOM</font> represents a document as a tree structure. <br />
+		HTML elements become interrelated <b>nodes</b> in the tree. <br />
+		All those nodes in the tree have some kind of relations among each other. <br />
+		Nodes can have <b>child</b> nodes. Nodes on the same tree level are called <b>siblings</b>. <br />
+		For example, consider the following structure: </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2773" alt=""> 
+	<p> For the example above:
+		<ol>
+			<li><b>&lt;html&gt;</b>: has two children &lpar;<font color="blue">&lt;head&gt;</font>,
+				<font color="blue">&lt;body&gt;</font>&rpar;;</li>
+			<li><b>&lt;head&gt;</b>: has one child &lpar;<font color="blue">&lt;title&gt;</font>&rpar; 
+				and one parent &lpar;<font color="darkred">&lt;html&gt;</font>&rpar;;</li>
+			<li><b>&lt;title&gt;</b>: has one parent &lpar;<font color="darkred">&lt;head&gt;</font>&rpar; 
+				and no children;</li>
+			<li><b>&lt;body&gt;</b>: has two children &lpar;<font color="blue">&lt;h1&gt;</font> 
+				and <font color="blue">&lt;a&gt;</font>&rpar; 
+				and one parent &lpar;<font color="darkred">&lt;html&gt;</font>&rpar;;</li>
+		</ol> </p>	
+	<div style="background-color:gold; width:600px; padding:1px">	 
+		It is important to understand the relationships between elements in an HTML document
+		in order to be able to manipulate them with JavaScript.
+	</div>
+	
+<!-- The document Object -->	
+	<p> <strong><h3><u>The document Object</u></h3></strong> </p>
+	<p>	There is a predefined <b>document</b> <font color="blue">object</font> in JavaScript,
+		which can be used to access all elements on the <font color="blue">DOM</font>. <br />
+		In other words, the <b>document</b> <font color="blue">object</font> is the owner
+		&lpar;or <b>root</b>&rpar; of all objects in your webpage. <br />
+		So, if you want to access objects in an HTML page, you always start with 
+		accessing the document <font color="blue">object</font>. <br />
+		<b>For example:</b> </p>
+	<p><b>Syntax:</b></p>
+	<p> document.body.<b><u>innerHTML</u></b> = "Some text"; </p>	
+	<p> As <b>body</b> is an element of the <font color="blue">DOM</font>, we can access it
+		using the <b>document</b> <font color="blue">object</font> and change the
+		content of the <b><font color="blue">innerHTML</font></b> property. </p>
+	<div style="background-color:gold; width:600px; padding:1px">	 
+		The <b><u>innerHTML</u></b> property can be used on almost all HTML
+		elements to change its content.
+	</div> <br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Selecting Elements -->
+	<h2><strong><font size="h2">II.</font> <u>Selecting Elements</u></strong></h2>
+<!-- Selecting Elements -->	
+	<p> <strong><h3><u>Selecting Elements</u></h3></strong> </p>	
+	<p> All HTML elements are <b>objects</b>. And as we know, every <font color="blue">object</font>
+		has <b>properties</b> and <b>methods</b>. <br />
+		The <b>document</b> <font color="blue">object</font> has methods that allow you to select
+		the desired HTML element. <br />
+		These three methods are the most commonly used for selecting HTML elements: </p>
+	<p><b>Syntax:</b></p>
+	<p> //finds element by id <br />
+		document.<b><u>getElementById</u></b>&lpar;id&rpar; </p>
+	<p> //finds elements by class name <br />
+		document.<b><u>getElementsByClassName</u></b>&lpar;name&rpar; </p>
+	<p> //finds elements by tag name <br />
+		document.<b><u>getElementsByTagName</u></b>&lpar;name&rpar; </p>
+	<p> In the example below, the <font color="blue"><b>getElementById</b> method</font> is used
+		to select the element with <b>id="demo"</b> and change its content: </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> elem = document.<b><u>getElementById</u></b>&lpar;"demo"&rpar;; <br />
+		elem.<u>innerHTML</u> = "Hello World!"; </p>
+	<div style="background-color:gold; width:600px; padding:1px">	 
+		The example above assumes that the HTML contains an element with id="demo". <br />
+		For	example: &lt;div id="demo"&gt;&lt;/div&gt;.
+	</div>
+	
+	<p> The <font color="blue"><b>getElementsByClassName</b></font>&lpar;&rpar; <font color="blue">method</font>
+		returns a collection of all elements in the document with the specified class name. <br />
+		For example, if our HTML page contained three elements with class="demo", the following code
+		would return all those elements as an <font color="blue">array</font>: </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> arr = document.<b><u>getElementsByClassName</u></b>&lpar;"demo"&rpar;; <br />
+		//accessing the second element <br />
+		arr[1].<u>innerHTML</u> = "Hi"; </p>
+	<p> Similarly, the <font color="blue"><b>getElementsByTagName</b> method</font> returns all of the
+		elements of the specified tag name as an <font color="blue">array</font>. <br />
+		The following example gets all paragraph elements of the page and changes their content: </p>
+	<p><b>Syntax:</b></p>
+	&lt;p&gt;hi&lt;/p&gt; <br />
+	&lt;p&gt;hello&lt;/p&gt; <br />
+	&lt;p&gt;hi&lt;/p&gt; <br />
+	&lt;<u>script</u>&gt; <br />
+		<u>var</u> arr = document.<u>getElementsByTagName</u>&lpar;"p"&rpar;; <br />
+		for &lpar;<u>var</u> x = 0; x < arr.length; x++&rpar; { <br />
+	&emsp; arr[x].<u>innerHTML</u> = "Hi there"; <br />
+		}	<br />
+	&lt;/script&gt; </p>
+	<p> The script will result in the following HTML: </p>	
+	<p><b>Result:</b></p>
+	<p> &lt;p&gt;Hi there&lt;/p&gt; <br />
+		&lt;p&gt;Hi there&lt;/p&gt; <br />
+		&lt;p&gt;Hi there&lt;/p&gt; </p>
+	<div style="background-color:gold; width:600px; padding:1px">	 
+		We used the <b>length</b> property of the <u>array</u> to loop through all the selected
+		elements in the above example.	
+	</div>	
+
+<!-- Working with DOM -->	
+	<p> <strong><h3><u>Working with DOM</u></h3></strong> </p>	
+	<p> Each element in the <font color="blue">DOM</font> has a set of properties and methods
+		that provide information about their relationships in the <font color="blue">DOM</font>:
+		<ul>
+			<li>element.<b>childNodes</b> - returns an <font color="blue">array</font> of an element's child nodes.</li>
+			<li>element.<b>firstChild</b> - returns the first child node of an element.</li>
+			<li>element.<b>lastChild</b> - returns the last child node of an element.</li>
+			<li>element.<b>hasChildNodes</b> - returns true if an element has any child nodes, otherwise false.</li>
+			<li>element.<b>nextSibling</b> - returns the next node at the same tree level.</li>
+			<li>element.<b>previousSibling</b> - returns the previous node at the same tree level.</li>
+			<li>element.<b>parentNode</b> - returns the parent node of an element.</li>
+		</ul> </p>
+	<p> We can, for example, select all child nodes of an element and change their content: </p>	
+
+<!-- JavaScript Code in HTML -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in HTML</strong> 
+	<font size="6">&ensp;&larr;</font></p>		
+	<p> &lt;html&gt; <br />
+	&emsp; &lt;body&gt; <br />
+	&emsp;&emsp; &lt;div id ="demo"&gt; <br />
+	&emsp;&emsp;&emsp; &lt;p&gt;some text&lt;/p&gt; <br />
+	&emsp;&emsp;&emsp; &lt;p&gt;some other text&lt;/p&gt; <br />
+	&emsp;&emsp; &lt;/div&gt; </p>
+	<p>&emsp;&emsp; <u>&lt;script&gt;</u> <br />
+	&emsp;&emsp;&ensp; <u>var</u> a = document.<u>getElementById</u>&lpar;"demo"&rpar;; <br />
+	&emsp;&emsp;&ensp; <u>var</u> arr = a.childNodes; <br />
+	&emsp;&emsp;&ensp; for&lpar;<u>var</u> x=0; x&lt;arr.length; x++&rpar; { <br />
+	&emsp;&emsp;&emsp; arr[x].<u>innerHTML</u> = "new text"; <br />
+	&emsp;&emsp;&ensp; } <br />
+	&emsp;&emsp; &lt;/script&gt; </p>
+	&emsp; &lt;body&gt; <br />
+	&lt;html&gt; </p>
+	
+<!-- ********** Example 7.1: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 7/Example7_1.js"></script> 
+<!-- ********** End Example 7.1 JS File ********** -->
+	
+<!--	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example1()">CLICK HERE FOR RESULT OF EXAMPLE 7.1! (External JS)</button> 
+	&ensp;<font size="6">&larr;</font> 
+	
+	<br /> -->
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_1.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.1! (Internal JS)</button> 
+	&ensp;<font size="6">&larr;</font> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">	 
+		The code above changes the text of both paragraphs to "new text".	
+	</div> <br />	
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Changing Elements -->
+	<h2><strong><font size="h2">III.</font> <u>Changing Elements</u></strong></h2>
+<!-- Changing Attributes -->	
+	<p> <strong><h3><u>Changing Attributes</u></h3></strong> </p>
+	<p> Once you have selected the element&lpar;s&rpar;, you want to work, you can change their attributes. <br />
+		As we have seen in the previous lessons, we can change the text content of an element using the
+		<b><font color="blue">innerHTML</font></b> property. <br />
+		Similarly, we can change the attributes of elements. <br />
+		For example, we can change the <b>src</b> attribute of an image: </p>
+	<p><b>Syntax:</b></p>
+	<p> &lt;img id="myimg" src="orange.png" alt="" /&gt; <br />
+		<u>&lt;script&gt;</u> <br />
+		<u>var</u> el = document.<u>getElementById</u>&lpar;"myimg"&rpar;; <br />
+		el.<b>src</b> = "apple.png"; <br />
+		&lt;/script&gt; </p>
+	<p> We can change the <b>href</b> attribute of a link: </p>
+	<p><b>Syntax:</b></p>
+	<p> &lt;a href="http://www.example.com"&gt;Some link&lt;/a&gt; <br />
+		<u>&lt;script&gt;</u> <br />
+		<u>var</u> el = document.<u>getElementByTagName</u>&lpar;"a"&rpar;; <br />
+		el[0].<b>href</b> = "http://www.sololearn.com"; <br />
+		&lt;/script&gt; </p>
+		
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_2_int_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.2! (Internal JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<br />
+	
+<!-- ********** Example 7.2: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 7/Example7_2.js"></script> 
+<!-- ********** End Example 7.2 JS File ********** -->	
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_2_ext_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.2! (External JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>
+	<div style="background-color:gold; width:600px; padding:1px">	 
+		Practically all attributes of an element can be changed using JavaScript.	
+	</div>
+
+<!-- Changing Style -->	
+	<p> <strong><h3><u>Changing Style</u></h3></strong> </p>
+	<p> The style of HTML elements can also be changed using JavaScript. <br />
+		All style attributes can be accessed using the <b>style</b>
+		<font color="blue">object</font> of the element. <br />
+		<b>For example:</b> </p>
+		
+<!-- JavaScript Code in HTML -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in HTML</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> &lt;div id="demo" style="width:200px"&gt;some text&lt;/div&gt; <br />
+		<u>&lt;script&gt;</u> <br />
+	&emsp; <u>var</u> x = document.<u>getElementById</u>&lpar;"demo"&rpar;; <br />
+	&emsp; <b>x.style.color</b> = "6600FF"; <br />
+	&emsp; <b>x.style.width</b> = "100px"; <br />
+		&lt;/script&gt; </p>
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_3_int_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.3! (Internal JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<br />
+	
+<!-- ********** Example 7.3: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 7/Example7_3.js"></script> 
+<!-- ********** End Example 7.3 JS File ********** -->	
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_3_ext_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.3! (External JS)</button> 
+	&ensp;<font size="6">&larr;</font>	
+	<p> The code above changes the text <b>color</b> and <b>width</b> of the div element. </p>
+	<div style="background-color:gold; width:600px; padding:1px">	 
+		All CSS properties can be set and modified using JavaScript. Just remember, that you
+		cannot use dashes &lpar;-&rpar; in te property names: these are replaced with camelCase
+		versions, where the compound words begin with a capital letter. <br />
+		For example, the <b>background-color</b> property should be referred to as <b>backgroundColor</b>.	
+	</div>	<br />
+
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Adding & Removing Elements -->
+	<h2><strong><font size="h2">IV.</font> <u>Adding & Removing Elements</u></strong></h2>
+<!-- Creating Elements -->	
+	<p> <strong><h3><u>Creating Elements</u></h3></strong> </p>	
+	<p> Using the following methods to create new nodes: 
+		<ul>
+			<li>element.<b>cloneNode</b>&lpar;&rpar; - clones an element and returns the resulting node.</li>
+			<li>document.<b>createElement</b>&lpar;element&rpar; - creates a new element node.</li>
+			<li>document.<b>createTextNode</b>&lpar;text&rpar; - creates a new text node.</li>
+		</ul> </p>
+	<p><b>For example</b></p>
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> node = document.<b>createTextNode</b>&lpar;"Some new text"&rpar;	</p>
+	<p> This will create a new text node, but it will not appear in the document until you append it
+		to an existing element with one of the following methods: 
+		<ul>
+			<li>element.<b>appendChild&lpar;newNode&rpar;</b> - adds a new child node to an element
+				as the last child node.</li>
+			<li>element.<b>insertBefore&lpar;node1, node2&rpar;</b> - inserts node1 as a child before node2.</li>
+		</ul> </p>
+	<p><b>Example:</b></p>
+
+<!-- JavaScript Code in HTML -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in HTML</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> &lt;div id="demo"&gt;some content&lt;/div&gt; </p>
+	<p>	<u>&lt;script&gt;</u> <br />
+	&emsp;	//creating a new paragraph <br />
+	&emsp; <u>var</u> p = document.createElement&lpar;"p"&rpar;; <br />
+	&emsp; <u>var</u> node = document.createTextNode&lpar;"Some new text"&rpar;; <br />
+	&emsp;	//adding the text to the paragraph <br />
+	&emsp; p.<b>appendChild</b>&lpar;node&rpar;; </p>
+	&emsp; <u>var</u> div = document.<u>getElementById</u>&lpar;"demo"&rpar;; <br />
+	&emsp; //adding the paragraph to the div <br />
+	&emsp; div.<b>appendChild</b>&lpar;p&rpar;; <br />
+		&lt;/script&gt; </p>
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_4_int_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.4! (Internal JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<br />
+	
+<!-- ********** Example 7.4: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 7/Example7_4.js"></script> 
+<!-- ********** End Example 7.4 JS File ********** -->	
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_4_ext_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.4! (External JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		This creates a new paragraph and adds it to the existing div element on the page.
+	</div>
+
+<!-- Removing Elements -->	
+	<p> <strong><h3><u>Removing Elements</u></h3></strong> </p>		
+	<p> To remove an HTML element, you must select the parent of the element and use the 
+		<b>removeChild</b>&lpar;node&rpar; <font color="blue">method</font>. <br />
+		<b>For example:</b> </p>
+		
+<!-- JavaScript Code in HTML -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in HTML</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> &lt;div id="demo"&gt; <br />
+	&emsp;	&lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt; <br />
+	&emsp;	&lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt; <br />
+		&lt;/div&gt; </p>
+	<p>	<u>&lt;script&gt;</u> <br />
+	&emsp; <u>var</u> parent = document.<u>getElementById</u>&lpar;"demo"&rpar;; <br />
+	&emsp; <u>var</u> child = document.<u>getElementById</u>&lpar;"p1"&rpar;; <br />
+	&emsp; parent.<b>removeChild</b>&lpar;child&rpar;; <br />	
+		&lt;/script&gt; </p>
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_5_int_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.5! (Internal JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<br />
+	
+<!-- ********** Example 7.5: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 7/Example7_5.js"></script> 
+<!-- ********** End Example 7.5 JS File ********** -->	
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_5_ext_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.5! (External JS)</button> 
+	&ensp;<font size="6">&larr;</font>	
+	<p> This removes the paragraph with id="p1" from the page. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		An alternative way of achieving the same result would be the use of the <b>parentNode</b>
+		property to get the parent of the element we want to remove: <br />
+		<u>var</u> child = document.<u>getElementById</u>&lpar;"p1"&rpar;; <br />
+		child.<b>parentNode</b>.removeChild&lpar;child&rpar;;
+	</div>	
+	
+<!-- Replacing Elements -->	
+	<p> <strong><h3><u>Replacing Elements</u></h3></strong> </p>
+	<p> To replace an HTML element, the element.<b>replaceChild</b>&lpar;newNode, oldNode&rpar;
+		<font color="blue">method</font> is used. <br />
+		<b>For example:</b></p>
+	
+<!-- JavaScript Code in HTML -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in HTML</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> &lt;div id="demo"&gt; <br />
+	&emsp;	&lt;p id="p1"&gt;This is a paragraph.&lt;/p&gt; <br />
+	&emsp;	&lt;p id="p2"&gt;This is another paragraph.&lt;/p&gt; <br />
+		&lt;/div&gt; </p>
+	<p>	<u>&lt;script&gt;</u> <br />
+	&emsp; <u>var</u> p = document.createElement&lpar;"p"&rpar;; <br />
+	&emsp; <u>var</u> node = document.createTextNode&lpar;"This is new"&rpar;; <br />
+	&emsp; p.appendChild&lpar;node&rpar;; </p>	
+	<p> &emsp; <u>var</u> parent = document.<u>getElementById</u>&lpar;"demo"&rpar;; <br />
+	&emsp; <u>var</u> child = document.<u>getElementById</u>&lpar;"p1"&rpar;; <br />
+	&emsp; parent.<b>replaceChild</b>&lpar;p, child&rpar;; <br />	
+		&lt;/script&gt; </p>
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_6_int_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.6! (Internal JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<br />
+	
+<!-- ********** Example 7.6: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 7/Example7_6.js"></script> 
+<!-- ********** End Example 7.6 JS File ********** -->	
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_6_ext_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.6! (External JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>
+	<div style="background-color:gold; width:600px; padding:1px">	
+		The code above creates a new paragraph element that replaces the existing p1 paragraph.
+	</div> <br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Creating Animations -->
+	<h2><strong><font size="h2">V.</font> <u>Creating Animations</u></strong></h2>
+<!-- Animations -->	
+	<p> <strong><h3><u>Animations</u></h3></strong> </p>		
+	<p> Now that we know how to select and change <font color="blue">DOM</font> elements,
+		we can create a simple animation. <br />
+		Let's create a simple HTML page with a <b>box</b> element that will be animated using JS. </p>
+	
+	<p><b>CSS Syntax:</b></p>
+	<p> &lt;style&gt; <br />
+		#container { <br />
+	&emsp; width: 200px; <br />
+	&emsp; height: 200px; <br />
+	&emsp; background: green; <br />
+	&emsp; <b>position: relative</b>; <br />	
+		} <br />
+		#box { <br />
+	&emsp; width: 50px; <br />
+	&emsp; height: 50px; <br />
+	&emsp; background: red; <br />
+	&emsp; <b>position: absolute</b>; <br />	
+		} <br />
+	&lt;/style&gt; <br />
+	&lt;div id="container"&gt; <br />
+	&emsp;	&lt;div id="box"&gt; &lt;/div&gt;<br />
+	&lt;/div&gt; </p>
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_7_int_css.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.7! (Internal CSS)</button> 
+	&ensp;<font size="6">&larr;</font> <br />
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_7_ext_css.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.7! (External CSS)</button> 
+	&ensp;<font size="6">&larr;</font>
+	
+	<p> Our <b>box</b> element is inside a <b>container</b> element. Note the position attribute used for the elements:
+		the container is <b>relative</b> and the box is <b>absolute</b>. This will allow us to create 
+		the animation relative to the container. </p>
+	<p> We will be animating the red box to make it move to the right side of the container. </p> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		You need to be familiar with CSS to better understand the code provided.
+	</div>	
+
+	<p> To create an animation, we need to change the properties of an element at small intervals of time. <br />
+		We can achieve this by using the <font color="blue"><b>setInterval</b></font>&lpar;&rpar;
+		<font color="blue">method</font>, which allows us to create a timer and call a function
+		to change properties repeatedly at defined intervals &lpar;in milliseconds&rpar;. </p>
+	<p><b>For example:</b></p>
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> t = <b><u>setInterval</u></b>&lpar;move, 500&rpar;; </p>
+	<p> This code creates a timer that calls a <b>move</b>&lpar;&rpar; function ever 500 milliseconds. <br />
+		Now we need to define the <b>move</b>&lpar;&rpar; function, that changes the 
+		position of the box. </p>	
+	<p><b>Syntax:</b></p>
+	<p> // starting position <br />
+		<u>var</u> pos = 0 <br />
+		//our box element <br />
+		<u>var</u> box = document.<u>getElementById</u>&lpar;"box"&rpar;; </p>
+	<p> function move&lpar;&rpar; { <br />
+	&emsp; pos += 1; <br />
+	&emsp; box.style.left = pos+"px"; //px = pixels <br />	
+		}	</p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		The <b>move</b>&lpar;&rpar; function increments the <b>left</b> property of the box
+		element by one each time it is called.
+	</div>
+
+	<p> The following code defines a timer that calls the <b>move</b>&lpar;&rpar;
+		function ever 10 milliseconds: </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> t = <u>setInterval</u>&lpar;move, 10&rpar;; </p>
+	<p> However, this makes our box move to the right forever. To stop the animation when the box
+		reaches the end of the container, we add a simple check to the move&lpar;&rpar; function and 
+		use the <b>clearInterval</b>&lpar;&rpar; <font color="blue">method</font> to stop the timer. </p>
+	<p><b>Syntax:</b></p>
+	<p> function move&lpar;&rpar; { <br />
+	&emsp; if&lpar;pos >= 150&rpar; { <br />
+	&emsp;&emsp; <b>clearInterval&lpar;t&rpar;;</b> <br />
+	&emsp; } <br />
+	&emsp; else { <br />
+	&emsp;&emsp; pos += 1; <br />
+	&emsp;&emsp; box.style.left = pos+"px"; <br />
+	&emsp; } <br />
+		} </p>
+	<p> When the left attribute of the box reaches the value of 150, the box reaches the end of the
+		container, based on a container width of 200 and a box width of 50. <br />
+		<b>The final code:</b>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>		
+	<p> <u>var</u> pos = 0; <br />
+		//our box element <br />
+		<u>var</u> box = document.<u>getElementById</u>&lpar;"box"&rpar;; <br />
+		<u>var</u> t = <u>setInterval</u>&lpar;move, 10&rpar;; </p>
+	<p>	function move&lpar;&rpar; { <br />
+	&emsp; if&lpar;pos >= 150&rpar; { <br />
+	&emsp;&emsp; clearInterval&lpar;t&rpar;; <br />
+	&emsp; } <br />
+	&emsp; else { <br />
+	&emsp;&emsp; pos += 1; <br />
+	&emsp;&emsp; box.style.left = pos+"px"; <br />
+	&emsp; } <br />
+		} </p>	
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_8.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.8! (External CSS + JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>
+	<div style="background-color:gold; width:600px; padding:1px">	
+		Congratulations, you have just created your first JavaScript animation!
+	</div> <br />
+
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Handling Events -->
+	<h2><strong><font size="h2">VI.</font> <u>Handling Events</u></strong></h2>
+<!-- Events -->	
+	<p> <strong><h3><u>Events</u></h3></strong> </p>	
+	<p> You can write JavaScript code that executes when an <b>event</b> occurs, such as when a user
+		clicks an HTML element, moves the mouse, or submits a form. <br />
+		When an event occurs on a target element, a <b>handler</b> function is executed. 
+		Common HTML events include: </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2777" alt=""> <p></p>	
+	<div style="background-color:gold; width:600px; padding:1px">	
+		Corresponding events can be added to HTML elements as attributes. <br />
+		For example: &lt;p <b>onclick="someFunc&lpar;&rpar;"</b>&gt;some text&lt;/p&gt;
+	</div>
+	
+<!-- Handling Events -->	
+	<p> <strong><h3><u>Handling Events</u></h3></strong> </p>
+	<p> Let's display an alert popup when the user clicks a specified button:
+
+<!-- JavaScript Code in HTML -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in HTML</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> &lt;button <b>onclick="show&lpar;&rpar;"</b>&gt;Click Me&lt;/button&gt; <br />
+	<u>&lt;script&gt;</u> <br />
+		function show&lpar;&rpar; { <br />
+	&emsp; alert&lpar;"Hi there"&rpar;; <br />
+		} <br />
+	&lt;/script&gt; </p>
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_9_int_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.9! (Internal JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<br />
+	
+<!-- ********** Example 7.9: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 7/Example7_9.js"></script> 
+<!-- ********** End Example 7.9 JS File ********** -->	
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="show();">CLICK HERE FOR RESULT OF EXAMPLE 7.9! (External JS)</button> 
+	&ensp;<font size="6">&larr;</font>	
+	
+	<p> Event handlers can be assigned to elements. <br />
+		<b>For example:</b> </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>		
+	<p> <u>var</u> x = document.<u>getElementById</u>&lpar;"demo"&rpar;; <br />
+		x.onclick = function&lpar;&rpar; { <br />
+	&emsp; document.body.<u>innerHTML</u> = <u>Date&lpar;&rpar;</u>; <br />
+		} </p>
+
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_10_int_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.10! (Internal JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<br />
+	
+<!-- ********** Example 7.10: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 7/Example7_10.js"></script> 
+<!-- ********** End Example 7.10 JS File ********** -->	
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_10_ext_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.10! (External JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		You can attach events to almost all HTML elements.
+	</div>
+	
+<!-- Events -->	
+	<p> <strong><h3><u>Events</u></h3></strong> </p>
+	<p> The <b>onload</b> and <b>onunload</b> events are triggered when the user enters or leaves the page.
+		These can be useful when performing actions after the page is loaded. </p>
+	
+	<p><b>Syntax:</b></p>
+	<p>&lt;body <b>onload</b>="doSomething&lpar;&rpar;"&gt;</p>
+	
+	<p> Similarly, the <b>window.onload</b> event can be used to run code after the whole page is loaded. </p>
+	<p><b>Syntax:</b></p>
+	<p> <b>window.onload</b> = function&lpar;&rpar; { <br />
+	&emsp; //some code <br />
+		}	</p>
+		
+	<p> The <b>onchange</b> event is mostly used on textboxes. The event handler gets called when the text inside 
+		the textbox changes and focus is lost from the element. <br />
+		<b>For example:</b> </p>
+
+<!-- JavaScript Code in HTML -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in HTML</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> &lt;input type="text" id="name" <b>onchange</b>="change&lpar;&rpar;"&gt; <br />
+	<u>&lt;script&gt;</u> <br />
+		function change&lpar;&rpar; { <br />
+	&emsp; <u>var</u> x = document.<u>getElementById</u>&lpar;"name"&rpar;; <br />
+	&emsp; x.value = x.value.toUpperCase&lpar;&rpar;; <br />
+		} <br />
+	&lt;/script&gt; </p>
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_11_int_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.11! (Internal JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<br />
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_11_ext_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.11! (External JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>
+	<div style="background-color:gold; width:600px; padding:1px">	
+		It's important to understand events, because they are an essential part of dynamic web pages.
+	</div>
+	
+<!-- Event Listeners -->	
+	<p> <strong><h3><u>Event Listeners</u></h3></strong> </p>
+	<p> The <b><font color="blue">addEventListener</font></b>&lpar;&rpar;<font color="blue">method</font> attaches an event handler
+		to an element without overwriting existing event handlers. You can add <i>many</i> event handlers to one element. <br />
+		You can also add many event handlers of the same type to one element, i.e., two "click" events. </p>
+	<p><b>Syntax:</b></p>
+	<p> element.<b><u>addEventListener</u></b>&lpar;event, function, useCapture&rpar;; </p>
+	<p> The first parameter is the event's <b>type</b> &lpar;like "click" or "mousedown"&rpar;. <br />
+		The second parameter is the <b>function</b> we want to call when the event occurs. <br />
+		The third parameter is a Boolean value specifying whether to use event <b>bubbling</b> or event <b>capturing</b>.
+		This parameter is optional, and will be described in the next lesson. </p>
+	</p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		Note that you don't use the "<b>on</b>" prefix for this event; use "<b>click</b>" instead of "<b>onclick</b>".
+	</div>
+
+	<p><b>Syntax:</b></p>
+	<p> element.<b><u>addEventListener</u>&lpar;"click", myFunction"&rpar;</b>; <br />
+		element.<b><u>addEventListener</u>&lpar;"mouseover", myFunction"&rpar;</b>; </p>
+	<p> function myFunction&lpar;&rpar; { <br />
+	&emsp; alert&lpar;"Hello World!"&rpar;; <br />
+		} </p>	
+	<p> This adds two event listeners to the element. </p>
+	
+	<p> We can remove one of the listeners: </p>
+	<p><b>Syntax:</b></p>
+	<p> element.<b><u>removeEventListener</u></b>&lpar;"mouseover, myFunction"&rpar;; </p>	
+		
+	<p> Let's create an event handler that removes itself after being executed: </p>
+
+<!-- JavaScript Code in HTML -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in HTML</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> &lt;button id="demo"&gt;Start&lt;/button&gt; </p>
+	<p><u>&lt;script&gt;</u> <br />
+		<u>var</u> btn = document.<u>getElementById</u>&lpar;"demo"&rpar;; <br />
+		<b>btn.<u>addEventListener</u></b>&lpar;"click", myFunction&rpar;; </p>
+	<p> function myFunction&lpar;&rpar; { <br />
+	&emsp; alert&lpar;<u>Math</u>.random&lpar;&rpar;&rpar;; <br />
+	&emsp; btn.<b><u>removeEventListener</u></b>&lpar;"click", myFunction&rpar;; <br />
+		} <br />	
+	&lt;/script&gt; </p>
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_12_int_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.12! (Internal JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<br />
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_12_ext_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.12! (External JS)</button> 
+	&ensp;<font size="6">&larr;</font>	
+
+	<p> After clicking the button, an alert with a random number displays and the event listener is removed. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		Internet Explorer version 8 and lower do not support the <b><u>addEventListener</u></b>&lpar;&rpar; and 
+		<b><u>removeEventListener</u></b>&lpar;&rpar; methods. However, you can use the document <b>attachEvent</b>&lpar;&rpar;
+		<u>method</u> to attach event handlers in Internet Explorer.
+	</div>	<br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Event Propagation -->
+	<h2><strong><font size="h2">VII.</font> <u>Event Propagation</u></strong></h2>
+<!-- Event Propagation -->	
+	<p> <strong><h3><u>Event Propagation</u></h3></strong> </p>
+	<p> There are two ways of event propagation in the HTML <font color="blue">DOM</font>: <b>bubbling</b> and <b>capturing</b>. </p>
+	<p> Event propagation allows for the definition of the element order when an event occurs. If you have a &lt;p&gt; element inside a
+		&lt;div&gt; element, and the user clicks on the &lt;p&gt; element, which element's "click" event should be handled first? </p>
+	<p> In <b>bubbling</b>, the innermost element's event is handled first and then the outer element's click event. 
+		<ol>
+			<li>&lt;p&gt; element's click event is handled first</li>
+			<li>&lt;div&gt; element's click event is handled second</li>
+		</ol> </p>
+	<p>	In <b>capturing</b>, the outermost element's event is handled first and then the inner. The &lt;div&gt; element's click event
+		is handled first, followed by the &lt;p&gt; element's click event. 
+		<ol>
+			<li>&lt;div&gt; element's click event is handled first</li>
+			<li>&lt;p&gt; element's click event is handled second</li>
+		</ol> </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		Capturing goes <b>down</b> the <u>DOM</u>. <br />
+		Bubbling goes <b>up</b> the <u>DOM</u>.
+	</div>	
+		
+<!-- Capturing vs. Bubbling -->	
+	<p> <strong><h3><u>Capturing vs. Bubbling</u></h3></strong> </p>
+	<p> The <b><font color="blue">addEventListener</font></b>&lpar;&rpar; <font color="blue">method</font> allows you to specify the
+		propagation type with the "<b>useCapture</b>" parameter. </p>
+	<p><b>Syntax:</b></p>
+	<p><u>addEventListener</u>&lpar;event, function, <b>useCapture</b>&rpar; </p>
+
+	<p> The default value is <b>false</b>, which means the bubbling propagation is used; when the value is set to <b>true</b>,
+		the event uses the capturing propagation. </p>
+	<p><b>Syntax:</b></p>
+	<p> //Capturing propagation <br />
+		elem1.<u>addEventListener</u>&lpar;"click", myFunction, <b>true</b>&rpar;; </p>
+	<p> //Bubbling propagation <br />
+		elem2.<u>addEventListener</u>&lpar;"click", myFunction, <b>false</b>&rpar;; </p>	
+	<div style="background-color:gold; width:600px; padding:1px">
+		This is particularly useful when you have the same event handled for multiple elements in the <u>DOM</u> hierarchy.
+	</div>	<br />
+		
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Creating an Image Slider -->
+	<h2><strong><font size="h2">VIII.</font> <u>Creating an Image Slider</u></strong></h2>
+<!-- Image Slider -->	
+	<p> <strong><h3><u>Image Slider</u></h3></strong> </p>
+	<p> Now we can create a sample image slider project. The images will be changed using "Next" and "Prev" buttons. <br />
+		Now, let's create our HTML, which includes an image and the two navigational buttons. </p>
+	
+
+<!-- HTML Code -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>HTML Code</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> &lt;div&gt; <br />
+	&emsp; &lt;button&gt;Prev&lt;/button&gt; <br />
+	&emsp; &lt;img id="slider" src="http://www.sololearn.com/uploads/slider/1.jpg" <br />
+	&emsp;&emsp; width="200px" height="100px" /&gt; <br />
+	&emsp; &lt;button&gt;Next&lt;/button&gt; <br />
+		&lt;/div&gt; </p>	
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_13.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.13! (External CSS)</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>
+
+	<p> Next, let's	define our sample images in an <font color="blue">array</font>: </p>
+	<p><b>JS Syntax:</b></p>
+	<p> <u>var</u> images = [ <br />
+	&emsp; "http://www.sololearn.com/uploads/slider/1.jpg", <br />
+	&emsp; "http://www.sololearn.com/uploads/slider/2.jpg", <br />
+	&emsp; "http://www.sololearn.com/uploads/slider/3.jpg" <br />
+		]; </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		We are going to use three sample images that we have uploaded to our server. You can use any number of images.
+	</div>
+	
+	<p> Now we need to handle the Next and Prev button clicks and call the corresponding functions to change the image. </p>
+	<p><b>HTML Syntax:</b></p>
+	<p> &lt;div&gt; <br />
+	&emsp; &lt;button <b>onclick="prev&lpar;&rpar;"</b>&gt;Prev&lt;/button&gt; <br />
+	&emsp; &lt;img id="slider" src="http://www.sololearn.com/uploads/slider/1.jpg" <br />
+	&emsp;&emsp; width="200px" height="100px" /&gt; <br />
+	&emsp; &lt;button <b>onclick="next&lpar;&rpar;"</b>&gt;Next&lt;/button&gt; <br />
+		&lt;/div&gt; </p>
+	
+	<p><b>JS Syntax:</b></p>
+	<p> <u>var</u> images = [ <br />
+	&emsp; "http://www.sololearn.com/uploads/slider/1.jpg", <br />
+	&emsp; "http://www.sololearn.com/uploads/slider/2.jpg", <br />
+	&emsp; "http://www.sololearn.com/uploads/slider/3.jpg" <br />
+		]; <br />
+		<u>var</u> num = 0; </p>
+	<p> function <b>next</b>&lpar;&rpar; { <br />
+	&emsp; <u>var</u> slider = document.<u>getElementById</u>&lpar;"slider"&rpar;; <br />
+	&emsp; num++; <br />
+	&emsp; if&lpar;num &gt;= images.length&rpar; { <br />
+	&emsp;&emsp; num = 0; <br />
+	&emsp;	} <br />
+	&emsp; slider.src = images[num]; <br />
+		} </p>
+	<p> function <b>prev</b>&lpar;&rpar; { <br />
+	&emsp; <u>var</u> slider = document.<u>getElementById</u>&lpar;"slider"&rpar;; <br />
+	&emsp; num--; <br />
+	&emsp; if&lpar;num &lt; 0&rpar; { <br />
+	&emsp;&emsp; num = images.length-1; <br />
+	&emsp;	} <br />
+	&emsp; slider.src = images[num]; <br />
+		}	</p>
+		
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_14.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.14! (External CSS + JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<p></p>
+
+	<p> The <b>num</b> <font color="blue">variable</font> holds the current image. The next and previous button clicks
+		are handled by their corresponding functions, which change the source of the image to the next/previous
+		image in the <font color="blue">array</font>. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		We have created a functioning image slider!
+	</div>	<br />
+		
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Form Validation -->
+	<h2><strong><font size="h2">IX.</font> <u>Form Validation</u></strong></h2>
+<!-- Form Validation -->	
+	<p> <strong><h3><u>Form Validation</u></h3></strong> </p>
+	<p> HTML5 adds some attributes that allow form validation. For example, the <b>required</b> attribute can be added to an input field to 
+		make it mandatory to fill in. <br />
+		More complex form validation can be done using JavaScript. <br />
+		The form element has an <b>onsubmit</b> event that can be handled to perform validation. <br />
+		For example, let's create a form with two inputs and one button. The text in both fields should be the same and not blank to pass the validation. </p>
+		
+	<p><b>HTML Syntax:</b></p>
+	<p> &lt;form <b>onsubmit="return.validate&lpar;&rpar;"</b> <u>method</u>="post"&gt; <br />
+	&emsp; Number: &lt;input type="text" name="num1" id="num1" /&gt; <br />
+	&emsp; &lt;br /&gt; <br />
+	&emsp; Repeat: &lt;input type="text" name="num2" id="num2" /&gt; <br />
+	&emsp; &lt;br /&gt; <br />	
+	&emsp; &lt;input type="submit" value="Submit" /&gt; <br />
+		&lt;/form&gt; </p>
+	
+	<p> Now we need to define the <b>validate</b>&lpar;&rpar; function: </p>
+
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>		
+	<p> function <b>validate</b>&lpar;&rpar; { <br />
+	&emsp; <u>var</u> n1 = document.<u>getElementById</u>&lpar;"num1"&rpar;; <br />
+	&emsp; <u>var</u> n2 = document.<u>getElementById</u>&lpar;"num2"&rpar;; <br />
+	&emsp; if&lpar;n1.value != "" && n2.value != ""&rpar; { <br />
+	&emsp;&emsp; if&lpar;n1.value == n2.value&rpar; { <br />
+	&emsp;&emsp;&emsp; return true; <br />
+	&emsp;&emsp; } <br />
+	&emsp;	} <br />
+	&emsp; alert&lpar;"The values should be equal and not blank"&rpar;; <br />
+	&emsp; return false; <br />
+		} </p>
+		
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_15_int_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.15! (Internal JS)</button> 
+	&ensp;<font size="6">&larr;</font>	<br />
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="window.open('My JavaScript Notebook I - Page 7/Example7_15_ext_js.html')">CLICK HERE FOR RESULT OF EXAMPLE 7.15! (External JS)</button> 
+	&ensp;<font size="6">&larr;</font>
+	
+	<p> We return <b>true</b> only when the values are not blank and are equal. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		The form will not get submitted if its <b>onsubmit</b> event returns <b>false</b>.
+	</div>	
+		
+<!-- ****************************** FOOTER ****************************** -->	
+	
+	<p></p><br />
+<!-- Pages start -->
+		<p align="center">
+		
+	<!-- Go to top -->	
+		<a href="#top">Go to top</a> <br />
+	
+	<!-- Previous Page -->	
+		<a href="Module_6_Core_Objects.html"
+			class="previous">&laquo Previous</a>
+	
+	<!-- Page 1 -->	
+		<a href="Module_1_Introduction_to_JavaScript.html" 
+			target="_self">1</a>
+	
+	<!-- Page 2 -->	
+		<a href="Module_2_Basic_Concepts.html" 
+			target="_self">2</a>
+	
+	<!-- Page 3 -->	
+		<a href="Module_3_Conditionals_and_Loops.html" 
+			target="_self">3</a>
+	
+	<!-- Page 4 -->	
+		<a href="Module_4_Functions.html" 
+			target="_self">4</a>
+	
+	<!-- Page 5 -->	
+		<a href="Module_5_Objects.html" 
+			target="_self">5</a>
+	
+	<!-- Page 6 -->	
+		<a href="Module_6_Core_Objects.html" 
+			target="_self">6</a>
+	
+	<!-- Page 7 -->	
+		<a href="#" 
+			target="_self">7</a>
+
+	<!-- Page 8 -->	
+		<a href="Module_8_ECMAScript6.html" 
+			target="_self">8</a>
+	
+	
+	<!-- Next Page -->	
+		<a href="Module_8_ECMAScript6.html"	
+			class="next">Next &raquo;</a>
+<!-- Pages end -->
+        
+<!-- Footer -->
+        <div class="copyright">
+            &copy; 2018 My JavaScript Notebook I. All rights reserved.
+        </div>
+	
+  </body>
+ </html>	

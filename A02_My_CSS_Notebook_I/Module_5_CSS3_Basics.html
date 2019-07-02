@@ -1,0 +1,729 @@
+<!DOCTYPE html>	<!-- enable standards mode for documents written using the HTML syntax -->
+ <html>
+  <head>
+   <title> My CSS Notebook I </title>
+   <p align="center"><strong><font size="7"> 
+	   <a href="../index.html">My CSS Notebook I</a>
+   </font></strong>
+<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->  
+   <style>	
+	body {		
+		background-color: teal;	<!-- Website will have teal background -->
+		}
+
+	h1 {
+		color: darkred;	
+		text-align: center;	<!-- All h1 text will have dark red, centered font -->
+		}
+		
+	h2 {
+		color: darkblue;	<!-- All h2 text will have dark blue font -->
+		}
+
+	h3 {
+		color: beige;	<!-- All h2 text will have beige font -->
+		}		
+
+	p {
+		font-family: verdana;
+		font-size: 14px;	<!-- All p text will be 14px verdana text -->
+		}
+   </style>
+  </head>
+  <body>
+
+<!-- ************************************* PAGE 5 ************************************* -->	
+  
+	
+	<p align="center">***** On Monday, 9/3/18, I started 
+		learning the fundamentals of CSS on 
+		<a href= "http://www.sololearn.com"target="_blank"> 
+		sololearn.com</a>. *****</p>
+		
+		<p align="center"> ***** On Tuesday, 1/15/19, I completed
+		the CSS Fundamentals course and was issued the 
+		<a href="https://www.sololearn.com/Certificate/1023-10607947/pdf/" target="_blank">
+		certificate</a>. *****
+		
+	<p align="center"> TAKE NOTE THAT THIS IS NOT A .CSS FILE BECAUSE IT WILL BE A PLAIN TEXT FILE.
+		INSTEAD, CSS WILL BE IMPLEMENTED INTO A .HTML FILE. THIS CAN BE DONE
+		VIA A LINK, EMBED, IMPORT AND/OR INLINE STYLES.</p>	<br />
+		
+<!-- ***** Module 5 Materials ***** -->
+	<h1><u> Module 5: CSS3 Basics </u></h1>
+	
+<!-- ************************************************************************** -->
+
+<!-- Introduction To CSS3 -->
+	<h2><strong><font size="h2">I.</font> <u>Introduction To CSS3 </u></strong></h2>
+<!-- CSS3 -->	
+	<p> <strong><h3><u>CSS3</u></h3></strong> </p>
+	<p> CSS3 is the latest standard for CSS. <br />
+		CSS3 is completely backwards-compatible with earlier CSS versions. </p>
+	<p> Some of the most significant new features are:
+	<ul>
+		<li><b>Border radius</b> - allows us to create rounded corners for elements.</li>
+		<li><b>Border images</b> - allows us to specify an image as the border around
+			an element.</li>
+		<li><b>Multiple backgrounds</b> - applies multiple backgrounds to elements.</li>
+		<li><b>Animations and effects</b>, and much more!</li>
+	</ul> </p>	
+
+<!-- CSS3: New Features -->	
+	<p> <strong><h3><u>CSS3: New Features</u></h3></strong> </p>
+	<p> To make web development easier and faster, CSS3 introduces additional new
+		features, including the following: </p>
+	<p><font size="2"><b>Box Shadow</b></font> <br />
+		With the <b>box-shadow</b> property, you can attach one or more shadows to 
+		an element by specifying values for color, size, blur, and offset. </p>
+	<p><font size="2"><b>Gradient</b></font> <br />
+		CSS3 gradients allows us to set the background color of the element to a
+		gradient. Two types of gradients are available: <b>Linear</b> and <b>Radial</b>. </p>
+	<p> Take note that most of the new features have been implemented by major web
+		browsers, so you can already enjoy the power of CSS3. </p>
+		
+	<p> <b>Transforms</b> allow you to <b>rotate</b>, <b>scale</b>, <b>move</b>, 
+		and <b>skew</b> elements. </p>
+	<p> Another popular feature is <b>Transitions</b>, which allows you to animate
+		from one CSS property value to another. You can combine it with transforms
+		and animate the element's position, rotation, or scale. </p>
+	<p> The property attracting the most attention is <b>Animations</b>. <br />
+		CSS Animations have their own specifications, and they allow you to create
+		<b>keyframes</b>, set duration, easing, and more. </p> <br />
+
+<!-- ************************************************************************** -->
+
+<!-- Vendor Prefixes -->
+	<h2><strong><font size="h2">II.</font> <u>Vendor Prefixes </u></strong></h2>
+<!-- CSS Vendor Prefixes  -->	
+	<p> <strong><h3><u>CSS Vendor Prefixes</u></h3></strong> </p>
+	<p> CSS vendor prefixes or CSS browser prefixes are a way for browser makers to
+		add support for new CSS features during periods of testing and experimentation.
+		Browser prefixes are used to add new features that may not be part of the final
+		and formal CSS specification. </p>	
+	<p> For example, the prefix for Safari and Chrome is <b>-webkit</b>. 
+		The <b>border-radius</b> property is currently supported in Chrome, Safari, and
+		Mozilla, as long as it is accompanied by the browser prefix. <br />
+		To specify the <b>border-radius</b> in Chrome and Safari,
+			the following syntax is used: </p>
+	<p><b>Syntax:</b></p>
+	<p> <b>-webkit</b>-<u>border-radius:</u> 24px; </p>
+	
+<!-- Link to Result of Example_5.1 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.1.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.1!</a> &larr; </p>	
+	<p> The prefix is added to the property to make it work in the unsupported browsers.
+		So, you might end up with multiple definitions of the same property, each
+		with the specific browser prefix. </p>
+	<p> Take note that while most browsers today will work without prefixes, it is
+		essential to know these for backwards capability and understanding older codes. </p>
+		
+<!-- Browser Prefixes  -->	
+	<p> <strong><h3><u>Browser Prefixes</u></h3></strong> </p>
+	<p> Here is the list of vendor prefixes for each browser: </p>
+	<img src ="https://api.sololearn.com/DownloadFile?id=2665" alt=""> <p></p>
+	<p> Take note that it might feel annoying and repetitive to have to write the
+		properties two to five times to get them to work in all browsers, but it's
+		temporary. As browsers improve, they add support for the standards based
+		version of the properties, and you can remove the prefixed versions. </p> <br />
+		
+<!-- ************************************************************************** -->
+
+<!-- Rounded Corners -->
+	<h2><strong><font size="h2">III.</font> <u>Rounded Corners </u></strong></h2>
+<!-- The border-radius Property  -->	
+	<p> <strong><h3><u>The border-radius Property</u></h3></strong> </p>
+	<p> With CSS3, you can give any element "rounded corners" by using the 
+		<b>border-radius</b> property. </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> <b>border-radius</b>: 20px; <br />
+		<u>background-color:</u> green; <br />
+		color: white; </p>
+	
+<!-- Link to Result of Example_5.2 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.2.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.2!</a> &larr; </p>
+	<p> Specific border-radius values can be applied for the border-radius property
+		in the following order: </p>
+	<ol>	
+		<li><b>top-left</b></li>
+		<li><b>top-right</b></li>
+		<li><b>bottom-right</b></li>
+		<li><b>bottom-left</b></li>
+	</ol>	
+	<p><b>Syntax:</b></p>
+	<p> <u>border-radius:</u> <b>0 0 20px 20px;</b>	</p>
+
+<!-- Link to Result of Example_5.3 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.3.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.3!</a> &larr; </p>
+	<p> Take note that the value of border-radius can also be specified in
+		<b>percentages</b>. </p>
+		
+<!-- Creating a Circle  -->	
+	<p> <strong><h3><u>Creating a Circle</u></h3></strong> </p>
+	<p> A rectangle can be turned into a circle using only CSS. <br />
+		To create a circle, the border radius should be <b>half of the height and
+			the width</b>. </p>
+	<p> The rectangle in the example below has a width and height of 200px. By setting
+		the border radius to <b>100px</b>, the corners will be rounded to form a circle: </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>		
+	<p> div { <br />
+	&emsp; width: <b>200px</b>; <br />
+	&emsp; height: <b>200px</b>; <br />
+	&emsp; <b><u>border-radius:</u> 100px</b>; <br />
+	&emsp; <u>background-color:</u> green; <br />
+	&emsp; color: white; <br />
+		} </p>
+	
+<!-- Link to Result of Example_5.4 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.4.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.4!</a> &larr; </p> <br />
+		
+<!-- ************************************************************************** -->
+
+<!-- box-shadow -->
+	<h2><strong><font size="h2">IV.</font> <u>box-shadow </u></strong></h2>
+<!-- The box-shadow Property  -->	
+	<p> <strong><h3><u>The box-shadow Property</u></h3></strong> </p>		
+	<p> The CSS3 <b>box-shadow</b> property applies shadow to elements. <br />
+		Components of the box=shadow property are decided by browsers in the following manner:
+	<ul>
+		<li>The first length for the <b>horizontal offset</b> will cast the shadow to the
+			right of the box &lpar;required&rpar;</li>
+		<li>The second length is for the <b>vertical offset</b> that will cast the shadow
+			to below the box &lpar;required&rpar;</li>
+		<li>The <b>color</b> of the shadow &lpar;optional&rpar;</li>
+	</ul> </p>
+	<p> In the example below, the horizontal and vertical offsets have been set to 10px: </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>	
+	<p> div { <br />
+	&emsp; width: 300px; <br />
+	&emsp; height: 100px; <br />
+	&emsp; <u>background-color:</u> #9ACD32; <br />
+	&emsp; <b><u>box-shadow:</u> 10px 10px #888888;</b> <br />
+		} </p>	
+	
+<!-- Link to Result of Example_5.5 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.5.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.5!</a> &larr; </p>
+
+<!-- Blur and Spread  -->	
+	<p> <strong><h3><u>Blur and Spread</u></h3></strong> </p>
+	<p> Besides color, there are also two optional values for the box-shadow element,
+		which are <b>blur</b> and <b>spread</b>. </p>
+	<p> Take note that the blur and spread values should be used before the color value. </p>	
+	<p><b>Syntax:</b></p>
+	<p> <u>box-shadow:</u> 10px 10px 5px 5px #888888; </p>
+	
+<!-- Link to Result of Example_5.6 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.6.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.6!</a> &larr; </p>	
+
+<!-- Negative Values  -->	
+	<p> <strong><h3><u>Negative Values</u></h3></strong> </p>
+	<p> <b>Negative values</b> can also be used for the box-shadow property. </p>
+	<p> <b>horizontal offset</b> - the shadow will be to the <b>left</b> of the box <br />
+		<b>vertical offset</b> - the shadow will be <b>above</b> the box <br />
+		<b>blur radius</b> - negative values are <b>not allowed</b> <br />
+		<b>spread radius</b> - negative values will cause the shadow to <b>shrink</b> </p>
+	<p><b>For example:</b></p>
+	<p><b>Syntax:</b></p>	
+	<p> <u>box-shadow:</u> <b>-10px -10px</b> 5px <b>-5px</b> #888888; </p>
+	
+<!-- Link to Result of Example_5.7 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.7.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.7!</a> &larr; </p>	<br />
+
+<!-- ************************************************************************** -->
+
+<!-- Box Shadow Techniques -->
+	<h2><strong><font size="h2">V.</font> <u>Box Shadow Techniques </u></strong></h2>
+<!-- Creating an Inner Shadow -->	
+	<p> <strong><h3><u>Creating an Inner Shadow</u></h3></strong> </p>
+	<p> The "<b>inset</b>" keyword allows to draw an inner shadow in the box.
+		To show an inset shadow, just add the inset keyword. </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>box-shadow:</u> <b>inset</b> 10px 10px 5px #888888; </p>
+
+<!-- Link to Result of Example_5.8 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.8.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.8!</a> &larr; </p>	
+	<p> Take note that you can simultaneously create <b>inner</b> and <b>outer</b>
+		shadows by separating each shadow with a <b>comma</b>.
+		
+<!-- Layering Multiple Shadows  -->	
+	<p> <strong><h3><u>Layering Multiple Shadows</u></h3></strong> </p>		
+	<p> You can define as many shadows for the same box as you want by 
+		writing all of them <b>comma-separated</b> in the same rule. </p>
+	<p> In the example below, two <b>inner</b> shadows have been created by 
+		separating each shadow with a <b>comma</b>. </p>
+	<p><b>Syntax:</b></p>
+	<p> <u>box-shadow:</u> <br />
+		<b>inset</b> 10px 10px 5px #888888, <br />
+		<b>inset</b> -10px -10px 5px #888888; </p>
+		
+<!-- Link to Result of Example_5.9 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.9.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.9!</a> &larr; </p>		
+	
+	<p> In case we specify more than one value, the one which comes last will be
+		positioned at the back of all shadows. <br />
+		Here is an example: </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> <u>box-shadow:</u> 0 0 10px 4px #FF6347, <br />
+		0 0 10px 30px #FFDAB9, <br />
+		30px 0 20px 30px #B0E0E6; </p>
+
+<!-- Link to Result of Example_5.10 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.10.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.10!</a> &larr; </p>
+		
+	<p> As expected, the blue shadow &lpar;<b>#B0E0E6</b>&rpar;	comes last. </p> <br />
+		
+<!-- ************************************************************************** -->
+
+<!-- Transparency Effect -->
+	<h2><strong><font size="h2">VI.</font> <u>Transparency Effect </u></strong></h2>
+<!-- Transparency Effect -->	
+	<p> <strong><h3><u>Transparency Effect</u></h3></strong> </p>		
+	<p> Before CSS3, transparent background images were used to create transparency	effects. 
+		The new features of CSS3 now make it easier to create transparency effects. </p>
+	<p> CSS supports color names, hexadecimal, and RGB colors. <br />
+		In addition, CSS3 introduces the following: </p>
+	<p><b><font size="2">RGBA Colors</font></b> <br />
+		RGBA color values are an extension of RGB color values with an alpha channel,
+		which specifies the opacity for a color. <br />
+		An RGBA color value is specified with: <b>rgba&lpar;red, green, blue, alpha&rpar;</b>.
+		The alpha parameter is a number between 0.0 &lpar;fully transparent&rpar;
+		and 1.0 &lpar;fully opaque&rpar;. </p>
+	<p><b><font size="2">HSL &lpar;Hue, Saturation, Lightness&rpar; Colors</font></b> <br />
+		An HSL color value is specified with: <b>hsl&lpar;hue, saturation, lightness&rpar;</b>. <br />
+		<ul>
+			<li><b>Hue</b> is a degree on the color wheel ranging from 0 to 360 </li>
+			<ul>
+				<li><b>red</b> = 0 &lpar;or 360&rpar;</li>
+				<li><b>green</b> = 120</li>
+				<li><b>blue</b> = 240</li>
+			</ul>
+			<li><b>Saturation</b> is a percentage value: 100% is the full color. </li>
+			<li><b>Lightness</b> is also a percentage
+			<ul>
+				<li><b>dark &lpar;black&rpar;</b> = 0%</li>
+				<li><b>white</b> = 100%</li>
+			</ul>
+		</ul>
+		<b>HSLA</b>	color values are an extension of HSL color values with an alpha channel - 
+			which specifies the opacity for a color &lpar;just like RGBA&rpar;. </p>
+	<p> In the example below, a transparent glass menu bar is created with CSS3. </p>
+	<p> In the HTML file, a &lt;nav&gt; tag containing an &lt;ul&gt; list with links
+		has been added. </p>
+	<p><b>HTML Syntax:</b></p>
+	<p> &lt;nav&gt; <br />
+	&emsp; &lt;ul&gt; <br />
+	&emsp;&emsp; &lt;li&gt;&lt;a href="#"&gt;COURSES&lt;/a&gt;&lt;/li&gt; <br />
+	&emsp;&emsp; &lt;li&gt;&lt;a href="#"&gt;DISCUSS&lt;/a&gt;&lt;/li&gt; <br />
+	&emsp;&emsp; &lt;li&gt;&lt;a href="#"&gt;TOP LEARNERS&lt;/a&gt;&lt;/li&gt; <br />
+	&emsp;&emsp; &lt;li&gt;&lt;a href="#"&gt;BLOG&lt;/a&gt;&lt;/li&gt; <br />
+	&emsp; &lt;/ul&gt; <br />			
+	&lt;/nav&gt; </p>
+	<p> A number of CSS3 features are used to create the effects: </p>
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> body { <br />
+	&emsp; background:url&lpar;"bg.jpg"&rpar; <br />
+		} <br />
+		nav { <br />
+	&emsp; <u>padding:</u> 50px 0; <br />
+	&emsp; <u>min-width:</u> 500px; <br />
+		} <br />
+		nav ul { <br />
+	&emsp; background: linear-gradient&lpar;90deg, <br />
+	&emsp;&emsp; rgba&lpar;255, 255, 255, 0&rpar; 0%, <br />
+	&emsp;&emsp; rgba&lpar;255, 255, 255, 0.2&rpar; 25%, <br />
+	&emsp;&emsp; rgba&lpar;255, 255, 255, 0.2&rpar; 75%, <br />
+	&emsp;&emsp; rgba&lpar;255, 255, 255, 0&rpar; 100%; <br />
+	&emsp; <u>box-shadow:</u> 0 0 25px rgba&lpar;0, 0, 0, 0.1&rpar;, <br />
+	&emsp;&emsp; inset 0 0 1px rgba&lpar;255, 255, 255, 0.6&rpar;; <br />
+		} <br />
+		nav ul li { <br />
+	&emsp; <u>display:</u> inline-block; <br />
+		} <br />
+		nav ul li a { <br />
+	&emsp; <u>padding:</u> 10px; <br />
+	&emsp; color: #FFFFFF; <br />
+	&emsp; <u>font-size:</u> 18px; <br />
+	&emsp; <u>font-family:</u> Arial; <br />
+	&emsp; <u>text-decoration:</u> none; <br />
+	&emsp; <u>display:</u> block; <br />
+	} </p>	
+	
+<!-- Link to Result of Example_5.11 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.11.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.11!</a> &larr; </p>	
+	
+	<p> The &lt;ul&gt; tag has been styled with a background gradient that is white and transparent. <br />
+		Two box-shadow values have been added. One for an outer, dark shadow; and one for an inner light edge. </p>
+	<p> Take note that some properties used &lpar;like the background gradients&rpar; will be discussed
+		in the upcoming lessons. </p> <br />
+	
+<!-- ************************************************************************** -->
+
+<!-- text-Shadow -->
+	<h2><strong><font size="h2">VII.</font> <u>text-Shadow </u></strong></h2>
+<!-- The text-Shadow Property -->	
+	<p> <strong><h3><u>The text-Shadow Property</u></h3></strong> </p>	
+	<p> The <b>text-shadow</b> property defines one or more comma-separated shadow effects,
+		to be applied to the text content of the current element. </p>
+	<p> The image below shows how the text-shadow property is applied: </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2676" alt=""> 
+	<p> Take note that
+		<ul>
+			<li>The <b>offset-x</b> and <b>offset-y</b> values are required for the CSS text-shadow property.</li>
+			<li>The <b>color</b> value is not required, but since the default for the text-shadow is
+				transparent, the text-shadow will not appear unless you specify a color value.</li>
+		</ul> </p>
+	
+<!-- Multiple Text Shadows -->	
+	<p> <strong><h3><u>Multiple Text Shadows</u></h3></strong> </p>
+	<p> The text-shadow style can accept multiple values in a comma-separated list. <br />
+		According to CSS2, the shadows are laid down in the order they appear. So if they overlap,
+		the last one that is specifed should appear on top. CSS3 has now changed that so they are 
+		applied in <b>reverse order</b>. </p>
+	<p> To create multiple shadows, the shadows are separated with a comma. Here is an example. </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> h1 { <br />
+	&emsp; <u>text-shadow:</u> 5px 10px 2px #93968f, <br />
+	&emsp;&emsp; -3px 6px 5px #58d1e3; <br />
+		} </p>
+
+<!-- Link to Result of Example_5.12 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.12.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.12!</a> &larr; </p>
+	<p> This example defines two text shadows at different locations, blur radius, and color. This makes
+		it look like there are two different light sources on the text. </p>
+	
+	<p> To make a text shadow look realistic, remember these few shadow characteristics: </p>
+	<ul>
+		<li>A shadow which is close to the text is normally not as blurred as a shadow that is far from the	text. 
+			A shadow that is far from the text usually implies a light source which is also far from the text</li>
+		<li>A shadow which is close to the text usually implies that the underlying surface is close, that the
+			light is close, or both. A close shadow is often darker than a distant shadow, because less light
+			can get in between the shape and the underlying surface.</li>
+	</ul>
+	<p> To remove a text-shadow, set the text-shadow property to <b>none</b>; no shadows will be
+		associated with that element. </p> <br />
+		
+<!-- ************************************************************************** -->
+
+<!-- Pseudo Classes -->
+	<h2><strong><font size="h2">VIII.</font> <u>Pseudo Classes </u></strong></h2>
+<!-- Working with Pseudo-Classes -->	
+	<p> <strong><h3><u>Working with Pseudo-Classes</u></h3></strong> </p>
+	<p>	The CSS pseudo-classes allow us to style elements, or parts of elements, that exist in the 
+		document tree without using JavaScript or any other script. A pseudo-class starts with 
+		a ":" &lpar;colon&rpar;. <br />
+		The most commonly used pseudo-classes are <b>:first-child</b> and <b>:last-child</b>. </p>
+	<p> The <b>:first-child</b>	pseudo-class matches an element that is the first child element
+		of some other element. <br />
+		In the following example, the selector matches any &lt;p&gt; element that is the
+		first child of the div element: </p>
+		
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar;	</p>
+	<p> &lt;div id="parent"&gt; <br />
+		&emsp;&lt;p&gt;First paragraph&lt;/p&gt; <br />
+		&emsp;&lt;p&gt;Second paragraph&lt;/p&gt; <br />
+		&emsp;&lt;p&gt;Thirs paragraph&lt;/p&gt; <br />
+		&emsp;&lt;p&gt;Fourth paragraph&lt;/p&gt; <br />
+		&lt;/div&gt; </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> #parent p:<b>first-child</b> { <br />
+	&emsp; color: green; <br />
+	&emsp; <u>text-decoration:</u> underline; <br />
+		} </p>
+
+<!-- Link to Result of Example_5.13 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.13.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.13!</a> &larr; </p>
+
+	<p> The <b>:last-child</b> pseudo-class matches an element that is the last child element
+		of some other element. </p>
+	<p> In the example below, the selector will match any &lt;p&gt; element that is the last child
+		of the div element: </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> #parent p:<b>last-child</b> { <br />
+	&emsp; color: green; <br />
+	&emsp; <u>text-decoration:</u> underline; <br />
+		} </p>
+
+<!-- Link to Result of Example_5.14 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.14.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.14!</a> &larr; </p> <br />
+
+<!-- ************************************************************************** -->
+
+<!-- Pseudo Elements -->
+	<h2><strong><font size="h2">IX.</font> <u>Pseudo Elements </u></strong></h2>
+<!-- Working with Pseudo Elements -->	
+	<p> <strong><h3><u>Working with Pseudo Elements</u></h3></strong> </p>		
+	<p> Pseudo elements are used to select specific parts of an element. <br />
+		There are five pseudo elements in CSS, each starting with a double colon &lpar;::&rpar;. </p>
+	<ol>
+		<li><b>::first-line</b> - the first line of the text in a selector</li>
+		<li><b>::first-letter</b> - the first letter of the text in a selector</li>
+		<li><b>::selection</b> - selects the portion of an element that is selected by a user</li>
+		<li><b>::before</b> - inserts some content before an element</li>
+		<li><b>::after</b> - inserts some content after an element</li>
+	</ol>
+	<p> In the example below, the <b>::first-line</b> pseudo element is used to style the
+		first line of our text: </p>
+	
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> p::<b>first-line</b> { <br />
+	&emsp; color: #589432; <br />
+		} </p>
+
+<!-- Link to Result of Example_5.15 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.15.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.15!</a> &larr; </p>	
+	
+	<p> The <b>::selection</b> pseudo element styles the selected text: </p>
+	<p><b>Syntax:</b></p>
+	<p> <b>p::-moz-selection</b> { <br />
+	&emsp; background: #8bc34a; <br />
+	&emsp; color: #fff; <br />
+		} </p>
+
+<!-- Link to Result of Example_5.16 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.16.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.16!</a> &larr; </p>
+	<p><b>Result after highlighting the text:</b></p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2681" alt="">
+	<p> Take note that the <b>-moz</b> prefix is used, as the <b>::selection</b> element
+		is not supported by Mozilla yet. </p>
+		
+	<p> Using the <b>::before</b> and <b>::after</b> pseudo elements allows us to add a wide
+		variety of content to the page. </p>
+	<p> In the example below, the <b>::before</b> pseudo element is used to add an image
+		before the list. </p>
+		
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar;	</p>
+	<p>&lt;p&gt;You can insert text, images, and other resources using &lt;strong&gt;:before <br />
+			&lt;/strong&gt;pseudo element.&lt;/p&gt; <br />
+		&lt;p&gt;You can insert text, images, and other resources using &lt;strong&gt;:before <br />
+			&lt;/strong&gt;pseudo element.&lt;/p&gt; <br />
+		&lt;p&gt;You can insert text, images, and other resources using &lt;strong&gt;:before <br />
+			&lt;/strong&gt;pseudo element.&lt;/p&gt; </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> p<b>::before</b> { <br />
+	&emsp; content: url&lpar;"logo.jpg"&rpar;;
+		} </p>	
+			
+<!-- Link to Result of Example_5.17 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.17.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.17!</a> &larr; </p>
+	<p> Take note of the <b>content</b> keyword in the syntax. </p>
+	<p> Take note that if you change the <b>::before</b> element to <b>::after</b> in the example above,
+		the images will appear at the end of the list. </p> <br />
+		
+<!-- ************************************************************************** -->
+
+<!-- word-wrap -->
+	<h2><strong><font size="h2">X.</font> <u>word-wrap </u></strong></h2>
+<!-- The word-wrap Property -->	
+	<p> <strong><h3><u>The word-wrap Property</u></h3></strong> </p>
+	<p> The word-wrap property allows long words to be broken and wrapped into the next line.
+		It takes two values: <b>normal</b> and <b>break-word</b>. </p>
+	<p> In the example below, the word-wrap property is set to <b>normal</b>. </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> p { <br />
+	&emsp; width: 210px; <br />
+	&emsp; height: 100px; <br />
+	&emsp; <u>border:</u> 1px solid #000000; <br />
+	&emsp; <b><u>word-wrap:</u> normal</b>; <br />
+		} </p>	
+			
+<!-- Link to Result of Example_5.18 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.18.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.18!</a> &larr; </p>
+
+	<p> Now let's see what happens when we use this same example and set the word-wrap property to break-word: </p>
+
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> p { <br />
+	&emsp; width: 210px; <br />
+	&emsp; height: 100px; <br />
+	&emsp; <u>border:</u> 1px solid #000000; <br />
+	&emsp; <b><u>word-wrap:</u> break-word</b>; <br />
+		} </p>	
+			
+<!-- Link to Result of Example_5.19 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.19.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.19!</a> &larr; </p>	
+	<p> Take note that when the word-wrap property is set to <b>break-word</b>, the browser breaks a word
+		when it is too long to fit within its container. </p> <br />
+		
+<!-- ************************************************************************** -->
+
+<!-- @font-face -->
+	<h2><strong><font size="h2">XI.</font> <u>@font-face </u></strong></h2>
+<!-- The @font-face Rule -->	
+	<p> <strong><h3><u>The @font-face Rule</u></h3></strong> </p>		
+	<p> The <b>@font-face</b> rule allows custom fonts to be loaded into a webpage. <br />
+		With the help of this rule, designs are no longer limited to the fonts that are installed
+		on a user's computer. </p>
+	<p> In Internet Explorer 8 and earlier, the URL must point to an 
+		<b>Embedded OpenType</b> &lpar;eot&rpar; file, while Firefox, Chrome, etc. support
+		<b>True Type Fonts</b> &lpar;ttf&rpar; fonts and <b>OpenType Fonts</b> &lpar;otf&rpar;. </p>
+	<img src="https://api.sololearn.com/DownloadFile?id=2685" alt="">
+	<p> Take note that in the @font-face rule, you must first define a name for the font
+		&lpar;e.g., myFirstFont&rpar;, and then point to the font file. </p>
+		
+<!-- Using the @font-face Rule -->	
+	<p> <strong><h3><u>Using the @font-face Rule</u></h3></strong> </p>		
+	<p> Each form of the font family must be declared using the <b>@font-face</b> rule. In the example below,
+		a custom font called "Delicious" is loaded and used for the heading. </p>
+		
+<!-- The HTML -->	
+	<p> <strong>The HTML:</strong> &lpar;Code&rpar;	</p>
+	<p> &lt;h1&gt;This is Our Headline&lt;/h1&gt; </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> @font-face { <br />
+	&emsp; <u>font-family:</u> Delicious; <br />
+	&emsp; src: url&lpar;'Delicious-Roman.otf'&rpar;; <br />
+		} <br />
+		@font-face { <br />
+	&emsp; <u>font-family:</u> Delicious; <br />
+	&emsp; <u>font-weight:</u> bold; <br />
+	&emsp; src: url&lpar;'Delicious-Bold.otf'&rpar;; <br />
+		} <br />
+		h1 { <br />
+	&emsp;	<u>font-family:</u> Delicious, sans-serif; <br />
+		} </p>
+			
+<!-- Link to Result of Example_5.20 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.20.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.20!</a> &larr; </p>		
+	
+	<p> Internet Explorer has a built-in bug when multiple @font-face rules are defined.
+		Using <b>#iefix</b> as shown below fixes the problem: </p>
+		
+<!-- The CSS -->	
+	<p> <strong>The CSS:</strong> &lpar;Code&rpar;	</p>
+	<p> @font-face { <br />
+	&emsp; <u>font-family:</u> Delicious; <br />
+	&emsp; src: url&lpar;'Delicious-Roman.ttf'&rpar;; <br />
+	&emsp; src: url&lpar;'Delicious-Roman.eot<b>?#iefix</b>'&rpar;; <br />
+		} </p>
+		
+<!-- Link to Result of Example_5.21 --> 
+	<p> <strong>Result with HTML and CSS:</strong> </p>			
+	<p> &rarr; <a href="My CSS Notebook I - Page 5/example_5.21.html" 
+		target="_blank"> CLICK HERE FOR RESULT OF EXAMPLE_5.21!</a> &larr; </p>		
+	<p> Take note that the question mark fools IE into thinking the rest of the string is a query string
+		and loads just the EOT file. The other browsers follow the spec and select the format they need
+		based on the src cascade. </p> 
+		
+<!-- ****************************** FOOTER ****************************** -->	
+	
+	<br />
+<!-- Pages start -->
+		<p align="center">
+		
+	<!-- Go to top -->	
+		<a href="#top">Go to top</a> <br />
+	
+	<!-- Previous Page -->	
+		<a href="Module_4_Positioning_and_Layout.html" 
+			class="previous">&laquo; Previous</a>
+	
+	<!-- Page 1 -->	
+		<a href="Module_1_The_Basics.html" 
+			target="_self">1</a>
+	
+	<!-- Page 2 -->	
+		<a href="Module_2_Working_with_Text.html" 
+			target="_self">2</a>
+	
+	<!-- Page 3 -->	
+		<a href="Module_3_Properties.html" 
+			target="_self">3</a>
+	
+	<!-- Page 4 -->	
+		<a href="Module_4_Positioning_and_Layout.html" 
+			target="_self">4</a>
+	
+	<!-- Page 5 -->	
+		<a href="#" 
+			target="_self">5</a>
+			
+	<!-- Page 6 -->	
+		<a href="Module_6_Gradients_&_Backgrounds.html" 
+			target="_self">6</a>
+
+	<!-- Page 7 -->	
+		<a href="Module_7_Transitions_&_Transforms.html" 
+			target="_self">7</a>			
+	
+	<!-- Page 8 -->	
+		<a href="Module_8_CSS_Filters.html" 
+			target="_self">8</a>	
+	
+	<!-- Next Page -->	
+		<a href="Module_6_Gradients_&_Backgrounds.html"	
+			class="next">Next &raquo;</a>
+
+<!-- Pages end -->
+        
+<!-- Footer -->
+        <div class="copyright">
+            &copy; 2018 My CSS Notebook I. All rights reserved.
+        </div>
+	
+  </body>
+ </html>	

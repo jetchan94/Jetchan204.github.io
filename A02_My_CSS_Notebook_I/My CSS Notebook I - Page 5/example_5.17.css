@@ -1,0 +1,3 @@
+p::before {
+    content: url("http://www.sololearn.com/images/bullet.jpg");
+}

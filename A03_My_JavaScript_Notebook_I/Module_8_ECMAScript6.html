@@ -1,0 +1,2015 @@
+<!DOCTYPE html>	<!-- enable standards mode for documents written using the HTML syntax -->
+ <html>
+  <head>
+   <title> My JavaScript Notebook I </title>
+   <p align="center"><strong><font size="7"> 
+	   <a href="../index.html">My JavaScript Notebook I</a>
+   </font></strong>
+<!-- ***** Inline styling for internal CSS (i.e. put CSS into HTML file) ***** -->  
+   <style>	
+	body {		
+		background-color: gray;	<!-- Website will have gray background -->
+		}
+
+	h1 {
+		color: darkblue;	
+		text-align: center;	<!-- All h1 text will have dark blue, centered font -->
+		}
+		
+	h2 {
+		color: darkgreen;	<!-- All h2 text will have dark green font -->
+		}
+
+	h3 {
+		color: tan;	<!-- All h2 text will have tan font -->
+		}		
+
+	p {
+		font-family: arial;
+		font-size: 14px;	<!-- All p text will be 14px arial text -->
+		}
+   </style>
+  </head>
+  <body>
+
+<!-- ************************************************************************ PAGE 7 ************************************************************************ -->	
+  
+	
+	<p align="center">***** On Monday, 9/10/18, I started 
+		learning the fundamentals of JavaScript on 
+		<a href= "http://www.sololearn.com"target="_blank"> 
+		sololearn.com</a>. *****</p>
+	<p	align="center">***** On Saturday, 1/12/19, I completed the JavaScript Tutorial course and was issued the 
+		<a href= "https://www.sololearn.com/Certificate/1024-10607947/pdf/" target="_blank">certificate</a>. *****</p>	
+	<p align="center"> TAKE NOTE THAT THIS IS NOT A .JS FILE BECAUSE IT WILL BE A 
+		PLAIN TEXT FILE. INSTEAD, JAVASCRIPT WILL BE IMPLEMENTED INTO A .HTML FILE. 
+		THIS CAN BE DONE VIA INTERNAL JAVASCRIPT OR EXTERNAL JAVASCRIPT.</p> <br />
+	
+<!-- ***** Module 8 Materials ***** -->
+	<h1><u> Module 8: ECMAScript6 </u></h1>
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Intro to ES6 -->
+	<h2><strong><font size="h2">I.</font> <u>Intro to ES6</u></strong></h2>
+<!-- ECMAScript6 -->	
+	<p> <strong><h3><u>ECMAScript6</u></h3></strong> </p>
+	<p> <b>ECMAScript6</b> &lpar;ES&rpar; is a scripting language specification created to standardize JavaScript. </p>
+	<p> The Sixth Edition, initially known as <b>ECMAScript6</b> &lpar;ES6&rpar; and later renamed to <b>ECMAScript 2015</b>,
+		adds significant new syntax for writing complex applications, including classes and modules, iterators and for/of loops,
+		generators, arrow functions, binary data, typed arrays, collections &lpar;maps, sets and weak maps&rpar;, promises, 
+		number and math enhancements, reflection, and proxies. </p>
+	<p> In other words, ES6 is a superset of JavaScript &lpar;ES5&rpar;. The reason that ES6 became so popular is that it
+		introduced new conventions and OOP &lpar;Object-Oriented Programming&rpar; concepts such as classes. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		In this module, we cover the most important additions to <b>ES6</b>. <br />
+		So, let's jump right in!
+	</div>	
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- ES6 Variables and Strings -->
+	<h2><strong><font size="h2">II.</font> <u>ES6 Variables and Strings</u></strong></h2>
+<!-- var & let -->	
+	<p> <strong><h3><u>var & let</u></h3></strong> </p>	
+	<p> In ES6, we have three ways of declaring variables: </p>
+	<p><b>Syntax:</b></p>
+	<p> <b><u>var</u></b> a = 10; <br />
+		<b>const</b> b = 'hello'; <br />
+		<b>let</b> c =  true; </p>
+		
+	<p> The type of declaration used depends on the necessary <b>scope</b>. <b>Scope</b> is the fundamental concept in all
+		programming languages that defines the visibility of a <font color="blue">variable</font>. </p>
+		
+	<p><font size="3"><b><font color="blue">var</font></b> &amp; <b>let</b></font> <br />
+		Unlike the <b><font color="blue">var</font></b> keyword, which defines a <font color="blue">variable</font> globally, or locally
+		to an entire function regardless of block scope, <b>let</b> allows you to declare variables that are limited in scope to the
+		block, statement, or expression in which they are used. <br />
+		<b>For example:</b>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> if &lpar;true&rpar; { <br />
+	&emsp; <b>let</b> name = 'Jack'; <br />
+		}	<br />
+		alert&lpar;name&rpar;; //generates an error </p>
+	
+<!-- ********** Example 8.1: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_1.js"></script>
+<!-- ********** End Example 8.1 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example1()">CLICK HERE FOR RESULT OF EXAMPLE 8.1! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />
+	
+	<p> In this case, the <b>name</b> <font color="blue">variable</font> is accessible only in the scope of the <b>if</b> statement
+		because it was declared as <b>let</b>. </p>
+	<p> To demonstrate the difference in scope between <b><font color="blue">var</font></b>	and <b>let</b>, consider this example: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> function varTest&lpar;&rpar; { <br />
+	&emsp; <b><u>var</u></b> x = 1; <br />
+	&emsp; if &lpar;true&rpar; { <br />
+	&emsp;&emsp; <b><u>var</u></b> x = 2; // same <u>variable</u> <br />
+	&emsp;&emsp; console.log&lpar;x&rpar;; // 2 <br />
+	&emsp;	} <br />
+	&emsp; console.log&lpar;x&rpar;; // 2 <br />	
+		} </p>
+	<p> function letTest&lpar;&rpar; { <br />
+	&emsp; <b>let</b> x = 1; <br />
+	&emsp; if &lpar;true&rpar; { <br />
+	&emsp;&emsp; <b>let</b> x = 2; // different <u>variable</u> <br />
+	&emsp;&emsp; console.log&lpar;x&rpar;; // 2 <br />
+	&emsp;	} <br />
+	&emsp; console.log&lpar;x&rpar;; // 1 <br />	
+		} </p>	
+	
+<!-- ********** Example 8.2: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_2.js"></script>
+<!-- ********** End Example 8.2 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example2()">CLICK HERE FOR RESULT OF EXAMPLE 8.2! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />
+	<p> Since the console.log method is used, in order to see the above results, be sure to have the console view visible
+		&lpar;Press F12 to view the console&rpar;. </p>
+	<p><b>console.log result:</b></p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_2.JPG" alt=""> 
+	
+	<p> One of the best uses for <b>let</b> is in loops: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> for &lpar;<b>let</b> i = 0; i &lt; 3; i++&rpar; { <br />
+	&emsp; document.write&lpar;i&rpar;; <br />
+		} </p>
+		
+<!-- ********** Example 8.3: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_3.js"></script>
+<!-- ********** End Example 8.3 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example3()">CLICK HERE FOR RESULT OF EXAMPLE 8.3! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />	
+	
+	<p> Here, the <b>i</b> <font color="blue">variable</font> is accessible only within the scope of the <b>for</b> loop, where it is needed. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		<b>let</b> is not subject to <b>Variable Hoisting</b>, which means that <b>let</b> declarations do not move to the top
+		of the current execution context.
+	</div>
+	
+<!-- const -->	
+	<p> <strong><h3><u>const</u></h3></strong> </p>		
+	<p> <b>const</b> variables have the same scope as variable declared using <b>let</b>. The difference is that const
+		variables are <b>immutable</b> - they are not allowed to be reassigned. <br />
+		For example, the following generates an exception: </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <b>const</b> a = 'Hello'; <br />
+		a = 'Bye'; </p>
+		
+<!-- ********** Example 8.4: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_4.js"></script>
+<!-- ********** End Example 8.4 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example4()">CLICK HERE FOR RESULT OF EXAMPLE 8.4! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />	<p></p>
+	
+	<div style="background-color:gold; width:600px; padding:1px">
+		<b>const</b> is not subject to <b>Variable Hoisting</b> too, which means that <b>const</b> declarations do
+		not move to the top of the current execution context. <br />
+		Also note that ES6 code will run only in browsers that support it. Older devices and browsers that do not
+		support ES6 will return a syntax error.
+	</div>
+	
+<!-- Template Literals in ES6 -->	
+	<p> <strong><h3><u>Template Literals in ES6</u></h3></strong> </p>	
+	<p> <b>Template literals</b> are a way to output variables in the <font color="blue">string</font>. <br />
+		Prior to ES6, we had to break the <font color="blue">string</font>, for example:
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let name = 'David'; <br />
+		let msg = 'Welcome' + name + '!'; <br />
+		console.log&lpar;msg&rpar;; </p>
+		
+<!-- ********** Example 8.5: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_5.js"></script>
+<!-- ********** End Example 8.5 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example5()">CLICK HERE FOR RESULT OF EXAMPLE 8.5! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />	
+	<p><b>console.log result:</b> &lpar;F12&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_5.JPG" alt="">
+
+	<p> ES6 introduces a new way of outputting 	<font color="blue">variable</font> values in strings. The same code
+		above can be rewritten as: </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let name = 'David'; <br />
+		let msg = `Welcome <b>${name}</b>!`; <br />
+		console.log&lpar;msg&rpar;; </p>
+		
+<!-- ********** Example 8.6: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_6.js"></script>
+<!-- ********** End Example 8.6 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example6()">CLICK HERE FOR RESULT OF EXAMPLE 8.6! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />	
+	<p><b>console.log result:</b> &lpar;F12&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_6.JPG" alt="">
+
+	<p> Notice that template literals are enclosed by the <b>backtick</b> &lpar;' '&rpar; character 
+		instead of double or single quotes. <br />
+		The <b>${expression}</b> is a placeholder, and can include any expression, which will get evaluated
+		and inserted into the template literal. </p>
+	<p><b>For example:</b></p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let a = 8; <br />
+		let b = 34; <br />
+		let msg = 'The sum is <b>${a+b}</b>'; <br />
+		console.log&lpar;msg&rpar;; </p>
+		
+<!-- ********** Example 8.7: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_7.js"></script>
+<!-- ********** End Example 8.7 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example7()">CLICK HERE FOR RESULT OF EXAMPLE 8.7! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />	
+	<p><b>console.log result:</b> &lpar;F12&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_7.JPG" alt="">	<p></p>
+	<div style="background-color:gold; width:600px; padding:1px">	
+		To escape a backtick in a template literal, put a backslash <b><font color="red">\</font></b> before the backtick.
+	</div> <br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Loops and Functions in ES6 -->
+	<h2><strong><font size="h2">III.</font> <u>Loops and Functions in ES6</u></strong></h2>
+<!-- Loops in ECMAScript6 -->	
+	<p> <strong><h3><u>Loops in ECMAScript6</u></h3></strong> </p>
+	<p>	In JavaScript, we commonly use the <b>for</b> loop to iterate over values in a list: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let arr = [1, 2, 3]; <br />
+		<b>for</b> &lpar;let k = 0; k &lt; arr.length; k++&rpar; { <br />
+	&emsp;	console.log&lpar;arr[k]&rpar;; <br />
+		} </p>
+		
+<!-- ********** Example 8.8: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_8.js"></script>
+<!-- ********** End Example 8.8 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example8()">CLICK HERE FOR RESULT OF EXAMPLE 8.8! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />	
+	<p><b>console.log result:</b> &lpar;F12&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_8.JPG" alt="">
+
+	<p> The <b>for...in</b> loop is intended for iterating over the enumerable keys of an <font color="blue">object</font>. <br />
+		<b>For example:</b> </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let obj = {a: 1, b: 2, c: 3}; <br />
+		<b>for</b> &lpar;let v <b>in</b> obj&rpar; { <br />
+	&emsp;	console.log&lpar;v&rpar;; <br />
+		} </p>
+		
+<!-- ********** Example 8.9: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_9.js"></script>
+<!-- ********** End Example 8.9 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example9()">CLICK HERE FOR RESULT OF EXAMPLE 8.9! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />	
+	<p><b>console.log result:</b> &lpar;F12&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_9.JPG" alt=""> <p></p>	
+	<div style="background-color:gold; width:600px; padding:1px">	
+		The <b>for...in</b> loop should <b>NOT</b> be used to iterate over arrays because, depending on the JavaScript engine, it could iterate
+		in an arbitrary order. Also, the iterating <u>variable</u> is a <b><u>string</u></b>, not a number, so if you try to do any math
+		with the <u>variable</u>, you'll be performing <u>string</u> concatenation instead of addition.
+	</div>
+	
+	<p> ES6 introduces the new <b>for...of</b> loop, which creates a loop iterating over iterable objects. <br />
+		<b>For example:</b>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let list = ["x", "y", "z"]; <br />
+		<b>for</b> &lpar;let val <b>of</b> list&rpar; { <br />
+	&emsp;	console.log&lpar;val&rpar;; <br />
+		} </p>
+		
+<!-- ********** Example 8.10: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_10.js"></script>
+<!-- ********** End Example 8.10 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example10()">CLICK HERE FOR RESULT OF EXAMPLE 8.10! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />	
+	<p><b>console.log result:</b> &lpar;F12&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_10.JPG" alt="">	
+	
+	<p> During each iteration, the <b>val</b> <font color="blue">variable</font> is assigned the corresponding element in the list. </p>
+	<p> The <b>for...of</b> loop works for other iterable objects as well, including <b>strings</b>: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <b>for</b> &lpar;let ch <b>of</b> "Hello"&rpar; { <br />
+	&emsp;	console.log&lpar;ch&rpar;; <br />
+		} </p>
+		
+<!-- ********** Example 8.11: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_11.js"></script>
+<!-- ********** End Example 8.11 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example11()">CLICK HERE FOR RESULT OF EXAMPLE 8.11! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />	
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_11.JPG" alt=""> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">	
+		The <b>for...of</b> loop also works on the newly introduced collections &lpar;<b>Map, Set, WeakMap, and WeakSet&rpar;</b>. 
+		We will learn about them in the upcoming lessons. <br />
+		Note that ES6 code will run only in browsers that support it. Older devices and browsers that do not support ES6 will return a syntax error.
+	</div>
+	
+<!-- Functions in ECMAScript 6 -->	
+	<p> <strong><h3><u>Functions in ECMAScript 6</u></h3></strong> </p>	
+	<p> Prior to ES6, a JavaScript function was defined like this: <br />
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <b>function</b> add&lpar;x, y&rpar; { <br />
+	&emsp; <u>var</u> sum = x+y; <br />
+	&emsp; console.log&lpar;sum&rpar;; <br />
+		} </p>
+		
+<!-- ********** Example 8.12: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_12.js"></script>
+<!-- ********** End Example 8.12 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example12()">CLICK HERE FOR RESULT OF EXAMPLE 8.12! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_12.JPG" alt="">
+	
+	<p> ES6 introduces a new syntax for writing functions. The same function from above can be written as: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> const add = &lpar;x, y&rpar; => { <br />
+	&emsp; let sum = x + y; <br />
+	&emsp; console.log&lpar;sum&rpar;; <br />
+		} </p>
+		
+<!-- ********** Example 8.13: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_13.js"></script>
+<!-- ********** End Example 8.13 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example13()">CLICK HERE FOR RESULT OF EXAMPLE 8.13! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_13.JPG" alt="">	
+	
+	<p> This new syntax is quite handy when you just need a simple function with one argument. <br />
+		You can skip typing <b>function</b> and <b>return</b>, as well as some parentheses and braces. <br />
+		<b>For example:</b>
+	
+	<p><b>Syntax:</b></p>
+	<p> const greet = x => "Welcome" + x; </p>
+	
+<!-- ********** Example 8.14: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_14.js"></script>
+<!-- ********** End Example 8.14 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example14()">CLICK HERE FOR RESULT OF EXAMPLE 8.14! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />	
+	
+	<p> Te code above defines a function named <b>greet</b> that has one argument and returns a message. </p>
+	<p> If there are no parameters, an empty pair of parentheses should be used, as in </p>
+	<p><b>Syntax:</b></p>
+	<p> const x = &lpar;&rpar; => alert&lpar;"Hi"&rpar;; </p>
+	
+<!-- ********** Example 8.15: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_15.js"></script>
+<!-- ********** End Example 8.15 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example15()">CLICK HERE FOR RESULT OF EXAMPLE 8.15! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />	
+	
+	<p> The syntax is very useful for inline functions. For example, let's say we have an <font color="blue">array</font>,
+		and for each element of the <font color="blue">array</font> we need to execute a function. We use the <b>forEach</b>
+		<font color="blue">method</font> of the <font color="blue">array</font>
+		to call a function for each element: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> arr = [2, 3, 7, 8]; </p>
+		arr.forEach&lpar;function&lpar;el&rpar; { <br />
+	&emsp; console.log&lpar;el * 2&rpar;; <br />
+		}); </p>
+		
+<!-- ********** Example 8.16: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_16.js"></script>
+<!-- ********** End Example 8.16 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example16()">CLICK HERE FOR RESULT OF EXAMPLE 8.16! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />	
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_16.JPG" alt="">
+	
+	<p> However, in ES6, the code above can be rewritten as following:
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> const arr = [2, 3, 7, 8]; </p>
+		arr.forEach&lpar;v => { <br />
+	&emsp; console.log&lpar;v * 2&rpar;; <br />
+		}); </p>
+		
+<!-- ********** Example 8.17: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_17.js"></script>
+<!-- ********** End Example 8.17 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example17()">CLICK HERE FOR RESULT OF EXAMPLE 8.17! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_17.JPG" alt="">	
+	
+<!-- Default Parameters in ES6 -->	
+	<p> <strong><h3><u>Default Parameters in ES6</u></h3></strong> </p>
+	<p> In ES6, we can put the default values right in the signature of the functions. <br />
+		<b>For example:</b> </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> function test&lpar;a, <b>b = 3</b>, <b>c = 42</b>&rpar; { <br />
+	&emsp; return a + b + c; <br />
+		} <br />
+		console.log&lpar;test&lpar;5&rpar;&rpar;; //50 </p>
+		
+		
+<!-- ********** Example 8.18: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_18.js"></script>
+<!-- ********** End Example 8.18 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example18()">CLICK HERE FOR RESULT OF EXAMPLE 8.18! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_18.JPG" alt="">
+	
+	<p> And here's an example of an arrow function with default parameters: </p>
+	
+	<p><b>Syntax:</b></p>
+	<p> const test = &lpar;a, <b>b = 3</b>, <b>c = 42</b>&rpar; => { <br />
+	&emsp; return a + b + c; <br />
+		} <br />
+		console.log&lpar;test&lpar;5&rpar;&rpar;; //50 </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		Default value expressions are evaluated at function call time from left to right. This also means that
+		default expressions can use the values of previously-filled parameters.	
+	</div>	<br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- ES6 Objects -->
+	<h2><strong><font size="h2">IV.</font> <u>ES6 Objects</u></strong></h2>
+<!-- ES6 Objects -->	
+	<p> <strong><h3><u>ES6 Objects</u></h3></strong> </p>
+	<p> JavaScript variables can be <b>Object</b> data types that contain many values called <b>properties</b>. <br />
+		An <font color="blue">object</font> can also have properties that are function definitions called <b>methods</b> for
+		performing actions on the <font color="blue">object</font>. <br />
+		ES6 introduces <b>shorthand</b> notations and <b>computed</b> property names that make declaring and using
+		objects easier to understand. </p>
+	<p> The new <font color="blue">method</font> definition shorthand does not require the colon &lpar;:&rpar; or
+		<b>function</b> keyword, as in the <b>grow</b> function of the <b>tree</b> <font color="blue">object</font> declaration: </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let tree = { <br />
+	&emsp; height: 10, <br />
+	&emsp; color: 'green', <br />
+	&emsp; <b>grow</b>&lpar;&rpar; { <br />
+	&emsp;&emsp; this.height += 2; <br />
+	&emsp;	} <br />
+		}; <br />
+		tree.grow&lpar;&rpar; <br />
+		console.log&lpar;tree.height&rpar;; // 12 </p>
+		
+<!-- ********** Example 8.19: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_19.js"></script>
+<!-- ********** End Example 8.19 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example19()">CLICK HERE FOR RESULT OF EXAMPLE 8.19! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_19.JPG" alt="">
+
+	<p> You can also use a property value shorthand when initializing properties with a <font color="blue">variable</font>
+		by the same name. <br />
+		For example, properties <b>height</b> and <b>health</b> are being initialized with variables named 
+		<b>height</b> and <b>health</b>: </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let height = 5; <br />
+		let health = 100; </p>
+	<p> let athlete = { <br />		
+	&emsp; height, <br />
+	&emsp; health <br />
+		}; </p>
+		
+<!-- ********** Example 8.20: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_20.js"></script>
+<!-- ********** End Example 8.20 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example20()">CLICK HERE FOR RESULT OF EXAMPLE 8.20! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_20.JPG" alt="">
+	
+	<p> When creating an <font color="blue">object</font> by using duplicate property names, the last property will
+		overwrite the prior ones of the same name. <br />
+		<b>For example:</b> </p>
+		
+	<p><b>Syntax:</b></p>
+	<p> <u>var</u> a = {x: 1, x: 2, x:3, x: 4}; </p>	
+
+<!-- ********** Example 8.21: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_21.js"></script>
+<!-- ********** End Example 8.21 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example21()">CLICK HERE FOR RESULT OF EXAMPLE 8.21! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_21.JPG" alt=""> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px"> 
+		Duplicate property names generated a <b>SyntaxError</b> in ES5 when using strict mode. <br />
+		However, ES6 removed this limitation.
+	</div>
+	
+<!-- Computed Property Names -->	
+	<p> <strong><h3><u>Computed Property Names</u></h3></strong> </p>
+	<p> With ES6, you can now used <b>computed property</b> names. Using the square bracket notation <b>[]</b>, we can use
+		an expression for a property name, including concatenating strings. This can be useful in cases where we want to create
+		certain objects based on user data &lpar;e.g. id, email, and so on&rpar;. </p>
+	<p>Here are three examples: <br />
+		<b>Example 1:</b> </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let prop = 'name'; <br />
+		let id = '1234'; <br />
+		let mobile = '08923' </p>		
+	<p> let user = { <br />
+	&emsp; [prop]: 'Jack', <br />
+	&emsp; ['user_${id}']: '${mobile}' <br />
+		}; </p>
+		
+<!-- ********** Example 8.22: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_22.js"></script>
+<!-- ********** End Example 8.22 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example22()">CLICK HERE FOR RESULT OF EXAMPLE 8.22! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_22.JPG" alt="">
+
+	<p><b>Example 2:</b></p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> i = 0; <br />
+		<u>var</u> a = { <br />
+	&emsp; ['foo' + ++i]: i, <br />
+	&emsp; ['foo' + ++i]: i, <br />
+	&emsp; ['foo' + ++i]: i <br />	
+		}; </p>
+
+<!-- ********** Example 8.23: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_23.js"></script>
+<!-- ********** End Example 8.23 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example23()">CLICK HERE FOR RESULT OF EXAMPLE 8.23! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_23.JPG" alt="">
+
+	<p><b>Example 3:</b></p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> param = 'size'; <br />
+		<u>var</u> config = { <br />
+	&emsp; [param]: 12, <br />
+	&emsp; ['mobile' + param.charAt&lpar;0&rpar;.toUpperCase&lpar;&rpar; + param.slice&lpar;1&rpar;]: 4 <br />	
+		}; <br />
+		console.log&lpar;config&rpar;; </p>
+
+<!-- ********** Example 8.24: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_24.js"></script>
+<!-- ********** End Example 8.24 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example24()">CLICK HERE FOR RESULT OF EXAMPLE 8.24! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_24.JPG" alt=""> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		It is very useful when you need to create custom objects based on some variables.
+	</div>
+
+<!-- Object.assign() in ES6 -->	
+	<p> <strong><h3><u>Object.assign() in ES6</u></h3></strong> </p>
+	<p> ES6 adds a new <b>Object</b> <font color="blue">method</font> <b>assign&lpar;&rpar;</b> that allows us to combine
+		multiple sources into one target to create a single new <font color="blue">object</font>. <br />
+		<b>Object.assign&lpar;&rpar;</b> is also useful for creating a duplicate of an existing <font color="blue">object</font>. </p>
+	<p> Let's look at the following example to see how to combine objects: </p>	
+
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let person = { <br />
+	&emsp; name: 'Jack', <br />
+	&emsp; age: 18, <br />
+	&emsp; sex: 'male' <br />
+		}; <br />
+		let student = { <br />
+	&emsp; name: 'Bob', <br />
+	&emsp; age: 20, <br />
+	&emsp; xp: '2' <br />	
+		}; <br />
+		let newStudent = <b>Object.assign</b>&lpar;{}, person, student&rpar;; </p>
+
+<!-- ********** Example 8.25: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_25.js"></script>
+<!-- ********** End Example 8.25 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example25()">CLICK HERE FOR RESULT OF EXAMPLE 8.25! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_25.JPG" alt="">
+	<p> Here we used the <b>Object.assign&lpar;&rpar;</b> where the first parameter is the <b>target <font color="blue">object</font></b>
+		you want to apply new properties to. <br />
+		Every parameter after the first will be used as <b>sources</b> for the target. There are no limitations on the number of source
+		parameters. However, order is important because properties in the second parameter will be overridden by properties of the same
+		name in the third parameter, and so on. </p>
+	<p> In the example above, we used a new <font color="blue">object</font> <b>{}</b> as the target and used two objects as sources. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		Try changing the order of second and third parameters to see what happens to the result.
+	</div>	
+	
+	<p>Now let's see how we can use <b>assign&lpar;&rpar;</b> to create a duplicate <font color="blue">object</font> without creating
+		a reference &lpar;mutating&rpar; to the base <font color="blue">object</font>. <br />
+		In the following example, assignment was used to try to generate a new <font color="blue">object</font>. However, using <b>=</b> creates
+		a reference to the base <font color="blue">object</font>. Because of this reference, changes intended for a new
+		<font color="blue">object</font> mutate the original <font color="blue">object</font>: </p>
+
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let person = { <br />
+	&emsp; name: 'Jack', <br />
+	&emsp; age: 18, <br />
+		}; </p>
+	<p>	let newPerson = person; // newPerson references person <br />
+		newPerson.name = 'Bob'; </p>
+	<p> console.log&lpar;person.name&rpar;; // Bob <br />	
+		console.log&lpar;newPerson.name&rpar;; // Bob </p>
+
+<!-- ********** Example 8.26: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_26.js"></script>
+<!-- ********** End Example 8.26 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example26()">CLICK HERE FOR RESULT OF EXAMPLE 8.26! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_26.JPG" alt="">
+
+	<p> To avoid this &lpar;mutations&rpar;, use <b>Object.assign&lpar;&rpar;</b> to create a new <font color="blue">object</font>. <br />
+		<b>For example:</b>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let person = { <br />
+	&emsp; name: 'Jack', <br />
+	&emsp; age: 18, <br />
+		}; </p>
+	<p>	let newPerson = <b>Object.assign&lpar;{}, person&rpar;</b>; <br />
+		newPerson.name = 'Bob'; </p>
+	<p> console.log&lpar;person.name&rpar;; // Jack <br />	
+		console.log&lpar;newPerson.name&rpar;; // Bob </p>
+
+<!-- ********** Example 8.27: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_27.js"></script>
+<!-- ********** End Example 8.27 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example27()">CLICK HERE FOR RESULT OF EXAMPLE 8.27! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_27.JPG" alt="">
+
+	<p> Finally, you can assign a value to an <font color="blue">object</font> property in the <b>Object.assign&lpar;&rpar;</b> statement. <br />
+		<b>For example:</b>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let person = { <br />
+	&emsp; name: 'Jack', <br />
+	&emsp; age: 18, <br />
+		}; </p>
+	<p>	let newPerson = <b>Object.assign&lpar;{}, person, {name: 'Bob'}&rpar;</b>; </p>
+
+<!-- ********** Example 8.28: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_28.js"></script>
+<!-- ********** End Example 8.28 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example28()">CLICK HERE FOR RESULT OF EXAMPLE 8.28! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_28.JPG" alt="">	<br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- ES6 Destructuring -->
+	<h2><strong><font size="h2">V.</font> <u>ES6 Destructuring</u></strong></h2>
+<!-- ES6 Destructuring -->	
+	<p> <strong><h3><u>ES6 Destructuring</u></h3></strong> </p>
+	<p> The <b>destructuring</b> assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays,
+		or properties from objects, into distinct variables. <br />
+		ES6 has added a shorthand syntax: for destructuring an <font color="blue">array</font>. </p>
+	<p> The following example demonstrates how to unpack the elements of an <font color="blue">array</font>	into distinct variables: </p>
+
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let arr = ['1', '2', '3']; <br />
+		<b>let [one, two, three] = arr</b>; </p>
+	<p> console.log&lpar;one&rpar;; // 1 <br />
+		console.log&lpar;two&rpar;; // 2 <br />
+		console.log&lpar;three&rpar;; // 3 </p>
+		
+<!-- ********** Example 8.29: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_29.js"></script>
+<!-- ********** End Example 8.29 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example29()">CLICK HERE FOR RESULT OF EXAMPLE 8.29! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_29.JPG" alt="">
+
+	<p> We can also destructure an <font color="blue">array</font> returned by a function. <br />
+		<b>For example:</b> </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let a = &lpar;&rpar; => { <br />
+	&emsp; return [1, 3, 2]; <br />
+		}; </p>
+	<p> <b>let [one, , two] = a&lpar;&rpar;</b>; </p>	
+		
+<!-- ********** Example 8.30: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_30.js"></script>
+<!-- ********** End Example 8.30 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example30()">CLICK HERE FOR RESULT OF EXAMPLE 8.30! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_30.JPG" alt="">
+	
+	<p> Notice that we left the second argument's place empty. </p>
+	<p> The destructuring syntax also simplifies assignment and swapping values: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let a, b, c = 4, d = 8; <br />
+		[a, b = 6] = [2]; // a = 2, b = 6 </p>
+	<p> [c, d] = [d, c]; // c = 8, d = 4 </p>
+
+<!-- ********** Example 8.31: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_31.js"></script>
+<!-- ********** End Example 8.31 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example31()">CLICK HERE FOR RESULT OF EXAMPLE 8.31! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_31.JPG" alt="">
+
+<!-- Object Destructuring in ES6 -->	
+	<p> <strong><h3><u>Object Destructuring in ES6</u></h3></strong> </p>
+	<p> Similar to Array destructuring, <b>Object destructuring</b> unpacks properties into distinct variables. <br />
+		<b>For example:</b> </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let obj = {h: 100, s: true}; <br />
+		<b> let {h, s} = obj</b>; </p>
+	<p> console.log&lpar;h&rpar;; // 100 <br />
+		console.log&lpar;s&rpar;; // true </p>
+
+<!-- ********** Example 8.32: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_32.js"></script>
+<!-- ********** End Example 8.32 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example32()">CLICK HERE FOR RESULT OF EXAMPLE 8.32! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_32.JPG" alt="">
+	
+	<p> We can assign without declaration, but there are some syntax requirements for that: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let a, b; <br />
+		&lpar;{a, b} = {a: 'Hello', b: 'Jack'}&rpar;; </p>
+	<p> console.log&lpar;a + b&rpar;; // Hello Jack </p>
+
+<!-- ********** Example 8.33: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_33.js"></script>
+<!-- ********** End Example 8.33 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example33()">CLICK HERE FOR RESULT OF EXAMPLE 8.33! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_33.JPG" alt="">
+	
+	<p> The <b>&lpar;&rpar;</b> with a <b>semicolon &lpar;;&rpar;</b> at the end are <b>mandatory</b> when destructuring without a declaration. <br />
+		However, you can also do it as follows where the <b>&lpar;&rpar;</b> are not required: </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let {a, b} = {a: 'Hello', b: 'Jack'}; <br />
+		console.log&lpar;a + b&rpar;; // Hello Jack </p>
+
+<!-- ********** Example 8.34: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_34.js"></script>
+<!-- ********** End Example 8.34 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example34()">CLICK HERE FOR RESULT OF EXAMPLE 8.34! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_34.JPG" alt="">
+	
+	<p> You can also assign the <font color="blue">object</font> to new <font color="blue">variable</font> names. <br />
+		<b>For example:</b> </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> o = {h: 42, s: true}; <br />
+		<b><u>var</u> {h: foo, s: bar} = o</b>; </p>
+	<p>	// console.log&lpar;h&rpar;; // Error <br />
+		console.log&lpar;foo&rpar;; // 42 </p>
+
+<!-- ********** Example 8.35: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_35.js"></script>
+<!-- ********** End Example 8.35 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example35()">CLICK HERE FOR RESULT OF EXAMPLE 8.35! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_35.JPG" alt="">	
+		
+	<p> Finally, you can assign <b>default values</b> to variables, in case the value unpacked from the 
+		<font color="blue">object</font> is <font color="blue">undefined</font>. <br />
+		<b>For example:</b> </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> obj = {id: 42, name: "Jack"}; </p>
+	<p>	<b>let {id = 10, age = 20} = obj</b>; </p>
+	<p> console.log&lpar;id&rpar;; // 42 <br />
+		console.log&lpar;age&rpar;; // 20 </p>
+
+<!-- ********** Example 8.36: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_36.js"></script>
+<!-- ********** End Example 8.36 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example36()">CLICK HERE FOR RESULT OF EXAMPLE 8.36! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_36.JPG" alt=""> <br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- Rest & Spread -->
+	<h2><strong><font size="h2">VI.</font> <u>Rest & Spread</u></strong></h2>
+<!-- ES6 Rest Parameters -->	
+	<p> <strong><h3><u>ES6 Rest Parameters</u></h3></strong> </p>	
+	<p> Prior to ES6, if we wanted to pass a <font color="blue">variable</font> number of arguments to a function, we could use the
+		<b>arguments</b> <font color="blue">object</font>, an <font color="blue">array</font>-like <font color="blue">object</font>,
+		to access the parameters passed to the function. <br />
+		For example, let's write a function that checks if an <font color="blue">array</font> contains all the arguments passed: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> function containsAll&lpar;arr&rpar; { <br />
+	&emsp; for &lpar;let k = 1; k &lt; <b>arguments</b>.length; k++&rpar; { <br />
+	&emsp;&emsp; let num = <b>arguments</b>[k]; <br />
+	&emsp;&emsp; if &lpar;arr.indexOf&lpar;num&rpar; === -1&rpar; { <br />
+	&emsp;&emsp;&emsp; return false; <br />
+	&emsp;&emsp; } <br />
+	&emsp;	} <br />
+	&emsp; return true; <br />
+		} <br />
+		let x = [2, 4, 6, 7]; <br />
+		console.log&lpar;containsAll&lpar;x, 2, 4, 7&rpar;&rpar;; <br />
+		console.log&lpar;containsAll&lpar;x, 6, 4, 9&rpar;&rpar;; </p>	
+		
+<!-- ********** Example 8.37: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_37.js"></script>
+<!-- ********** End Example 8.37 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example37()">CLICK HERE FOR RESULT OF EXAMPLE 8.37! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_37.JPG" alt=""> 	
+	
+	<p> We can pass any number of arguments to the function and access it using the <b>arguments</b> <font color="blue">object</font>. </p>
+	<p> While this does the job, ES6 provides a more readable syntax to achieve <font color="blue">variable</font> number of
+		parameters by using a <b>rest parameter</b>: </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> function containsAll&lpar;arr, <b>...nums</b>&rpar; { <br />
+	&emsp; for &lpar;let num of nums&rpar; { <br />
+	&emsp;&emsp; if &lpar;arr.indexOf&lpar;num&rpar; === -1&rpar; { <br />
+	&emsp;&emsp;&emsp; return false; <br />
+	&emsp;&emsp; } <br />
+	&emsp;	} <br />
+	&emsp; return true; <br />
+		} </p>		
+		
+<!-- ********** Example 8.38: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_38.js"></script>
+<!-- ********** End Example 8.38 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example38()">CLICK HERE FOR RESULT OF EXAMPLE 8.38! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_38.JPG" alt="">	
+		
+	<p>	The <b>...nums</b> parameter is called a <b>rest parameter</b>. It takes all the "extra" arguments passed to the function.
+		The three dots &lpar;...&rpar; are called the <b>Spread operator</b>. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		Only the last parameter of a function may be marked as a rest parameter. If there are no extra arguments, the rest parameter will simply
+		be an empty <u>array</u>; the rest parameter will never be <b><u>undefined</u></b>.
+	</div>	
+		
+<!-- The Spread Operator -->	
+	<p> <strong><h3><u>The Spread Operator</u></h3></strong> </p>		
+	<p> This operator is similar to the Rest Parameter, but it has another purpose when used in objects or arrays or function calls &lpar;arguments&rpar;. </p>
+	
+	<p><font size="3"><b>Spread in function calls</b></font> <br />
+		It is common to pass the elements of an <font color="blue">array</font>	as arguments to a function. Before ES6, we used
+		the following <font color="blue">method</font>: </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> function myFunction&lpar;w, x, y, z&rpar; { <br />
+	&emsp; console.log&lpar;w + x + y + z&rpar;; <br />
+		}	<br />
+		<u>var</u> <b>args</b> = [1, 2, 3]; <br />
+		myFunction.apply&lpar;<u>null</u>, <b>args.concat</b>&lpar;4&rpar;&rpar;; </p>
+		
+<!-- ********** Example 8.39: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_39.js"></script>
+<!-- ********** End Example 8.39 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example39()">CLICK HERE FOR RESULT OF EXAMPLE 8.39! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_39.JPG" alt="">	
+		
+	<p>	ES6 provides an easy way to do the example above with <b>spread operators</b>: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> const myFunction&lpar;w, x, y, z&rpar; => { <br />
+	&emsp; console.log&lpar;w + x + y + z&rpar;; <br />
+		};	<br />
+		let args = [1, 2, 3]; <br />
+		myFunction&lpar;<b>...args</b>, 4&rpar;; </p>
+		
+<!-- ********** Example 8.40: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_40.js"></script>
+<!-- ********** End Example 8.40 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example40()">CLICK HERE FOR RESULT OF EXAMPLE 8.40! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_40.JPG" alt="">
+	
+	<p>Example:</p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> dateFields = [1970, 0, 1]; // 1 Jan 1970 <br />
+		<u>var</u> date = new <u>Date</u>&lpar;<b>...dateFields</b>&rpar;; <br />
+		console.log&lpar;date&rpar;; </p>
+		
+<!-- ********** Example 8.41: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_41.js"></script>
+<!-- ********** End Example 8.41 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example41()">CLICK HERE FOR RESULT OF EXAMPLE 8.41! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_41.JPG" alt="">	
+		
+	<p><font size="3"><b>Spread in array literals</b></font> <br />
+			Before ES6, we used the following syntax to add an item at middle of an <font color="blue">array</font>: </p>
+			
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> arr = ["One", "Two", "Five"]; </p>
+	<p> arr.splice&lpar;2, 0, "Three"&rpar;; <br />
+		arr.splice&lpar;3, 0, "Four"&rpar;; <br />
+		console.log&lpar;arr&rpar;; </p>
+		
+<!-- ********** Example 8.42: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_42.js"></script>
+<!-- ********** End Example 8.42 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example42()">CLICK HERE FOR RESULT OF EXAMPLE 8.42! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_42.JPG" alt="">	
+		
+	<p> You can use methods such as push, splice, and concat, for example, to achieve this in different positions of the
+		<font color="blue">array</font>. However, in ES6, the spread operator lets us do this more easily: </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let newArr = ['Three', 'Four']; <br />
+		let arr = ['One', 'Two', <b>...newArr</b>, 'Five']; <br />
+		console.log&lpar;arr&rpar;; </p>
+		
+<!-- ********** Example 8.43: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_43.js"></script>
+<!-- ********** End Example 8.43 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example43()">CLICK HERE FOR RESULT OF EXAMPLE 8.43! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_43.JPG" alt="">	
+		
+	<p><font size="3"><b>Spread in object literals</b></font> <br />
+		In objects, it copies the own enumerable properties from the provided <font color="blue">object</font>
+		onto a new <font color="blue">object</font>. </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> const obj1 = { foo: 'bar', x: 42 }; <br />
+		const obj2 = { foo: 'baz', y: 5 }; </p>
+	<p> const clonedObj = {<b>...obj1</b>}; // { foo: "bar", x: 42 } <br />
+		const mergedObj = {<b>...obj1</b>, <b>...obj2</b>}; // { foo: "baz", x: 42, y: 5 } </p>
+		
+<!-- ********** Example 8.44: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_44.js"></script>
+<!-- ********** End Example 8.44 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example44()">CLICK HERE FOR RESULT OF EXAMPLE 8.44! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_44.JPG" alt="">	
+		
+	<p>	However, if you try to merge them, you will not get the result you expected: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> const obj1 = { foo: 'bar', x: 42 }; <br />
+		const obj2 = { foo: 'baz', y: 5 }; <br />
+		const merge = &lpar;<b>...objects</b>&rpar; => &lpar;{<b>...objects</b>}&rpar;; </p>
+	<p> let mergedObj = merge&lpar;<b>obj1</b>, <b>obj2</b>&rpar;; <br />
+		// { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 5 } } </p>
+	<p> let mergedObj2 = merge&lpar;<b>{}</b>, <b>obj1</b>, <b>obj2</b>&rpar;; <br />
+		// { 0: {}, 1 { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 5 } } </p>	
+		
+<!-- ********** Example 8.45: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_45.js"></script>
+<!-- ********** End Example 8.45 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example45()">CLICK HERE FOR RESULT OF EXAMPLE 8.45! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_45.JPG" alt="">	<p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		Shallow cloning or merging objects is possible with another operator called <b>Object.assign&lpar;&rpar;</b>.
+	</div>	<br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- ES6 Classes -->
+	<h2><strong><font size="h2">VII.</font> <u>ES6 Classes</u></strong></h2>
+<!-- Classes in ES6 -->	
+	<p> <strong><h3><u>Classes in ES6</u></h3></strong> </p>	
+	<p> In this lesson, we'll explain how to create a <b>class</b> that can be used to create multiple objects
+		of the same structure. <br />
+		A class uses the keyword <b>class</b> and contains a <font color="blue"><b>constructor</b> method</font> for initializing. </p>
+	<p><b>For example:</b></p>
+	<p><b>Syntax:</b></p>
+	<p> <b>class</b> Rectangle { <br />
+	&emsp; <b><u>constructor</u></b>&lpar;height, width&rpar; { <br />
+	&emsp;&emsp; this.height = height; <br />
+	&emsp;&emsp; this.width = width; <br />
+	&emsp; } <br />
+		} </p>
+
+	<p> A declared class can then be used to create multiple objects using the keyword <b>new</b>. <br />
+		<b>For example:</b> </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> const square = new Rectangle&lpar;5, 5&rpar;; <br />
+		const poster = new Rectangle&lpar;2, 3&rpar;; </p>
+
+<!-- ********** Example 8.46: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_46.js"></script>
+<!-- ********** End Example 8.46 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example46()">CLICK HERE FOR RESULT OF EXAMPLE 8.46! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_46.JPG" alt="">	<p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		Class Declarations are <b>not hoisted</b> while Function Declarations are. If you try to access your class before
+		declaring it, <b>ReferenceError</b> will be returned.
+	</div>
+
+	<p> You can also define a class with a <b>class expression</b>, where the class can be named or unnamed. <br />
+		A <b>named</b> class looks like: </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> Square = class Rectangle { <br />
+	&emsp; <b><u>constructor</u></b>&lpar;height, width&rpar; { <br />
+	&emsp;&emsp; this.height = height; <br />
+	&emsp;&emsp; this.width = width; <br />
+	&emsp; } <br />
+		}; </p>
+	
+<!-- ********** Example 8.47: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_47.js"></script>
+<!-- ********** End Example 8.47 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example47()">CLICK HERE FOR RESULT OF EXAMPLE 8.47! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_47.JPG" alt="">
+		
+	<p> In the unnamed class expression, a <font color="blue">variable</font> is simply assigned the class definition: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> Square = <b>class</b> { <br />
+	&emsp; <b><u>constructor</u></b>&lpar;height, width&rpar; { <br />
+	&emsp;&emsp; this.height = height; <br />
+	&emsp;&emsp; this.width = width; <br />
+	&emsp; } <br />
+		}; </p>
+	
+<!-- ********** Example 8.48: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_48.js"></script>
+<!-- ********** End Example 8.48 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example48()">CLICK HERE FOR RESULT OF EXAMPLE 8.48! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_48.JPG" alt="">	<p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		The <b><u>constructor</u></b> is a special <u>method</u> which is used for creating and initializing
+		an <u>object</u> created with a class. <br />
+		There can be only <b>one</b> <u>constructor</u> in each class.
+	</div>
+	
+<!-- Class Methods in ES6 -->	
+	<p> <strong><h3><u>Class Methods in ES6</u></h3></strong> </p>
+	<p> ES6 introduced a shorthand that does not require the keyword <b>function</b> for a function assigned to a 
+		<font color="blue">method</font>'s name. One type of class <font color="blue">method</font> is the 
+		<b>prototype <font color="blue">method</font> </b>, which is available to objects of the class. <br />
+		<b>For Example:</b> </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> class Rectangle { <br />
+	&emsp; <u>constructor</u>&lpar;height, width&rpar; { <br />
+	&emsp;&emsp; this.height = height; <br />
+	&emsp;&emsp; this.width = width; <br />
+	&emsp; } <br />
+	&emsp; get <b>area</b>&lpar;&rpar; { <br />
+	&emsp;&emsp; return this.calcArea&lpar;&rpar;; <br />	
+	&emsp; } <br />
+	&emsp; <b>calcArea</b>&lpar;&rpar; { <br />
+	&emsp;&emsp; return this.height * this.width; <br />
+	&emsp; } <br />	
+		} <br />
+		const square = new Rectangle&lpar;5, 5&rpar;; <br />	
+		console.log&lpar;square.<b>area</b>&rpar;; // 25	</p>
+	
+<!-- ********** Example 8.49: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_49.js"></script>
+<!-- ********** End Example 8.49 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example49()">CLICK HERE FOR RESULT OF EXAMPLE 8.49! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_49.JPG" alt="">	<p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		In the code above, <b>area</b> is a getter, <b>calcArea</b> is a <u>method</u>.
+	</div>
+	
+	<p> Another type of <font color="blue">method</font> is the <b>static <font color="blue">method</font></b>, which
+		cannot be called through a class instance. <br/>
+		Static methods are often used to create utility functions for an application. <br />
+		<b>For Example:</b> </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>			
+	<p> class Point { <br />
+	&emsp; <u>constructor</u>&lpar;x, y&rpar; { <br />
+    &emsp;&emsp; this.x = x; <br />
+    &emsp;&emsp; this.y = y; <br />
+	&emsp; } <br />
+	&emsp; <b>static distance</b>&lpar;a, b&rpar; { <br />
+    &emsp;&emsp; const dx = a.x - b.x; <br />
+    &emsp;&emsp; const dy = a.y - b.y; <br />
+    &emsp;&emsp; return <u>Math.hypot</u>&lpar;dx, dy&rpar;; <br />
+	&emsp; } <br />
+		} <br />
+		const p1 = new Point&lpar;7, 2&rpar;; <br />
+		const p2 = new Point&lpar;3, 8&rpar;; </p>
+	<p> console.log&lpar;Point.<b>distance</b>&lpar;p1, p2&rpar;&rpar;; </p>
+	
+<!-- ********** Example 8.50: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_50.js"></script>
+<!-- ********** End Example 8.50 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example50()">CLICK HERE FOR RESULT OF EXAMPLE 8.50! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_50.JPG" alt=""> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		As you can see, the static <b>distance</b> <u>method</u> is called directly using the class name,
+		without an <u>object</u>.
+	</div>
+	
+<!-- Inheritance in ES6 -->	
+	<p> <strong><h3><u>Inheritance in ES6</u></h3></strong> </p>	
+	<p> The <b>extends</b> keyword is used in class declarations or class expressions to create a child of a class. the child
+		inherits the properties and methods of the parent. <br />
+		<b>For example:</b> </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>		
+	<p> class Animal { <br />
+	&emsp; <u>constructor</u>&lpar;name&rpar; { <br />
+    &emsp;&emsp; this.name = name; <br />
+	&emsp; } <br />
+	&emsp; speak&lpar;&rpar; { <br />
+    &emsp;&emsp; console.log&lpar;this.name + ' makes a noise.'&rpar;; <br />
+	&emsp; } <br />
+		} <br />
+		class Dog <b>extends</b> Animal { <br />
+	&emsp; speak&lpar;&rpar; { <br />
+    &emsp;&emsp; console.log&lpar;this.name + ' barks.'&rpar;; <br />
+	&emsp; } <br />
+		} </p>
+	<p> let dog = new Dog&lpar;'Rex'&rpar;; <br />
+		dog.speak&lpar;&rpar;; </p>
+	
+<!-- ********** Example 8.51: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_51.js"></script>
+<!-- ********** End Example 8.51 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example51()">CLICK HERE FOR RESULT OF EXAMPLE 8.51! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_51.JPG" alt="">
+	
+	<p> In the code above, the <b>Dog</b> class is a child of the <b>Animal</b> class, inheriting its properties and methods. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		If there is a <u>constructor</u> present in the subclass, it needs to first call <b>super</b>&lpar;&rpar; before using
+		<b>this</b>. Also, the <b>super</b> keyword is used to call parent's methods.
+	</div>
+	
+	<p> For example, we can modify the program above to the following: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>		
+	<p> class Animal { <br />
+	&emsp; <u>constructor</u>&lpar;name&rpar; { <br />
+    &emsp;&emsp; this.name = name; <br />
+	&emsp; } <br />
+	&emsp; speak&lpar;&rpar; { <br />
+    &emsp;&emsp; console.log&lpar;this.name + ' makes a noise.'&rpar;; <br />
+	&emsp; } <br />
+		} <br />
+		class Dog <b>extends</b> Animal { <br />
+	&emsp; speak&lpar;&rpar; { <br />
+	&emsp;&emsp; <b>super</b>.speak&lpar;&rpar;; // Super <br />
+    &emsp;&emsp; console.log&lpar;this.name + ' barks.'&rpar;; <br />
+	&emsp; } <br />
+		} </p>
+	<p> let dog = new Dog&lpar;'Rex'&rpar;; <br />
+		dog.speak&lpar;&rpar;; </p>
+	
+<!-- ********** Example 8.52: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_52.js"></script>
+<!-- ********** End Example 8.52 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example52()">CLICK HERE FOR RESULT OF EXAMPLE 8.52! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_52.JPG" alt=""> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		In the code above, the parent's <b>speak&lpar;&rpar;</b> <u>method</u> is called using the <b>super</b> keyword.
+	</div> <br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- ES6 Map & Set -->
+	<h2><strong><font size="h2">VIII.</font> <u>ES6 Map & Set</u></strong></h2>
+<!-- ES6 Map -->	
+	<p> <strong><h3><u>ES6 Map</u></h3></strong> </p>	
+	<p> A <b>Map</b> <font color="blue">object</font> can be used to hold <b>key/value</b> pairs. A key or value in a map can be
+		anything &lpar;objects and primitive values&rpar;. </p>
+	<p> The syntax <b>newMap&lpar;[iterable]&rpar;</b> creates a Map <font color="blue">object</font> where <b>iterable</b> is an
+		<font color="blue">array</font> or any other iterable <font color="blue">object</font> whose elements are arrays 
+		&lpar;with a key/value pair each&rpar;. </p>
+	<p>	An <b>Object</b> is similar to <b>Map</b> but there are important differences that make using a Map preferable in certain cases: 
+		<ol>
+			<li>The keys can be any type including functions, objects, and any primitive.</li>
+			<li>You can get the size of a Map.</li>
+			<li>You can directly iterate over Map.</li>
+			<li>Performance of the Map is better in scenarios involving frequent addition and removal of key/value pairs.</li>
+		</ol> </p>
+	
+	<p> The <b>size</b> property returns the number of key/value pairs in a map. <br />
+		<b>For example:</b> </p>
+		
+	<p><b>Syntax:</b></p>
+	<p> let map = new <b>Map</b>&lpar;[['k1', 'v1'], ['k2', 'v2']]&rpar;; </p>
+	<p> console.log&lpar;map.size&rpar;; // 2 </p>
+
+<!-- ********** Example 8.53: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_53.js"></script>
+<!-- ********** End Example 8.53 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example53()">CLICK HERE FOR RESULT OF EXAMPLE 8.53! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_53.JPG" alt="">
+	<p><font size="3"><b>Methods</b></font>
+		<ul>
+			<li><b>set&lpar;key, value&rpar;</b> - Adds a specified key/value pair to the map. If the specified key already exists, value
+				corresponding to it is replaced with the specified value.</li>
+			<li><b>get&lpar;key&rpar;</b> - Gets the value corresponding to a specified key in the map. If the specified key doesn't
+				exist, <font color="blue">undefined</font> is returned.</li>
+			<li><b>has&lpar;key&rpar;</b> - Returns true if a specified key exists in the map and false otherwise.</li>
+			<li><b>delete&lpar;key&rpar;</b> - Deletes the key/value pair with a specified key from the map and returns true.
+				Returns false if the element does not exist.</li>
+			<li><b>clear&lpar;&rpar;</b> - Removes all key/value pairs from map.</li>
+			<li><b>keys&lpar;&rpar;</b> - Returns an Iterator of keys in the map for each element.</li>
+			<li><b>values&lpar;&rpar;</b> - Returns an Iterator of values in the map for each element.</li>
+			<li><b>entries&lpar;&rpar;</b> - Returns an Iterator of <font color="blue">array</font>[key, value] in the map
+				for each element.</li>
+		</ul> </p>
+	<p><b>For example:</b></p>	
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> let map = new Map&lpar;&rpar;; </p>
+	<p> map.<b>set</b>&lpar;'k1', 'v1'&rpar;.<b>set</b>&lpar;'k2', 'v2'&rpar;; </p>
+	<p> console.log&lpar;map.<b>get</b>&lpar;'k1'&rpar;&rpar;; // v1 </p>
+	<p> console.log&lpar;map.<b>has</b>&lpar;'k2'&rpar;&rpar;; // true </p>
+	<p> for &lpar;let kv of map.<b>entries</b>&lpar;&rpar;&rpar; <br />
+	&emsp;	console.log&lpar;kv[0] + " : " + kv[1]&rpar;; </p>
+	
+<!-- ********** Example 8.54: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_54.js"></script>
+<!-- ********** End Example 8.54 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example54()">CLICK HERE FOR RESULT OF EXAMPLE 8.54! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_54.JPG" alt="">
+	<p> The above example demonstrates some of the ES6 Map methods. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		<b>Map</b> supports different data types i.e. 1 and "1" are two different keys/values.
+	</div>
+	
+<!-- ES6 Set -->	
+	<p> <strong><h3><u>ES6 Set</u></h3></strong> </p>
+	<p> A <b>Set</b> <font color="blue">object</font> can be used to hold <b>unique</b> values &lpar;no repetitions are allowed&rpar;. <br />
+		A value in a set can be anything &lpar;objects and primitive values.&rpar;. </p>
+	<p> The syntax <b>new Set&lpar;[iterable]&rpar;</b> creates a Set <font color="blue">object</font> where <b>iterable</b> is an
+		<font color="blue">array</font> or any other iterable <font color="blue">object</font> of values. </p>
+	<p> The <b>size</b> property returns the number of distinct values in a set. <br />
+		<b>For example:</b> </p>
+	
+	<p><b>Syntax:</b></p>
+	<p> let set = new <b>Set</b>&lpar;[1, 2, 4, 2, 59, 9, 4, 9, 1]&rpar;; </p>
+	<p> console.log&lpar;set.size&rpar;; // 5 </p>
+	
+<!-- ********** Example 8.55: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_55.js"></script>
+<!-- ********** End Example 8.55 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example55()">CLICK HERE FOR RESULT OF EXAMPLE 8.55! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_55.JPG" alt="">
+	
+	<p><font size="3"><b>Methods</b></font>
+		<ul>
+			<li><b>add&lpar;value&rpar;</b> - Adds a new element with the given value to the Set.</li>			
+			<li><b>delete&lpar;value&rpar;</b> - Deletes a specified value from the set.</li>
+			<li><b>has&lpar;value&rpar;</b> - Returns true if a specified value exists in the set and false otherwise.</li>
+			<li><b>clear&lpar;&rpar;</b> - Removes the set.</li>
+			<li><b>values&lpar;&rpar;</b> - Returns an Iterator of values in the set.</li>
+		</ul> </p>
+	<p><b>For example:</b></p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>	
+	<p> let set = new Set&lpar;&rpar;; </p>
+	<p> set.<b>add</b>&lpar;5&rpar;.<b>add</b>&lpar;9&rpar;.<b>add</b>&lpar;59&rpar;.<b>add</b>&lpar;9&rpar;; </p>
+	<p> console.log&lpar;set.<b>has</b>&lpar;9&rpar;&rpar;; </p>
+	<p> for &lpar;let v of set.<b>values</b>&lpar;&rpar;&rpar; <br />
+	&emsp;	console.log&lpar;v&rpar;; </p>
+	
+<!-- ********** Example 8.56: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_56.js"></script>
+<!-- ********** End Example 8.56 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example56()">CLICK HERE FOR RESULT OF EXAMPLE 8.56! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_56.JPG" alt="">	
+	<p> The above example demonstrates some of the ES6 Set methods. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		<b>Set</b> supports different data types i.e. <b>1</b> and "<b>1</b>" are two different values. <br />
+		NaN and <u>undefined</u> can also be stored in Set.
+	</div> <br />
+	
+<!-- **************************************************************************************************************************************************** -->
+
+<!-- More on ES6 -->
+	<h2><strong><font size="h2">IX.</font> <u>More on ES6</u></strong></h2>
+<!-- ES6 Promises -->	
+	<p> <strong><h3><u>ES6 Promises</u></h3></strong> </p>		
+	<p> A <b>Promise</b> is a better way for asynchronous programming when compared to the common way of using a
+		<b>setTimeout&lpar;&rpar;</b> type of <font color="blue">method</font>. </p>
+	<p> Consider this <b>example:</b> </p>
+
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> setTimeout&lpar;function&lpar;&rpar; { <br />
+	&emsp; console.log&lpar;"Work 1"&rpar;; <br />
+	&emsp; setTimeout&lpar;function&lpar;&rpar; { <br />
+	&emsp;&emsp; console.log&lpar;"Work 2"&rpar;; <br />
+	&emsp; }, 1000&rpar;; <br />	
+		}, 1000&rpar;; <br />
+		console.log&lpar;"End"&rpar;; </p>	
+	
+<!-- ********** Example 8.57: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_57.js"></script>
+<!-- ********** End Example 8.57 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example57()">CLICK HERE FOR RESULT OF EXAMPLE 8.57! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_57.JPG" alt="">
+	<p> It prints "End", "Work 1", and "Work 2" in that order &lpar;the work is done asynchronously&rpar;. But if there are
+		more events like this, the code becomes very complex. </p>
+		
+	<p> ES6 comes to the rescue in such situations. A <b>promise</b> can be created as follows: </p>
+	<p><b>Syntax:</b></p>
+	<p> new <b>Promise</b>&lpar;function&lpar;resolve, reject&rpar; { <br />
+	&emsp; // Work <br />
+	&emsp; if &lpar;success&rpar; <br />
+	&emsp;&emsp; resolve&lpar;result&rpar;; <br />
+	&emsp; else <br />
+	&emsp;&emsp; reject&lpar;Error&lpar;"failure"&rpar;&rpar;; <br />
+		}&rpar;; </p>
+	<p> Here, <b>resolve</b> is the <font color="blue">method</font> for success and <b>reject</b> is the <font color="blue">method</font> for failure. </p>
+	
+	<p> If a <font color="blue">method</font> returns a promise, its calls should use the <b>then</b> <font color="blue">method</font>, 
+		which takes two methods as input; one for success and the other for the failure. </p>
+	<p><b>For Example:</b></p>
+
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> function asyncFunc&lpar;work&rpar; { <br />
+	&emsp; return new <b>Promise</b>&lpar;function&lpar;resolve, reject&rpar; { <br />
+    &emsp;&emsp; if (work === "") <br />
+    &emsp;&emsp;&emsp; reject&lpar;Error&lpar;"Nothing"&rpar;&rpar;; <br />
+    &emsp;&emsp; setTimeout&lpar;function&lpar;&rpar; { <br />
+    &emsp;&emsp;&emsp; resolve&lpar;work&rpar;; <br />
+    &emsp;&emsp; }, 1000&rpar;; <br />
+	&emsp; }&rpar;; <br />
+		} </p>
+	<p> asyncFunc&lpar;"Work 1"&rpar; // Task 1 <br />
+		<b>.then</b>&lpar;function&lpar;result&rpar; { <br />
+	&emsp; console.log&lpar;result&rpar;; <br />
+	&emsp; return asyncFunc&lpar;"Work 2"&rpar;; // Task 2 <br />
+		}, function&lpar;error&rpar; { <br />
+	&emsp; console.log&lpar;error&rpar;; <br />
+		}&rpar; <br />
+		<b>.then</b>&lpar;function&lpar;result&rpar; { <br />
+	&emsp; console.log&lpar;result&rpar;; <br />
+		}, function&lpar;error&rpar; { <br />
+	&emsp; console.log&lpar;error&rpar;; <br />
+		}&rpar;; <br />
+		console.log&lpar;"End"&rpar;; </p>	
+		
+<!-- ********** Example 8.58: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_58.js"></script>
+<!-- ********** End Example 8.58 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example58()">CLICK HERE FOR RESULT OF EXAMPLE 8.58! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_58.JPG" alt="">
+	<p> It also prints "End", "Work 1", and "Work 2" &lpar;the work is done asynchronously&rpar;. But, this is clearly
+		more readable than the previous example. In more complex situations, it is easier to work with. </p>
+	
+<!-- Iterators & Generators -->	
+	<p> <strong><h3><u>Iterators & Generators</u></h3></strong> </p>	
+	<p> <b>Symbol.iterator</b> is the default iterator for an <font color="blue">object</font>. The for...of loops are based
+		on this type of iterator. </p>
+	<p> In the example below, we will see how we should implement it and how <b>generator functions</b> are used. <br />
+		<b>Example:</b> </p>
+		
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let myIterableObj = { <br />
+	&emsp;[<b>Symbol.iterator</b>] : <b>function</b>* &lpar;&rpar; { <br />
+	&emsp;&emsp; yield 1; yield 2; yield 3; <br />
+		... <br />
+		console.log&lpar;[<b>...myIterableObj</b>]&rpar;; </p>
+	
+<!-- ********** Example 8.59: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_59.js"></script>
+<!-- ********** End Example 8.59 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example59()">CLICK HERE FOR RESULT OF EXAMPLE 8.59! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_59.JPG" alt=""> 
+	<img src="My JavaScript Notebook I - Page 8/Example8_59-1.JPG" alt="">
+	
+	<p> First, we create an <font color="blue">object</font>, and use the <b>Symbol.iterator</b> and <b>generator function</b>
+		to fill it with some values. </p>
+	<p> In the second line of the code, we use a <b>*</b> with the <b>function</b> keyword. It's called a 
+		<b>generator function &lpar;or gen function&rpar;</b>. </p>
+	<p> For example, here is a simple case of how <b>gen functions</b> can be useful: </p>
+
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <b>function*</b> idMaker&lpar;&rpar; { <br />
+	&emsp; let index = 0; <br />
+	&emsp; while &lpar;index &lt; 5&rpar; <br />
+	&emsp;&emsp; <b>yield</b> index++; <br />
+		} <br />
+		<u>var</u> gen = idMaker&lpar;&rpar;; <br />
+		console.log&lpar;<b>gen.next&lpar;&rpar;.value</b>&rpar;; </p>
+
+<!-- ********** Example 8.60: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_60.js"></script>
+<!-- ********** End Example 8.60 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example60()">CLICK HERE FOR RESULT OF EXAMPLE 8.60! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_60.JPG" alt="">
+	
+	<p> We can exit and re-enter generator functions later. Their <font color="blue">variable</font> bindings &lpar;context&par; will be 
+		saved across re-entrances. They are a very powerful tool for asynchronous programming, especially when combined with Promises. 
+		They can also be useful for creating loops with special requirements. </p>
+	<p> We can nest <b>generator functions</b> inside each other to create more complex structures and pass the arguments while we are calling them. <br />
+		The example below will show a useful case of how we can use <b>generator functions</b> and <b>Symbol.iterators</b> together. <br />
+		<b>Example:</b> </p>
+
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> const arr = ['0', '1', '4', 'a', '9', 'c', '16']; <br />
+		const my_obj = { <br />
+	&emsp; [<b>Symbol.iterator</b>]: <b>function*</b>&lpar;&rpar; { <br />
+    &emsp;&emsp; for&lpar;let index of arr&rpar; { <br />
+    &emsp;&emsp;&emsp; <b>yield</b> `${index}`; <br />
+    &emsp;&emsp; } <br />
+	&emsp; } <br />
+		}; <br />
+		const all = [<b>...my_obj</b>] <br />
+	&emsp; <b>.map</b>&lpar;i => parseInt&lpar;i, 10&rpar;&rpar; <br />
+	&emsp; <b>.map</b>&lpar;<u>Math</u>.sqrt&rpar; <br />
+	&emsp; <b>.filter</b>&lpar;&lpar;i&rpar; => i &lt; 5&rpar; <br />
+	&emsp; <b>.reduce</b>&lpar;&lpar;i, d&rpar; => i + d&rpar;; <br />
+		console.log&lpar;all&rpar;; </p>	
+	
+<!-- ********** Example 8.61: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_61.js"></script>
+<!-- ********** End Example 8.61 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example61()">CLICK HERE FOR RESULT OF EXAMPLE 8.61! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_61.JPG" alt=""> <br />
+	<b>.filter</b>&lpar;&lpar;i&rpar; => i &lt; <b><font color="blue">4</font></b>&rpar; <br />
+	<img src="My JavaScript Notebook I - Page 8/Example8_61-1.JPG" alt="">
+	
+	<p> We create an <font color="blue">object</font> of 7 elements by using <b>Symbol.iterator</b> and <b>generator functions</b>.
+		In the second part, we assign our <font color="blue">object</font> to a constant <b>all</b>. At the end, we print its value. </p>
+	
+<!-- Modules -->	
+	<p> <strong><h3><u>Modules</u></h3></strong> </p>
+	<p> It is a good practice to divide your related code into modules. Before ES6 there were some libraries which made this possible
+		&lpar;e.g., RequireJS, CommonJS&rpar;. ES6 is now supporting this feature natively.	</p>
+		
+	<p><b><font size="3">Considerations when using modules</font></b><br />
+		The first consideration is <b>maintainability</b>. A module is independent of other modules, making improvements and 
+		expansion possible without any dependency on code in other modules. </p>
+	<p> The second consideration is <b>namespacing</b>. In an earlier lesson, we talked about variables and scope. 
+		As you know, vars are globally declared, so it's common to have namespace pollution where unrelated variables are 
+		accessible all over our code. Modules solve this problem by creating a private space for variables. </p>
+	<p> Another important consideration is <b>reusability</b>. When we write code that can be used in other projects, modules 
+		make it possible to easily reuse the code without having to rewrite it in a new project. </p>
+	<p> Let's see how we should use modules in JS files. <br />
+		<b>For Example:</b> </p>
+		
+	<p><b>Syntax:</b></p>
+	<p> // lib/math.js <br />
+		<b>export</b> let sum = &lpar;x, y&rpar; => { return x + y; } <br />
+		<b>export</b> let pi = 3.14; </p>
+	<p> // app.js <br />
+		<b>import *</b> as math from "lib/math" <br />
+		console.log&lpar;`2p = + ${math.sum&lpar;math.pi, math.pi&rpar;}`&rpar; </p>	
+	<p> Here we are exporting the sum function and the pi <font color="blue">variable</font> so we can use them in different files. </p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		ES6 supports <b>modules</b> officially, however, some browsers are not supporting modules natively yet. So, we should 
+		use bundlers &lpar;builders&rpar; such as Webpack or Browserify to run our code.	
+	</div>
+	
+<!-- Built-in Methods -->	
+	<p> <strong><h3><u>Built-in Methods</u></h3></strong> </p>	
+	<p> ES6 also introduced new built-in methods to make several tasks easier. Here we will cover the most common ones. </p>
+	
+	<p><b><font size="3">Array Element Finding</font></b><br />
+		The legacy way to find the first element of an <font color="blue">array</font> by its value and a rule was the following: </p>
+
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> <u>var</u> value = [4, 5, 1, 8, 2, 0].filter&lpar;function &lpar;x&rpar; { <br />
+	&emsp; return x &gt; 3; <br />
+		}&rpar;[0]; <br />
+		console.log&lpar;value&rpar;; </p>
+
+<!-- ********** Example 8.62: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_62.js"></script>
+<!-- ********** End Example 8.62 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example62()">CLICK HERE FOR RESULT OF EXAMPLE 8.62! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>			
+	<img src="My JavaScript Notebook I - Page 8/Example8_62.JPG" alt="">
+	
+	<p> The new syntax is cleaner and more robust: </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let value = [4, 5, 1, 8, 2, 0].<b>find</b>&lpar;x => x &gt; 3&rpar;; <br />
+		console.log&lpar;value&rpar;; </p>
+
+<!-- ********** Example 8.63: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_63.js"></script>
+<!-- ********** End Example 8.63 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example63()">CLICK HERE FOR RESULT OF EXAMPLE 8.63! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_63.JPG" alt="">
+	
+	<p> You can also get the index of the item above by using the <b>findIndex&lpar;&rpar;</b> <font color="blue">method</font> </p>
+	
+<!-- JavaScript Code in JS -->	
+	<p> <font size="6">&rarr;&ensp;</font>
+	<strong>JavaScript Code in JS</strong> 
+	<font size="6">&ensp;&larr;</font></p>
+	<p> let value = [4, 5, 1, 8, 2, 0].<b>findIndex</b>&lpar;x => x &gt; 3&rpar;; <br />
+		console.log&lpar;value&rpar;; </p>
+
+<!-- ********** Example 8.64: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_64.js"></script>
+<!-- ********** End Example 8.64 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example64()">CLICK HERE FOR RESULT OF EXAMPLE 8.64! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>	
+	<img src="My JavaScript Notebook I - Page 8/Example8_64.JPG" alt="">
+	
+	<p><b><font size="3">Repeating Strings</font></b><br />
+		Before ES6 the following syntax was the correct way to repeat a <font color="blue">string</font> multiple times: </p>
+	<p><b>Syntax:</b></p>
+	<p> console.log&lpar;Array&lpar;3 + 1&rpar;.join&lpar;"foo"&rpar;&rpar;; // foofoofoo </p>	
+	
+<!-- ********** Example 8.65: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_65.js"></script>
+<!-- ********** End Example 8.65 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example65()">CLICK HERE FOR RESULT OF EXAMPLE 8.65! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_65.JPG" alt="">
+
+	<p> With the new syntax, it becomes: </p>
+	<p><b>Syntax:</b></p>
+	<p> console.log&lpar;"foo"<b>.repeat</b>&lpar;3&rpar;&rpar;; // foofoofoo </p>	
+	
+<!-- ********** Example 8.66: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_66.js"></script>
+<!-- ********** End Example 8.66 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example66()">CLICK HERE FOR RESULT OF EXAMPLE 8.66! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_66.JPG" alt="">
+
+	<p><b><font size="3">Searching Strings</font></b><br />
+		Before ES6 we only used the indexOf&lpar;&rpar; <font color="blue">method</font> to find the position of the text 
+		in the string. For example: </p>
+	<p><b>Syntax:</b></p>
+	<p>	"SoloLearn".indexOf&lpar;"Solo"&rpar; === 0; // true <br />
+		"SoloLearn".indexOf&lpar;"Solo"&rpar; === &lpar;4 - "Solo".length&rpar;; // true <br />
+		"SoloLearn".indexOf&lpar;"loLe"&rpar; !== -1; // true <br />
+		"SoloLearn".indexOf&lpar;"olo", 1&rpar; !== -1; // true <br />
+		"SoloLearn".indexOf&lpar;"olo", 2&rpar; !== -1; // false </p>
+		
+<!-- ********** Example 8.67: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_67.js"></script>
+<!-- ********** End Example 8.67 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example67()">CLICK HERE FOR RESULT OF EXAMPLE 8.67! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>		
+	<img src="My JavaScript Notebook I - Page 8/Example8_67.JPG" alt="">
+	
+	<p> ES6 has replaced this with a version that has cleaner and more simplified syntax: </p>
+	<p><b>Syntax:</b></p>
+	<p>	"SoloLearn".<b>startsWith</b>&lpar;"Solo", 0&rpar;; // true <br />
+		"SoloLearn".<b>endsWith</b>&lpar;"Solo", 4&rpar;; // true <br />
+		"SoloLearn".<b>includes</b>&lpar;"loLe"&rpar;; // true <br />
+		"SoloLearn".<b>includes</b>&lpar;"olo", 1&rpar;; // true <br />
+		"SoloLearn".<b>includes</b>&lpar;"olo", 2&rpar;; // false </p>
+		
+<!-- ********** Example 8.68: External JavaScript File ********** -->		
+	<script src="My JavaScript Notebook I - Page 8/Example8_68.js"></script>
+<!-- ********** End Example 8.68 JS File ********** -->
+	
+	<font size="6">&rarr;</font>&ensp;  
+	<button onclick="Example68()">CLICK HERE FOR RESULT OF EXAMPLE 8.68! </button> 
+	&ensp;<font size="6">&larr;</font>	<br />		
+	<p><b>console.log result:</b> &lpar;F12 and show timestamps&rpar;</p>
+	<img src="My JavaScript Notebook I - Page 8/Example8_68.JPG" alt=""> <p></p>
+	<div style="background-color:gold; width:600px; padding:1px">
+		It is always a good practice to refactor your code with the new syntax to learn new things and make your code more understandable.
+	</div>
+	
+	<!-- ****************************** FOOTER ****************************** -->	
+	
+	<p></p><br />
+<!-- Pages start -->
+		<p align="center">
+		
+	<!-- Go to top -->	
+		<a href="#top">Go to top</a> <br />
+	
+	<!-- Previous Page -->	
+		<a href="Module_7_DOM_&_Events.html"
+			class="previous">&laquo Previous</a>
+	
+	<!-- Page 1 -->	
+		<a href="Module_1_Introduction_to_JavaScript.html" 
+			target="_self">1</a>
+	
+	<!-- Page 2 -->	
+		<a href="Module_2_Basic_Concepts.html" 
+			target="_self">2</a>
+	
+	<!-- Page 3 -->	
+		<a href="Module_3_Conditionals_and_Loops.html" 
+			target="_self">3</a>
+	
+	<!-- Page 4 -->	
+		<a href="Module_4_Functions.html" 
+			target="_self">4</a>
+	
+	<!-- Page 5 -->	
+		<a href="Module_5_Objects.html" 
+			target="_self">5</a>
+	
+	<!-- Page 6 -->	
+		<a href="Module_6_Core_Objects.html" 
+			target="_self">6</a>
+	
+	<!-- Page 7 -->	
+		<a href="Module_7_DOM_&_Events.html" 
+			target="_self">7</a>
+
+	<!-- Page 8 -->	
+		<a href="#" 
+			target="_self">8</a>
+	
+	
+	<!-- Next Page -->	
+		<a href="#"	
+			class="next">Next &raquo;</a>
+<!-- Pages end -->
+        
+<!-- Footer -->
+        <div class="copyright">
+            &copy; 2018 My JavaScript Notebook I. All rights reserved.
+        </div>
+	
+  </body>
+ </html>
