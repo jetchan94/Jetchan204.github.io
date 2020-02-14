@@ -17,16 +17,16 @@ body a {
         }
         #frame {
             float: left;
-            width: 33%;
+            width: 30%;
             margin: 0 auto;
         }
         #frame1 {
-            width: 33%;
+            width: 30%;
             margin: 0 auto;
         }
         #frame2 {
             float: right;
-            width: 32%;
+            width: 30%;
             margin: 0 auto;
         }
         header {
