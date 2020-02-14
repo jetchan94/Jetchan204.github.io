@@ -18,6 +18,7 @@ body a {
 /** Nested div 1 **/
         #row {
             display: table;
+            border-spacing: 2%;
             width: 100%;
             margin: auto;
         }
