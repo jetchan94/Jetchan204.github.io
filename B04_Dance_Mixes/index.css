@@ -14,9 +14,3 @@ body {
 .w3-half img:hover {
   opacity: 1
 }
-/** Sidebar/menu **/
-#mySidebar {
-  z-index: 3;
-  width: 300px;
-  font-weight: bold;
-}
