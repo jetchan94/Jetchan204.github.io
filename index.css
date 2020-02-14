@@ -21,6 +21,7 @@ body a {
             margin: auto;
         }
         #frame1 {
+          float: justify;
             width: 33%;
             margin: auto;
         }
