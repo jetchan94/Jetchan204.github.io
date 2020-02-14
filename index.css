@@ -15,20 +15,27 @@ body a {
         li:hover {
             background-color: #aaa;
         }
-        #frame {
+/** Nested div 1 **/
+        #container {
+            background: #CCC;
+            width: 100%;
+            margin: auto;
+        }
+        .frame {
             float: left;
-            width: 30%;
-            margin: 0 auto;
+            width: 33%;
+            margin: auto;
         }
-        #frame1 {
-            width: 30%;
-            margin: 0 auto;
+        .frame1 {
+            width: 33%;
+            margin: auto;
         }
-        #frame2 {
+        .frame2 {
             float: right;
-            width: 30%;
-            margin: 0 auto;
+            width: 33%;
+            margin: auto;
         }
+/** End Nested div 1 **/
         header {
             background-image: url("http://i.imgur.com/VKQrP9H.jpg");
             background-repeat: no-repeat;
