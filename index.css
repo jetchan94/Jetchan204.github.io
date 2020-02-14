@@ -15,19 +15,22 @@ body a {
         li:hover {
             background-color: #aaa;
         }
-        #frame {
-            float: left;
-            width: 33%;
+/** Nested div 1 **/
+        #row {
+            display: table;
+            width: 100%;
             margin: auto;
         }
-        #frame1 {
-          float: justify;
-            width: 33%;
+        .col {
+            display: table-cell;
             margin: auto;
         }
-        #frame2 {
-            float: right;
-            width: 33%;
+        .col1 {
+            display: table-cell;
+            margin: auto;
+        }
+        .col2 {
+            display: table-cell;
             margin: auto;
         }
 /** End Nested div 1 **/
