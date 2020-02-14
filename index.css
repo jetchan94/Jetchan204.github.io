@@ -19,7 +19,7 @@ body a {
         #table {
             display: table;
             border-collapse: separate;
-            border-spacing: 2%
+            border-spacing: 10px 0px;
             width: 100%;
             margin: auto;
         }
