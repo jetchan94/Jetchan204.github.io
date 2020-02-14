@@ -17,24 +17,20 @@ body a {
         }
 /** Nested div 1 **/
         #row {
-            display: table;
             width: 100%;
             margin: auto;
         }
         .col {
-            display: table-cell;
             width: 33%;
             margin-left: 2%;
             margin-right: -2%;
         }
         .col1 {
-            display: table-cell;
             width: 33%;
             margin-left: 2%;
             margin-right: -2%;
         }
         .col2 {
-            display: table-cell;
             width: 33%;
             margin-left: 2%;
             margin-right: -2%;
