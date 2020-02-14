@@ -23,18 +23,21 @@ body a {
         }
         .col {
             display: table-cell;
-            width: 30%;
-            margin: auto;
+            width: 33%;
+            margin-left: 2%;
+            margin-right: 2%;
         }
         .col1 {
             display: table-cell;
-            width: 30%;
-            margin: auto;
+            width: 33%;
+            margin-left: 2%;
+            margin-right: 2%;
         }
         .col2 {
             display: table-cell;
-            width: 30%;
-            margin: auto;
+            width: 33%;
+            margin-left: 2%;
+            margin-right: 2%;
         }
 /** End Nested div 1 **/
         header {
