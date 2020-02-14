@@ -21,17 +21,17 @@ body a {
             width: 100%;
             margin: auto;
         }
-        .col {
+        .frame {
             display: table-cell;
             width: 33%;
             margin: auto;
         }
-        .col1 {
+        .frame1 {
             display: table-cell;
             width: 33%;
             margin: auto;
         }
-        .col2 {
+        .frame2 {
             display: table-cell;
             width: 33%;
             margin: auto;
