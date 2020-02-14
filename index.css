@@ -16,25 +16,27 @@ body a {
             background-color: #aaa;
         }
 /** Nested div 1 **/
-        #row {
+        #table {
             display: table;
+            border-collapse: separate;
+            border-spacing: 2%
             width: 100%;
             margin: auto;
         }
         .frame {
             display: table-cell;
             width: 33%;
-            margin: 2%;
+            margin: auto;
         }
         .frame1 {
             display: table-cell;
             width: 33%;
-            margin: 2%;
+            margin: auto;
         }
         .frame2 {
             display: table-cell;
             width: 33%;
-            margin: 2%;
+            margin: auto;
         }
 /** End Nested div 1 **/
         header {
