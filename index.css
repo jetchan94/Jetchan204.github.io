@@ -23,14 +23,17 @@ body a {
         }
         .col {
             display: table-cell;
+            width: 33%;
             margin: auto;
         }
         .col1 {
             display: table-cell;
+            width: 33%;
             margin: auto;
         }
         .col2 {
             display: table-cell;
+            width: 33%;
             margin: auto;
         }
 /** End Nested div 1 **/
