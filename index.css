@@ -1,4 +1,4 @@
-body a {    
+body a {
             color: #000;
             text-decoration: none;
         }
@@ -20,10 +20,14 @@ body a {
             width: 33%;
             margin: 0 auto;
         }
-        #frame1 {            
+        #frame1 {
             width: 33%;
             margin: 0 auto;
-        }    
+        }
+        #frame2 {            
+            width: 33%;
+            margin: 0 auto;
+        }
         header {
             background-image: url("http://i.imgur.com/VKQrP9H.jpg");
             background-repeat: no-repeat;
