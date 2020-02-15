@@ -20,3 +20,8 @@ body {
   .w3-half img:hover {
     opacity: 1
   }
+  #first, #second, #third, #fourth, #fifth, #sixth #final {
+    font-size: 16px;
+    border-style: outset;
+    padding: 10px;
+  }
