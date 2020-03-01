@@ -30,7 +30,7 @@ body {
     margin-right: 10%;
   }
   /** Custom Break Mixes **/
-  #eighth {
+  #eighth, #ninth, #tenth {
     font-size: 16px;
     border-style: outset;
     padding: 10px;
