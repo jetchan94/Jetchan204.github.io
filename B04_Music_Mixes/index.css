@@ -30,7 +30,7 @@ body {
     margin-right: 10%;
   }
   /** Custom Break Mixes **/
-  #h {
+  #h, #i, #j {
     font-size: 16px;
     border-style: outset;
     padding: 10px;
