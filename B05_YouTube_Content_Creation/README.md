@@ -57,7 +57,7 @@ ___
 <details>
   <summary><b>This channel displays my series on my team's channel</b></summary><br />  
   
-  1. Episode 12: [*JetAir: Custom Gaming PC Unboxing & Testing](https://www.youtube.com/watch?v=BW0hywu-9Cg&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=12&t=4s)
+  1. Episode 12: [*JetAir: Custom Gaming PC Unboxing & Testing*](https://www.youtube.com/watch?v=BW0hywu-9Cg&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=12&t=4s)
   2. Episode 11: [*JetAir: Stay Safe Everyone*](https://www.youtube.com/watch?v=rwi5oskRADA&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=11)
   3. Episode 10: [*JetAir: Building My Home Gym, Part 4*](https://www.youtube.com/watch?v=KjSZrY6p4Jk&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=10)
   4. Episode 9: [*JetAir: Give It The Ol' Swipe*](https://www.youtube.com/watch?v=zPdXYdaUDzE&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=9)
