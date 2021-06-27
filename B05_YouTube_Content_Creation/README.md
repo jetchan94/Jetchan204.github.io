@@ -57,15 +57,16 @@ ___
 <details>
   <summary><b>This channel displays my series on my team's channel</b></summary><br />  
   
-  1. Episode 11: [*JetAir: Stay Safe Everyone*](https://www.youtube.com/watch?v=rwi5oskRADA&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=11)
-  2. Episode 10: [*JetAir: Building My Home Gym, Part 4*](https://www.youtube.com/watch?v=KjSZrY6p4Jk&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=10)
-  3. Episode 9: [*JetAir: Give It The Ol' Swipe*](https://www.youtube.com/watch?v=zPdXYdaUDzE&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=9)
-  4. Episode 8: [*JetAir: Building My Home Gym, Part 3*](https://www.youtube.com/watch?v=n49K147RLbU&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=8)
-  5. Episode 7: [*JetAir: Project Precision I*](https://www.youtube.com/watch?v=5JF_9Uy6Aes&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=7)
-  6. Episode 6: [*JetAir: Building My Home Gym, Part 2*](https://www.youtube.com/watch?v=Ah11tSNmU14&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=6)
-  7. Episode 5: [*JetAir: Project Descent I*](https://www.youtube.com/watch?v=NfQZBLdxbhQ&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=5)
-  8. Episode 4: [*JetAir: Building My Home Gym, Part 1*](https://www.youtube.com/watch?v=lZNaX1uzwvk&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=4)
-  9. Episode 3: [*JetAir: Project Ascent I*](https://www.youtube.com/watch?v=FOvcL2RQV0c&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=3)
-  10. Episode 2: [*JetAir: Lost and Found*](https://www.youtube.com/watch?v=EPWP8rJTHlw&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=2)
-  11. Episode 1: [*JetAir*](https://www.youtube.com/watch?v=r3Kk8sYlggA&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=1)
+  1. Episode 12: [*JetAir: Custom Gaming PC Unboxing & Testing](https://www.youtube.com/watch?v=BW0hywu-9Cg&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=12&t=4s)
+  2. Episode 11: [*JetAir: Stay Safe Everyone*](https://www.youtube.com/watch?v=rwi5oskRADA&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=11)
+  3. Episode 10: [*JetAir: Building My Home Gym, Part 4*](https://www.youtube.com/watch?v=KjSZrY6p4Jk&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=10)
+  4. Episode 9: [*JetAir: Give It The Ol' Swipe*](https://www.youtube.com/watch?v=zPdXYdaUDzE&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=9)
+  5. Episode 8: [*JetAir: Building My Home Gym, Part 3*](https://www.youtube.com/watch?v=n49K147RLbU&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=8)
+  6. Episode 7: [*JetAir: Project Precision I*](https://www.youtube.com/watch?v=5JF_9Uy6Aes&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=7)
+  7. Episode 6: [*JetAir: Building My Home Gym, Part 2*](https://www.youtube.com/watch?v=Ah11tSNmU14&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=6)
+  8. Episode 5: [*JetAir: Project Descent I*](https://www.youtube.com/watch?v=NfQZBLdxbhQ&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=5)
+  9. Episode 4: [*JetAir: Building My Home Gym, Part 1*](https://www.youtube.com/watch?v=lZNaX1uzwvk&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=4)
+  10. Episode 3: [*JetAir: Project Ascent I*](https://www.youtube.com/watch?v=FOvcL2RQV0c&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=3)
+  11. Episode 2: [*JetAir: Lost and Found*](https://www.youtube.com/watch?v=EPWP8rJTHlw&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=2)
+  12. Episode 1: [*JetAir*](https://www.youtube.com/watch?v=r3Kk8sYlggA&list=PL2IylO9-Mz_kBOD59xFSzqhHYfyPnscQy&index=1)
 </details>
