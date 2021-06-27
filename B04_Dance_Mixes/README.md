@@ -1,4 +1,4 @@
-# Dance Mixes
+# Music Mixes
 
 These are various mixes that are comprised of a compilation of tracks
 from different mixtapes or albums.
