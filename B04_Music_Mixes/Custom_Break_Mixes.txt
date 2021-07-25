@@ -42,7 +42,7 @@ ________________________________________________________________________________
 ________________________________________________________________________________
 
 ****************************************
-****** Lofi Break Mix 01 (Clean) *******
+****** Lofi Break Mix 01 (Clean) *******	DONE
 ****************************************
 
 01: E66S - And I will...
@@ -61,10 +61,8 @@ ________________________________________________________________________________
 14: Chinsaku - See Ya...
 15: Chinsaku - Time
 16: Chinsaku - Timeless
-17: Coddneck - TORIMICHI
-18: Squid Ethics - x jhfly
-19: 
-20: 
+17: Squid Ethics - x jhfly
+18: Coddneck - TORIMICHI
 ________________________________________________________________________________
 
 ****************************************
@@ -77,10 +75,10 @@ ________________________________________________________________________________
 04: The Calvin Owens Show - The Cat (Sammy P Edit)
 05: The Third Degree - Mercy
 06: G-Eazy - Achievement (Freestyle Instrumental - Faster Tempo)
-07: Madcon - Beggin (Instrumental)
+07: Madcon - Beggin
 08: Parov Stelar - Spygame (Edited for Bboy)
 09: Fort Minor - Petrified (Instrumental)
-10: DJ Mingo - Reed Street (Loop)
+10: Red Bull BC One Dance Connect 1 (Loop)
 11: DJ Funk Style - Skorpio
 12: Cosmic EFI - B-Boy Freedom "Funky Boogie Brothers" Remix
 13: DJ Woodo/J:Loop - Medusas Path
@@ -95,11 +93,11 @@ ________________________________________________________________________________
 ________________________________________________________________________________
 
 ****************************************
-* Classic Break Mix 01 (Dirty) *
+****** Classic Break Mix 01 (Dirty) ****
 ****************************************
 
-01: Red Hot Lover Tone feat. Biggie Smalls, MOP & Organized Konfusion - 4 My Peeps
-02: Organized Konfusion - Drop Bombs
+01: 
+02: 
 03:
 04:
 05:
@@ -118,3 +116,35 @@ ________________________________________________________________________________
 18: 
 19: 
 20: 
+________________________________________________________________________________
+
+****************************************
+****** Breakbeat Mix 03 (Clean) ********	DONE
+****************************************
+
+01: Lupe Fiasco - All Black Everything
+02: Rilan and the Bombardiers - Walking on Fire
+03: Kool Moe Dee - Wild Wild West
+04: Kool Moe Dee - How Ya Like Me Now
+05: Fort Minor - High Road (ft. John Legend) (Clean)
+06: Fort Minor (feat. Bobo and Styles of Beyond) - Believe Me
+07: Fort Minor - Feel Like Home (feat. Styles of Beyond) (Clean Edit)
+08: Fusik - Santi
+09: The Sure Fire Soul Ensemble - Jeannie's Getdown
+10: CES Cru - Juice (Feat. Tech N9ne) (Clean Edit)
+11: MAYDAY x MURS - Beast Out The Box
+12: Blitz The Ambassador ft Kate Mattison - Losing Your Mind (Clean Edit)
+13: Masta Killa - School ft. RZA (DJ FLEG EDIT)
+14: DJ Dekhan - Sixtyone Steps vol. 5
+15: djblesOne - GRAVITY'S FIRST FLIGHT
+16: djblesOne - Don't Cry over Broken Bones
+17: Method Man - Judgement Day
+18: Dj Fleg - Gospel Of Fleg
+19: Dj Zapy & Dj UraGun - Black Mamba
+20: Dj Zapy & Dj Uragun - Hamburger
+21: Dj Zapy & Dj UraGun - Firemove
+22: Jon Willis - Ready Set Go (Clean Edit)
+23: Dr. Dre feat. Snoop Doggy Dogg - Deep Cover (187-Mix) (Instrumental -  KaizerOnTheBeat) (+8% Tempo)
+24: Dj Dash - The Crossing
+25: DJ Just-A-Kid & iLL Wayno - HYPED!
+26: DJ OB One & DJ Catch - Cancrejo
